@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Ideas -Masters Project}
+\author{Maria Ramírez Rodríguez}
+\date{February-May 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{1NN and 2NN models}
+
+\subsection{Overview}
+
+The 1NN model describes the 2D Hubbard model, only considering nearest neighbour hopping.
+The 2NN model describes the exact same physical system, but the unit cells are now considered to be 2 atom units cells. 
+When performing the FRG calculation of both models, one expects to see the same phase diagram output.
+
+Several things have to be taken into account: k convergence and form factor convergence.
+Currently, the parameters nk and nkf have been set to be 20 and 5 respectively. An interesting test would be to thoroughly check whether there are lower values of nk and nkf for which the calculation returns the correct ground state.
+The form factor convergence is currently being tested for a range of parameters in units of \AA.
+
+
+
+\subsection{Form factor convergence}
+
+Form factor convergence in the 2NN model is being tested for values of 1-10 \AA. This is being tested for a 2NN Hubbard model with a coulumb repulsion U = 3 and $\mu$ = 0.2 eV.
+The nk and nkf parameters used are 20 and 5 respectively. 
+
+For these particular parameters, the calculation seems to converge (Tc is stabilised) at a value of around 3-4 \AA in the 2NN model. The 1NN model behaves slightly different, where the convergence for the 
+
+
+\subsection{K-points convergence}
+
+
+\end{document}

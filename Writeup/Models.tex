@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{File tracker- Masters Project}
+\author{Maria Ramírez Rodríguez}
+\date{February-May 2025}
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Test models}
+
+\subsection{1NN}
+FRG code (no symmetries applied) to a 1NN 2D hubbard model. Includes  a brief analysis (k1k2)  on the number of kn and knf points to use for each iteration. 
+
+\subsubsection{Umu}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        U & $\frac{\mu}{U}$ &  nk & nkf\\ \hline
+        0-2 (steps of 0.5)  &  0.5-2 (steps of 0.5)  & 40   & 15   \\ \hline
+    \end{tabular}
+    \caption{Umu model}
+    \label{tab:example_table}
+\end{table}
+
+
+
+
+\subsubsection{Umu2}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        U & $\mu$ &  nk & nkf\\ \hline
+        0-8 (steps of 0.1)  &  0-1 (steps of 0.25 (exluding 0.75))  & 40   & 10   \\ \hline
+    \end{tabular}
+    \caption{Umu2 model}
+    \label{tab:example_table}
+\end{table}
+
+
+\subsubsection{Umu3CDW}
+Exploring what appeared to be a CDW region, when in reality was a FL. 
+
+\subsubsection{Umu4}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        U & $\mu$ &  nk & nkf\\ \hline
+        0-8 (steps of 0.25)  &  0-1 (steps of 0.1)  & 40   & 10   \\ \hline
+    \end{tabular}
+    \caption{Umu4 model}
+    \label{tab:example_table}
+\end{table}
+
+\subsubsection{Umu5}
+
+For comparison with 1.2.1 and 1.2.2
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        U & $\mu$ &  nk & nkf\\ \hline
+        0-8 (steps of 0.25)  &  0-1 (steps of 0.1)  & 20   & 5   \\ \hline
+    \end{tabular}
+    \caption{Umu5 model}
+    \label{tab:example_table}
+\end{table}
+
+
+\subsection{2NN}
+
+\subsubsection{2NN-without editing}
+
+DISCARD. Note that this model shows the results for a 2NN TBM but without the appropriate .c file
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        U & $\mu$ &  nk & nkf & computer \\ \hline
+        0-8 (steps of 0.25)  &  0-1 (steps of 0.1)  & 20   & 15 & 0  \\ \hline
+    \end{tabular}
+    \caption{Umu4 model}
+    \label{tab:example_table}
+\end{table}
+
+
+\subsubsection{2NNa }
+
+Same model as 2NN, only subtetly is that the C file has been edited accordingly to match the two atoms per unit cell. 
+ (paws1)
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        U & $\mu$ &  nk & nkf\\ \hline
+        0-8 (steps of 0.25)  &  0-1 (steps of 0.1)  & 20   & 5  \\ \hline
+    \end{tabular}
+    \caption{Umu4 model}
+    \label{tab:example_table}
+\end{table}
+
+
+\subsubsection{2NNb }
+
+Same model as 2NNb, only subtetly is that the C file has been edited accordingly to ensure that the positions of the two atoms lie within one unit cell. 
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        U & $\mu$ &  nk & nkf\\ \hline
+        0-8 (steps of 0.25)  &  0-1 (steps of 0.1)  & 20   & 5  \\ \hline
+    \end{tabular}
+    \caption{Umu4 model}
+    \label{tab:example_table}
+\end{table}
+
+
+
+
+\end{document}

@@ -1,0 +1,54 @@
+#!/bin/bash
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/work/ec261/ec261/shared/OpenBLAS/lib:/work/ec261/ec261/shared/src/diverge/
+#export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+nk=$1
+nkf=$2
+PointsFile=$3
+time_log=$4
+
+if [ ! -d k${nk}_kf${nkf} ]; then
+    mkdir k${nk}_kf${nkf}
+fi
+
+
+labels=("SC" "SDW" "CDW" "FL")
+
+U_array=()
+J_array=()
+
+#read in the U and J points to loop over
+while read -r num1 num2; do
+    U_array+=("$num1")
+    J_array+=("$num2")
+done < $PointsFile
+
+#go through all those U and J points. 
+for i in "${!U_array[@]}"; do
+    filename=k${nk}_kf${nkf}/1NN_ff4_${U_array[i]}_${J_array[i]}_${nk}_${nkf}.out
+    if [ -e $filename ]; then
+         echo $filename "already exists"
+    else
+    	echo "Calculation:" ${U_array[i]} ${J_array[i]} $nk $nkf $filename
+    	time_taken=$({ time ./FRG_1NN_ff4.x ${U_array[i]} ${J_array[i]} $nk $nkf> $filename; } 2>&1 | grep "real" | awk '{print $2}')
+	final_data=$(tail -n1 $filename)
+	read -a fields <<< "$final_data"
+	last_column="${fields[-1]}" #The maximum value
+        first_column="${fields[0]}" #The final energy
+
+	if [[ "$first_column" =~ e-06$ ]]; then
+	final_label="${labels[-1]}" #its a Fermi Liquid
+	else
+	for i in "${!fields[@]}"; do
+		if [[ "${fields[$i]}" == "$last_column" ]]; then
+		final_label="${labels[$((i-1))]}"
+		break
+		fi
+	done
+	fi
+	echo -n  "$filename " >> $time_log
+	echo -n  "$final_label " >> $time_log
+        echo -n  "$first_column " >> $time_log
+	echo  "$time_taken"  >> $time_log
+    fi
+done 

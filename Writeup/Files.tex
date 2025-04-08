@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{File tracker- Masters Project}
+\author{Maria Ramírez Rodríguez}
+\date{February-May 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{1NN models}
+
+\subsection{ Form factor convergence}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        File name & Location & U & $\mu$ &  nk & nkf & form factor & Other \\ \hline
+        1NN\_ff.log &  paws000 & 3.0 & 0.2 & 20 & 5 & 1-10 & n/a \\ \hline
+        1NN\_ff2.log &  paws000 & 5.0 & 0.5 & 20 & 5 & 1-10 & n/a  \\ \hline
+        1NN\_ff3.log &  paws000 & 5.0 & 0.2 & 20 & 5 & 1-10 & n/a  \\ \hline
+        1NN\_ff4.log &  paws000 & 5.0 & 0.2 & 20 & 5 & 1-10 & change in step size \\ \hline
+        1NN\_ff5.log &  paws000 & 5.0 & 0.2 & 20 & 5 & 50 & n/a  \\ \hline
+        1NN\_ff6.log &  paws000 & 5.0 & 0.2 & 20 & 5 & 10-15 & n/a  \\ \hline
+        1NN\_ff7.log &  paws000 & 5.0 & 0.1 & 20 & 5 & 1-10 & n/a  \\ \hline
+        1NN\_ff8.log &  paws000 & 5.5 & 0.9 & 20 & 5 & 1-10 & n/a  \\ \hline
+        1NN\_ff9.log &  paws000 & 5.5 & 1.0 & 20 & 5 & 1-10 & n/a  \\ \hline
+        1NN\_ff10.log &  paws000 & 5.0 & 0.2 & 20 & 5 & 1-10 & RIGHT  \\ \hline
+        1NN\_ff11.log &  paws000 & 3.0 & 0.2 & 20 & 5 & 1-10 & RIGHT  \\ \hline
+        1NN\_ff12.log &  paws000 & 5.0 & 1.0 & 20 & 5 & 1-10 & RIGHT  \\ \hline
+    \end{tabular}
+    \caption{Form factor convergence data for the 1NN model}
+    \label{tab:example_table}
+\end{table}
+
+Note: Ony models after ff10 (inclusive) were run with the correct code 
+
+
+\section{2NN models}
+
+\subsection{ Form factor convergence}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        File name & Location & U & $\mu$ &  nk & nkf & form factor & Other \\ \hline
+        2NN\_ff3.log &  paws002 & 5.0 & 0.2 & 20 & 5& 1-10 & n/a \\ \hline
+        2NN\_ff4.log &  paws002 & 5.0 & 1.0 & 20 & 5& 1-10 & n/a \\ \hline
+       
+    \end{tabular}
+    \caption{Form factor convergence data for the 2NN model}
+    \label{tab:example_table}
+\end{table}
+
+\subsection{k values convergence}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        File name & Location & U & $\mu$ &  nk & nkf & form factor & Other \\ \hline
+        2NNktest\_5\_0.2.log &  paws002 & 5.0 & 0.2 & comb (2-20) & (2-16)& 4 & n/a \\ \hline
+        2NNktest\_3\_0.2.log &  paws002 & 3.0 & 0.2 & comb (2-20) & (2-16)& 4 & n/a \\ \hline
+       
+    \end{tabular}
+    \caption{nk convergence data for the 2NN model}
+    \label{tab:example_table}
+\end{table}
+
+
+
+\end{document}

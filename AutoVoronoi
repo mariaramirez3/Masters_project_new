@@ -1,0 +1,32 @@
+#!/bin/bash
+#SBATCH -J m100_k8_4
+#SBATCH --nodes=1
+#SBATCH --exclusive
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=36
+#SBATCH -t 96:00:00
+#SBATCH -p standard
+#SBATCH --qos=standard
+#SBATCH --account=ec261
+ulimit -s unlimited
+module load python
+module load gcc
+module load fftw
+module load openmpi
+module load eigen
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/work/ec261/ec261/shared/OpenBLAS/lib:/work/ec261/ec261/shared/src/diverge/
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+total=20
+nk=8
+nkf=4
+PointsFile="Points_8_4.txt"
+LogFile="Sr214m100_8_4.log"
+
+for i in $(seq 1 $total);do
+echo "Starting sequence $i out of $total"
+./job_CalcFRG $nk $nkf $PointsFile $LogFile
+python3 CalculateVoronoiPoints.py $LogFile $PointsFile
+done

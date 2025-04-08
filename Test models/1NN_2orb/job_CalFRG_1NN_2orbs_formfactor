@@ -1,0 +1,52 @@
+#!/bin/bash
+nk=$1
+nkf=$2
+FormsFile=$3
+time_log=$4
+labels=("SC" "SDW" "CDW" "FL")
+U=3.0
+mu=0.2
+form_array=()
+
+# Create directory if it doesn't exist
+if [ ! -d k${nk}_kf_${nkf} ]; then
+    mkdir k${nk}_kf_${nkf}
+fi
+
+# Read form values from the file
+while read -r form; do
+    form_array+=("$form")
+done < "$FormsFile"
+
+# Loop over form values
+for form in "${form_array[@]}"; do
+    filename="k${nk}_kf_${nkf}/1NN2orb_${U}_${mu}_${form}_${nk}_${nkf}.out"
+    
+    if [ -e "$filename" ]; then
+        echo "$filename already exists"
+    else
+        echo "Calculation: U=$U mu=$mu form=$form nk=$nk nkf=$nkf filename=$filename"
+        time_taken=$({ time ./FRG_1NN_2orbs.x $U $mu $nk $nkf $form  > "$filename"; } 2>&1 | grep "real" | awk '{print $2}')
+
+        final_data=$(tail -n1 "$filename")
+        read -a fields <<< "$final_data"
+        last_column="${fields[-1]}" # The maximum value
+        first_column="${fields[0]}" # The final energy
+
+        if [[ "$first_column" =~ e-06$ ]]; then
+            final_label="${labels[-1]}" # It's a Fermi Liquid
+        else
+            for i in "${!fields[@]}"; do
+                if [[ "${fields[$i]}" == "$last_column" ]]; then
+                    final_label="${labels[$((i-1))]}"
+                    break
+                fi
+            done
+        fi
+
+        echo -n "$filename " >> "$time_log"
+        echo -n "$final_label " >> "$time_log"
+        echo -n "$first_column " >> "$time_log"
+        echo "$time_taken" >> "$time_log"
+    fi
+done
