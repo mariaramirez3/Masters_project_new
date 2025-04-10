@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  7 APR 2025 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  10 APR 2025 14:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/oem/Documents/Final year project/Writeup/FinalWriteup.tex"
-(/home/oem/Documents/Final year project/Writeup/FinalWriteup.tex
+**"/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex"
+(/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -249,34 +249,34 @@ File: FRGflowdiagram.png Graphic file (type png)
 <use FRGflowdiagram.png>
 Package pdftex.def Info: FRGflowdiagram.png  used on input line 91.
 (pdftex.def)             Requested size: 442.29108pt x 216.97156pt.
-<1NNpd.png, id=26, 433.62pt x 578.16pt>
-File: 1NNpd.png Graphic file (type png)
-<use 1NNpd.png>
-Package pdftex.def Info: 1NNpd.png  used on input line 130.
-(pdftex.def)             Requested size: 393.15178pt x 524.22969pt.
- [4 <./FRGflowdiagram.png>]
-<1NNTcformu.png, id=31, 398.23781pt x 309.40594pt>
-File: 1NNTcformu.png Graphic file (type png)
-<use 1NNTcformu.png>
-Package pdftex.def Info: 1NNTcformu.png  used on input line 142.
-(pdftex.def)             Requested size: 196.57214pt x 152.72443pt.
-<SC_gap_FS_1NN_0.0_10.00_1.00_80_5.png, id=32, 462.528pt x 346.896pt>
-File: SC_gap_FS_1NN_0.0_10.00_1.00_80_5.png Graphic file (type png)
-<use SC_gap_FS_1NN_0.0_10.00_1.00_80_5.png>
-Package pdftex.def Info: SC_gap_FS_1NN_0.0_10.00_1.00_80_5.png  used on input line 149.
-(pdftex.def)             Requested size: 245.71893pt x 184.29333pt.
-<1NN_SDW_stripes.png, id=33, 805.50937pt x 478.03593pt>
+<1NNphasediagram.png, id=26, 621.82312pt x 515.67656pt>
+File: 1NNphasediagram.png Graphic file (type png)
+<use 1NNphasediagram.png>
+Package pdftex.def Info: 1NNphasediagram.png  used on input line 130.
+(pdftex.def)             Requested size: 614.29733pt x 509.4355pt.
+
+Overfull \hbox (122.85947pt too wide) in paragraph at lines 130--133
+ [][] 
+ []
+
+[4 <./FRGflowdiagram.png>]
+<1NNSC.png, id=31, 539.76656pt x 211.54031pt>
+File: 1NNSC.png Graphic file (type png)
+<use 1NNSC.png>
+Package pdftex.def Info: 1NNSC.png  used on input line 142.
+(pdftex.def)             Requested size: 491.43787pt x 192.60204pt.
+<1NN_SDW_stripes.png, id=32, 805.50937pt x 478.03593pt>
 File: 1NN_SDW_stripes.png Graphic file (type png)
 <use 1NN_SDW_stripes.png>
-Package pdftex.def Info: 1NN_SDW_stripes.png  used on input line 160.
+Package pdftex.def Info: 1NN_SDW_stripes.png  used on input line 159.
 (pdftex.def)             Requested size: 442.29108pt x 262.48291pt.
-<1NNN.png, id=34, 531.48563pt x 536.0025pt>
+<1NNN.png, id=33, 531.48563pt x 536.0025pt>
 File: 1NNN.png Graphic file (type png)
 <use 1NNN.png>
-Package pdftex.def Info: 1NNN.png  used on input line 172.
-(pdftex.def)             Requested size: 442.29108pt x 446.0597pt.
- [5] [6 <./1NNpd.png>] [7 <./1NNTcformu.png> <./SC_gap_FS_1NN_0.0_10.00_1.00_80_5.png> <./1NN_SDW_stripes.png>] [8 <./1NNN.png>]
-Overfull \hbox (54.45302pt too wide) in paragraph at lines 191--209
+Package pdftex.def Info: 1NNN.png  used on input line 171.
+(pdftex.def)             Requested size: 491.43787pt x 495.6228pt.
+ [5] [6 <./1NNphasediagram.png>] [7 <./1NNSC.png> <./1NN_SDW_stripes.png>] [8 <./1NNN.png>]
+Overfull \hbox (54.45302pt too wide) in paragraph at lines 190--208
  [][] 
  []
 
@@ -291,18 +291,18 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4218 strings out of 476182
- 70305 string characters out of 5795596
+ 4200 strings out of 476182
+ 69832 string characters out of 5795596
  1936975 words of memory out of 5000000
- 26208 multiletter control sequences out of 15000+600000
+ 26190 multiletter control sequences out of 15000+600000
  564709 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 67i,10n,77p,971b,408s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,10n,77p,979b,394s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on FinalWriteup.pdf (10 pages, 1040352 bytes).
+Output written on FinalWriteup.pdf (10 pages, 1180078 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

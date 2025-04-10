@@ -45,7 +45,7 @@ We extend these models further by considering the two-orbital per site case.
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.9\textwidth]{2Dhubbardmodel.png}  % Adjust width as needed
-    \caption{\textbf{Two-Dimensional Tight-Binding Models:}Three pannels showing the 1NN, 1NNN and 1NN2 models discussed in Section~\ref{subsec:1NNModel},~\ref{subsec:1NNNModel} and~\ref{subsec:1NN2Model} respectively. Fig a) shows the Nearest-neighbour hopping case, where \textit{t} depicts the hopping amplitude between the neighbouring sites. Fig b) shows the inclusion of the next-nearest neighbour hopping, the magnitude given by \textit{t'}.
+    \caption{\textbf{Two-Dimensional Tight-Binding Models:} Three pannels showing the 1NN, 1NNN and 1NN2 models discussed in Section~\ref{subsec:1NNModel},~\ref{subsec:1NNNModel} and~\ref{subsec:1NN2Model} respectively. Fig a) shows the Nearest-neighbour hopping case, where \textit{t} depicts the hopping amplitude between the neighbouring sites. Fig b) shows the inclusion of the next-nearest neighbour hopping, the magnitude given by \textit{t'}.
     Fig c) Shows the extension to the two-orbital case, depicting the same orbital ($t_{orb1}$, $t_{orb2}$) and different orbital ($t_{orb1,2}$) nearest neighbour hopping. Note that this is just a pictorial representation of the orbitals, and that it does not correspond to a particular choice of orbitals or their real space projection. }
     \label{fig:2D Hubbard model}
 \end{figure}
@@ -127,31 +127,30 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
-    \includegraphics[width=0.8\textwidth]{1NNpd.png}  % Adjust width as needed
-    \caption{Phase diagram for the 1NN model (t =1eV, nkxnkf = 20x5, ff = 4\AA). Calculated points in the phase diagram are showed by the 'x' markers and a lighter-couloured background is used to depict interpolated regions between these points. }
+    \includegraphics[width=1.25\textwidth]{1NNphasediagram.png}  % Adjust width as needed
+    \caption{\textbf{Phase diagram for the 1NN model}:  (t =1eV, nkxnkf = 20x5, ff = 4\AA) as a function of On-site Coulumb Repulsion $U$ and chemical potential $\mu$. 
+    Figure shows the four phases observed in the 1NN model: SC (Superconductivity), SDW (Spin-Density Wave), CDW(Charge Density Wave) and FL (Fermu-Liquid).
+    Calculated points in the phase diagram are showed by the 'x' markers and a lighter-couloured background is used to depict interpolated regions between these points. }
     \label{fig:1NNpd}
 \end{figure}
 
 
 \subsubsection{Superconductivity in the 1NN Model}
 
-\begin{figure}[htbp]
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
-    \begin{subfigure}{0.40\textwidth} % Adjust width as needed
-        \centering
-        \includegraphics[width=\linewidth]{1NNTcformu.png}
-        \vspace{2mm}
-        \label{fig:sub3}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.50\textwidth} % Adjust width as needed
-        \centering
-        \includegraphics[width=\linewidth]{SC_gap_FS_1NN_0.0_10.00_1.00_80_5.png}
-        \label{fig:sub2}
-    \end{subfigure}
-    \caption{(LHS) Tc as a function of chemical potential $\mu$ for U =10.00eV, showing an enhancement closer to the magnetic instability. (RHS) Superconducting order parameter for U=10.00 eV, $\mu$ = 1.00 eV showing antisymmetry about a 90 degree rotation and hence a d-wave symmetry.}
-    \label{fig: SC_in_1NN}
+    \includegraphics[width=1.0\textwidth]{1NNSC.png}  % Adjust width as needed
+    \caption{\textbf{Superconductivity in the 1NN model}:  
+    Fig a) Superconducting order parameter projected on Fermi Surface at $\mu$ = 1.00 eV, 
+    for U =10.00eV. The order parameter is antisymmetric about a 90 degree rotation and hence
+    it exhibits d-wave symmetry. 
+    Fig b) Transition temperature (Tc) as a function of chemical potential ($\mu$) for U =10.00eV.
+    Tc is enhanced closest to the magnetic instability.   
+    }
+    \label{fig:1NNSC}
 \end{figure}
+
+
 
 \subsubsection{Magnetic stripes in the 1NN Model}
 
@@ -169,7 +168,7 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
-    \includegraphics[width=0.9\textwidth]{1NNN.png}  % Adjust width as needed
+    \includegraphics[width=1.0\textwidth]{1NNN.png}  % Adjust width as needed
     \caption{\textbf{1NNN model:} a) Phase diagram for the 1NNN model as a function of Coulumb repulsion U and chemical potential $\mu$ (t =1eV, nkxnkf = 20x5, ff = 4\AA) for t'=0.00, 0.25, 0.50, 0.75 eV. 
     b) Transition temperature for the superconducting region.
     c) Single plot of the band structure along high-symmetry path for corresponding values of t'.
@@ -200,7 +199,7 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
         \hline
         0.25 & 1.40 &  Yes (CDW)  & (0,0)  & FM \\
         \hline
-        0.25 & -2.00 & No  & (0,)-($\pi$, $\pi$)  & FM - AFM\\
+        0.25 & -2.00 & No  & (0,0)-($\pi$, $\pi$)  & FM - AFM\\
         \hline
         0.25 & 0.60 &  No  & (0,0)  & FM \\
           
