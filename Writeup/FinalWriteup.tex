@@ -172,6 +172,15 @@ Q_0^{\Lambda} & 0 \\
 \label{subsubsec:Truncation scheme}
 \subsubsection{Decoupling of flow equation}
 
+
+After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple  the evolution of the two-particle coupling as a function of the flow parameter $\lambda$ into three channels:
+
+\begin{equation}\label{3 channels}
+    \frac{d}{d\lambda} V^{\lambda}(k1, k2, k3) = \mathcal{T}_{pp}^{\lambda}(k1,k2,k3) + \mathcal{T}_{cr-ph}^{\lambda}(k1,k2,k3) +\mathcal{T}_{d-ph}^{\lambda}(k1,k2,k3)
+\end{equation}
+
+\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms given explicitly below and they represent all possible ways in which the two particle interactions can occur in our correlated system. When applied to 2D systems, the solution to the flow equation is usually inacecessible. For this matter, there exist several numerical approaches of which this TUFRG method remains as the most powerful one.
+
 \subsubsection{Instability calculation}
 
 
@@ -216,11 +225,13 @@ onsite Coulumb repulsion. Therefore, the work presented here covers a much wider
 
 \noindent In real materials,  the chemical potential is an easily tuneable parameter due to its strong connection to the electronic doping of the system.
 However, controlling the magnitude of the Coulumb repulsion between electrons is not that straightforward. 
+Moreover, some of the interesting features of these phase-diagrams lie outside of the physical regime. (ie- in our FRG calculation a weak-coupling limit was 
+assumed and therefore any Coulumb repulsion values above the magnitude of the  bandwidth of the material (8eV) can be considered to be unphysical in this limit.)
 Therefore, the analysis performed in this project does not neccesarily provide a route to enhance the superconductivity in real materials that resemble the models investigated. Instead, the main aim is to understand how varying these parameters affects the correlated phases observed in the model. It is also important to note, as discussed in Section \ref{subsubsec:Truncation scheme}, that any analysis on the transition temperature
 of the superconducting regions must be treated qualitatively and that this work does not claim to have found Superconducting regions at temperatures of the order of thousands of Kelvin in any of the models discussed. \par 
 
 \medskip
-\noindent The complete phase diagram for the values discussed above is shown in Fig.\ref{fig:1NNpd}. This particle-hole symmetric phase diagram shows a magnetic dome sandwiched between two superconducting regions.Moreover, narrow magnetic stirpes appear for even
+\noindent The complete phase diagram for the values discussed above is shown in Fig.\ref{fig:1NNpd}. This particle-hole symmetric phase diagram shows a magnetic dome sandwiched between two superconducting regions. Moreover, narrow magnetic stirpes appear for even
 integer chemical potential values.
 \par
 
@@ -266,7 +277,10 @@ integer chemical potential values.
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.9\textwidth]{1NNstripes.png}  % Adjust width as needed
-    \caption{\textbf{Magentic stripes in the 1NN model}: Fig a) Transition temperature as a function of Coulumb repulsion (U) along the Magnetic stripe at $\mu$ =1eV. Fig b). Magnetic susceptibility along high symmetry path for U =2.00 eV. Fig c) Magenetic susceptibility along high symmetry path for U= 18.00eV. Plots showing the susceptibility as a function of \b{q} for both magnetic regions. The Ferromagnetic SDW is supressed by a superconducting phase at U$\approx$ 6.00eV. At larger values of U,  the SDW phase is recovered but with an Anti-Ferromagnetic ordering instead.  }
+    \caption{\textbf{Magentic stripe in the 1NN model for doping at $\frac{1}{8}$ of the bandwith}: Fig a) Transition temperature as a function of Coulumb repulsion (U) along the Magnetic stripe at $\mu$ =1eV. 
+       Fig b) Magnetic susceptibility along high symmetry path for U =2.00 eV. 
+       Fig c) Plot of the Superconducting order parameter projected on top of the Fermi-surface of the 1NN model for U = 10.00eV and $\mu$ =1.00eV.
+       Fig d) Magenetic susceptibility along high symmetry path for U= 18.00eV. Plots showing the susceptibility as a function of \b{q} for both magnetic regions. The Ferromagnetic SDW is supressed by a superconducting phase at U$\approx$ 6.00eV. At larger values of U,  the SDW phase is recovered but with an Anti-Ferromagnetic ordering instead.  }
     \label{fig:1NN_stripes}
 \end{figure}
 
@@ -289,6 +303,22 @@ integer chemical potential values.
 \newpage
 
 \subsubsection{Superconductivity in the 1NNN Model}
+
+Important to note that results shown in Fig \ref{fig:1NNNSC} are the plots for the case of U = 9.00eV and although this
+value is unphysical since we constrain ourselves to the weak-coupling approximation in which we assume that U is of the orders of
+magnitude of the bandwidth of the material. 
+
+
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
+    \centering
+    \includegraphics[width=0.90\textwidth]{1NNNSC_075.png}  % Adjust width as needed
+    \caption{\textbf{Change in the superconducting order parameter in the t' =0.75eV 1NNN model}: Fig a) Critical temperature
+    as a function of chemical potential $\mu$ for u = 9.00eV.
+    The lower panel shows the magnitude of the superconducting order parameter plotted on top of the fermi surface for U= 9.00eV and $\mu$ = -2.6eV, -1.8eV and -1.4eV. These are shown in Figs b)
+    c) and d) respectively.  }
+    \label{fig:1NNNSC}
+\end{figure}
+
 
 
 
