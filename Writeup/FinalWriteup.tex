@@ -22,6 +22,8 @@
 
 \subsection{Unconventional superconductivity}
 
+
+
 \subsubsection{Spin-fluctuation mediated superconductivity}
 
 \subsection{Hubbard-Kanamori Model}
@@ -86,6 +88,12 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 
 \subsection{Theoretical Background in FRG}
 
+In this section the theoretical framework in which FRG calculations are performed is outlined. The central element of FRG is a flow equation that describes the evolution of the system's action with respect to a scalar parameter Lambda $\Lambda$ \textit{(See section ~\ref{subsubsec:Flow Equation})}.
+The flow equation can be solved exactly for a limited number of systems (REFERENCE), so for most sceneraios an approximation has to be made in order to reach a solution in a reasonable computational time. More details of how this approximation is performed and the limitations it presents can be found in Section ~\ref{subsubsec:Truncation scheme}. For the systems explored in this project only two-particle
+interactions are considered and any higher order terms are neglected.
+This allows for the (effective) action of the system to be separated into three channels, which correspond to the three physical channels: Superconductivity, Spin-Density and Charge-Density Waves.
+The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the material exhibits. This rather "hand-wavy" overview of FRG can be viewed as a flowchart in Fig.\ref{fig:FRGflowdiagram}.
+
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.9\textwidth]{FRGflowdiagram.png}  % Adjust width as needed
@@ -95,12 +103,77 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 \end{figure}
 
 \subsubsection{Flow equation}
+\label{subsubsec:Flow Equation}
+
+The central elements of statitiscal physics are the partition function, the canonical potential and its Legendre transformations. One can derive all physical observables from these. In quantum many body physics, this partition function is replaced by a partition functional, defined as follows:
+
+\begin{equation}\label{partition functional}
+    \mathcal{Z}[\bar{\eta}, \eta] = \int \mathcal{D} \bar{\psi} \mathcal{D}\psi e^{\mathcal{S}[\bar{\psi}, \psi]}e^{(\bar{\eta}, \psi)+(\eta, \bar{\psi})}
+\end{equation}
+
+\noindent In the case of fermionic systems, the action in the exponent of Eq.\ref{partition functional} takes the form shown below.
+\begin{equation} \label{action}
+    \mathcal{S}[\psi, \bar{\psi}] = -(\bar{\psi}, G_0^{-1} \psi) + V[\psi, \bar{\psi}]
+\end{equation}
+
+\noindent Here, $V[\psi, \bar{\psi}]$ is an arbitrary many-body interaction and $G_0$ represents the propagator of the noninteracting system. This equation contains the shorthand notation $(...)$, which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. The Grassman field index $x$ represents all the quantum numbers of the single-particle basis and imaginary time.
+Note that in the limiting case where $V=0$, the path integral is exactly solveable. The main idea behind FRG is to introduce a cutoff in the non interacting Green's function ($G_0$). 
+The cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently including electronic correlations. \par
+
+\medskip
+
+\noindent For convinience, the equations are then formulated in terms of the effective action (the Legendre transform of $\mathcal{G}[\eta, \bar{\eta}]$):
+
+\begin{equation} \label{Effective action}
+    \mathcal{T}[\psi, \bar{\psi}] = (\bar{\eta},\psi) + (\bar{\psi},\eta) \mathcal{G}[\eta, \bar{\eta}]
+\end{equation}
+
+\noindent where $\mathcal{G}[\eta, \bar{\eta}]$ is given by:
+
+\begin{equation}\label{G term in effective action}
+    \mathcal{G}[\eta, \bar{\eta}] = 
+    -ln \int{\mathcal{D}\psi \mathcal{D} \bar{\psi}e^{-\mathcal{S}[\psi, \bar{\psi}]}e^{(\bar{\eta}, \psi) +(\bar{\psi}, \eta)}}
+\end{equation}
+
+\noindent The next step is to introduce a scalar flow parameter $\lambda$ into the generating functionals defined above. 
+This has to be performed such that the generators recover their orginal structure at $\lambda = 0 $.
+After a series of algebraic manipulations, which are ommitted here but can be found in (REFERENCE), one arrives at the exact functional flow equation for the effective action:
+
+
+\begin{equation} \label{eq:ExactFunctionalFlowEquation}
+    \frac{d}{d\Lambda} \mathcal{T}^{\Lambda}[\psi, \bar{\psi}] = (\bar{\psi}, \dot{Q}_0^{\Lambda} \psi) - \frac{1}{2} \text{tr} \big( \dot{Q}_0^{\Lambda} (\boldsymbol{\Gamma}^{(2)\Lambda}[\psi, \bar{\psi}])^{-1} \big).
+\end{equation}
+
+\noindent Where $\Gamma^{(2)\lambda}[\psi, \bar{\psi}]$ and  $\b{Q}_0^{\Lambda}$ are given by equations (\ref{Gamma term}) and (\ref{Q0 term }) respectively.
+
+
+
+\begin{equation}\label{Gamma term}
+\Gamma^{(2)\lambda}[\psi, \bar{\psi}] = 
+\begin{bmatrix}
+\bar{\delta} \delta \Gamma[\psi, \bar{\psi}](x',x) & \bar{\delta} \bar{\delta} \Gamma[\psi, \bar{\psi}](x',x) \\
+\delta \delta \Gamma[\psi, \bar{\psi}](x',x)  & \delta \bar{\delta} \Gamma[\psi, \bar{\psi}](x',x)
+\end{bmatrix}
+\end{equation}
+
+
+
+\begin{equation}\label{Q0 term }
+\b{Q}_0^{\Lambda} =
+\begin{bmatrix}
+Q_0^{\Lambda} & 0 \\
+0 & -Q_0^{\Lambda t}
+\end{bmatrix}
+= diag(Q_0^{\Lambda}, - Q_0^{\Lambda t}),
+\end{equation}
+
 
 \subsubsection{Truncation scheme}
-
+\label{subsubsec:Truncation scheme}
 \subsubsection{Decoupling of flow equation}
 
 \subsubsection{Instability calculation}
+
 
 
 
@@ -109,6 +182,7 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 \subsection{Diverge}
 
 \subsection{Convergence of Calculation}
+\label{subsec:convergence}
 
 \subsubsection{Form factor convergence}
 
@@ -125,6 +199,39 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 \subsection{1NN Model}
 \label{subsec:1NNModel}
 
+We define the 1NN model as the 2D Hubbard model with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
+As outlined in Section \ref{subsec: HubbardModel}, solving this model near half-filling becomes a hard endeavour. 
+This section explores the solution to the 1NN Model Hamiltonian using  two-particle-interaction-truncated FRG.
+Here, a phase diagram in terms of the On-site Coulumb repulsion $U$ and chemical
+potential $\mu$ is presented and discussed in detail. The calculations were carried out using a 20x5 $n_k$x$n_{kf}$ grid and a form factor
+of 4\AA, with a  nearest-neighbour hopping parameter of 1eV.  The choice of convergence parameters was determined by the methods discussed in Section \ref{subsec:convergence}. 
+Results are presented for Coulumb repulsion values  ranging from 1-20 eV and chemical potential
+values spanning the entire energetic bandwith of the model (from -4eV to 4eV). 
+Whilst there exists previous work on the 2D Hubbard Model using FRG (REFERENCE), most of it focuses on small areas of the phase diagram and none of it explores the effect of varying the 
+onsite Coulumb repulsion. Therefore, the work presented here covers a much wider range of parameters than what has previously been explored. 
+\medskip
+
+
+
+
+\noindent In real materials,  the chemical potential is an easily tuneable parameter due to its strong connection to the electronic doping of the system.
+However, controlling the magnitude of the Coulumb repulsion between electrons is not that straightforward. 
+Therefore, the analysis performed in this project does not neccesarily provide a route to enhance the superconductivity in real materials that resemble the models investigated. Instead, the main aim is to understand how varying these parameters affects the correlated phases observed in the model. It is also important to note, as discussed in Section \ref{subsubsec:Truncation scheme}, that any analysis on the transition temperature
+of the superconducting regions must be treated qualitatively and that this work does not claim to have found Superconducting regions at temperatures of the order of thousands of Kelvin in any of the models discussed. \par 
+
+\medskip
+\noindent The complete phase diagram for the values discussed above is shown in Fig.\ref{fig:1NNpd}. This particle-hole symmetric phase diagram shows a magnetic dome sandwiched between two superconducting regions.Moreover, narrow magnetic stirpes appear for even
+integer chemical potential values.
+\par
+
+\medskip
+
+\noindent Paragraph comparing results to the Cuprates!
+
+
+
+
+
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=1.25\textwidth]{1NNphasediagram.png}  % Adjust width as needed
@@ -133,6 +240,8 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
     Calculated points in the phase diagram are showed by the 'x' markers and a lighter-couloured background is used to depict interpolated regions between these points. }
     \label{fig:1NNpd}
 \end{figure}
+
+\newpage
 
 
 \subsubsection{Superconductivity in the 1NN Model}
@@ -156,8 +265,8 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
-    \includegraphics[width=0.9\textwidth]{1NN_SDW_stripes.png}  % Adjust width as needed
-    \caption{Critical temperature as a function of Coulumb repulsion (U) along the Magnetic stripe at $\mu$ =1eV. Plots showing the susceptibility as a function of \b{q} for both magnetic regions. The Ferromagnetic SDW is supressed by a superconducting phase. At larger values of U, we recover the SDW phase but with an Anti-Ferromagnetic ordering instead.  }
+    \includegraphics[width=0.9\textwidth]{1NNstripes.png}  % Adjust width as needed
+    \caption{\textbf{Magentic stripes in the 1NN model}: Fig a) Transition temperature as a function of Coulumb repulsion (U) along the Magnetic stripe at $\mu$ =1eV. Fig b). Magnetic susceptibility along high symmetry path for U =2.00 eV. Fig c) Magenetic susceptibility along high symmetry path for U= 18.00eV. Plots showing the susceptibility as a function of \b{q} for both magnetic regions. The Ferromagnetic SDW is supressed by a superconducting phase at U$\approx$ 6.00eV. At larger values of U,  the SDW phase is recovered but with an Anti-Ferromagnetic ordering instead.  }
     \label{fig:1NN_stripes}
 \end{figure}
 
@@ -205,9 +314,11 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
           
         \hline
     \end{tabular}
-    \caption{\textbf{Survey of stripes in the 1NNN model.} Table summarising the location and magnetic ordering of the Stripes.}
+    \caption{\textbf{Survey of stripes in the 1NNN model.} Table summarising the location and magnetic ordering of the Stripes in the 1NNN model .}
     \label{tab:StripesSummary}
 \end{table}
+
+\subsubsection{Continous variation of next-nearest neighbour hopping}
 
 \subsection{Effect of bi-orbital system (1NN2 model)}
 \label{subsec:1NN2Model}
@@ -229,6 +340,8 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
     \caption{\textbf{Nearest neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters, note that  $t_{\perp}$ corresponds to the intralayer hopping between the $d_{3z^2-r^2}$ orbitals. Other rows show which hopping parameters were included in each of the two models.}
     \label{tab:2D2orbparams }
 \end{table}
+
+
 
 \subsubsection{Superconductivity in the 1NN2 model}
 
