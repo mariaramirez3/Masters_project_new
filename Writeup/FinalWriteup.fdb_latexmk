@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex FinalWriteup"] 1744386903.95527 "FinalWriteup.aux" "FinalWriteup.bbl" "FinalWriteup" 1744388054.79137 0
+["bibtex FinalWriteup"] 1744489023.48611 "FinalWriteup.aux" "FinalWriteup.bbl" "FinalWriteup" 1744489100.15217 0
   "./references.bib" 1743497317.07966 1351 b7b025697a228708ee841580b5a5e6cc ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "FinalWriteup.aux" 1744388054.72948 10386 3b85239ea385dc200b1a1e566ef8d335 "pdflatex"
+  "FinalWriteup.aux" 1744489100.10711 10386 f0bedeb3adf5bb29d5fb247499a16075 "pdflatex"
   (generated)
   "FinalWriteup.bbl"
   "FinalWriteup.blg"
   (rewritten before read)
-["pdflatex"] 1744388053.89806 "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" "FinalWriteup.pdf" "FinalWriteup" 1744388054.79166 0
+["pdflatex"] 1744489099.45869 "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" "FinalWriteup.pdf" "FinalWriteup" 1744489100.15234 0
   "/etc/texmf/web2c/texmf.cnf" 1738672379.84493 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" 1744388053.76948 21925 ae86b4f6779d68ece334122b5376fe50 ""
+  "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" 1744489099.35311 22578 0293e4068a8a6560f912e4a9a21e8d5e ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -80,10 +80,10 @@
   "1NNstripes.png" 1744384988.84976 74737 955c7654c18c685e8fb2c72232953800 ""
   "2Dhubbardmodel.png" 1744029096.53911 43641 f11694c37bb0ed3312c8b2421bc63553 ""
   "FRGflowdiagram.png" 1744038794.99993 70811 105df604f26633c6cef12f3af1192eca ""
-  "FinalWriteup.aux" 1744388054.72948 10386 3b85239ea385dc200b1a1e566ef8d335 "pdflatex"
-  "FinalWriteup.bbl" 1744386903.96194 49 0eba253fc001332e731e8aba3f23127b "bibtex FinalWriteup"
-  "FinalWriteup.tex" 1744388053.76948 21925 ae86b4f6779d68ece334122b5376fe50 ""
-  "FinalWriteup.toc" 1744388054.73048 2748 bf9fc7e62a5c21a0cab629ba840a83da "pdflatex"
+  "FinalWriteup.aux" 1744489100.10711 10386 f0bedeb3adf5bb29d5fb247499a16075 "pdflatex"
+  "FinalWriteup.bbl" 1744489023.49391 49 0eba253fc001332e731e8aba3f23127b "bibtex FinalWriteup"
+  "FinalWriteup.tex" 1744489099.35311 22578 0293e4068a8a6560f912e4a9a21e8d5e ""
+  "FinalWriteup.toc" 1744489100.10811 2748 bf9fc7e62a5c21a0cab629ba840a83da "pdflatex"
   (generated)
   "FinalWriteup.aux"
   "FinalWriteup.log"
