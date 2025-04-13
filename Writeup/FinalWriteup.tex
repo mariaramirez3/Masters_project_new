@@ -76,7 +76,6 @@ could indeed be an artefact of some numerical approximation (REFERENCE-ABSENCE..
 
 \subsubsection{Hubbard-Kanamori Model}
 In the case of materials with a multi-band and/or multi-orbital nature, the Hubbard model is not sufficient to capture all of the physical phenomena. This motivates the extension of the Hubbard Model to the Hubbard- Kanamori model by including a Hund's coupling term.
-Solving this Hamiltonian is rather challenging, which is why we resort to numerical techniques such as FRG to do so. 
 
 \begin{equation} \label{Hubbard-Kanamori Model}
     H_{int} = U \sum_{is}n_{i,s\uparrow}n_{i,s\downarrow} + \frac{V}{2} \sum_{i,s,t \neq s} n_{is}n_{it} -\frac{J}{2} \sum_{i,s,t \neq s} \vec{S}_{is} \cdot \vec{S}_{it} 
@@ -88,15 +87,15 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 
 \subsection{Theoretical Background in FRG}
 
-FRG falls into the category of many other weak-coupling techniques (such as Mean field-theory, pertubation theory...).
-In these theories, the interactions between the electrons are considered to be weak and therefore, one can effectively model the electrons as free particles 
-and treat their interactions as a pertubation. In the non-interacting limit, the method is exact. Beyond this limit, it is controlled by the ratio between the interaction
+Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why we resort to numerical techniques such as FRG to do so. FRG falls into the category of many other weak-coupling techniques (such as Mean field-theory, pertubation theory...).
+In these theories, interactions between electrons are considered to be weak. This allows one to effectively model the electrons in the system as free particles 
+and treat their interactions as a pertubation. In the non-interacting limit, the method is therefore exact. Beyond this limit, it is controlled by the ratio between the interaction
 strength and the bandwidth of the system. 
 
 \medskip
 
-\noindent In this section the theoretical framework in which FRG calculations are performed is outlined. The central element of FRG is a flow equation that describes the evolution of the system's action with respect to a scalar parameter Lambda $\Lambda$ \textit{(See section ~\ref{subsubsec:Flow Equation})}.
-The flow equation can be solved exactly for a limited number of systems (REFERENCE), so for most sceneraios an approximation has to be made in order to reach a solution in a reasonable computational time. More details of how this approximation is performed and the limitations it presents can be found in Section ~\ref{subsubsec:Truncation scheme}. For the systems explored in this project only two-particle
+\noindent In this section the theoretical framework in which FRG calculations are performed is outlined. The central element of FRG is a flow equation that describes the evolution of the system's action with respect to a scalar/flow parameter Lambda $\Lambda$ \textit{(See section ~\ref{subsubsec:Flow Equation})}.
+The flow equation can be solved exactly for a limited number of systems (REFERENCE), so for most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time. More details of how this approximation is performed and the limitations it presents can be found in Section ~\ref{subsubsec:Truncation scheme}. For the systems explored in this project only two-particle
 interactions are considered and any higher order terms are neglected.
 This allows for the (effective) action of the system to be separated into three channels, which correspond to the three physical channels: Superconductivity, Spin-Density and Charge-Density Waves.
 The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the material exhibits. This rather "hand-wavy" overview of FRG can be viewed as a flowchart in Fig.\ref{fig:FRGflowdiagram}.
@@ -112,7 +111,12 @@ The calculation is then performed to determine the "winning channel" which will 
 \subsubsection{Flow equation}
 \label{subsubsec:Flow Equation}
 
-In this section the derivation of the flow equation is outlined. If interested in further details, the reader is refferred to (REFERENCE). The central elements of statitiscal physics are the partition function, the canonical potential and its Legendre transformations. One can derive all physical observables from these. In quantum many body physics, this partition function is replaced by a partition functional, defined as follows:
+In this section the derivation of the flow equation is outlined. For such, it is assumed that the reader has grasped a strong understanding in Quantum Field theory and many-body physics.
+If interested in further details, the reader is refferred to (REFERENCE). \par
+\medskip
+\noindent The central elements of statitiscal physics are the partition function, the canonical potential and its Legendre transformations. 
+These are such powerful physical quantities that one can derive all physical observables from them.
+For quantum many-body problems, one works instead with partition functional, defined as follows:
 
 \begin{equation}\label{partition functional}
     \mathcal{Z}[\bar{\eta}, \eta] = \int \mathcal{D} \bar{\psi} \mathcal{D}\psi e^{\mathcal{S}[\bar{\psi}, \psi]}e^{(\bar{\eta}, \psi)+(\eta, \bar{\psi})}
@@ -123,27 +127,50 @@ In this section the derivation of the flow equation is outlined. If interested i
     \mathcal{S}[\psi, \bar{\psi}] = -(\bar{\psi}, G_0^{-1} \psi) + V[\psi, \bar{\psi}]
 \end{equation}
 
-\noindent Here, $V[\psi, \bar{\psi}]$ is an arbitrary many-body interaction and $G_0$ represents the propagator of the noninteracting system. This equation contains the shorthand notation $(...)$, which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. The Grassman field index $x$ represents all the quantum numbers of the single-particle basis and imaginary time.
-Note that in the limiting case where $V=0$, the path integral is exactly solveable. The main idea behind FRG is to introduce a cutoff in the non interacting Green's function ($G_0$). 
-The cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently including electronic correlations. \par
-
+\noindent Here, $V[\psi, \bar{\psi}]$ is an arbitrary many-body interaction and $G_0$ represents the propagator of the non-interacting system. This equation contains the shorthand notation $(...)$, which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. The Grassman field index $x$ represents all the quantum numbers of the single-particle basis and imaginary time.\par
 \medskip
 
-\noindent For convinience, the equations are then formulated in terms of the effective action (the Legendre transform of $\mathcal{G}[\eta, \bar{\eta}]$):
+\noindent Note that in the limiting case where $V=0$, the path integral is exactly solveable. 
+The main idea behind FRG is to introduce a cut-off in the non interacting Green's function ($G_0 \rightarrow G_0^{\lambda} = f(\lambda)G_0$). 
+The cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently including electronic correlations. 
+An intuitive example of such would be to introduce a momentum cut-off in the case of a translationally invariant system. In the case of a spin-independant system this would transform the 
+bare propagator as shown below in Equations (\ref{propagator transform 1}) and (\ref{propagator transform 2}). 
 
-\begin{equation} \label{Effective action}
-    \mathcal{T}[\psi, \bar{\psi}] = (\bar{\eta},\psi) + (\bar{\psi},\eta) + \mathcal{G}[\eta, \bar{\eta}]
+\begin{equation} \label{propagator transform 1}
+    G_0(k_0, \textbf{k}) \rightarrow G_0^{\lambda}(k_0, \textbf{k})
 \end{equation}
 
-\noindent where $\mathcal{G}[\eta, \bar{\eta}]$ is given by:
+
+\begin{equation} \label{propagator transform 2}
+    \frac{1}{ik_0 - \xi_{\textbf{k}}} \rightarrow \frac{\theta^{\textbf{k}}}{ik_0 - \xi_{\textbf{k}}}
+\end{equation}
+
+\noindent where $\theta^{\lambda}(\textbf{k})$ is defined, for example, as follows:
+
+\begin{equation} \label{theta def}
+    \theta^{\lambda}(\textbf{k}) = \Theta(|\xi_{\textbf{k}}| - \lambda)    
+\end{equation}
+
+\noindent With this cutoff scheme, the calculation then excludes points close to the Fermi Surface as shown in Figure (FIGURE). 
+For convinience, the derivation will now abandon the idea of the partition functional and will work with the so-called "effective action" instead.
+This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), both defined below in Equations (\ref{Greens function functional}, \ref{G term in effective action}) and (\ref{Effective action}) respectively. 
+
+\begin{equation} \label{Greens function functional}
+    \mathcal{G}[\eta, \bar{\eta}] = -ln(\mathcal{Z}[\eta, \bar{\eta}])
+\end{equation}
 
 \begin{equation}\label{G term in effective action}
     \mathcal{G}[\eta, \bar{\eta}] = 
     -ln \int{\mathcal{D}\psi \mathcal{D} \bar{\psi}e^{-\mathcal{S}[\psi, \bar{\psi}]}e^{(\bar{\eta}, \psi) +(\bar{\psi}, \eta)}}
 \end{equation}
 
-\noindent The next step is to introduce a scalar flow parameter $\lambda$ into the generating functionals defined above. 
-This has to be performed such that the generators recover their orginal structure at $\lambda = 0 $.
+\begin{equation} \label{Effective action}
+    \mathcal{T}[\psi, \bar{\psi}] = (\bar{\eta},\psi) + (\bar{\psi},\eta) + \mathcal{G}[\eta, \bar{\eta}]
+\end{equation}
+
+
+\noindent The next step is to introduce a scalar flow parameter $\lambda$ into the generating functionals defined above. This is done in the same manner as is outlined in the example in Equations (\ref{propagator transform 1}, \ref{propagator transform 2}). 
+But more generally, has to be performed such that the generators recover their orginal structure at $\lambda = 0 $.
 After a series of algebraic manipulations, which are ommitted here but can be found in (REFERENCE), one arrives at the exact functional flow equation for the effective action:
 
 
@@ -177,6 +204,8 @@ Q_0^{\Lambda} & 0 \\
 
 \subsubsection{Truncation scheme}
 \label{subsubsec:Truncation scheme}
+
+The flow equation derived above can only be solved in 
 \subsubsection{Decoupling of flow equation}
 
 
