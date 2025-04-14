@@ -94,11 +94,12 @@ strength and the bandwidth of the system.
 
 \medskip
 
-\noindent In this section the theoretical framework in which FRG calculations are performed is outlined. The central element of FRG is a flow equation that describes the evolution of the system's action with respect to a scalar/flow parameter Lambda $\Lambda$ \textit{(See section ~\ref{subsubsec:Flow Equation})}.
+\noindent In this section the theoretical framework in which FRG calculations are performed is outlined. The central element of FRG is a flow equation that describes the evolution of the effective action of the system with respect to a scalar/flow parameter Lambda $\Lambda$ \textit{(See section ~\ref{subsubsec:Flow Equation})}.
 The flow equation can be solved exactly for a limited number of systems (REFERENCE), so for most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time. More details of how this approximation is performed and the limitations it presents can be found in Section ~\ref{subsubsec:Truncation scheme}. For the systems explored in this project only two-particle
 interactions are considered and any higher order terms are neglected.
-This allows for the (effective) action of the system to be separated into three channels, which correspond to the three physical channels: Superconductivity, Spin-Density and Charge-Density Waves.
+This allows for the effective action of the system to be separated into three terms, which correspond to three physical channels: Superconductivity, Spin-Density and Charge-Density Waves.
 The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the material exhibits. This rather "hand-wavy" overview of FRG can be viewed as a flowchart in Fig.\ref{fig:FRGflowdiagram}.
+For a more rigorous explanation the reader is referred to the sections below. 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
@@ -112,11 +113,11 @@ The calculation is then performed to determine the "winning channel" which will 
 \label{subsubsec:Flow Equation}
 
 In this section the derivation of the flow equation is outlined. For such, it is assumed that the reader has grasped a strong understanding in Quantum Field theory and many-body physics.
-If interested in further details, the reader is refferred to (REFERENCE). \par
+If interested in the finer details of the derivation, the reader is refferred to (REFERENCE). \par
 \medskip
 \noindent The central elements of statitiscal physics are the partition function, the canonical potential and its Legendre transformations. 
 These are such powerful physical quantities that one can derive all physical observables from them.
-For quantum many-body problems, one works instead with partition functional, defined as follows:
+For quantum many-body problems, one works instead with partition functional, defined as follows in Eq.\ref{partition functional}:
 
 \begin{equation}\label{partition functional}
     \mathcal{Z}[\bar{\eta}, \eta] = \int \mathcal{D} \bar{\psi} \mathcal{D}\psi e^{\mathcal{S}[\bar{\psi}, \psi]}e^{(\bar{\eta}, \psi)+(\eta, \bar{\psi})}
@@ -127,10 +128,11 @@ For quantum many-body problems, one works instead with partition functional, def
     \mathcal{S}[\psi, \bar{\psi}] = -(\bar{\psi}, G_0^{-1} \psi) + V[\psi, \bar{\psi}]
 \end{equation}
 
-\noindent Here, $V[\psi, \bar{\psi}]$ is an arbitrary many-body interaction and $G_0$ represents the propagator of the non-interacting system. This equation contains the shorthand notation $(...)$, which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. The Grassman field index $x$ represents all the quantum numbers of the single-particle basis and imaginary time.\par
+\noindent Here, $V[\psi, \bar{\psi}]$ is an arbitrary many-body interaction and $G_0$ represents the propagator of the non-interacting system. This equation contains the shorthand notation $(...)$, which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. In this sum, the Grassman field index $x$ represents all the quantum numbers of the single-particle basis and imaginary time.\par
 \medskip
 
-\noindent Note that in the limiting case where $V=0$, the path integral is exactly solveable. 
+\noindent Note that in the limiting case where $V=0$, the path integral in Eq.\ref{partition functional} is exactly solveable. 
+However, once electronic correlations are included, the picture becomes more complicated. 
 The main idea behind FRG is to introduce a cut-off in the non interacting Green's function ($G_0 \rightarrow G_0^{\lambda} = f(\lambda)G_0$). 
 The cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently including electronic correlations. 
 An intuitive example of such would be to introduce a momentum cut-off in the case of a translationally invariant system. In the case of a spin-independant system this would transform the 
@@ -151,9 +153,12 @@ bare propagator as shown below in Equations (\ref{propagator transform 1}) and (
     \theta^{\lambda}(\textbf{k}) = \Theta(|\xi_{\textbf{k}}| - \lambda)    
 \end{equation}
 
-\noindent With this cutoff scheme, the calculation then excludes points close to the Fermi Surface as shown in Figure (FIGURE). 
-For convinience, the derivation will now abandon the idea of the partition functional and will work with the so-called "effective action" instead.
-This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), both defined below in Equations (\ref{Greens function functional}, \ref{G term in effective action}) and (\ref{Effective action}) respectively. 
+\noindent With this cutoff scheme, the calculation then excludes points close to the Fermi Surface as shown in Figure (FIGURE). \par
+\medskip
+\noindent In the following steps the derivation will proceed in the framework of the  so-called "effective action".
+This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), both of which are defined below in Equations (\ref{Greens function functional}, \ref{G term in effective action}) and (\ref{Effective action}) respectively. 
+\textit{(For convinience and for reasons that
+are beyond the scope of this project it is more convinient to work with the effective action than it is to do so with the partition functional.)}
 
 \begin{equation} \label{Greens function functional}
     \mathcal{G}[\eta, \bar{\eta}] = -ln(\mathcal{Z}[\eta, \bar{\eta}])
@@ -169,7 +174,7 @@ This is the Legendre transformation of the Greens function functional ($\mathcal
 \end{equation}
 
 
-\noindent The next step is to introduce a scalar flow parameter $\lambda$ into the generating functionals defined above. This is done in the same manner as is outlined in the example in Equations (\ref{propagator transform 1}, \ref{propagator transform 2}). 
+\noindent The next step is to introduce a scalar flow parameter $\lambda$ into the generating functionals defined above. This is done in the same manner as is outlined in the example shown in Equations (\ref{propagator transform 1}, \ref{propagator transform 2}). 
 But more generally, has to be performed such that the generators recover their orginal structure at $\lambda = 0 $.
 After a series of algebraic manipulations, which are ommitted here but can be found in (REFERENCE), one arrives at the exact functional flow equation for the effective action:
 
@@ -201,28 +206,59 @@ Q_0^{\Lambda} & 0 \\
 = diag(Q_0^{\Lambda}, - Q_0^{\Lambda t}),
 \end{equation}
 
+\noindent This equation, as mentioned previously, is the central element of FRG and the sections below outline how to solve it.
 
-\subsubsection{Truncation scheme}
+
+\subsubsection{Truncation scheme (TU$^2$FRG)}
 \label{subsubsec:Truncation scheme}
 
-The flow equation derived above can only be solved in 
+The flow equation derived above can be solved for a limited amount of systems (REFERENCE). In order to reduce 
+the memory demand of the calculations for more complex systems, the truncated unity approximation was introduced in 2020 (REFERENCE). 
+The main idea behind this is to find a new basis that, with a controlled loss of accuracy, can represent all 
+of the required elements in a compressed way. It can be shown (REFERENCE), that such a basis can be constructed and is 
+well defined in the case where the calculation is constrained to terms U$^{2}$ \textit{(two-particle interactions)}.
+Partitions of unity are the introduced into a specific part of the flow equation. This reduces an otherwise computationally expensive nested integral to a matrix product. 
+This is an outline of how TU$^2$FRG works. Details of how
+this truncation is incorporated are ommitted but the reader is referred to Appendix. (REFERENCE appendix).\par
+\medskip
+
+\noindent Whilst the truncated scheme presents advantages in computational efficiency, particularly for models with broken translational symmetry, it also has its limitations. 
+TU$^2$FRG relies on short-range interactions, struggling to capture strongly correlated phases. 
+This is particularly relevant for the study of the 2D Hubbard model presented here. TU$^2$FRG will not be able to capture
+the characteristic Mott insulating phase in the Cuprate phase diagrams (REFERENCE), which limits how well the results presented in this project can be directly compared with existing literature. 
+Nevertheless, it manages to successfully capture the competition between Magnetic and Superconducting instabilities, which is one of the main focus of this project. 
 \subsubsection{Decoupling of flow equation}
-
-
 After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple  the evolution of the two-particle coupling as a function of the flow parameter $\lambda$ into three channels:
 
 \begin{equation}\label{3 channels}
-    \frac{d}{d\lambda} V^{\lambda}(k1, k2, k3) = \mathcal{T}_{pp}^{\lambda}(k1,k2,k3) + \mathcal{T}_{cr-ph}^{\lambda}(k1,k2,k3) +\mathcal{T}_{d-ph}^{\lambda}(k1,k2,k3)
+    \frac{d}{d\lambda} \mathcal{T}^{\lambda}(k1, k2, k3) = \mathcal{T}_{pp}^{\lambda}(k1,k2,k3) + \mathcal{T}_{cr-ph}^{\lambda}(k1,k2,k3) +\mathcal{T}_{d-ph}^{\lambda}(k1,k2,k3)
 \end{equation}
 
-\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms given explicitly below and they represent all possible ways in which the two particle interactions can occur in our correlated system. When applied to 2D systems, the solution to the flow equation is usually inacecessible. For this matter, there exist several numerical approaches of which this TUFRG method remains as the most powerful one.
+\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms given explicitly below and they represent all possible ways in which the two particle interactions can occur in the correlated system. The particle-particle (P), particle-hole (D) and cross-particle-hole (C) channels
+correspond to the Superconducting, Magnetic and charge phases respectively. 
+
 
 \subsubsection{Instability calculation}
 
+The procedure from this decoupled flow equation is outlined here. For more details the reader is refferred to (REFERENCES). 
+A FRG calculation will return the self-energy and two-particle vertex \footnote{This is the footnote text.}. These quantities are
+not directly experimentally accessible, so a series of post processing steps have to be carried out. The first step is to find out which of the three channels diverge. 
+This gives the diverging susceptibility. Mean-Field analysis is then carried out at the critical scale in order to obtain
+the ordering symmetry and a linearised gap equation. 
 
 
 
 \section{Computational Methods}
+
+\subsection{FRG specifics}
+
+\noindent So far, the fundamentals of FRG have been outlined and discussed. It is however important to make 
+the reader aware of several caveats that are relevant for the results discussed in this report. 
+
+
+
+A very interesting application of this post-processing process is that of the calculation of the SC gap for the 2D Hubbard model. 
+This is done in the particular case 
 
 \subsection{Diverge}
 
