@@ -1,3 +1,48 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{onnes1911superconductivity}
+H~Kamerlingh Onnes.
+\newblock The superconductivity of mercury.
+\newblock {\em Comm. Phys. Lab. Univ. Leiden}, 122:124, 1911.
+
+\bibitem{schrieffer2018theory}
+J~Robert Schrieffer.
+\newblock {\em Theory of superconductivity}.
+\newblock CRC press, 2018.
+
+\bibitem{bednorz1986possible}
+J~George Bednorz and K~Alex M{\"u}ller.
+\newblock Possible high t c superconductivity in the ba- la- cu- o system.
+\newblock {\em Zeitschrift f{\"u}r Physik B Condensed Matter}, 64(2):189--193, 1986.
+
+\bibitem{moriya2000spin}
+Toru Moriya and Kazuo Ueda.
+\newblock Spin fluctuations and high temperature superconductivity.
+\newblock {\em Advances in Physics}, 49(5):555--606, 2000.
+
+\bibitem{esirgen1997fluctuation}
+G{\"o}khan Esirgen and NE~Bickers.
+\newblock Fluctuation-exchange theory for general lattice hamiltonians.
+\newblock {\em Physical Review B}, 55(4):2122, 1997.
+
+\bibitem{migdal1958interaction}
+AB~Migdal.
+\newblock Interaction between electrons and lattice vibrations in a normal metal.
+\newblock {\em Sov. Phys. JETP}, 7(6):996--1001, 1958.
+
+\bibitem{moriya2006developments}
+Toru Moriya.
+\newblock Developments of the theory of spin fluctuations and spin fluctuation-induced superconductivity.
+\newblock {\em Proceedings of the Japan Academy, Series B}, 82(1):1--16, 2006.
+
+\bibitem{scalapino1995case}
+Douglas~J Scalapino.
+\newblock The case for dx2- y2 pairing in the cuprate superconductors.
+\newblock {\em Physics Reports}, 250(6):329--365, 1995.
+
+\bibitem{timusk1999pseudogap}
+Tom Timusk and Bryan Statt.
+\newblock The pseudogap in high-temperature superconductors: an experimental survey.
+\newblock {\em Reports on Progress in Physics}, 62(1):61, 1999.
 
 \end{thebibliography}

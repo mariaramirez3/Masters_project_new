@@ -2,47 +2,45 @@ This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: FinalWriteup.aux
 The style file: unsrt.bst
-I found no \citation commands---while reading file FinalWriteup.aux
 Database file #1: references.bib
-You've used 0 entries,
+You've used 9 entries,
             1791 wiz_defined-function locations,
-            445 strings with 3532 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
+            515 strings with 4849 characters,
+and the built_in function-call counts, 1844 in all, are:
+= -- 174
+> -- 52
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 22
+- -- 13
+* -- 129
+:= -- 299
+add.period$ -- 27
+call.type$ -- 9
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 9
+duplicate$ -- 82
+empty$ -- 197
+format.name$ -- 13
+if$ -- 401
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 9
+missing$ -- 10
+newline$ -- 48
+num.names$ -- 9
+pop$ -- 15
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 30
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 146
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+while$ -- 22
+width$ -- 10
+write$ -- 100

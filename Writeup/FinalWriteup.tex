@@ -22,9 +22,62 @@
 
 \subsection{Unconventional superconductivity}
 
+For many years after the discovery of superconductivity in 1911\cite{onnes1911superconductivity} physicists
+were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the pairing mechanism in all superconducting materials. 
+However, in 1986, the discovery of the first heavy-fermion superconductor\cite{bednorz1986possible} resulted in the emergence of a whole new class of materials: Unconventional Superconductors. 
+These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory. Whilst there exists consensus that their superconductivity does not in fact stem from the BCS mechanism, 
+for some materials there is no wide agreement on what the mechanism otherwise is. 
 
+\medskip
+\noindent Most generally, the Hamiltonian for a superconducting state can be described as follows:
+
+\begin{equation}\label{General Hamiltonian}
+    \hat{H} = \hat{H}^0 + \hat{H}^{cp}
+\end{equation}
+
+\noindent where $\hat{H}^{cp}$ describes the pairing interation that leads to the formation of a Cooper pair and is given by:
+
+\begin{equation}\label{Hcp}
+    \hat{H}^{cp} = \sum_{k,k'} \Gamma(k, k') c^{\dagger}_{k, \uparrow}  c^{\dagger}_{k', \downarrow} c_{k', \uparrow}c_{-k, \downarrow}
+\end{equation}
+
+\noindent In the case of unconventional superconductors, the form of the effective pairing interaction $\Gamma(k,k')$ has remained as an unanswered question for decades.
 
 \subsubsection{Spin-fluctuation mediated superconductivity}
+
+One emerging theory for some unconventional superconductors such Iron-based or heavy-fermion compounds 
+is that underlying pairing mechanism is driven by spin fluctuations \cite{moriya2000spin}. This section discusses how to
+model spin-fluctuation mediated superconductivity for the fluctuation-exchange approximation(FLEX) \cite{esirgen1997fluctuation}. \par
+\medskip
+\noindent In such cases, the effective pairing interaction $\Gamma(k,k')$ is given by \footnote{Note that this form of pairing interaction 
+assumes that the ratio between 
+the fluctuation frequence $w_f$ and the Fermi energy is small.} 
+\cite{migdal1958interaction} :
+
+\begin{equation}\label{Pairing interaction SF}
+    \Gamma(k,k') = \frac{3}{2} U^2 \chi^S(k-k') -\frac{1}{2}U^2 \chi^C(k-k') + U
+\end{equation} 
+
+\noindent where U is the on-site Coulumb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge (C) or Spin(S) channel respectively. The later are given below.
+
+\begin{equation}
+    \chi^S(q) = \frac{\chi^0(q)}{1 - U \chi^0 (q)}
+\end{equation}
+
+\begin{equation}
+    \chi^C(q) = \frac{\chi^0(q)}{1 + U \chi^0 (q)}
+\end{equation}
+
+\noindent The interacting spin susceptibilities are expressed in terms of the non-interacting dynamic spin susceptibility which is stated below without formal proof \cite{moriya2000spin}. 
+
+\begin{equation}\label{chi 0}
+    \chi_{ps}^0(q, i \omega) = -\sum_{k} \int_{0}^{\beta} d\tau G^0_{ps}(k+q \tau) G^0_{sp}(k, -\tau)e^{i\omega \tau}
+\end{equation} 
+
+\noindent The calculations presented in this project are carried out in the spin-fluctuation framework. This theory has succesfully captures key features in phase diagrams of unconvential superconductors but also has its limitations.
+The most relevant example is that of the cuprate phase diagram.
+Spin-fluctuation theory is able to describe the superconducting dome and correct order parameter \cite{moriya2006developments, scalapino1995case} and fails
+to describe the characteristic pseudo-gap\cite{timusk1999pseudogap}. 
 
 \subsection{Hubbard-Kanamori Model}
 

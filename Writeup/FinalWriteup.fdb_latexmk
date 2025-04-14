@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex FinalWriteup"] 1744630599.4406 "FinalWriteup.aux" "FinalWriteup.bbl" "FinalWriteup" 1744630726.03104 0
-  "./references.bib" 1743497317.07966 1351 b7b025697a228708ee841580b5a5e6cc ""
+["bibtex FinalWriteup"] 1744643280.58818 "FinalWriteup.aux" "FinalWriteup.bbl" "FinalWriteup" 1744643281.30256 0
+  "./references.bib" 1744643279.71813 2969 b55c9aad7c07c3038ad467b0022053e2 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "FinalWriteup.aux" 1744630725.98098 10726 59ee4609a0e0c753cfe239e2451063e4 "pdflatex"
+  "FinalWriteup.aux" 1744643281.24021 11505 11303b36074d9adb62a985494e1b2a0e "pdflatex"
   (generated)
   "FinalWriteup.bbl"
   "FinalWriteup.blg"
   (rewritten before read)
-["pdflatex"] 1744630725.32789 "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" "FinalWriteup.pdf" "FinalWriteup" 1744630726.0312 0
+["pdflatex"] 1744643280.59913 "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" "FinalWriteup.pdf" "FinalWriteup" 1744643281.30278 0
   "/etc/texmf/web2c/texmf.cnf" 1738672379.84493 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" 1744630725.215 28334 ec4d8f9454d1741f6b8ca1f039cab8c0 ""
+  "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" 1744643271.75471 31860 4b742bbf525e35829d5b56d41555e766 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -36,8 +36,10 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb" 1248133631 32166 b0c356b15f19587482a9217ce1d8fa67 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -84,10 +86,10 @@
   "1NNstripes.png" 1744384988.84976 74737 955c7654c18c685e8fb2c72232953800 ""
   "2Dhubbardmodel.png" 1744029096.53911 43641 f11694c37bb0ed3312c8b2421bc63553 ""
   "FRGflowdiagram.png" 1744038794.99993 70811 105df604f26633c6cef12f3af1192eca ""
-  "FinalWriteup.aux" 1744630725.98098 10726 59ee4609a0e0c753cfe239e2451063e4 "pdflatex"
-  "FinalWriteup.bbl" 1744630599.44722 49 0eba253fc001332e731e8aba3f23127b "bibtex FinalWriteup"
-  "FinalWriteup.tex" 1744630725.215 28334 ec4d8f9454d1741f6b8ca1f039cab8c0 ""
-  "FinalWriteup.toc" 1744630725.98198 2828 08f9c4bf40cbcf1a20924c820798efed "pdflatex"
+  "FinalWriteup.aux" 1744643281.24021 11505 11303b36074d9adb62a985494e1b2a0e "pdflatex"
+  "FinalWriteup.bbl" 1744643280.59617 1743 1001799bc8a1242ae0d8bda1550aa96d "bibtex FinalWriteup"
+  "FinalWriteup.tex" 1744643271.75471 31860 4b742bbf525e35829d5b56d41555e766 ""
+  "FinalWriteup.toc" 1744643281.24121 2837 803df07c3a2901a8ea3e5f734fac4b73 "pdflatex"
   (generated)
   "FinalWriteup.aux"
   "FinalWriteup.log"
