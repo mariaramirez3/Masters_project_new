@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  14 APR 2025 11:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  14 APR 2025 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -261,46 +261,46 @@ LaTeX Warning: Command \textquoteright invalid in math mode on input line 131.
 
 [5 <./FRGflowdiagram.png>]
 
-LaTeX Warning: Command \b invalid in math mode on input line 186.
+LaTeX Warning: Command \b invalid in math mode on input line 185.
 
 
-LaTeX Warning: Command \b invalid in math mode on input line 201.
+LaTeX Warning: Command \b invalid in math mode on input line 200.
 
 [6] [7] [8]
-<1NNphasediagram.png, id=47, 621.82312pt x 515.67656pt>
+<1NNphasediagram.png, id=49, 621.82312pt x 515.67656pt>
 File: 1NNphasediagram.png Graphic file (type png)
 <use 1NNphasediagram.png>
-Package pdftex.def Info: 1NNphasediagram.png  used on input line 320.
+Package pdftex.def Info: 1NNphasediagram.png  used on input line 342.
 (pdftex.def)             Requested size: 614.29733pt x 509.4355pt.
 
-Overfull \hbox (122.85947pt too wide) in paragraph at lines 320--323
+Overfull \hbox (122.85947pt too wide) in paragraph at lines 342--345
  [][] 
  []
 
 [9] [10 <./1NNphasediagram.png>]
-<1NNSC.png, id=55, 539.76656pt x 211.54031pt>
+<1NNSC.png, id=57, 539.76656pt x 211.54031pt>
 File: 1NNSC.png Graphic file (type png)
 <use 1NNSC.png>
-Package pdftex.def Info: 1NNSC.png  used on input line 334.
+Package pdftex.def Info: 1NNSC.png  used on input line 356.
 (pdftex.def)             Requested size: 491.43787pt x 192.60204pt.
-<1NNstripes.png, id=56, 532.23843pt x 397.485pt>
+<1NNstripes.png, id=58, 532.23843pt x 397.485pt>
 File: 1NNstripes.png Graphic file (type png)
 <use 1NNstripes.png>
-Package pdftex.def Info: 1NNstripes.png  used on input line 351.
+Package pdftex.def Info: 1NNstripes.png  used on input line 373.
 (pdftex.def)             Requested size: 442.29108pt x 330.31882pt.
-<1NNN.png, id=57, 531.48563pt x 536.0025pt>
+<1NNN.png, id=59, 531.48563pt x 536.0025pt>
 File: 1NNN.png Graphic file (type png)
 <use 1NNN.png>
-Package pdftex.def Info: 1NNN.png  used on input line 366.
+Package pdftex.def Info: 1NNN.png  used on input line 388.
 (pdftex.def)             Requested size: 491.43787pt x 495.6228pt.
  [11 <./1NNSC.png>] [12 <./1NNstripes.png>] [13 <./1NNN.png>]
-<1NNNSC_075.png, id=71, 443.40656pt x 306.39468pt>
+<1NNNSC_075.png, id=73, 443.40656pt x 306.39468pt>
 File: 1NNNSC_075.png Graphic file (type png)
 <use 1NNNSC_075.png>
-Package pdftex.def Info: 1NNNSC_075.png  used on input line 386.
+Package pdftex.def Info: 1NNNSC_075.png  used on input line 408.
 (pdftex.def)             Requested size: 442.29108pt x 305.64122pt.
 
-Overfull \hbox (54.45302pt too wide) in paragraph at lines 401--419
+Overfull \hbox (54.45302pt too wide) in paragraph at lines 423--441
  [][] 
  []
 
@@ -322,17 +322,17 @@ L3 programming layer <2024-01-22>
  ) 
 Here is how much of TeX's memory you used:
  4242 strings out of 476182
- 70492 string characters out of 5795596
+ 70494 string characters out of 5795596
  1936975 words of memory out of 5000000
  26224 multiletter control sequences out of 15000+600000
  567398 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 67i,10n,77p,979b,394s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on FinalWriteup.pdf (15 pages, 1195786 bytes).
+ 67i,10n,77p,1004b,394s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on FinalWriteup.pdf (15 pages, 1210314 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 148 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

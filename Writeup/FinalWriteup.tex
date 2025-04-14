@@ -34,7 +34,7 @@ The Tight Binding Model is a central element of condensed matter physics \eqref{
 Due to the overlap between the quantum mechanical wavefunctions that describe these sites, electrons are allowed to 'hop' to neighbouring sites. The probability that this hopping process will occur is given by a tunnelling amplitude, which can be calculated using a hopping integral. \par
 \medskip
 \noindent This work is carried out in the tight-binding model framework, where the magnitude of the tunnelling amplitudes are at first treated as free parameters. 
-Here, we build from a simple 2D nearest neighbour hoppping Hubbard model (Section.~\ref{subsec: HubbardModel}) and investigate the effect of introducing and varying the strength of the next-nearest neighbour hopping amplitude (See Fig. \ref{fig:2D Hubbard model}).
+Here, we build from a simple 2D nearest-neighbour hoppping Hubbard model (Section.~\ref{subsec: HubbardModel}) and investigate the effect of introducing and varying the strength of the next-nearest neighbour hopping amplitude (See Fig. \ref{fig:2D Hubbard model}).
 We extend these models further by considering the two-orbital per site case. 
 
 
@@ -47,8 +47,8 @@ We extend these models further by considering the two-orbital per site case.
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.9\textwidth]{2Dhubbardmodel.png}  % Adjust width as needed
-    \caption{\textbf{Two-Dimensional Tight-Binding Models:} Three pannels showing the 1NN, 1NNN and 1NN2 models discussed in Section~\ref{subsec:1NNModel},~\ref{subsec:1NNNModel} and~\ref{subsec:1NN2Model} respectively. Fig a) shows the Nearest-neighbour hopping case, where \textit{t} depicts the hopping amplitude between the neighbouring sites. Fig b) shows the inclusion of the next-nearest neighbour hopping, the magnitude given by \textit{t'}.
-    Fig c) Shows the extension to the two-orbital case, depicting the same orbital ($t_{orb1}$, $t_{orb2}$) and different orbital ($t_{orb1,2}$) nearest neighbour hopping. Note that this is just a pictorial representation of the orbitals, and that it does not correspond to a particular choice of orbitals or their real space projection. }
+    \caption{\textbf{Two-Dimensional Tight-Binding Models:} Three pannels showing the tight binding models for the 1NN, 1NNN and 1NN2 models discussed in Section~\ref{subsec:1NNModel},~\ref{subsec:1NNNModel} and~\ref{subsec:1NN2Model} respectively. Fig a) shows the Nearest-neighbour hopping case, where \textit{t} depicts the hopping amplitude between the neighbouring sites. Fig b) shows the inclusion of the next-nearest neighbour hopping, the magnitude given by \textit{t'}.
+    Fig c) Shows the extension to the two-orbital case, depicting  same orbital ($t_{orb1}$, $t_{orb2}$) and different orbital ($t_{orb1,2}$) nearest-neighbour hopping. Note that this is just a pictorial representation of the orbitals, and that it does not correspond to a particular choice of orbitals or their real space projection. }
     \label{fig:2D Hubbard model}
 \end{figure}
 
@@ -75,14 +75,14 @@ could indeed be an artefact of some numerical approximation (REFERENCE-ABSENCE..
 
 
 \subsubsection{Hubbard-Kanamori Model}
-In the case of materials with a multi-band and/or multi-orbital nature, the Hubbard model is not sufficient to capture all of the physical phenomena. This motivates the extension of the Hubbard Model to the Hubbard- Kanamori model by including a Hund's coupling term.
+In the case of materials with a multi-band and/or multi-orbital nature, the Hubbard model is not sufficient to capture all of the physical phenomena. This motivates the extension of the Hubbard Model to the Hubbard-Kanamori model by including a Hund's coupling term.
 
 \begin{equation} \label{Hubbard-Kanamori Model}
     H_{int} = U \sum_{is}n_{i,s\uparrow}n_{i,s\downarrow} + \frac{V}{2} \sum_{i,s,t \neq s} n_{is}n_{it} -\frac{J}{2} \sum_{i,s,t \neq s} \vec{S}_{is} \cdot \vec{S}_{it} 
     + \frac{J'}{2} \sum_{i,s,t \neq s} \sum_{\sigma} c_{is\sigma}^{\dagger}c_{is\bar{\sigma}}^{\dagger}c_{it\bar{\sigma}}c_{it\sigma}
 \end{equation}
 
-Here, $U$ and $V$ represent the intraorbital interaction of electrons in the same and different orbitals respectively. For generality, the intraorbital exchange $J$ and the 'pair hopping' term $J'$ following from Hund's rule coupling have been separated.  
+\noindent Here, $U$ and $V$ represent the electronic interactions in the same and different orbitals respectively. For generality, the intraorbital exchange $J$ and the 'pair hopping' term $J'$ following from Hund's rule coupling have been separated.  
 Note that this Hamiltonian is relevant for the later section of this project, where the model is extended to a two-orbital, two-dimensional Hubbard Model.
 
 \subsection{Theoretical Background in FRG}
@@ -98,7 +98,7 @@ strength and the bandwidth of the system.
 The flow equation can be solved exactly for a limited number of systems (REFERENCE), so for most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time. More details of how this approximation is performed and the limitations it presents can be found in Section ~\ref{subsubsec:Truncation scheme}. For the systems explored in this project only two-particle
 interactions are considered and any higher order terms are neglected.
 This allows for the effective action of the system to be separated into three terms, which correspond to three physical channels: Superconductivity, Spin-Density and Charge-Density Waves.
-The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the material exhibits. This rather "hand-wavy" overview of FRG can be viewed as a flowchart in Fig.\ref{fig:FRGflowdiagram}.
+The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the model exhibits. This rather "hand-wavy" overview of FRG can be is represented in a flowchart in Fig.\ref{fig:FRGflowdiagram}.
 For a more rigorous explanation the reader is referred to the sections below. 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
@@ -134,9 +134,8 @@ For quantum many-body problems, one works instead with partition functional, def
 \noindent Note that in the limiting case where $V=0$, the path integral in Eq.\ref{partition functional} is exactly solveable. 
 However, once electronic correlations are included, the picture becomes more complicated. 
 The main idea behind FRG is to introduce a cut-off in the non interacting Green's function ($G_0 \rightarrow G_0^{\lambda} = f(\lambda)G_0$). 
-The cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently including electronic correlations. 
-An intuitive example of such would be to introduce a momentum cut-off in the case of a translationally invariant system. In the case of a spin-independant system this would transform the 
-bare propagator as shown below in Equations (\ref{propagator transform 1}) and (\ref{propagator transform 2}). 
+This cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently For a spin-independant system this would transform the 
+bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{propagator transform 2}). 
 
 \begin{equation} \label{propagator transform 1}
     G_0(k_0, \textbf{k}) \rightarrow G_0^{\lambda}(k_0, \textbf{k})
@@ -155,10 +154,10 @@ bare propagator as shown below in Equations (\ref{propagator transform 1}) and (
 
 \noindent With this cutoff scheme, the calculation then excludes points close to the Fermi Surface as shown in Figure (FIGURE). \par
 \medskip
-\noindent In the following steps the derivation will proceed in the framework of the  so-called "effective action".
-This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), both of which are defined below in Equations (\ref{Greens function functional}, \ref{G term in effective action}) and (\ref{Effective action}) respectively. 
+\noindent In the following steps the derivation will proceed in the framework of the  so-called "effective action" ($\mathcal{T}[\psi, \bar{\psi}]$).
+This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), defined below in Equations (\ref{Greens function functional}, \ref{G term in effective action}) and (\ref{Effective action}) respectively. 
 \textit{(For convinience and for reasons that
-are beyond the scope of this project it is more convinient to work with the effective action than it is to do so with the partition functional.)}
+are beyond the scope of this project it is more convinient to work with the effective action than it is to do so with the partition functional.) \footnote{If interested in why see REFERENCE}}
 
 \begin{equation} \label{Greens function functional}
     \mathcal{G}[\eta, \bar{\eta}] = -ln(\mathcal{Z}[\eta, \bar{\eta}])
@@ -212,35 +211,58 @@ Q_0^{\Lambda} & 0 \\
 \subsubsection{Truncation scheme (TU$^2$FRG)}
 \label{subsubsec:Truncation scheme}
 
-The flow equation derived above can be solved for a limited amount of systems (REFERENCE). In order to reduce 
-the memory demand of the calculations for more complex systems, the truncated unity approximation was introduced in 2020 (REFERENCE). 
-The main idea behind this is to find a new basis that, with a controlled loss of accuracy, can represent all 
+The flow equation derived above can be solved for a limited amount of systems (REFERENCE). For most systems, the memory demand for the 
+FRG calculations is high.  In order to tackle this issue, the truncated unity approximation (TU$^2$FRG) was introduced in 2020 (REFERENCE). 
+The main idea behind this scheme is to find a new basis that, with a controlled loss of accuracy, can represent all 
 of the required elements in a compressed way. It can be shown (REFERENCE), that such a basis can be constructed and is 
 well defined in the case where the calculation is constrained to terms U$^{2}$ \textit{(two-particle interactions)}.
-Partitions of unity are the introduced into a specific part of the flow equation. This reduces an otherwise computationally expensive nested integral to a matrix product. 
-This is an outline of how TU$^2$FRG works. Details of how
-this truncation is incorporated are ommitted but the reader is referred to Appendix. (REFERENCE appendix).\par
+Partitions of unity \footnote{A detailed explanation of what these are can be found in} are the introduced into a specific part of the flow equation. This reduces an otherwise computationally expensive nested integral to a matrix product. 
+Details of how this truncation is incorporated are ommitted but the reader is referred to Appendix. (REFERENCE appendix).\par
 \medskip
 
 \noindent Whilst the truncated scheme presents advantages in computational efficiency, particularly for models with broken translational symmetry, it also has its limitations. 
-TU$^2$FRG relies on short-range interactions, struggling to capture strongly correlated phases. 
-This is particularly relevant for the study of the 2D Hubbard model presented here. TU$^2$FRG will not be able to capture
+TU$^2$FRG relies on short-range interactions, thus struggling to capture strongly correlated phases. 
+This is particularly relevant for the study of the 2D Hubbard model. TU$^2$FRG will not be able to capture
 the characteristic Mott insulating phase in the Cuprate phase diagrams (REFERENCE), which limits how well the results presented in this project can be directly compared with existing literature. 
-Nevertheless, it manages to successfully capture the competition between Magnetic and Superconducting instabilities, which is one of the main focus of this project. 
+Nevertheless, it manages to successfully capture the competition between Magnetic and Superconducting instabilities, which is one of the main focus of thes results presented here. 
 \subsubsection{Decoupling of flow equation}
 After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple  the evolution of the two-particle coupling as a function of the flow parameter $\lambda$ into three channels:
 
-\begin{equation}\label{3 channels}
-    \frac{d}{d\lambda} \mathcal{T}^{\lambda}(k1, k2, k3) = \mathcal{T}_{pp}^{\lambda}(k1,k2,k3) + \mathcal{T}_{cr-ph}^{\lambda}(k1,k2,k3) +\mathcal{T}_{d-ph}^{\lambda}(k1,k2,k3)
+\begin{equation} \label{V decoupling}
+    V(k1,k2,k3)= V_{k_1, k_2, k_3}^{(0)} - \phi^{P}_{k_1 +k_2, \frac{k_1 - k_2}{2}, \frac{k_4-k_3}{2}} + \phi^{C}_{k_1 - k_3, \frac{k_1 +k_3}{2}, \frac{k_2+k_4}{2}} +\phi^{D}_{k_3- k_2, \frac{k_1 + k_4}{2}, \frac{k_2+k_3}{2}}
 \end{equation}
 
-\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms given explicitly below and they represent all possible ways in which the two particle interactions can occur in the correlated system. The particle-particle (P), particle-hole (D) and cross-particle-hole (C) channels
-correspond to the Superconducting, Magnetic and charge phases respectively. 
+\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms given explicitly below in terms of the respective effective actions and they represent all possible ways in which the two particle interactions can occur in the correlated system. The particle-particle (P), cross-particle-hole (C) and direct-particle-hole (D) channels
+correspond to the Superconducting, Charge and Magnetic phases respectively. 
+
+\begin{equation}
+    \dot{\phi}^{P}_{k_1 +k_2, \frac{k_1 - k_2}{2}, \frac{k_4-k_3}{2}} = - \mathcal{T}_{pp}(k1,k2,k3)
+\end{equation}
+
+
+\begin{equation}
+    \dot{\phi}^{C}_{k_1 - k_3, \frac{k_1 +k_3}{2}, \frac{k_2+k_4}{2}} = - \mathcal{T}_{cr-ph}(k1,k2,k3)
+\end{equation}
+
+\begin{equation}
+    \dot{\phi}^{D}_{k_3- k_2, \frac{k_1 + k_4}{2}, \frac{k_2+k_3}{2}} = - \mathcal{T}_{d-ph}(k1,k2,k3)
+\end{equation}
+
+\noindent This effectively allows one to treat the effective action as a separable object:
+
+\begin{equation}
+    \mathcal{T}[\psi, \bar{\psi}] = \mathcal{T}_{pp}[\psi, \bar{\psi}] + \mathcal{T}_{ph}[\psi, \bar{\psi}] + \mathcal{T}_{cph}[\psi, \bar{\psi}]
+\end{equation}
+
+\medskip
+
+
+
 
 
 \subsubsection{Instability calculation}
 
-The procedure from this decoupled flow equation is outlined here. For more details the reader is refferred to (REFERENCES). 
+The procedure from the decoupled  effective action and flow equation is outlined here. For more details the reader is refferred to (REFERENCES). 
 A FRG calculation will return the self-energy and two-particle vertex \footnote{This is the footnote text.}. These quantities are
 not directly experimentally accessible, so a series of post processing steps have to be carried out. The first step is to find out which of the three channels diverge. 
 This gives the diverging susceptibility. Mean-Field analysis is then carried out at the critical scale in order to obtain
