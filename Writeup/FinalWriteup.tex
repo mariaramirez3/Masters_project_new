@@ -206,6 +206,14 @@ bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{p
 \end{equation}
 
 \noindent With this cutoff scheme, the calculation then excludes points close to the Fermi Surface as shown in Figure (FIGURE). \par
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
+    \centering
+    \includegraphics[width=0.35\textwidth]{Truncation.png}  % Adjust width as needed
+    \caption{\textbf{Cut-off scheme example:} Momentum space region(shaded in grey) around the Fermi-surface(red) that is excluded 
+    by a momentum cut-off for a 2D square lattice with a lattice constant of 1\AA. Taken from \cite {metzner2012functional}}
+    \label{fig:Truncation}
+\end{figure}
+
 \medskip
 \noindent In the following steps the derivation will proceed in the framework of the  so-called "effective action" ($\mathcal{T}[\psi, \bar{\psi}]$).
 This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), defined below in Equations (\ref{Greens function functional}, \ref{G term in effective action}) and (\ref{Effective action}) respectively. 
@@ -367,7 +375,7 @@ A table summarising estimated parameters for the models  discussed in Section~\r
 divERGe is an open-source, high-performance, C/C++/Python library that includes a truncated unity FRG (TU$^2$FRG) computational backend.
 Under the approximations outlined in Section\ref{subsubsec:Truncation scheme}, the flow equations
 are integrated fromhigh scales($\lambda = \inf$) to low scales ($\lambda = 0$) by numerically going from $\lambda$ to $\lambda + d\lambda$.
-This integration is repeated until a phase transition(divergence of one of the calculated channels) occurs or a minimal $\lambda$ is reached. 
+This integration is repeated until a phase transition (divergence of one of the calculated channels) occurs or a minimal $\lambda$ is reached. 
 In the later case, the system is assumed to be in a Fermi-Liquid state. 
 All calculations have been carried out in the HPC cluster at the university of St Andrews. 
 
@@ -377,9 +385,34 @@ All calculations have been carried out in the HPC cluster at the university of S
 \subsection{Convergence of Calculation}
 \label{subsec:convergence}
 In the truncated-unity approximation there are several convergence tests that one needs to carry out in order to verify
-that the calculations are accurate. These are outlined here.
+that the calculations are accurate. These include the form factor convergence and the number of k points.
 
 \subsubsection{Form factor convergence}
+
+The set of orthogonal basis functions ($f_m$) used to describe the Truncated space\textit{(See section \ref{subsubsec:Truncation scheme})}
+in momentum representation is called the \textbf{form factors}. In the case of the square lattice, 
+these take the form of delta functions in real space. The form factors are arranged as circles with increasing radii around the origin. This effectively leads to a "bond-like" representation where the form-factor number
+essentially determines how many of the neighbouring bonds are accounted for in a calculation for each point. This is depicted in Fig. . For mathematical rigour on the definition of the form factor, the reader is referred to \cite{lichtenstein2018functional}. \par
+
+\medskip
+
+
+\noindent The divERGe package allows the user to modify the number of form-factor shells accordingly. It boils down to a trade 
+between computational accuracy and expensiveness. 
+For the results in this project, the form factor value was set at 4\AA\footnote{This is equivalent to a number of form factor shells of 4 since the lattice spacing of the models here is set to 1\AA.}. The convergence of 
+the calculations was tested accordingly for a range of points in the phase diagram (an example is shown in Fig.\ref{fig:Formfactorconvergence} ). Moreover, this is in agreement with values used in previous literature\cite{lichtenstein2018functional}. 
+
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
+    \centering
+    \includegraphics[width=0.9\textwidth]{convergence.png}  % Adjust width as needed
+    \caption{\textbf{Convergence testing:} Fig a) Transition temperature as a function of form factor for the 1NN model, U = 5.00, $\mu$ = 0.20eV. Fig b) Time taken for calculation
+    as a function of form factor.   }
+    \label{fig:Formfactorconvergence}
+\end{figure}
+
+
+
+
 
 \subsubsection{Number of k points convergence }
 

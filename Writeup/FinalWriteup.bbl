@@ -45,9 +45,19 @@ Tom Timusk and Bryan Statt.
 \newblock The pseudogap in high-temperature superconductors: an experimental survey.
 \newblock {\em Reports on Progress in Physics}, 62(1):61, 1999.
 
+\bibitem{metzner2012functional}
+Walter Metzner, Manfred Salmhofer, Carsten Honerkamp, Volker Meden, and Kurt Sch{\"o}nhammer.
+\newblock Functional renormalization group approach to correlated fermion systems.
+\newblock {\em Reviews of Modern Physics}, 84(1):299--352, 2012.
+
 \bibitem{slater1954simplified}
 John~C Slater and George~F Koster.
 \newblock Simplified lcao method for the periodic potential problem.
 \newblock {\em Physical review}, 94(6):1498, 1954.
+
+\bibitem{lichtenstein2018functional}
+Julian Lichtenstein.
+\newblock {\em Functional renormalization group studies on competing orders in the square lattice}.
+\newblock PhD thesis, Dissertation, RWTH Aachen University, 2018, 2018.
 
 \end{thebibliography}
