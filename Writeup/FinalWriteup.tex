@@ -25,8 +25,8 @@
 For many years after the discovery of superconductivity in 1911\cite{onnes1911superconductivity} physicists
 were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the pairing mechanism in all superconducting materials. 
 However, in 1986, the discovery of the first heavy-fermion superconductor\cite{bednorz1986possible} resulted in the emergence of a whole new class of materials: Unconventional Superconductors. 
-These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory. Whilst there exists consensus that their superconductivity does not in fact stem from the BCS mechanism, 
-for some materials there is no wide agreement on what the mechanism otherwise is. 
+These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory.
+However, for some materials there is no wide agreement on what the mechanism otherwise is. 
 
 \medskip
 \noindent Most generally, the Hamiltonian for a superconducting state can be described as follows:
@@ -58,7 +58,7 @@ the fluctuation frequence $w_f$ and the Fermi energy is small.}
     \Gamma(k,k') = \frac{3}{2} U^2 \chi^S(k-k') -\frac{1}{2}U^2 \chi^C(k-k') + U
 \end{equation} 
 
-\noindent where U is the on-site Coulumb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge (C) or Spin(S) channel respectively. The later are given below.
+\noindent where U is the on-site Coulumb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge (C) and Spin(S) channel respectively. The later are given below.
 
 \begin{equation}
     \chi^S(q) = \frac{\chi^0(q)}{1 - U \chi^0 (q)}
@@ -68,13 +68,13 @@ the fluctuation frequence $w_f$ and the Fermi energy is small.}
     \chi^C(q) = \frac{\chi^0(q)}{1 + U \chi^0 (q)}
 \end{equation}
 
-\noindent The interacting spin susceptibilities are expressed in terms of the non-interacting dynamic spin susceptibility which is stated below without formal proof \cite{moriya2000spin}. 
+\noindent These interacting spin susceptibilities are expressed in terms of the non-interacting dynamic spin susceptibility ($\chi_{ps}^0$) which is stated below without formal proof \cite{moriya2000spin}. 
 
 \begin{equation}\label{chi 0}
     \chi_{ps}^0(q, i \omega) = -\sum_{k} \int_{0}^{\beta} d\tau G^0_{ps}(k+q \tau) G^0_{sp}(k, -\tau)e^{i\omega \tau}
 \end{equation} 
 
-\noindent The calculations presented in this project are carried out in the spin-fluctuation framework. This theory has succesfully captures key features in phase diagrams of unconvential superconductors but also has its limitations.
+\noindent The calculations presented in this project are carried out in the spin-fluctuation framework. This theory has succesfully captured key features in phase diagrams of unconvential superconductors but also has its limitations.
 The most relevant example is that of the cuprate phase diagram.
 Spin-fluctuation theory is able to describe the superconducting dome and correct order parameter \cite{moriya2006developments, scalapino1995case} and fails
 to describe the characteristic pseudo-gap\cite{timusk1999pseudogap}. 
@@ -113,8 +113,8 @@ We extend these models further by considering the two-orbital per site case.
 The  tight binding model as defined above fails to account for any interactions between neighbouring electrons. This motivates the extension of this model to the Hubbard model \eqref{t Hubbard model}, which includes the (onsite) Coulomb repulsion between electrons. Despite its simple form, this model can describe very rich physical phenomena.
 In particular, it becomes very interesting to study when U and t are of comparable order, since it highlights the competing phenomena that takes place in correlated systems. 
 The 2D Hubbard model remains unsolved to date, but is able to predict all sorts of correlated phases: it describes metals, insulators, superconductors and other exotic phases (REFERENCE). 
-This model has been widely studied since it resembles the structure of the cuprate high-temperature superconductors (REFERENCE). While it has shown to accurately  capture the magnetic and superconducting behaviour that is expected of this family of superconductors, recent findings suggest that the superconducting groundstate 
-could indeed be an artefact of some numerical approximation (REFERENCE-ABSENCE...). A large part of this thesis focuses on exploring this toy model and the effect of the nearest-neighbour hopping parameter.
+This model has been widely studied since it resembles the structure of the cuprate high-temperature superconductors (REFERENCE). 
+
 
 
 
@@ -151,7 +151,7 @@ strength and the bandwidth of the system.
 The flow equation can be solved exactly for a limited number of systems (REFERENCE), so for most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time. More details of how this approximation is performed and the limitations it presents can be found in Section ~\ref{subsubsec:Truncation scheme}. For the systems explored in this project only two-particle
 interactions are considered and any higher order terms are neglected.
 This allows for the effective action of the system to be separated into three terms, which correspond to three physical channels: Superconductivity, Spin-Density and Charge-Density Waves.
-The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the model exhibits. This rather "hand-wavy" overview of FRG can be is represented in a flowchart in Fig.\ref{fig:FRGflowdiagram}.
+The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the model exhibits. This rather "hand-wavy" overview of FRG is represented in a flowchart in Fig.\ref{fig:FRGflowdiagram}.
 For a more rigorous explanation the reader is referred to the sections below. 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
@@ -187,7 +187,7 @@ For quantum many-body problems, one works instead with partition functional, def
 \noindent Note that in the limiting case where $V=0$, the path integral in Eq.\ref{partition functional} is exactly solveable. 
 However, once electronic correlations are included, the picture becomes more complicated. 
 The main idea behind FRG is to introduce a cut-off in the non interacting Green's function ($G_0 \rightarrow G_0^{\lambda} = f(\lambda)G_0$). 
-This cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently For a spin-independant system this would transform the 
+This cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently including electronic interactions. For a spin-independant system this would transform the 
 bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{propagator transform 2}). 
 
 \begin{equation} \label{propagator transform 1}
@@ -264,20 +264,20 @@ Q_0^{\Lambda} & 0 \\
 \subsubsection{Truncation scheme (TU$^2$FRG)}
 \label{subsubsec:Truncation scheme}
 
-The flow equation derived above can be solved for a limited amount of systems (REFERENCE). For most systems, the memory demand for the 
+The flow equation derived above can be solved for a limited amount of systems (REFERENCE). However, in most cases, the memory demand for the 
 FRG calculations is high.  In order to tackle this issue, the truncated unity approximation (TU$^2$FRG) was introduced in 2020 (REFERENCE). 
 The main idea behind this scheme is to find a new basis that, with a controlled loss of accuracy, can represent all 
 of the required elements in a compressed way. It can be shown (REFERENCE), that such a basis can be constructed and is 
 well defined in the case where the calculation is constrained to terms U$^{2}$ \textit{(two-particle interactions)}.
-Partitions of unity \footnote{A detailed explanation of what these are can be found in} are the introduced into a specific part of the flow equation. This reduces an otherwise computationally expensive nested integral to a matrix product. 
+Partitions of unity \footnote{A detailed explanation of what these are can be found in} are then introduced into a specific part of the flow equation. This reduces an otherwise computationally expensive nested integral to a matrix product. 
 Details of how this truncation is incorporated are ommitted but the reader is referred to Appendix. (REFERENCE appendix).\par
 \medskip
 
 \noindent Whilst the truncated scheme presents advantages in computational efficiency, particularly for models with broken translational symmetry, it also has its limitations. 
 TU$^2$FRG relies on short-range interactions, thus struggling to capture strongly correlated phases. 
 This is particularly relevant for the study of the 2D Hubbard model. TU$^2$FRG will not be able to capture
-the characteristic Mott insulating phase in the Cuprate phase diagrams (REFERENCE), which limits how well the results presented in this project can be directly compared with existing literature. 
-Nevertheless, it manages to successfully capture the competition between Magnetic and Superconducting instabilities, which is one of the main focus of thes results presented here. 
+the characteristic Mott insulating phase of the Cuprate phase diagrams (REFERENCE), which limits how well the results presented in this project can be directly compared with existing literature. 
+Nevertheless, it manages to successfully capture the competition between Magnetic and Superconducting instabilities, which is one of the main focus of the results presented here. 
 \subsubsection{Decoupling of flow equation}
 After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple  the evolution of the two-particle coupling as a function of the flow parameter $\lambda$ into three channels:
 
@@ -285,7 +285,7 @@ After constraining ourselves to the case of two-particle interactions in the fra
     V(k1,k2,k3)= V_{k_1, k_2, k_3}^{(0)} - \phi^{P}_{k_1 +k_2, \frac{k_1 - k_2}{2}, \frac{k_4-k_3}{2}} + \phi^{C}_{k_1 - k_3, \frac{k_1 +k_3}{2}, \frac{k_2+k_4}{2}} +\phi^{D}_{k_3- k_2, \frac{k_1 + k_4}{2}, \frac{k_2+k_3}{2}}
 \end{equation}
 
-\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms given explicitly below in terms of the respective effective actions and they represent all possible ways in which the two particle interactions can occur in the correlated system. The particle-particle (P), cross-particle-hole (C) and direct-particle-hole (D) channels
+\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms given explicitly below in terms of the respective effective actions. They represent all possible ways in which the two particle interactions can occur in the correlated system. The particle-particle (P), cross-particle-hole (C) and direct-particle-hole (D) channels
 correspond to the Superconducting, Charge and Magnetic phases respectively. 
 
 \begin{equation}
@@ -319,21 +319,47 @@ The procedure from the decoupled  effective action and flow equation is outlined
 A FRG calculation will return the self-energy and two-particle vertex \footnote{This is the footnote text.}. These quantities are
 not directly experimentally accessible, so a series of post processing steps have to be carried out. The first step is to find out which of the three channels diverge. 
 This gives the diverging susceptibility. Mean-Field analysis is then carried out at the critical scale in order to obtain
-the ordering symmetry and a linearised gap equation. 
+the ordering symmetry and a linearised gap equation. The later allows one to calculate the Superconducting gap and order parameter. 
 
 
 
 \section{Computational Methods}
 
-\subsection{FRG specifics}
+This section outlines how the concepts presented above link together and are implemented for the purpose of this project. 
+The general aim is to solve the Hubbard-(Kanamori) model for the 2D Hubbard model. This is achieved computationally, using the Diverge package. This package implements the TU$^2$FRG
+formalism discussed in the section above. All of the calculations are carried out under the assumption that the superconductivity 
+is spin-fluctuation mediated. This section outlines the methods followed to calculate the required Tight-Binding Models for each of the systems, the utilisation of 
+Diverge and some of the post-processing techniques used. 
 
-\noindent So far, the fundamentals of FRG have been outlined and discussed. It is however important to make 
-the reader aware of several caveats that are relevant for the results discussed in this report. 
+\subsection{Tight-Binding Models}
 
+This project discusses three models: the 1NN, 1NNN and 1NN2 model (\textit{See Fig.\ref{fig:2D Hubbard model}}). For the first two, the hopping parameters in the tight-binding model are treated as free parameters. 
+For the later, the hopping parameters are determined using the method described below. \par
+\medskip
+\noindent Constrained to the case of a single layer, the 1NN model is extended to a multi-orbital system by
+including two-orbitals per site and investigating the effect of the interorbital hopping. To allow for comparison with
+exisiing literature (REFERENCE), a $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbital are including. 
+Their respective hopping parameters are calculated using the  table of interatomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
+In this calculation, the values of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05eV$ respectively in order to capture their relative values (REFERENCE).
+A table summarising estimated parameters for the models  discussed in Section~\ref{subsec:1NN2Model} is shown below.
 
-
-A very interesting application of this post-processing process is that of the calculation of the SC gap for the 2D Hubbard model. 
-This is done in the particular case 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+       Model &$t^{[1,0,0]}_{3z^2-r^2}$  &$t^{[0,1,0]}_{3z^2-r^2}$  &  $t_{x^2 - y^2}$ &  $t^{[1,0,0]}_{x^2 - y^2 -3z^2-r^2} $ & $t^{[0,1,0]}_{x^2 - y^2 -3z^2-r^2} $ \\
+        \hline
+        & -0.781 & -0.719  &  -0.375 & -0.402 & -0.310\\
+        \hline
+        1NN2MN & on &  on  & on  & off & off  \\
+        \hline
+        1NN2MY & on &  on  & on  & on & on \\
+          
+        \hline
+    \end{tabular}
+    \caption{\textbf{Nearest neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters. Other rows show which hopping parameters were included in each of the two models.}
+    \label{tab:2D2orbparams }
+\end{table}
 
 \subsection{Diverge}
 
@@ -500,23 +526,7 @@ magnitude of the bandwidth of the material.
 \subsection{Effect of bi-orbital system (1NN2 model)}
 \label{subsec:1NN2Model}
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-       Model &$t^{[1,0,0]}_{3z^2-r^2}$  &$t^{[0,1,0]}_{3z^2-r^2}$  &  $t_{x^2 - y^2}$ &  $t^{[1,0,0]}_{x^2 - y^2 -3z^2-r^2} $ & $t^{[0,1,0]}_{x^2 - y^2 -3z^2-r^2} $ & $t_{\perp}$ \\
-        \hline
-        & -0.781 & -0.719  &  -0.375 & -0.402 & -0.310 & -2.50\\
-        \hline
-        1NN2MN & on &  on  & on  & off & off & off \\
-        \hline
-        1NN2MY & on &  on  & on  & on & on & off \\
-          
-        \hline
-    \end{tabular}
-    \caption{\textbf{Nearest neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters, note that  $t_{\perp}$ corresponds to the intralayer hopping between the $d_{3z^2-r^2}$ orbitals. Other rows show which hopping parameters were included in each of the two models.}
-    \label{tab:2D2orbparams }
-\end{table}
+
 
 
 

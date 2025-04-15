@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{onnes1911superconductivity}
 H~Kamerlingh Onnes.
@@ -44,5 +44,10 @@ Douglas~J Scalapino.
 Tom Timusk and Bryan Statt.
 \newblock The pseudogap in high-temperature superconductors: an experimental survey.
 \newblock {\em Reports on Progress in Physics}, 62(1):61, 1999.
+
+\bibitem{slater1954simplified}
+John~C Slater and George~F Koster.
+\newblock Simplified lcao method for the periodic potential problem.
+\newblock {\em Physical review}, 94(6):1498, 1954.
 
 \end{thebibliography}
