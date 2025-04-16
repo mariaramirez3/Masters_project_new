@@ -325,8 +325,8 @@ correspond to the Superconducting, Charge and Magnetic phases respectively.
 
 \subsubsection{Instability calculation}
 
-The procedure from the decoupled  effective action and flow equation is outlined here. For more details the reader is refferred to (REFERENCES). 
-A FRG calculation will return the self-energy and two-particle vertex \footnote{This is the footnote text.}. These quantities are
+The procedure from the decoupled  effective action and flow equation is outlined here. For more details the reader is refferred to\cite{profe2023functional}. 
+A FRG calculation will return the self-energy and two-particle vertex \footnote{An exact definition of these can be found in \cite{metzner2012functional}, but is omitted here.}. These quantities are
 not directly experimentally accessible, so a series of post processing steps have to be carried out. The first step is to find out which of the three channels diverge. 
 This gives the diverging susceptibility. Mean-Field analysis is then carried out at the critical scale in order to obtain
 the ordering symmetry and a linearised gap equation. The later allows one to calculate the Superconducting gap and order parameter. 
@@ -348,7 +348,7 @@ For the later, the hopping parameters are determined using the method described 
 \medskip
 \noindent Constrained to the case of a single layer, the 1NN model is extended to a multi-orbital system by
 including two-orbitals per site and investigating the effect of the interorbital hopping. To allow for comparison with
-existing literature (REFERENCE), a $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbital are included. 
+existing literature\cite{sakakibara2024possible}, a $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbital are included. 
 Their respective hopping parameters are determined using the  table of interatomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
 In this calculation, the values of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05eV$ respectively in order to capture their relative values (REFERENCE).
 A table summarising estimated parameters for the models  discussed in Section~\ref{subsec:1NN2Model} is shown below.
@@ -374,7 +374,7 @@ A table summarising estimated parameters for the models  discussed in Section~\r
 \subsection{divERGe}
 \label{subsec:diverge}
 
-divERGe is an open-source, high-performance, C/C++/Python library that includes a truncated unity FRG (TU$^2$FRG) computational backend.
+divERGe is an open-source, high-performance, C/C++/Python library that includes a truncated unity FRG (TU$^2$FRG) computational backend\cite{profe2024diverge}. 
 Under the approximations outlined in Section\ref{subsubsec:Truncation scheme}, the flow equations
 are integrated fromhigh scales($\lambda = \inf$) to low scales ($\lambda = 0$) by numerically going from $\lambda$ to $\lambda + d\lambda$.
 This integration is repeated until a phase transition (divergence of one of the calculated channels) occurs or a minimal $\lambda$ is reached. 

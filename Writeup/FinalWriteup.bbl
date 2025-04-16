@@ -110,10 +110,25 @@ Masatoshi Imada, Atsushi Fujimori, and Yoshinori Tokura.
 \newblock Metal-insulator transitions.
 \newblock {\em Reviews of modern physics}, 70(4):1039, 1998.
 
+\bibitem{profe2023functional}
+Jonas~Benedikt Profe.
+\newblock {\em Functional renormalization group developments for correlations in quantum materials}.
+\newblock PhD thesis, Dissertation, RWTH Aachen University, 2023, 2023.
+
+\bibitem{sakakibara2024possible}
+Hirofumi Sakakibara, Naoya Kitamine, Masayuki Ochi, and Kazuhiko Kuroki.
+\newblock Possible high t c superconductivity in la 3 ni 2 o 7 under high pressure through manifestation of a nearly half-filled bilayer hubbard model.
+\newblock {\em Physical Review Letters}, 132(10):106002, 2024.
+
 \bibitem{slater1954simplified}
 John~C Slater and George~F Koster.
 \newblock Simplified lcao method for the periodic potential problem.
 \newblock {\em Physical review}, 94(6):1498, 1954.
+
+\bibitem{profe2024diverge}
+Jonas Profe, Dante~M Kennes, and Lennart Klebl.
+\newblock diverge implements various exact renormalization group examples.
+\newblock {\em SciPost Physics Codebases}, page 026, 2024.
 
 \bibitem{kivelson1998electronic}
 Steven~A Kivelson, Eduardo Fradkin, and Victor~J Emery.
