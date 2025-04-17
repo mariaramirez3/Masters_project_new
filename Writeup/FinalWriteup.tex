@@ -25,7 +25,7 @@
 For many years after the discovery of superconductivity in 1911\cite{onnes1911superconductivity} physicists
 were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the pairing mechanism in all superconducting materials. 
 However, in 1986, the discovery of the first heavy-fermion superconductor\cite{bednorz1986possible} resulted in the emergence of a whole new class of materials: Unconventional Superconductors. 
-These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory. 
+These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory\cite{hirsch2015superconducting}. 
 
 \medskip
 \noindent Most generally, the Hamiltonian for a superconducting state can be described as follows:
@@ -128,7 +128,7 @@ This model has been widely studied since it resembles the structure of the cupra
 
 
 \subsubsection{Hubbard-Kanamori Model}
-In the case of materials with a multi-band and/or multi-orbital nature, the Hubbard model is not sufficient to capture all of the physical phenomena. This motivates the extension of the Hubbard Model to the Hubbard-Kanamori model by including a Hund's coupling term.
+In the case of materials with a multi-band and/or multi-orbital nature, the Hubbard model is not sufficient to capture all of the physical phenomena. This motivates the extension of the Hubbard Model to the Hubbard-Kanamori model\cite{sherman2020hubbard} by including a Hund's coupling term.
 
 \begin{equation} \label{Hubbard-Kanamori Model}
     H_{int} = U \sum_{is}n_{i,s\uparrow}n_{i,s\downarrow} + \frac{V}{2} \sum_{i,s,t \neq s} n_{is}n_{it} -\frac{J}{2} \sum_{i,s,t \neq s} \vec{S}_{is} \cdot \vec{S}_{it} 
@@ -350,7 +350,7 @@ For the later, the hopping parameters are determined using the method described 
 including two-orbitals per site and investigating the effect of the interorbital hopping. To allow for comparison with
 existing literature\cite{sakakibara2024possible}, a $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbital are included. 
 Their respective hopping parameters are determined using the  table of interatomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
-In this calculation, the values of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05eV$ respectively in order to capture their relative values (REFERENCE).
+In this calculation, the values of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05eV$ respectively in order to capture their relative values\cite{blanksby2003bond, mcgrady2015introduction, krapp2008strength}.
 A table summarising estimated parameters for the models  discussed in Section~\ref{subsec:1NN2Model} is shown below.
 
 \begin{table}[h]
@@ -420,6 +420,13 @@ the calculations was tested accordingly for a range of points in the phase diagr
 
 \subsubsection{Number of k points convergence }
 
+When integrating the flow equation, there are two parameters that can be further tuned to ensure convergence.
+Those are $n_k$ and $n_{k_f}$ and  loosely speaking specify the number of k points used to carry out the nested integrations. 
+In particular, $n_k$ refers to the number of k points used for the general momentum integral, and $n_{k_f}$ for 
+the additional sum around each k-point. The calculations performed here were carried out with an integration 
+grid of 20x5 ($n_k$ x $n_{k_f}$) points. The choice of parameters ensured that the calculations had converged appropriatedly 
+and resulted in a computational time of $\approx 180s$ per point. 
+
 \subsection{Calculation of Susceptibilities}
 
 \subsubsection{Nesting vectors}
@@ -481,13 +488,24 @@ informative to compare the results presented here with that of the Cuprate ph
 
 \subsubsection{Superconductivity in the 1NN Model}
 
-Recent findings have claimed that the 2D Hubbard model (same model as the 1NN model discussed here) does not have a superconducting ground state\cite{qin2020absence}. 
-The analysis in Ref. \cite{qin2020absence} is conducted in a slightly different framework than the one used in this project: using DMRG \cite{white1992density} at moderate-strong coupling and for values of U between 6-8eV\textit{(which is claimed to be the regime relevant to the cuprates)}.
+Recent findings have claimed that the 2D Hubbard model does not have a superconducting ground state\cite{qin2020absence}. 
+Whilst their model is the same as the 1NN model explored in this section, the analysis in Ref. \cite{qin2020absence} is conducted in a 
+slightly different framework than the one used in this project: using DMRG \cite{white1992density} 
+at moderate-strong coupling and for values of U between 6-8eV\textit{(which they claim to be the 
+regime relevant to the cuprates)}.
 The lack of superconductivity in their findings is attributed to a lack of competition 
 between the magnetic and superconducting phases. Here, in the weak-coupling framework both a competition between magnetism and superconductivity and 
-a stabilised superconducting region is found. The superconducting order parameter is plotted on top of the Fermi-Surface for the first BZ for all calculated points in the Superconducting region (Fig.\ref{fig:1NNNSC}a).
+a stabilised superconducting region is found. The superconducting order parameter is plotted on top of the Fermi-Surface for the first BZ of points in the Superconducting region (Fig.\ref{fig:1NNSC}a).
 The order parameter shows antisymmetry with respect to a 90 degree rotation and therefore
-the superconducting region is d-wave symmetric. This is in agreement with what is expected from the Cuprate superconductors \cite{tsuei2000pairing}. 
+the superconducting region is d-wave symmetric. This is in agreement with what is expected from the Cuprate superconductors \cite{tsuei2000pairing}.\par
+\medskip
+\noindent 
+Moreover, after plotting the the critical temperature (Tc) as a function of chemical potential ($\mu$) for a constant Coulumb repulsion(U), one observes that
+the superconducting critical temperature is maximised closest to the magnetic instability (Fig.\ref{fig:1NNSC}b). This matches existing theories that the competition between instabilities
+enhaces the phase transition temperature(REFERENCE).
+However, it is important to note that limiting the interactions 
+we consider in the FRG calculation to two-particle interactions acts as a bottle-neck for the accuracy 
+of the Tc values calculated. Nevertheless, the trends in Tc remain trustworthy. 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
@@ -497,7 +515,9 @@ the superconducting region is d-wave symmetric. This is in agreement with what i
     for U =10.00eV. The order parameter is antisymmetric about a 90 degree rotation and hence
     it exhibits d-wave symmetry. 
     Fig b) Transition temperature (Tc) as a function of chemical potential ($\mu$) for U =10.00eV.
-    Tc is enhanced closest to the magnetic instability.   
+    Tc is enhanced closest to the magnetic instability. 
+    Although both plots are shown only specific for certain values of U and $\mu$, the results they display hold for the enterity of
+    the superconducting region of the phase diagram in Fig.\ref{fig:1NNpd}.  
     }
     \label{fig:1NNSC}
 \end{figure}
