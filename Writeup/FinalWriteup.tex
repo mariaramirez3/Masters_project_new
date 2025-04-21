@@ -548,7 +548,11 @@ However, the physics becomes more interesting for a chemical potential of $\mu =
 The doping value recieves its name from the emergence of stripe ordering and supresion of superconductivity. Here, the magical doping corresponds to a chemical potential of $\pm 1.00eV$($\frac{1}{8}$th of the bandwidth). 
 One observes that for low Coulumb repulsion values there is a Ferromagentically ordered SDW. This SDW is then supressed by a Superconducting Phase and is later recovered at around $\approx U = 15.00eV$. This second SDW state is now
 Antiferromagnetically ordered. The $T_c$ increases along the stripe(Fig.\ref{fig:1NN_stripes}). Whilst not quite the conventional stripe behaviour observed in the Cuprates, it is safe to conclude that there is still 
-something "magical" about a $\frac{1}{8}$th filling fraction in the 1NN model presented here. 
+something "magical" about a $\frac{1}{8}$th filling fraction in the 1NN model presented here. It is important to note that
+before carrying out this analysis the possibility of the stripes being a result of a computational artefact was ruled out. 
+This was done by increasing the $n_k$x$n_{k_f}$-resolution for a single point in the stripe and verifying that the result of the calculation does not change. 
+The appearance of these stripes as true results of the calculations is further confirmed in Section~\ref{subsec:Stripes1NNN}. 
+
 
 
 
@@ -566,13 +570,34 @@ something "magical" about a $\frac{1}{8}$th filling fraction in the 1NN model pr
 
 \subsection{Effect of next-nearest neighbour hopping (1NNN model)}
 \label{subsec:1NNNModel}
+The 1NNN model is defined as the extension of the 1NN model described above, 
+with the inclusion of the next-nearest neighbour hopping amplitude as a free parameter.
+This section discusses three additional phase diagrams
+for the two-dimensional Hubbard model with a respective next-nearest neighbour hopping amplitude 
+of 0.25, 0.50 and 0.75 eV(Fig.\ref{fig:1NNN}).
+The nearest neighbour hopping amplitude is maintained at 1eV for all models. 
+Moreover, the chemical potential of the models is set accordingly to ensure a 
+constant number of electrons at half-filling so that the models are comparable. \par
+\medskip
+\noindent
+As the next-nearest neighbour hopping is increased the position of the Van-Hove singularity is lowered in energy. 
+Increasing $t'$ also changes the Fermi-surface and therefore the nesting vectors of the models. 
+As a result of both, when $t'$ is increased, the magnetic-superconducting sandwich 
+region is displaced towards the negative chemical potential regime. However, there are several features of the 1NN model that remain once $t'$ is included. 
+The superconducting regions remain (in the most-part) d-wave symmetric and one can still observe the emergence of magnetic stripes. Moreover, general trends in $T_c$ are also observed: it is maximised closest to the 
+magnetic instability and it increases as a function of U. \par
+\medskip
+\noindent There have been several studies investigating the effect of $t'$ in the 2D Hubbard model, both using FRG\cite{husemann2012incommensurate} and other alternative methods\cite{fontenele2025effects}, with a particular
+focus on using the value $t'$ as a route to enhance $T_c$. 
+The results presented here are of a slightly different flavour, 
+the aim is to compare the features of the 1NN and 1NNN phase diagrams. 
 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=1.0\textwidth]{1NNN.png}  % Adjust width as needed
     \caption{\textbf{1NNN model:} a) Phase diagram for the 1NNN model as a function of Coulumb repulsion U and chemical potential $\mu$ (t =1eV, nkxnkf = 20x5, ff = 4\AA) for t'=0.00, 0.25, 0.50, 0.75 eV. 
-    b) Transition temperature for the superconducting region.
+    b) Transition temperature for the superconducting region (plotted in a logarithmic scale).
     c) Single plot of the band structure along high-symmetry path for corresponding values of t'.
     d) Single plot of the Fermi surface for all values of t' considered.}
     
@@ -582,6 +607,18 @@ something "magical" about a $\frac{1}{8}$th filling fraction in the 1NN model pr
 \newpage
 
 \subsubsection{Superconductivity in the 1NNN Model}
+
+Including a next-nearest neighbour hopping parameter in the 1NN model does not result in
+any major changes of the superconductivity of the model. The order parameter is mostly d-wave symmetric and the $T_c$ increases
+as a function of Coulumb repulsion. The proximity to a Magnetic instability enhances the superconducting transition temperature.
+Moreover, the same SC-SDW-SC sandwich is observed after breaking particle-hole symmetry. This supports the claim that SC is favoured in the vicinity
+of a SDW instability. Whilst most key features remain the same, there are some important differences. 
+In the case where $t' \neq 0 $, CDW patches appear in the vicinity of SC regions.
+When $\frac{t'}{t} = 0.75$, and for all values of U between 8-11eV, the Superconducting order parameter changes.
+Along these horizontal cuts there is a SCI-SDW-SCII-CDW transition. The Superconducting order parameter 
+is always d-wave symmetric in the SCI region and for most of the SCII region. It abruptly transitions to 
+s-wave symmetric in the vicinity of the CDW region. This behaviour is also observed in the SC regions that neighbour CDW regions for 
+the $t' = 0.25, 0.50eV$ models. 
 
 Important to note that results shown in Fig \ref{fig:1NNNSC} are the plots for the case of U = 9.00eV and although this
 value is unphysical since we constrain ourselves to the weak-coupling approximation in which we assume that U is of the orders of
@@ -599,9 +636,10 @@ magnitude of the bandwidth of the material.
 \end{figure}
 
 
-
+\newpage
 
 \subsubsection{Magnetic stripes in the 1NNN model}
+\label{subsec:Stripes1NNN}
 
 \begin{table}[h]
     \centering
