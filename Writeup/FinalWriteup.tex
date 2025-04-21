@@ -344,6 +344,8 @@ Diverge to solve them and some of the utilised post-processing techniques.
 
 \subsection{Tight-Binding Models}
 
+\label{subsec:TBM1NN2}
+
 This project discusses three models: the 1NN, 1NNN and 1NN2 model (\textit{See Fig.\ref{fig:2D Hubbard model}}). For the first two, the hopping parameters in the tight-binding model are treated as free parameters. 
 For the later, the hopping parameters are determined using the method described below. \par
 \medskip
@@ -428,11 +430,6 @@ the additional sum around each k-point. The calculations performed here were car
 grid of 20x5 ($n_k$ x $n_{k_f}$) points. The choice of parameters ensured that the calculations had converged appropriatedly 
 and resulted in a computational time of $\approx 180s$ per point. 
 
-\subsection{Calculation of Susceptibilities}
-
-\subsubsection{Nesting vectors}
-
-\subsubsection{Superconducting order parameters}
 
 \section{Results and discussion}
 
@@ -609,6 +606,7 @@ the aim is to compare the features of the 1NN and 1NNN phase diagrams.
 \newpage
 
 \subsubsection{Superconductivity in the 1NNN Model}
+\label{subsubsec:SC1NNN}
 
 Including a next-nearest neighbour hopping parameter in the 1NN model does not result in
 many changes of the superconductivity of the model. The order parameter is mostly d-wave symmetric and the $T_c$ increases
@@ -722,7 +720,7 @@ model and phase for which this trend is observed.
     \includegraphics[width=\textwidth]{1NNN050Dome.png}
     \captionof{figure}{\textbf{Magnetic Dome in 1NNN, t'=0.50eV model}: Tc as a function of $\mu$ for different values of U (offsetted by 1eV).
     This figure shows how the height of the second magentic dome increases as a function of U whilst the height of the 
-    first remains constant. The turning point for the double dome pattern occurs at $\mu$=-2.00eV }
+    first remains constant. The turning point of the double dome pattern occurs at $\mu$=-2.00eV }
     \label{fig:1NNNDome}
 \end{minipage}
 \hfill
@@ -740,8 +738,19 @@ model and phase for which this trend is observed.
 
 \subsubsection{Continous variation of next-nearest neighbour hopping}
 
+In order to support further the ideas discussed in Section \ref{subsec:1NNModel}, the critical temperature
+is plotted as a function of chemical potential $\mu$ for different values of t' at U=10.00eV \textit{(See Fig.\ref{fig:tprimecont})}
+One can see how the Magnetic region is pushed to more negative values of the chemical potential as the value of the next-nearest 
+neighbour hoping parameter is increased (and the van Hove singularity is pushed down in energy). The bulk magnetic
+region remains AFM ordered and the SC order parameter is in most cases d-wave symmetric. The exception to this is the case where
+t' is set to 0.70eV. There, the SC order parameter transitions to s-wave symmetric when it is closest to the boundary 
+with the CDW phase (as discussed in Section \ref{subsubsec:SC1NNN}).
+
 \subsection{Effect of bi-orbital system (1NN2 model)}
 \label{subsec:1NN2Model}
+
+The models discussed so far were constructed assuming a single orbital per site.
+
 
 
 
