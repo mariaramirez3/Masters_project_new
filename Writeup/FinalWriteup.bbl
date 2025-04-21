@@ -154,6 +154,21 @@ Jonas Profe, Dante~M Kennes, and Lennart Klebl.
 \newblock diverge implements various exact renormalization group examples.
 \newblock {\em SciPost Physics Codebases}, page 026, 2024.
 
+\bibitem{beyer2023rashba}
+Jacob Beyer, Jonas~B Profe, Lennart Klebl, Tilman Schwemmer, Dante~M Kennes, Ronny Thomale, Carsten Honerkamp, and Stephan Rachel.
+\newblock Rashba spin-orbit coupling in the square-lattice hubbard model: A truncated-unity functional renormalization group study.
+\newblock {\em Physical Review B}, 107(12):125115, 2023.
+
+\bibitem{hille2020quantitative}
+Cornelia Hille, Fabian~B Kugler, Christian~J Eckhardt, Yuan-Yao He, Anna Kauch, Carsten Honerkamp, Alessandro Toschi, and Sabine Andergassen.
+\newblock Quantitative functional renormalization group description of the two-dimensional hubbard model.
+\newblock {\em Physical Review Research}, 2(3):033372, 2020.
+
+\bibitem{vilardi2020dynamical}
+Demetrio Vilardi, Pietro~M Bonetti, and Walter Metzner.
+\newblock Dynamical functional renormalization group computation of order parameters and critical temperatures in the two-dimensional hubbard model.
+\newblock {\em Physical Review B}, 102(24):245128, 2020.
+
 \bibitem{kivelson1998electronic}
 Steven~A Kivelson, Eduardo Fradkin, and Victor~J Emery.
 \newblock Electronic liquid-crystal phases of a doped mott insulator.
@@ -168,6 +183,21 @@ Eduardo Fradkin, Steven~A Kivelson, and John~M Tranquada.
 Tuomas~I Vanhala and P{\"a}ivi T{\"o}rm{\"a}.
 \newblock Dynamical mean-field theory study of stripe order and d-wave superconductivity in the two-dimensional hubbard model.
 \newblock {\em Physical Review B}, 97(7):075112, 2018.
+
+\bibitem{furukawa1998truncation}
+Nobuo Furukawa, TM~Rice, and Manfred Salmhofer.
+\newblock Truncation of a two-dimensional fermi surface due to quasiparticle gap formation at the saddle points.
+\newblock {\em Physical review letters}, 81(15):3195, 1998.
+
+\bibitem{honerkamp2001temperature}
+Carsten Honerkamp and Manfred Salmhofer.
+\newblock Temperature-flow renormalization group and the competition between superconductivity and ferromagnetism.
+\newblock {\em Physical Review B}, 64(18):184516, 2001.
+
+\bibitem{capone2006competition}
+Massimo Capone and G~Kotliar.
+\newblock Competition between d-wave superconductivity and antiferromagnetism in the two-dimensional hubbard model.
+\newblock {\em Physical Review B—Condensed Matter and Materials Physics}, 74(5):054513, 2006.
 
 \bibitem{qin2020absence}
 Mingpu Qin, Chia-Min Chung, Hao Shi, Ettore Vitali, Claudius Hubig, Ulrich Schollw{\"o}ck, Steven~R White, Shiwei Zhang, and (Simons~Collaboration on~the Many-Electron~Problem).
