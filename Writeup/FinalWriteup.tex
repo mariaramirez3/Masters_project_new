@@ -129,6 +129,7 @@ This model has been widely studied since it resembles the structure of the cupra
 
 
 \subsubsection{Hubbard-Kanamori Model}
+\label{subsubsec: HKmodel}
 In the case of materials with a multi-band and/or multi-orbital nature, the Hubbard model is not sufficient to capture all of the physical phenomena. This motivates the extension of the Hubbard Model to the Hubbard-Kanamori model\cite{sherman2020hubbard} by including a Hund's coupling term.
 
 \begin{equation} \label{Hubbard-Kanamori Model}
@@ -710,7 +711,7 @@ model and phase for which this trend is observed.
     e) t' = 0.50eV, $\mu$=1.60eV,
     f) t' = 0.50eV, $\mu$=-2.60eV,
     g) t' = 0.75eV, $\mu$=1.60eV, 
-    h) t' = 0.75eV, $\mu$=-3.00eV}
+    h) t' = 0.75eV, $\mu$=-3.00eV.}
     \label{fig:1NNNStripes}
 \end{figure}
 
@@ -749,14 +750,36 @@ with the CDW phase (as discussed in Section \ref{subsubsec:SC1NNN}).
 \subsection{Effect of bi-orbital system (1NN2 model)}
 \label{subsec:1NN2Model}
 
-The models discussed so far were constructed assuming a single orbital per site.
+The models presented so far were constructed assuming a single orbital per site. This section discusses the effect of including
+two orbitals per site. The model was calculated using the parameters discussed in Section \ref{subsec:TBM1NN2} and since it now includes
+multiple orbitals per site its Hamiltonian is now extended to the Hubbard-Kanamori Hamiltonian \textit{(See Section \ref{subsubsec: HKmodel})}. 
+The chemical potential is fixed to the undoped ($\mu = 0.00eV $) and doped ($\mu =1.00eV$). The Coulumb repulsion and Hunds coupling strengths are varied from 1-10eV and 0.1-1.0eV respectively.
+The points were calculated using a form factor of 4\AA and an $n_k$x$n_{k_f}$ grid of 20x5. 
+This section will focus on the 1NN2A model, where the orbital mixing between different orbitals is set to 0.\par
+\medskip
+\noindent In the undoped case, the model shows an Antiferromagnetically ordered SDW ground state
+for $U > 3.00eV$. The groundstate transitions to a CDW if the Coulomb repulsion is set to 0. This CDW region has a nesting vector 
+of $(\pi, \pi)$. Doping the system to a chemical potential of $\mu = 1.00eV$ supresses the SDW. Instead, a small superconducting patch 
+emerges in the boundary of a CDW phase \textit{(See Fig.{\ref{fig:1NN2pd}})}.
 
-
-
-
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
+    \centering
+    \includegraphics[width=0.90\textwidth]{1NN2.png}  % Adjust width as needed
+    \caption{\textbf{Phase diagram for the 1NN2 model:} Phase diagram for the 1NN2 model without orbital 
+    mixing between different orbitals. Fig a) Band structure for the undoped 1NN2A model. 
+    Fig b) Band structure for the 1NN2A model at $\mu =1.0eV$  
+    Fig c) Phase diagram for the undoped 1NN2A model
+    Fig d) Phase diagram for the 1NN2A model at $\mu =1.00eV$}
+    \label{fig:1NN2pd}
+\end{figure}
 
 
 \subsubsection{Superconductivity in the 1NN2 model}
+
+The Superconducting regions shown in Fig.\ref{fig:1NN2pd}d. show different order parameters. The SC region at U=0.0eV is s-wave symmetric whilst the SC region at U =10.00eV
+is d-wave symmetric. 
+
+
 
 \subsubsection{Effect of orbital hybridisation in the 1NN2 model}
 
