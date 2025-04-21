@@ -6,7 +6,7 @@
 \usepackage{cite}
 \usepackage{caption}
 
-\title{Investigating unconventional superconductivity in the 2D Hubbard-Kanamori model using Functional Renomarlization Group (FRG)}
+\title{Investigating unconventional superconductivity in the 2D Hubbard-Kanamori model using Functional Renormalization Group (FRG)}
 \author{210003218}
 \date{February-May 2025}
 
@@ -17,7 +17,50 @@
 
 \section{Abstract}
 
+High-temperature superconductors have the potential to bring ground-breaking advancements to modern technology.
+
+
+
+
 \section{Introduction}
+
+Since its discovery in 1911\cite{onnes1911superconductivity}, superconductivity has remained a topic of great scientific interest.
+This phenomena, characterised by an abrupt drop in resistance at a so-called "Critical Temperature($T_c$)"\cite{geballe2015tc} is driven by an attractive interaction
+between electrons. This attractive interaction gives rise to the formation of electron pairs, famously known as "Cooper pairs"\cite{schrieffer2018theory}. For many 
+years after the discovery of superconductivity, physicists
+were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the pairing mechanism in all superconducting materials. 
+However, in 1986, the discovery of the first heavy-fermion superconductor\cite{bednorz1986possible} resulted in the emergence of a whole new class of materials: Unconventional Superconductors. 
+These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory\cite{hirsch2015superconducting}.
+For many materials, there is no consensus on what the mechanism otherwise is.\par 
+\medskip
+
+\noindent High Temperature superconductors are defined by having a critical temperature that exceeds the boiling point 
+of Nitrogen (77K). Ever since the discovery of the first high-Tc superconductor, the search for "(close to-) room temperature" superconductors has been extended to 
+other all sorts of unconventional supercondutors. However, a comprehensive understanding of what drives the superconductivity is required in order 
+to achieve this. There have been multiple attempts to model the pairing mechanism of some families of high-Tc superconductors, but they have
+been greatly limited by the numerical challenges that working with multi-band systems and with spin-orbit coupling (SOC) present. 
+This motivates the use of a promising technique: TU$^2$FRG\cite{eckhardt2020truncated,profe2024magic}.\par
+
+\medskip
+
+\noindent This work studies one of the most fundamental models in condensed matter physics: the 2D Hubbard model. 
+In this project, the 2D Hubbard Hamiltonian is solved using Functional Renormalisation Group (FRG). The effect of the Coulumb repulsion(U) and 
+chemical potential ($\mu$) on the interplay between Magnetism and Superconductivity is investigated. Stable superconducting and
+magnetic regions are found and the trends their respective ordering and critical temperature are presented. The analysis is extended one dimension further 
+by looking at how the magnitude of the next-nearest neighbour hopping amplitude and the introduction of a second orbital 
+per site affects all of the above. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Theoretical Background}
 
@@ -46,7 +89,7 @@ These are condensates of cooper pairs formed by a \textbf{different} pairing mec
 \subsubsection{Spin-fluctuation mediated superconductivity}
 
 One emerging theory for some unconventional superconductors such Iron-based or heavy-fermion compounds 
-is that underlying pairing mechanism is driven by spin fluctuations \cite{moriya2000spin}. This section discusses how to
+is that the underlying pairing mechanism is driven by spin fluctuations \cite{moriya2000spin}. This section discusses how to
 model spin-fluctuation mediated superconductivity for the fluctuation-exchange approximation(FLEX) \cite{esirgen1997fluctuation}. \par
 \medskip
 \noindent In such cases, the effective pairing interaction $\Gamma(k,k')$ is given by \footnote{Note that this form of pairing interaction 
@@ -88,7 +131,7 @@ The Tight Binding Model is a central element of condensed matter physics \eqref{
 Due to the overlap between the quantum mechanical wavefunctions that describe these sites, electrons are allowed to 'hop' to neighbouring sites. The probability that this hopping process will occur is given by a tunnelling amplitude, which can be calculated using a hopping integral. \par
 \medskip
 \noindent This work is carried out in the tight-binding model framework, where the magnitude of the tunnelling amplitudes are at first treated as free parameters. 
-Here, we build from a simple 2D nearest-neighbour hoppping Hubbard model (Section.~\ref{subsec: HubbardModel}) and investigate the effect of introducing and varying the strength of the next-nearest neighbour hopping amplitude (See Fig. \ref{fig:2D Hubbard model}).
+Here, the starting point is a simple 2D nearest-neighbour hoppping Hubbard model (Section.~\ref{subsec: HubbardModel}) and investigate the effect of introducing and varying the strength of the next-nearest neighbour hopping amplitude (See Fig. \ref{fig:2D Hubbard model}).
 We extend these models further by considering the two-orbital per site case. 
 
 
@@ -112,7 +155,7 @@ We extend these models further by considering the two-orbital per site case.
 \label{subsec: HubbardModel}
 
 The  tight binding model as defined above fails to account for any interactions between neighbouring electrons. This motivates the extension of this model to the Hubbard model \eqref{t Hubbard model}, which includes the (onsite) Coulomb repulsion between electrons. Despite its simple form, this model can describe very rich physical phenomena.
-In particular, it becomes very interesting to study when U and t are of comparable order, since it highlights the competing phenomena that takes place in correlated systems. 
+In particular, it becomes very interesting to study when U and t are of comparable order, since it highlights the competing phenomena that take place in correlated systems. 
 The 2D Hubbard model remains unsolved to date, but is able to predict all sorts of correlated phases: it describes metals, insulators, superconductors and other exotic phases\cite{white1989numerical,hirsch1985two, anderson1990luttinger,sun2011nearly}. 
 This model has been widely studied since it resembles the structure of the cuprate high-temperature superconductors \cite{dagotto1994correlated}. 
 
@@ -144,7 +187,7 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 
 Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why we resort to numerical techniques such as FRG to do so. FRG falls into the category of many other weak-coupling techniques (such as Mean field-theory\cite{kadanoff2009more}, pertubation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or Random Phase approximation\cite{bohm1951collective}).
 In these theories, interactions between electrons are considered to be weak. This allows one to effectively model the electrons in the system as free particles 
-and treat their interactions as a pertubation. In the non-interacting limit, the method is therefore exact. Beyond this limit, it is controlled by the ratio between the interaction
+and treat their interactions as a pertubation. In the non-interacting limit, the method is therefore exact. Beyond this limit, the precision of the method is controlled by the ratio between the interaction
 strength and the bandwidth of the system. 
 
 \medskip
@@ -220,7 +263,7 @@ bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{p
 \noindent In the following steps the derivation will proceed in the framework of the  so-called "effective action" ($\mathcal{T}[\psi, \bar{\psi}]$).
 This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), defined below in Equations (\ref{Greens function functional}, \ref{G term in effective action}) and (\ref{Effective action}) respectively. 
 \textit{(For convinience and for reasons that
-are beyond the scope of this project it is more convinient to work with the effective action than it is to do so with the partition functional.) \footnote{If interested in why see REFERENCE}}
+are beyond the scope of this project it is more convinient to work with the effective action than it is to do so with the partition functional.) \footnote{If interested in why see Ref. \cite{metzner2012functional}}}
 
 \begin{equation} \label{Greens function functional}
     \mathcal{G}[\eta, \bar{\eta}] = -ln(\mathcal{Z}[\eta, \bar{\eta}])

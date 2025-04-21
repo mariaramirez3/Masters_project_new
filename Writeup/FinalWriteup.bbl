@@ -5,6 +5,11 @@ H~Kamerlingh Onnes.
 \newblock The superconductivity of mercury.
 \newblock {\em Comm. Phys. Lab. Univ. Leiden}, 122:124, 1911.
 
+\bibitem{geballe2015tc}
+Theodore~H Geballe, Robert~H Hammond, and Phillip~M Wu.
+\newblock What tc tells.
+\newblock {\em Physica C: Superconductivity and Its Applications}, 514:9--16, 2015.
+
 \bibitem{schrieffer2018theory}
 J~Robert Schrieffer.
 \newblock {\em Theory of superconductivity}.
@@ -18,6 +23,16 @@ J~George Bednorz and K~Alex M{\"u}ller.
 \bibitem{hirsch2015superconducting}
 JE~Hirsch, MB~Maple, and F~Marsiglio.
 \newblock Superconducting materials classes: Introduction and overview, 2015.
+
+\bibitem{eckhardt2020truncated}
+Christian~J Eckhardt, Carsten Honerkamp, Karsten Held, and Anna Kauch.
+\newblock Truncated unity parquet solver.
+\newblock {\em Physical Review B}, 101(15):155104, 2020.
+
+\bibitem{profe2024magic}
+Jonas~B Profe, Luke~C Rhodes, Matteo D{\"u}rrnagel, Rebecca Bisset, Carolina~A Marques, Shun Chi, Tilman Schwemmer, Ronny Thomale, Dante~M Kennes, Chris~A Hooley, et~al.
+\newblock Magic angle of sr 2 ruo 4: Optimizing correlation-driven superconductivity.
+\newblock {\em Physical Review Research}, 6(4):043057, 2024.
 
 \bibitem{moriya2000spin}
 Toru Moriya and Kazuo Ueda.
@@ -103,11 +118,6 @@ David Bohm and David Pines.
 Walter Metzner, Manfred Salmhofer, Carsten Honerkamp, Volker Meden, and Kurt Sch{\"o}nhammer.
 \newblock Functional renormalization group approach to correlated fermion systems.
 \newblock {\em Reviews of Modern Physics}, 84(1):299--352, 2012.
-
-\bibitem{eckhardt2020truncated}
-Christian~J Eckhardt, Carsten Honerkamp, Karsten Held, and Anna Kauch.
-\newblock Truncated unity parquet solver.
-\newblock {\em Physical Review B}, 101(15):155104, 2020.
 
 \bibitem{lichtenstein2018functional}
 Julian Lichtenstein.
