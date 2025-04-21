@@ -486,14 +486,14 @@ pseudo-gap\cite{katanin2009comparing,otsuki2014superconductivity}, both of which
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
-    \includegraphics[width=1.25\textwidth]{1NNphasediagram.png}  % Adjust width as needed
+    \includegraphics[width=0.95\textwidth]{1NNphased.png}  % Adjust width as needed
     \caption{\textbf{Phase diagram for the 1NN model}:  (t =1eV, nkxnkf = 20x5, ff = 4\AA) as a function of On-site Coulumb Repulsion $U$ and chemical potential $\mu$. 
     Figure shows the four phases observed in the 1NN model: SC (Superconductivity), SDW (Spin-Density Wave), CDW(Charge Density Wave) and FL (Fermu-Liquid).
     Calculated points in the phase diagram are showed by the 'x' markers and a lighter-couloured background is used to depict interpolated regions between these points. }
     \label{fig:1NNpd}
 \end{figure}
 
-\newpage
+
 
 
 \subsubsection{Superconductivity in the 1NN Model}
@@ -533,7 +533,6 @@ of the Tc values calculated. Nevertheless, the trends in Tc remain trustworthy.
     \label{fig:1NNSC}
 \end{figure}
 
-\newpage
 
 
 \subsubsection{Magnetic stripes in the 1NN Model}
@@ -596,10 +595,11 @@ the aim is to compare the features of the 1NN and 1NNN phase diagrams.
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=1.0\textwidth]{1NNN.png}  % Adjust width as needed
-    \caption{\textbf{1NNN model:} a) Phase diagram for the 1NNN model as a function of Coulumb repulsion U and chemical potential $\mu$ (t =1eV, nkxnkf = 20x5, ff = 4\AA) for t'=0.00, 0.25, 0.50, 0.75 eV. 
-    b) Transition temperature for the superconducting region (plotted in a logarithmic scale).
-    c) Single plot of the band structure along high-symmetry path for corresponding values of t'.
-    d) Single plot of the Fermi surface for all values of t' considered.}
+    \caption{\textbf{1NNN model:}  a) Single plot of the band structure along high-symmetry path for corresponding values of t'.
+    b) Single plot of the Fermi surface for all values of t' considered.
+    c) Phase diagram for the 1NNN model as a function of Coulumb repulsion U and chemical potential $\mu$ (t =1eV, nkxnkf = 20x5, ff = 4\AA) for t'=0.00, 0.25, 0.50, 0.75 eV. 
+    d) Transition temperature for the superconducting region (plotted in a logarithmic scale).
+   }
     
     \label{fig:1NNN}
 \end{figure}
@@ -609,21 +609,20 @@ the aim is to compare the features of the 1NN and 1NNN phase diagrams.
 \subsubsection{Superconductivity in the 1NNN Model}
 
 Including a next-nearest neighbour hopping parameter in the 1NN model does not result in
-any major changes of the superconductivity of the model. The order parameter is mostly d-wave symmetric and the $T_c$ increases
+many changes of the superconductivity of the model. The order parameter is mostly d-wave symmetric and the $T_c$ increases
 as a function of Coulumb repulsion. The proximity to a Magnetic instability enhances the superconducting transition temperature.
 Moreover, the same SC-SDW-SC sandwich is observed after breaking particle-hole symmetry. This supports the claim that SC is favoured in the vicinity
-of a SDW instability. Whilst most key features remain the same, there are some important differences. 
+of a SDW instability. \par
+\medskip
+\noindent Whilst most key features remain the same, there are some important differences. 
 In the case where $t' \neq 0 $, CDW patches appear in the vicinity of SC regions.
 When $\frac{t'}{t} = 0.75$, and for all values of U between 8-11eV, the Superconducting order parameter changes.
 Along these horizontal cuts there is a SCI-SDW-SCII-CDW transition. The Superconducting order parameter 
 is always d-wave symmetric in the SCI region and for most of the SCII region. It abruptly transitions to 
-s-wave symmetric in the vicinity of the CDW region. This behaviour is also observed in the SC regions that neighbour CDW regions for 
-the $t' = 0.25, 0.50eV$ models. 
-
-Important to note that results shown in Fig \ref{fig:1NNNSC} are the plots for the case of U = 9.00eV and although this
-value is unphysical since we constrain ourselves to the weak-coupling approximation in which we assume that U is of the orders of
-magnitude of the bandwidth of the material. 
-
+s-wave symmetric in the vicinity of the CDW region\textit{(See Fig.\ref{fig:1NNNSC})}. This behaviour is also observed in the SC regions that neighbour CDW regions for 
+the $t' = 0.25, 0.50eV$ models. In order to verify whether this corresponds to a physical phase transition, one should be able to experimentally observe a 
+discontinuity as a consequence of an additional symmetry breaking when the order parameter changes from s- to d- wave symmetric.
+ 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
@@ -641,23 +640,58 @@ magnitude of the bandwidth of the material.
 \subsubsection{Magnetic stripes in the 1NNN model}
 \label{subsec:Stripes1NNN}
 
+The appearance of Magnetic stripes is another common denominator between the 1NN and 1NNN models. 
+A survey of all stripes and their respective nesting vectors can be found in Tab.\ref{tab:StripesSummary}. The location of the
+stripes suggest that their emergence is a consequence of strong nesting at particular chemical potential values. 
+The "magic doping" stripe remains the only to have change ordering from FM to AFM as a consequence of the interplay with Superconductivity. 
+
+
+
+\medskip 
+
+\noindent When $\frac{t'}{t} = 0.50$, a magnetic double dome emerges, becoming more pronounced as the 
+magnitude of the Coulumb repulsion increases. This is the pattern that one would have expected in
+the superconducting region(as is seen for the Cuprates\cite{taillefer2010scattering}). However, this is the only 
+model and phase for which this trend is observed. 
+ 
+
+
+
+
 \begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
        t'(eV) & $\mu$ (eV) & Competing with other phase?& Nesting vector & Magnetic ordering  \\
         \hline
-        0.00 & 1.00 & Yes (SC) & (0,0)-($\pi$, $\pi$)&  Changing from FM-AFM\\
+        0.00 & 1.00 & Yes (SC) & (0,0)-($\pi$, $\pi$)& FM-AFM\\
         \hline
-        0.00 & 2.00 &  No  & (0,0)-(0, $\pi$)  & Changing from FM to Commensurate\\
+        0.00 & 2.00 &  No  & (0,0)-(0, $\pi$)  & FM-Commensurate\\
         \hline
-        0.25 & 2.40 &  No  & (0,0)  & FM \\
+        0.25 & -3.20 & No  & (0,0)  & FM\\
         \hline
-        0.25 & 1.40 &  Yes (CDW)  & (0,0)  & FM \\
+        0.25 & -2.40 & No  & (0,0) & FM\\
         \hline
         0.25 & -2.00 & No  & (0,0)-($\pi$, $\pi$)  & FM - AFM\\
         \hline
         0.25 & 0.60 &  No  & (0,0)  & FM \\
+        \hline
+        0.25 & 1.40 &  Yes (CDW)  & (0,0)  & FM \\
+        \hline
+        0.25 & 2.40 &  No  & (0,0)  & FM \\
+        \hline
+        0.50 & -2.60 &  No  & (0,0)  & FM \\
+        \hline
+        0.50 & 1.60 &  No  & (0,0)  & FM \\
+        \hline
+        0.75 & -3.00 &  Yes(SC)  & (0,0)  & FM \\
+        \hline
+        0.75 & -2.20 &  Yes(SC)  & (0,0)-inc. & FM- Incommensurate \\
+        \hline
+        0.75 & 2.00 &  No  & (0,0). & FM \\
+        \hline
+
+
           
         \hline
     \end{tabular}
