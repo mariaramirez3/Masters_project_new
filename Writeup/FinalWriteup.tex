@@ -16,9 +16,15 @@
 
 
 \section{Abstract}
-
-High-temperature superconductors have the potential to bring ground-breaking advancements to modern technology.
-
+ 
+The 2D Hubbard model has been widely studied due to its resemblance to the Cuprate Superconductors. 
+This thesis presents an in depth study of the 2D Hubbard model using Functional Renormalisation Group theory (FRG).
+The work presented here is carried out in the framework of spin-fluctuation mediated superconductivity and utilising the divERGe package
+to implement the truncated-unity-FRG TU$^2$FRG computational backend. The research is conducted by varying several model
+parameters such as the on-site Coulumb repulsion, chemical potential, Hunds
+coupling, next-nearest neighbour hopping and the number of orbitals per site. From this, one obtains conclusive trends on the 
+competition between Magnetism and Superconductivity, the ordering of these phases and  a qualititative picture of how the critical temperature Tc evolves along the
+phase diagram. 
 
 
 
@@ -45,20 +51,11 @@ This motivates the use of a promising technique: TU$^2$FRG\cite{eckhardt2020trun
 
 \noindent This work studies one of the most fundamental models in condensed matter physics: the 2D Hubbard model. 
 In this project, the 2D Hubbard Hamiltonian is solved using Functional Renormalisation Group (FRG). The effect of the Coulumb repulsion(U) and 
-chemical potential ($\mu$) on the interplay between Magnetism and Superconductivity is investigated. Stable superconducting and
+chemical potential ($\mu$) on the interplay between Magnetism and Superconductivity is investigated. This is done under the crucial assumption
+that superconductivity is mediated by spin-fluctuations. Stable superconducting and
 magnetic regions are found and the trends their respective ordering and critical temperature are presented. The analysis is extended one dimension further 
 by looking at how the magnitude of the next-nearest neighbour hopping amplitude and the introduction of a second orbital 
 per site affects all of the above. 
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -66,11 +63,8 @@ per site affects all of the above.
 
 \subsection{Unconventional superconductivity}
 
-For many years after the discovery of superconductivity in 1911\cite{onnes1911superconductivity} physicists
-were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the pairing mechanism in all superconducting materials. 
-However, in 1986, the discovery of the first heavy-fermion superconductor\cite{bednorz1986possible} resulted in the emergence of a whole new class of materials: Unconventional Superconductors. 
-These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory\cite{hirsch2015superconducting}. 
-
+As previously outlined, unconventional superconductors are those in which the Cooper pair formation is not driven by Spin-Fluctuations. 
+This section aims to outline the theoretical background behind a particular class of unconventional superconductors: Spin-fluctuation mediated superconductors. 
 \medskip
 \noindent Most generally, the Hamiltonian for a superconducting state can be described as follows:
 
@@ -422,7 +416,12 @@ A table summarising estimated parameters for the models  discussed in Section~\r
 \label{subsec:diverge}
 
 divERGe is an open-source, high-performance, C/C++/Python library that includes a truncated unity FRG (TU$^2$FRG) computational backend\cite{profe2024diverge}. 
-Under the approximations outlined in Section\ref{subsubsec:Truncation scheme}, the flow equations
+The central element in this truncated unity calculation is a model that includes all of the required parameters. This model must capture the kinematics
+of the system based on the real hopping parameters of the model. It is important to also specify other parameters such as  the Bravais lattice vectors, the number of atoms per site or the number 
+of orbitals per atom. Once the model is created, it is neccesary to specify 6 different input parameters in order for the calculation to run: the strength of the Coulumb repulsion (U) and Hunds coupling (J), the magnitude of the chemical 
+potential ($\mu$) and the form factor, nk and nkf values. The later three are explained in more details in Section \ref{subsec:convergence}.\par
+\medskip
+\noindent Once the model is created and the required parameters are specified, it is time to perform the calculation. Under the approximations outlined in Section \ref{subsubsec:Truncation scheme}, the flow equations
 are integrated fromhigh scales($\lambda = \inf$) to low scales ($\lambda = 0$) by numerically going from $\lambda$ to $\lambda + d\lambda$.
 This integration is repeated until a phase transition (divergence of one of the calculated channels) occurs or a minimal $\lambda$ is reached. 
 In the later case, the system is assumed to be in a Fermi-Liquid state. 
