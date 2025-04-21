@@ -3,8 +3,8 @@ INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex
-OUTPUT FinalWriteup.log
+INPUT /home/oem/Documents/Final year project (copy)/Writeup/FinalWriteuptrial.tex
+OUTPUT FinalWriteuptrial.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -51,10 +51,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./FinalWriteup.aux
-INPUT ./FinalWriteup.aux
-INPUT FinalWriteup.aux
-OUTPUT FinalWriteup.aux
+INPUT ./FinalWriteuptrial.aux
+INPUT ./FinalWriteuptrial.aux
+INPUT FinalWriteuptrial.aux
+OUTPUT FinalWriteuptrial.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -71,9 +71,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./FinalWriteup.toc
-INPUT ./FinalWriteup.toc
-INPUT FinalWriteup.toc
+INPUT ./FinalWriteuptrial.toc
+INPUT ./FinalWriteuptrial.toc
+INPUT FinalWriteuptrial.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -86,9 +86,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-OUTPUT FinalWriteup.pdf
+OUTPUT FinalWriteuptrial.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-OUTPUT FinalWriteup.toc
+OUTPUT FinalWriteuptrial.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT ./2Dhubbardmodel.png
@@ -155,15 +155,10 @@ INPUT ./1NNN050Dome.png
 INPUT ./1NNN050Dome.png
 INPUT ./1NNN050Dome.png
 INPUT ./1NNN050Dome.png
-INPUT ./tprimecont.png
-INPUT ./tprimecont.png
-INPUT ./tprimecont.png
-INPUT ./tprimecont.png
-INPUT ./tprimecont.png
-INPUT ./FinalWriteup.bbl
-INPUT ./FinalWriteup.bbl
-INPUT FinalWriteup.bbl
-INPUT FinalWriteup.aux
+INPUT ./FinalWriteuptrial.bbl
+INPUT ./FinalWriteuptrial.bbl
+INPUT FinalWriteuptrial.bbl
+INPUT FinalWriteuptrial.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb

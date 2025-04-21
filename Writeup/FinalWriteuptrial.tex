@@ -4,7 +4,6 @@
 \usepackage{subcaption} 
 \usepackage[scale=0.8]{geometry}
 \usepackage{cite}
-\usepackage{caption}
 
 \title{Investigating unconventional superconductivity in the 2D Hubbard-Kanamori model using Functional Renomarlization Group (FRG)}
 \author{210003218}
@@ -654,7 +653,7 @@ The stripe at "magic doping" remains the only to have change ordering from FM to
 \noindent Whilst the transition from a Fermi-Liquid phase to any of a SC,SDW or CDW is quite abrupt, the critical temperature
 evolves more smoothly for those stripes which have a strong competition between SC and SDW/CDW instabilities \textit{(See Fig.\ref{fig:1NNNStripes})}. This is in agreement with
 that discussed in Section \ref{subsec:Stripes1NN}. When $\frac{t'}{t} = 0.50$, a magnetic double dome emerges, becoming more pronounced as the 
-magnitude of the Coulumb repulsion increases \textit{(See Fig.\ref{fig:1NNNDome})}. This is the pattern that one would have expected in
+magnitude of the Coulumb repulsion increases. This is the pattern that one would have expected in
 the superconducting region(as is seen for the Cuprates\cite{taillefer2010scattering}). However, this is the only 
 model and phase for which this trend is observed. 
  
@@ -716,25 +715,11 @@ model and phase for which this trend is observed.
     \label{fig:1NNNStripes}
 \end{figure}
 
-\noindent
-\begin{minipage}[t]{0.48\textwidth}
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
-    \includegraphics[width=\textwidth]{1NNN050Dome.png}
-    \captionof{figure}{\textbf{Magnetic Dome in 1NNN, t'=0.50eV model}: Tc as a function of $\mu$ for different values of U (offsetted by 1eV).
-    This figure shows how the height of the second magentic dome increases as a function of U whilst the height of the 
-    first remains constant. The turning point for the double dome pattern occurs at $\mu$=-2.00eV }
+    \includegraphics[width=0.90\textwidth]{1NNN050Dome.png}  % Adjust width as needed
     \label{fig:1NNNDome}
-\end{minipage}
-\hfill
-% Second figure (right side)
-\begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{tprimecont.png}
-    \captionof{figure}{\textbf{Continuous variation of t':} Normalised Tc plotted as a function of chemical 
-    potential $\mu$ for several values of t'. Tc is normalised separatedly with respect to the 
-    maxima of each plot in order to allow for the clear vizualisation of the trend.  }
-    \label{fig:tprimecont}
-\end{minipage}
+\end{figure}
 
 \newpage
 
