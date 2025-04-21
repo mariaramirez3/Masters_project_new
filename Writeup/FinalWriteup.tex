@@ -441,38 +441,44 @@ and resulted in a computational time of $\approx 180s$ per point.
 We define the 1NN model as the 2D Hubbard model with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
 As outlined in Section \ref{subsec: HubbardModel}, solving this model near half-filling becomes a hard endeavour. 
 This section explores the solution to the 1NN Model Hamiltonian using  two-particle-interaction-truncated FRG.
-Here, a phase diagram in terms of the On-site Coulumb repulsion $U$ and chemical
+Here, a phase diagram in terms of the on-site Coulumb repulsion $U$ and chemical
 potential $\mu$ is presented and discussed in detail. The calculations were carried out using a 20x5 $n_k$x$n_{kf}$ grid and a form factor
 of 4\AA, with a  nearest-neighbour hopping parameter of 1eV.  The choice of convergence parameters was determined by the methods discussed in Section \ref{subsec:convergence}. 
 Results are presented for Coulumb repulsion values  ranging from 1-20 eV and chemical potential
 values spanning the entire energetic bandwith of the model (from -4eV to 4eV). 
-Whilst there exists previous work on the 2D Hubbard Model using FRG\cite{beyer2023rashba,hille2020quantitative,vilardi2020dynamical} most of it focuses on specific areas of the phase diagram and there is very little focus on the effect of varying the 
-onsite Coulumb repulsion. Therefore, the work presented here covers a much wider range of parameters than what has previously been explored. 
+Whilst there exists previous work on the 2D Hubbard Model using FRG\cite{beyer2023rashba,hille2020quantitative,vilardi2020dynamical} 
+most of it focuses on specific areas of the phase diagram. Thus,
+very limited investigation has been carried out on the effect of varying the 
+on-site Coulumb repulsion. Therefore, the work presented here covers a much wider range of parameters than what has previously been explored. 
 \medskip
 
 
 
 
 \noindent There are several caveats to the results presented here. In real materials,  the chemical potential is an easily tuneable parameter due to its strong connection to the electronic doping of the system.
-However, controlling the magnitude of the Coulumb repulsion between electrons is by no means straightforward. 
+In turn, controlling the magnitude of the Coulumb repulsion between electrons is by no means straightforward. 
 Moreover, some of the interesting features discussed in this report lie outside of the physical regime. (ie- in our FRG calculation a weak-coupling limit was 
 assumed and therefore any Coulumb repulsion values above the magnitude of the  bandwidth of the material (8eV) can be considered to be unphysical in this limit.)
-Therefore, the analysis performed in this project does not neccesarily provide a route to enhance the superconductivity in real materials that resemble the models investigated. Instead, the main aim is to understand how varying hopping parameters affects the correlated phases observed in the model. It is also important to note, as discussed in Section \ref{subsubsec:Truncation scheme}, that any analysis on the transition temperature
-of the superconducting regions must be treated qualitatively and that this work does not claim to have found Superconducting regions at temperatures of the order of thousands of Kelvin in any of the models discussed. \par 
+Therefore, the analysis performed in this project does not neccesarily provide a route to enhance the superconductivity in the materials that resemble the models investigated.
+Instead, the main aim is to understand how varying certain parameters \textit{(U, $\mu$, t')} affects the correlated phases observed in the model. It is also important to note, as discussed in Section \ref{subsubsec:Truncation scheme}, that any analysis on the transition temperature
+of the superconducting regions must be treated qualitatively and that this work does not claim to have found Superconducting regions with transition temperatures of the order of thousands of Kelvin. \par 
 
 \medskip
 \noindent The complete phase diagram for the values discussed above is shown in Fig.\ref{fig:1NNpd}. As is expected
 for both the Hubbard model and the Cuprates\cite{kivelson1998electronic,fradkin2015colloquium,vanhala2018dynamical}, a strong competition between Magnetism and 
-Superconductivity is observed. This results in the emergence of a magnetic dome, sandwiched between two narrower d-wave superconducting regions. This magnetic dome is 
-\textbf{Anti-Ferromagentically} ordered and its width increases as the magnitude of the Coulumb repulsion is increased. A greater Coulumb repulsion thus favours the magnetic instability for a larger range
+Superconductivity (SC) is observed. This results in the emergence of a magnetic dome, sandwiched between two narrower d-wave superconducting regions. This magnetic dome is 
+\textbf{Anti-Ferromagentically} (AFM) ordered and its width increases as the magnitude of the Coulumb repulsion is increased. A greater Coulumb repulsion thus favours the magnetic instability as the "winner" of this competition for a larger range
 of doping values. Since both the AFM and d-wave SC are driven by repulsive scattering between
 ($\pi$,0) and (0,$\pi$) vectors, their competition is at its largest closest to the Van-Hove singularity, where both grow and reinforce the other\cite{furukawa1998truncation,honerkamp2001temperature}. Moreover, narrow magnetic stripes appear for even
-integer chemical potential values. For large values of U (greater than the material's bandwidth) there are patches of a charge density wave instability sorrounding the superconducting regions.\par
+integer chemical potential values. For large values of U \textit{(those that exceed the material's bandwidth)} there are patches of a charge density wave instability sorrounding the superconducting regions.\par
 
 \medskip
 
-\noindent The findings presented here are consistent with other studies of the two-dimensional Hubbard model. Dynamical Mean Field Theory(DMFT) has previously captured the idea that at weak-coupling the antiferromagnetic and d-wave superconductivity order parameters co-exist within the same solution
-for a range of doping (chemical potential values) and that the sytem evolves smoothly from the AFM to the SC phase\cite{capone2006competition}. 
+\noindent The findings presented here are consistent with other studies of the two-dimensional Hubbard model. Dynamical Mean Field Theory(DMFT) has previously captured the 
+coexistance of the AFM and SC order parameter within the same solution for 
+a range of doping\textit{(~$\mu$ in the findings here)} at weak-coupling. A smooth transition between these two phases has also been observed\cite{capone2006competition}. 
+However, the FRG 2D 1NN Hubbard model fails to capture Mott insulating phases or the formation of the 
+pseudo-gap\cite{katanin2009comparing,otsuki2014superconductivity}, both of which are characteristic to the Cuprate phase diagram. 
 
 
 
@@ -493,22 +499,23 @@ for a range of doping (chemical potential values) and that the sytem evolves smo
 \subsubsection{Superconductivity in the 1NN Model}
 
 Recent findings have claimed that the 2D Hubbard model does not have a superconducting ground state\cite{qin2020absence}. 
-Whilst their model is the same as the 1NN model explored in this section, the analysis in Ref. \cite{qin2020absence} is conducted in a 
+Whilst the model in Ref. \cite{qin2020absence} is the same as the 1NN model explored in this section, their analysis is conducted in a 
 slightly different framework than the one used in this project: using DMRG \cite{white1992density} 
 at moderate-strong coupling and for values of U between 6-8eV\textit{(which they claim to be the 
 regime relevant to the cuprates)}.
 The lack of superconductivity in their findings is attributed to a lack of competition 
 between the magnetic and superconducting phases. Here, in the weak-coupling framework both a competition between magnetism and superconductivity and 
-a stabilised superconducting region is found. The superconducting order parameter is plotted on top of the Fermi-Surface for the first BZ of points in the Superconducting region (Fig.\ref{fig:1NNSC}a).
-The order parameter shows antisymmetry with respect to a 90 degree rotation and therefore
+a stabilised superconducting region is found. The superconducting order parameter for this stable region is plotted on top of the Fermi-Surface for the first BZ (Fig.\ref{fig:1NNSC}a).
+The order parameter shows antisymmetry with respect to a 90 degree rotation and therefore one concludes that
 the superconducting region is d-wave symmetric. This is in agreement with what is expected from the Cuprate superconductors \cite{tsuei2000pairing}.\par
 \medskip
 \noindent 
-Moreover, after plotting the the critical temperature (Tc) as a function of chemical potential ($\mu$) for a constant Coulumb repulsion(U), one observes that
-the superconducting critical temperature is maximised closest to the magnetic instability (Fig.\ref{fig:1NNSC}b). This matches existing theories that the competition between instabilities
-enhaces the phase transition temperature(REFERENCE). The magnitude of the Coulumb repulsion and Tc are positively correlated, as is to be expected from the assumed of the pairing mechanism\textit{(See Eq.\ref{Pairing interaction SF})}.
+After plotting the the critical temperature (Tc) as a function of chemical potential ($\mu$) for a constant Coulumb repulsion(U), one observes that
+the superconducting critical temperature is maximised closest to the magnetic instability (Fig.\ref{fig:1NNSC}b).
+This is in agreement with the idea that competition between instabilities
+enhace the phase transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulumb repulsion and Tc are positively correlated, as is to be expected from the assumed of the pairing mechanism\textit{(See Eq.\ref{Pairing interaction SF})}.
 It is important to note that limiting the interactions 
-we consider in the FRG calculation to two-particle interactions acts as a bottle-neck for the accuracy 
+accounted for in the FRG calculation to two-particle interactions acts as a bottle-neck for the accuracy 
 of the Tc values calculated. Nevertheless, the trends in Tc remain trustworthy. 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
@@ -526,9 +533,24 @@ of the Tc values calculated. Nevertheless, the trends in Tc remain trustworthy.
     \label{fig:1NNSC}
 \end{figure}
 
+\newpage
 
 
 \subsubsection{Magnetic stripes in the 1NN Model}
+
+Another distinctive feature of the Cuprates \textit{(as well as other unconventional superconductors}\cite{levi1998stripes}\textit{)} is the emergence of "stripes". These are patterns of alternating
+charge-density and spin density waves\cite{zachar1998landau, vojta2009lattice}. In the 1NN model discussed here, such stripes are not observed. Nevertheless, one finds magnetic regions of interest
+outside of the main Anti-Ferromagnetic dome. The 1NN phase diagram in Fig.\ref{fig:1NNpd} shows what will from now on be reffered to as a 
+"magnetic stripe" occuring at even integer values of chemical potential($\mu$). 
+These "magnetic stripes" are thin magnetic regions that occur in parallel domains and for very specific values of chemical potential.
+Most of them are Ferromagnetically ordered and evolve to some commensurate nesting vector as the Coulumb repulsion is increased.  
+However, the physics becomes more interesting for a chemical potential of $\mu =1.00eV$. In the Cuprates, $\frac{1}{8}$th is reffered to as the magical doping \cite{komiya2005magic}.
+The doping value recieves its name from the emergence of stripe ordering and supresion of superconductivity. Here, the magical doping corresponds to a chemical potential of $\pm 1.00eV$($\frac{1}{8}$th of the bandwidth). 
+One observes that for low Coulumb repulsion values there is a Ferromagentically ordered SDW. This SDW is then supressed by a Superconducting Phase and is later recovered at around $\approx U = 15.00eV$. This second SDW state is now
+Antiferromagnetically ordered. The $T_c$ increases along the stripe(Fig.\ref{fig:1NN_stripes}). Whilst not quite the conventional stripe behaviour observed in the Cuprates, it is safe to conclude that there is still 
+something "magical" about a $\frac{1}{8}$th filling fraction in the 1NN model presented here. 
+
+
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
@@ -540,6 +562,7 @@ of the Tc values calculated. Nevertheless, the trends in Tc remain trustworthy.
     \label{fig:1NN_stripes}
 \end{figure}
 
+\newpage
 
 \subsection{Effect of next-nearest neighbour hopping (1NNN model)}
 \label{subsec:1NNNModel}

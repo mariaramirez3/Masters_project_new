@@ -199,6 +199,16 @@ Massimo Capone and G~Kotliar.
 \newblock Competition between d-wave superconductivity and antiferromagnetism in the two-dimensional hubbard model.
 \newblock {\em Physical Review B—Condensed Matter and Materials Physics}, 74(5):054513, 2006.
 
+\bibitem{katanin2009comparing}
+AA~Katanin, A~Toschi, and K~Held.
+\newblock Comparing pertinent effects of antiferromagnetic fluctuations in the two-and three-dimensional hubbard model.
+\newblock {\em Physical Review B—Condensed Matter and Materials Physics}, 80(7):075104, 2009.
+
+\bibitem{otsuki2014superconductivity}
+Junya Otsuki, Hartmut Hafermann, and Alexander~I Lichtenstein.
+\newblock Superconductivity, antiferromagnetism, and phase separation in the two-dimensional hubbard model: A dual-fermion approach.
+\newblock {\em Physical Review B}, 90(23):235132, 2014.
+
 \bibitem{qin2020absence}
 Mingpu Qin, Chia-Min Chung, Hao Shi, Ettore Vitali, Claudius Hubig, Ulrich Schollw{\"o}ck, Steven~R White, Shiwei Zhang, and (Simons~Collaboration on~the Many-Electron~Problem).
 \newblock Absence of superconductivity in the pure two-dimensional hubbard model.
@@ -213,5 +223,35 @@ Steven~R White.
 CC~Tsuei and JR~Kirtley.
 \newblock Pairing symmetry in cuprate superconductors.
 \newblock {\em Reviews of Modern Physics}, 72(4):969, 2000.
+
+\bibitem{maple1995interplay}
+M~Brian Maple.
+\newblock Interplay between superconductivity and magnetism.
+\newblock {\em Physica B: Condensed Matter}, 215(1):110--126, 1995.
+
+\bibitem{sun2016dome}
+JP~Sun, K~Matsuura, GZ~Ye, Y~Mizukami, M~Shimozawa, Kazuyuki Matsubayashi, M~Yamashita, T~Watashige, Shigeru Kasahara, Y~Matsuda, et~al.
+\newblock Dome-shaped magnetic order competing with high-temperature superconductivity at high pressures in fese.
+\newblock {\em Nature communications}, 7(1):12146, 2016.
+
+\bibitem{levi1998stripes}
+Barbara~Goss Levi.
+\newblock Are stripes a universal feature of high-t c superconductors?
+\newblock {\em Physics Today}, 51(6):19--22, 1998.
+
+\bibitem{zachar1998landau}
+Oron Zachar, SA~Kivelson, and VJ~Emery.
+\newblock Landau theory of stripe phases in cuprates and nickelates.
+\newblock {\em Physical Review B}, 57(3):1422, 1998.
+
+\bibitem{vojta2009lattice}
+Matthias Vojta.
+\newblock Lattice symmetry breaking in cuprate superconductors: stripes, nematics, and superconductivity.
+\newblock {\em Advances in Physics}, 58(6):699--820, 2009.
+
+\bibitem{komiya2005magic}
+Seiki Komiya, Han-Dong Chen, Shou-Cheng Zhang, and Yoichi Ando.
+\newblock Magic doping fractions for high-temperature superconductors.
+\newblock {\em Physical review letters}, 94(20):207004, 2005.
 
 \end{thebibliography}
