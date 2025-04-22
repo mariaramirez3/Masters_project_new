@@ -14,17 +14,17 @@
 \contentsline {subsubsection}{\numberline {3.3.4}Instability calculation}{10}{}%
 \contentsline {section}{\numberline {4}Computational Methods}{11}{}%
 \contentsline {subsection}{\numberline {4.1}Tight-Binding Models}{11}{}%
-\contentsline {subsection}{\numberline {4.2}divERGe}{11}{}%
+\contentsline {subsection}{\numberline {4.2}divERGe}{12}{}%
 \contentsline {subsection}{\numberline {4.3}Convergence of Calculation}{12}{}%
 \contentsline {subsubsection}{\numberline {4.3.1}Form factor convergence}{12}{}%
-\contentsline {subsubsection}{\numberline {4.3.2}Number of k points convergence }{12}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}Number of k points convergence }{13}{}%
 \contentsline {section}{\numberline {5}Results and discussion}{13}{}%
 \contentsline {subsection}{\numberline {5.1}1NN Model}{13}{}%
-\contentsline {subsubsection}{\numberline {5.1.1}Superconductivity in the 1NN Model}{14}{}%
-\contentsline {subsubsection}{\numberline {5.1.2}Magnetic stripes in the 1NN Model}{16}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Superconductivity in the 1NN Model}{16}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Magnetic stripes in the 1NN Model}{17}{}%
 \contentsline {subsection}{\numberline {5.2}Effect of next-nearest neighbour hopping (1NNN model)}{17}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Superconductivity in the 1NNN Model}{20}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Magnetic stripes in the 1NNN model}{20}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Superconductivity in the 1NNN Model}{19}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Magnetic stripes in the 1NNN model}{19}{}%
 \contentsline {subsubsection}{\numberline {5.2.3}Continous variation of next-nearest neighbour hopping}{23}{}%
 \contentsline {subsection}{\numberline {5.3}Effect of bi-orbital system (1NN2 model)}{23}{}%
 \contentsline {section}{\numberline {6}Conclusion and Outlook}{26}{}%
