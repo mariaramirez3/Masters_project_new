@@ -500,29 +500,27 @@ on the critical temperature of the superconducting regions is also examined.
 \label{subsec:1NNModel}
 
 The 1NN model is defined as the 2D Hubbard model with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
-As outlined in Section \ref{subsec: HubbardModel}, solving this model near half-filling becomes a hard endeavour. 
-This section explores the solution to the 1NN Model Hamiltonian using  two-particle-interaction-truncated FRG.
-Here, a phase diagram in terms of the on-site Coulumb repulsion $U$ and chemical
-potential $\mu$ is presented and discussed in detail. The calculations were carried out using a 20x5 $n_k$x$n_{kf}$ grid and a form factor
-of 4\AA, with a  nearest-neighbour hopping parameter of 1eV.  The choice of convergence parameters was determined by the methods discussed in Section \ref{subsec:convergence}. 
-Results are presented for Coulumb repulsion values  ranging from 1-20 eV and chemical potential
-values spanning the entire energetic bandwith of the model (from -4eV to 4eV). 
-Whilst there exists previous work on the 2D Hubbard Model using FRG\cite{beyer2023rashba,hille2020quantitative,vilardi2020dynamical} 
-most of it focuses on specific areas of the phase diagram. Thus,
-very limited investigation has been carried out on the effect of varying the 
-on-site Coulumb repulsion. Therefore, the work presented here covers a much wider range of parameters than what has previously been explored. 
+As discussed in Section \ref{subsec: HubbardModel}, solving this model near half-filling presents significant challenges. This section investigates the solution to the 1NN Model Hamiltonian using two-particle-interaction-truncated FRG. A phase diagram, plotted in terms of the on-site Coulomb repulsion 
+$U$ and chemical potential $\mu$ is presented and analyzed in detail. The calculations were performed using a 20x5 $n_k$x$n_{kf}$
+grid and a form factor of 4\AA, with a nearest-neighbor hopping parameter of 1eV.
+These convergence parameters were selected based on the methods outlined in Section \ref{subsec:convergence}. 
+The results cover Coulomb repulsion values ranging from 1 to 20 eV and chemical potential values spanning the full energy bandwidth 
+of the model (from -4 eV to 4 eV). While there exist previous FRG studies on the 2D Hubbard model  \cite{beyer2023rashba,hille2020quantitative,vilardi2020dynamical},
+they mostly focus on specific regions of the phase diagram. As a result, there has been limited investigation into the effects of varying the on-site Coulomb repulsion.
+The present work, therefore, explores a much broader range of parameters than has been previously studied.\par
 \medskip
 
 
-
-
 \noindent There are several caveats to the results presented here. In real materials,  the chemical potential is an easily tuneable parameter due to its strong connection to the electronic doping of the system.
-In turn, controlling the magnitude of the Coulumb repulsion between electrons is by no means straightforward. 
-Moreover, some of the interesting features discussed in this report lie outside of the physical regime. (ie- in our FRG calculation a weak-coupling limit was 
-assumed and therefore any Coulumb repulsion values above the magnitude of the  bandwidth of the material (8eV) can be considered to be unphysical in this limit.)
-Therefore, the analysis performed in this project does not neccesarily provide a route to enhance the superconductivity in the materials that resemble the models investigated.
-Instead, the main aim is to understand how varying certain parameters \textit{(U, $\mu$, t')} affects the correlated phases observed in the model. It is also important to note, as discussed in Section \ref{subsubsec:Truncation scheme}, that any analysis on the transition temperature
-of the superconducting regions must be treated qualitatively and that this work does not claim to have found Superconducting regions with transition temperatures of the order of thousands of Kelvin. \par 
+In turn, controlling the magnitude of the Coulumb repulsion between electrons is far from straightforward. 
+Additionally, some of the interesting features discussed in this report fall outside the physical regime—specifically, the FRG calculation assumes a weak-coupling limit, meaning that any Coulomb 
+repulsion values exceeding the bandwidth of the material (8 eV) are unphysical in this context.
+Therefore, the analysis conducted in this project should not be interpreted as a guide to enhance superconductivity in materials that closely resemble the models studied.
+Instead, the primary goal is to understand how variations in certain parameters \textit{(U, $\mu$, t')} influence the correlated phases observed in the model. 
+It is also important to note, as discussed in Section \ref{subsubsec:Truncation scheme}, that any analysis of the 
+superconducting transition temperature should be treated qualitatively. At no point does this work claim to have identified superconducting 
+regions with transition temperatures on the order of thousands of Kelvin.
+
 
 \medskip
 \noindent The complete phase diagram for the values discussed above is shown in Fig.\ref{fig:1NNpd}. As is expected
@@ -537,7 +535,7 @@ integer chemical potential values. For large values of U \textit{(those that exc
 
 \noindent The findings presented here are consistent with other studies of the two-dimensional Hubbard model. Dynamical Mean Field Theory(DMFT) has previously captured the 
 coexistance of the AFM and SC order parameter within the same solution for 
-a range of doping\textit{(~$\mu$ in the findings here)} at weak-coupling. A smooth transition between these two phases has also been observed\cite{capone2006competition}. 
+a range of doping \textit{(analogous to $\mu$ in the findings here)} at weak-coupling. A smooth transition between these two phases has also been observed\cite{capone2006competition}. 
 However, the FRG 2D 1NN Hubbard model fails to capture Mott insulating phases or the formation of the 
 pseudo-gap\cite{katanin2009comparing,otsuki2014superconductivity}, both of which are characteristic to the Cuprate phase diagram. 
 
