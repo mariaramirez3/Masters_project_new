@@ -17,15 +17,19 @@
 \newpage 
 
 \section{Abstract}
- 
-The 2D Hubbard model has been widely studied due to its resemblance to the Cuprate Superconductors. 
-This thesis presents an in depth study of the 2D Hubbard model using Functional Renormalisation Group theory (FRG).
-The work presented here is carried out in the framework of spin-fluctuation mediated superconductivity and utilising the divERGe package
-to implement the truncated-unity-FRG TU$^2$FRG computational backend. The research is conducted by varying several model
-parameters such as the on-site Coulumb repulsion, chemical potential, Hunds
-coupling, next-nearest neighbour hopping and the number of orbitals per site. From this, one obtains conclusive trends on the 
-competition between Magnetism and Superconductivity, the ordering of these phases and  a qualititative picture of how the critical temperature Tc evolves along the
-phase diagram. 
+
+
+
+Due to its structural resemblance to the high-temperature cuprate superconductors \cite{dagotto1994correlated}, 
+the two-dimensional Hubbard model has attracted sustained scientific interest for decades.
+This thesis conducts a detailed analysis of the 2D Hubbard model using the truncated-unity functional Renormalisation Group (TU$^2$FRG) method,
+within the framework of spin-fluctuation-mediated superconductivity.  The interplay between magenetism and superconductivity is explored 
+by systematically varying model parameters such as the on-site Coulomb repulsion, chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per
+site. This approach enables the identification of clear trends in the superconducting critical temperature and order parameter, while also
+providing insights into the magnetic ordering. 
+
+
+
 
 
 
@@ -35,28 +39,29 @@ Since its discovery in 1911\cite{onnes1911superconductivity}, superconductivity 
 This phenomena, characterised by an abrupt drop in resistance at a so-called "Critical Temperature($T_c$)"\cite{geballe2015tc} is driven by an attractive interaction
 between electrons. This attractive interaction gives rise to the formation of electron pairs, famously known as "Cooper pairs"\cite{schrieffer2018theory}. For many 
 years after the discovery of superconductivity, physicists
-were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the pairing mechanism in all superconducting materials. 
+were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the electron pairing mechanism in all superconducting materials. 
 However, in 1986, the discovery of the first heavy-fermion superconductor\cite{bednorz1986possible} resulted in the emergence of a whole new class of materials: Unconventional Superconductors. 
 These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory\cite{hirsch2015superconducting}.
-For many materials, there is no consensus on what the mechanism otherwise is.\par 
+For many materials, there is no consensus on what the mechanism otherwise is. \par 
 \medskip
 
-\noindent High Temperature superconductors are defined by having a critical temperature that exceeds the boiling point 
-of Nitrogen (77K). Ever since the discovery of the first high-Tc superconductor, the search for "(close to-) room temperature" superconductors has been extended to 
-other all sorts of unconventional supercondutors. However, a comprehensive understanding of what drives the superconductivity is required in order 
+\noindent High-Temperature superconductors are defined by having a critical temperature that exceeds the boiling point 
+of Nitrogen (77K). Ever since the discovery of the first high-Tc superconductor\cite{bednorz1986possible}, the search for "(close to-) room temperature" superconductors has been extended to 
+all other sorts of unconventional supercondutors. However, a comprehensive understanding of what drives the superconductivity is required in order 
 to achieve this. There have been multiple attempts to model the pairing mechanism of some families of high-Tc superconductors, but they have
 been greatly limited by the numerical challenges that working with multi-band systems and with spin-orbit coupling (SOC) present. 
 This motivates the use of a promising technique: TU$^2$FRG\cite{eckhardt2020truncated,profe2024magic}.\par
 
 \medskip
 
-\noindent This work studies one of the most fundamental models in condensed matter physics: the 2D Hubbard model. 
-In this project, the 2D Hubbard Hamiltonian is solved using Functional Renormalisation Group (FRG). The effect of the Coulumb repulsion(U) and 
-chemical potential ($\mu$) on the interplay between Magnetism and Superconductivity is investigated. This is done under the crucial assumption
-that superconductivity is mediated by spin-fluctuations. Stable superconducting and
-magnetic regions are found and the trends their respective ordering and critical temperature are presented. The analysis is extended one dimension further 
-by looking at how the magnitude of the next-nearest neighbour hopping amplitude and the introduction of a second orbital 
-per site affects all of the above. 
+\noindent Motivated by these challenges and the need for simplified yet insightful models, this work turns to the two-dimensional Hubbard model—one of the most fundamental 
+and extensively studied frameworks in condensed matter physics. Functional Renormalisation Group (FRG) is employed to 
+investigate the influence of the Coulomb repulsion ($U$) and chemical potential ($\mu$) on the
+interplay between magnetism and superconductivity.
+This is done under the key assumption that superconductivity arises from spin-fluctuation mediation.
+In this work, regions of stable magnetic and superconducting order are identified, and trends in their respective ordering and critical temperatures are presented.
+The study is further extended by examining how variations in the next-nearest-neighbor hopping amplitude and the inclusion of a second orbital per site impact all of the above.
+
 
 
 
@@ -64,8 +69,8 @@ per site affects all of the above.
 
 \subsection{Unconventional superconductivity}
 
-As previously outlined, unconventional superconductors are those in which the Cooper pair formation is not driven by Spin-Fluctuations. 
-This section aims to outline the theoretical background behind a particular class of unconventional superconductors: Spin-fluctuation mediated superconductors. 
+As previously outlined, unconventional superconductors are those in which the Cooper pair formation is not driven by the convetional electron-phonon coupling. 
+This section aims to outline the theoretical background behind a particular class of unconventional superconductors: Spin-fluctuation mediated superconductors. \par
 \medskip
 \noindent Most generally, the Hamiltonian for a superconducting state can be described as follows:
 
@@ -85,7 +90,7 @@ This section aims to outline the theoretical background behind a particular clas
 
 One emerging theory for some unconventional superconductors such Iron-based or heavy-fermion compounds 
 is that the underlying pairing mechanism is driven by spin fluctuations \cite{moriya2000spin}. This section discusses how to
-model spin-fluctuation mediated superconductivity for the fluctuation-exchange approximation(FLEX) \cite{esirgen1997fluctuation}. \par
+model spin-fluctuation mediated superconductivity for the fluctuation-exchange approximation (FLEX) \cite{esirgen1997fluctuation}. \par
 \medskip
 \noindent In such cases, the effective pairing interaction $\Gamma(k,k')$ is given by \footnote{Note that this form of pairing interaction 
 assumes that the ratio between 
@@ -125,9 +130,10 @@ to describe the characteristic pseudo-gap\cite{timusk1999pseudogap}.
 The Tight Binding Model is a central element of condensed matter physics \eqref{TBM}. In this model, electrons are bound in orbitals (called sites) around the lattice ions.
 Due to the overlap between the quantum mechanical wavefunctions that describe these sites, electrons are allowed to 'hop' to neighbouring sites. The probability that this hopping process will occur is given by a tunnelling amplitude, which can be calculated using a hopping integral. \par
 \medskip
-\noindent This work is carried out in the tight-binding model framework, where the magnitude of the tunnelling amplitudes are at first treated as free parameters. 
-Here, the starting point is a simple 2D nearest-neighbour hoppping Hubbard model (Section.~\ref{subsec: HubbardModel}) and investigate the effect of introducing and varying the strength of the next-nearest neighbour hopping amplitude (See Fig. \ref{fig:2D Hubbard model}).
-We extend these models further by considering the two-orbital per site case. 
+\noindent This work is carried out in the tight-binding model framework, where the magnitude of the tunnelling amplitudes is at first treated as a free parameter. 
+The starting point is a simple nearest-neighbour hoppping tight binding model. 
+The effect of introducing a next-nearest-neighbour hopping and an extra orbital per site
+is then investigated \textit{(See Fig. \ref{fig:2D Hubbard model})}.
 
 
 
@@ -188,10 +194,11 @@ strength and the bandwidth of the system.
 \medskip
 
 \noindent In this section the theoretical framework in which FRG calculations are performed is outlined. The central element of FRG is a flow equation that describes the evolution of the effective action of the system with respect to a scalar/flow parameter Lambda $\Lambda$ \textit{(See section ~\ref{subsubsec:Flow Equation})}.
-The flow equation can be solved exactly for a limited number of systems, so for most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time. More details of how this approximation is performed and the limitations it presents can be found in Section ~\ref{subsubsec:Truncation scheme}. For the systems explored in this project only two-particle
+The flow equation can be solved exactly for a limited number of systems, so for most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time. 
+More details of how this approximation is performed and the limitations it presents can be found in Section~\ref{subsubsec:Truncation scheme}. For the systems explored in this project only two-particle
 interactions are considered and any higher order terms are neglected.
 This allows for the effective action of the system to be separated into three terms, which correspond to three physical channels: Superconductivity, Spin-Density and Charge-Density Waves.
-The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the model exhibits. This rather "hand-wavy" overview of FRG is represented in a flowchart in Fig.\ref{fig:FRGflowdiagram}.
+The calculation is then performed to determine the "winning channel" which will correspond to the respective physical phase that the model exhibits. This rather "hand-wavy" overview of FRG is represented in a flowchart below \textit{ (See Fig.\ref{fig:FRGflowdiagram})}.
 For a more rigorous explanation the reader is referred to the sections below. 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
@@ -225,7 +232,7 @@ For quantum many-body problems, one works instead with partition functional, def
 \medskip
 
 \noindent Note that in the limiting case where $V=0$, the path integral in Eq.\ref{partition functional} is exactly solveable. 
-However, once electronic correlations are included, the picture becomes more complicated. 
+However, the situation becomes considerably more intricate when electronic correlations are taken into account.
 The main idea behind FRG is to introduce a cut-off in the non interacting Green's function ($G_0 \rightarrow G_0^{\lambda} = f(\lambda)G_0$). 
 This cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently including electronic interactions. For a spin-independant system this would transform the 
 bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{propagator transform 2}). 
@@ -245,7 +252,7 @@ bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{p
     \theta^{\lambda}(\textbf{k}) = \Theta(|\xi_{\textbf{k}}| - \lambda)    
 \end{equation}
 
-\noindent With this cutoff scheme, the calculation then excludes points close to the Fermi Surface as shown in Figure (FIGURE). \par
+\noindent With this particular choice of cutoff scheme, the calculation then excludes points close to the Fermi Surface \textit{(See Fig.\ref{fig:Truncation})}. \par
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.35\textwidth]{Truncation.png}  % Adjust width as needed
@@ -257,7 +264,7 @@ bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{p
 \medskip
 \noindent In the following steps the derivation will proceed in the framework of the  so-called "effective action" ($\mathcal{T}[\psi, \bar{\psi}]$).
 This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), defined below in Equations (\ref{Greens function functional}, \ref{G term in effective action}) and (\ref{Effective action}) respectively. 
-\textit{(For convinience and for reasons that
+\textit{(For reasons that
 are beyond the scope of this project it is more convinient to work with the effective action than it is to do so with the partition functional.) \footnote{If interested in why see Ref. \cite{metzner2012functional}}}
 
 \begin{equation} \label{Greens function functional}
@@ -274,7 +281,7 @@ are beyond the scope of this project it is more convinient to work with the effe
 \end{equation}
 
 
-\noindent The next step is to introduce a scalar flow parameter $\lambda$ into the generating functionals defined above. This is done in the same manner as is outlined in the example shown in Equations (\ref{propagator transform 1}, \ref{propagator transform 2}). 
+\noindent The next step is to introduce a scalar flow parameter $\lambda$ into the generating functionals defined above. This is done in the same manner as is outlined in the example shown in Equations \ref{propagator transform 1} $\&$ \ref{propagator transform 2}. 
 But more generally, has to be performed such that the generators recover their orginal structure at $\lambda = 0 $.
 After a series of algebraic manipulations, which are ommitted here but can be found in \cite{metzner2012functional}, one arrives at the exact functional flow equation for the effective action:
 
@@ -306,17 +313,19 @@ Q_0^{\Lambda} & 0 \\
 = diag(Q_0^{\Lambda}, - Q_0^{\Lambda t}),
 \end{equation}
 
-\noindent This equation, as mentioned previously, is the central element of FRG and the sections below outline how to solve it.
+\noindent This flow equation is the central element of FRG and the sections below outline how to solve it.
 
 
 \subsubsection{Truncation scheme (TU$^2$FRG)}
 \label{subsubsec:Truncation scheme}
 
-The flow equation derived above can be solved for a limited amount of systems. However, in most cases, the memory demand for the 
-FRG calculations is high.  In order to tackle this issue, the truncated unity approximation (TU$^2$FRG) was introduced in 2020\cite{eckhardt2020truncated}. 
+
+The flow equation derived above can be solved exactly only for a small class of systems; for most models, Functional Renormalisation Group (FRG) 
+calculations are highly computationally expensive.
+In order to tackle this issue, the truncated unity approximation (TU$^2$FRG) was introduced in 2020\cite{eckhardt2020truncated}. 
 The main idea behind this scheme is to find a new basis that, with a controlled loss of accuracy, can represent all 
 of the required elements in a compressed way. It can be shown\cite{lichtenstein2018functional}, that such a basis can be constructed and is 
-well defined in the case where the calculation is constrained to terms U$^{2}$ \textit{(two-particle interactions)}.
+well defined in the case where the calculation is constrained to terms in the order of U$^{2}$ \textit{(two-particle interactions)}.
 Partitions of unity \footnote{A detailed explanation of what these are can be found in \cite{lichtenstein2018functional}} are then introduced into a specific part of the flow equation. This reduces an otherwise computationally expensive nested integral to a matrix product. 
 Details of how this truncation is incorporated are ommitted but the reader is referred to Appendix. (REFERENCE appendix).\par
 \medskip
@@ -325,11 +334,11 @@ Details of how this truncation is incorporated are ommitted but the reader is re
 TU$^2$FRG relies on short-range interactions, thus struggling to capture strongly correlated phases. 
 This is particularly relevant for the study of the 2D Hubbard model. TU$^2$FRG will not be able to capture
 the characteristic Mott insulating phase of the Cuprate phase diagrams\cite{imada1998metal}, which limits how well the results presented in this project can be directly compared with existing literature. 
-More importantly, the truncation scheme has a direct consquence on the accuracy of the predicted phase transition temperature ($T_c$), it is able to correctly capture
-the trends in $T_c$ but the values predicted are much higher than what is sensible to expect in real materials.
-Nevertheless, TU$^2$FRG manages to successfully capture the competition between Magnetic and Superconducting instabilities, which is one of the main focus of the results presented here. 
+More importantly, the truncation scheme has a direct consquence on the accuracy of the predicted phase transition temperature ($T_c$). Whilst it is able to correctly capture
+the trends in $T_c$, the values predicted are much higher than what is reasonable to expect in real materials.
+Nevertheless, TU$^2$FRG successfully captures the competition between Magnetic and Superconducting instabilities, a central focus of the results presented in this project. 
 \subsubsection{Decoupling of flow equation}
-After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple  the evolution of the two-particle coupling as a function of the flow parameter $\lambda$ into three channels:
+After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple the two-particle coupling as a function of the flow parameter $\lambda$ into three channels:
 
 \begin{equation} \label{V decoupling}
     V(k1,k2,k3)= V_{k_1, k_2, k_3}^{(0)} - \phi^{P}_{k_1 +k_2, \frac{k_1 - k_2}{2}, \frac{k_4-k_3}{2}} + \phi^{C}_{k_1 - k_3, \frac{k_1 +k_3}{2}, \frac{k_2+k_4}{2}} +\phi^{D}_{k_3- k_2, \frac{k_1 + k_4}{2}, \frac{k_2+k_3}{2}}
@@ -351,7 +360,7 @@ correspond to the Superconducting, Charge and Magnetic phases respectively.
     \dot{\phi}^{D}_{k_3- k_2, \frac{k_1 + k_4}{2}, \frac{k_2+k_3}{2}} = - \mathcal{T}_{d-ph}(k1,k2,k3)
 \end{equation}
 
-\noindent This effectively allows one to treat the effective action as a separable object:
+\noindent This enables the effective action to be treated as a separable object:
 
 \begin{equation}
     \mathcal{T}[\psi, \bar{\psi}] = \mathcal{T}_{pp}[\psi, \bar{\psi}] + \mathcal{T}_{ph}[\psi, \bar{\psi}] + \mathcal{T}_{cph}[\psi, \bar{\psi}]
@@ -365,12 +374,12 @@ correspond to the Superconducting, Charge and Magnetic phases respectively.
 
 \subsubsection{Instability calculation}
 
-The procedure from the decoupled  effective action and flow equation is outlined here. For more details the reader is refferred to\cite{profe2023functional}. 
-A FRG calculation will return the self-energy and two-particle vertex \footnote{An exact definition of these can be found in \cite{metzner2012functional}, but is omitted here.}. These quantities are
-not directly experimentally accessible, so a series of post processing steps have to be carried out. The first step is to find out which of the three channels diverge. 
-This gives the diverging susceptibility. Mean-Field analysis is then carried out at the critical scale in order to obtain
-the ordering symmetry and a linearised gap equation. The later allows one to calculate the Superconducting gap and order parameter. 
-
+This section outlines the procedure that follows after decoupling the effective action and flow equation. For more details the reader is refferred to\cite{profe2023functional}. 
+An FRG calculation on the decoupled action yields the self-energy and the two-particle vertex\footnote{For precise definitions of these quantities, see \cite{metzner2012functional}}.
+Although these quantities are not directly measurable, they serve as the foundation for further analysis. The first post-processing step involves
+identifying which of the three interaction channels diverges, revealing the leading susceptibility. Mean-field analysis is then performed at the critical scale to determine the ordering symmetry 
+and derive a linearized gap equation. This, in turn, enables the computation of 
+the superconducting gap and order parameter.
 
 
 \section{Computational Methods}

@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{dagotto1994correlated}
+Elbio Dagotto.
+\newblock Correlated electrons in high-temperature superconductors.
+\newblock {\em Reviews of Modern Physics}, 66(3):763, 1994.
+
 \bibitem{onnes1911superconductivity}
 H~Kamerlingh Onnes.
 \newblock The superconductivity of mercury.
@@ -83,11 +88,6 @@ Philip~W Anderson.
 Kai Sun, Zhengcheng Gu, Hosho Katsura, and S~Das~Sarma.
 \newblock Nearly flatbands with nontrivial topology.
 \newblock {\em Physical review letters}, 106(23):236803, 2011.
-
-\bibitem{dagotto1994correlated}
-Elbio Dagotto.
-\newblock Correlated electrons in high-temperature superconductors.
-\newblock {\em Reviews of Modern Physics}, 66(3):763, 1994.
 
 \bibitem{sherman2020hubbard}
 Alexei Sherman.
