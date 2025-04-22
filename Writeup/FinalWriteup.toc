@@ -23,8 +23,8 @@
 \contentsline {subsubsection}{\numberline {5.1.1}Superconductivity in the 1NN Model}{14}{}%
 \contentsline {subsubsection}{\numberline {5.1.2}Magnetic stripes in the 1NN Model}{16}{}%
 \contentsline {subsection}{\numberline {5.2}Effect of next-nearest neighbour hopping (1NNN model)}{17}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Superconductivity in the 1NNN Model}{18}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Magnetic stripes in the 1NNN model}{18}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Superconductivity in the 1NNN Model}{20}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Magnetic stripes in the 1NNN model}{21}{}%
 \contentsline {subsubsection}{\numberline {5.2.3}Continous variation of next-nearest neighbour hopping}{23}{}%
 \contentsline {subsection}{\numberline {5.3}Effect of bi-orbital system (1NN2 model)}{23}{}%
 \contentsline {section}{\numberline {6}Conclusion and Outlook}{25}{}%

@@ -385,10 +385,10 @@ the superconducting gap and order parameter.
 \section{Computational Methods}
 
 This section outlines how the concepts presented above link together and are implemented for the purpose of this project. 
-The general aim is to solve the 2D Hubbard-(Kanamori) model. This is achieved computationally, using the divERGe package (See section ~\ref{subsec:diverge}) which implements the TU$^2$FRG
-formalism discussed in the section above. All of the calculations are carried out under the assumption that the superconductivity 
+The general aim is to solve the 2D Hubbard-(Kanamori) model. This is achieved computationally, using the divERGe package \textit{(See section ~\ref{subsec:diverge})} which implements the TU$^2$FRG
+formalism discussed in Section \ref{subsubsec:Truncation scheme}. All of the calculations are carried out under the assumption that the superconductivity 
 is spin-fluctuation mediated. This section outlines the methods followed to calculate the required Tight-Binding Models for each of the systems, the utilisation of 
-Diverge to solve them and some of the utilised post-processing techniques. 
+Diverge to solve them and some of the required convergence techniques. 
 
 \subsection{Tight-Binding Models}
 
@@ -398,11 +398,11 @@ This project discusses three models: the 1NN, 1NNN and 1NN2 model (\textit{See F
 For the later, the hopping parameters are determined using the method described below. \par
 \medskip
 \noindent Constrained to the case of a single layer, the 1NN model is extended to a multi-orbital system by
-including two-orbitals per site and investigating the effect of the interorbital hopping. To allow for comparison with
+including two-orbitals per site and investigating the effect of the interorbital hopping. To allow for future comparison with
 existing literature\cite{sakakibara2024possible}, a $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbital are included. 
 Their respective hopping parameters are determined using the  table of interatomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
 In this calculation, the values of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05eV$ respectively in order to capture their relative values\cite{blanksby2003bond, mcgrady2015introduction, krapp2008strength}.
-A table summarising estimated parameters for the models  discussed in Section~\ref{subsec:1NN2Model} is shown below.
+A table summarising the estimated parameters for the models  discussed in Section~\ref{subsec:1NN2Model} is shown below.
 
 \begin{table}[h]
     \centering
@@ -418,7 +418,9 @@ A table summarising estimated parameters for the models  discussed in Section~\r
           
         \hline
     \end{tabular}
-    \caption{\textbf{Nearest neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters. Other rows show which hopping parameters were included in each of the two models.}
+    \caption{\textbf{Nearest neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters.
+    These are labelled by a lower and upper index reresenting the orbital and the direction of hoping respectively.
+    Other rows in the table show which hopping parameters were included in each of the two models from Section \ref{subsec:1NN2Model}.}
     \label{tab:2D2orbparams }
 \end{table}
 
@@ -426,39 +428,41 @@ A table summarising estimated parameters for the models  discussed in Section~\r
 \label{subsec:diverge}
 
 divERGe is an open-source, high-performance, C/C++/Python library that includes a truncated unity FRG (TU$^2$FRG) computational backend\cite{profe2024diverge}. 
-The central element in this truncated unity calculation is a model that includes all of the required parameters. This model must capture the kinematics
-of the system based on the real hopping parameters of the model. It is important to also specify other parameters such as  the Bravais lattice vectors, the number of atoms per site or the number 
-of orbitals per atom. Once the model is created, it is neccesary to specify 6 different input parameters in order for the calculation to run: the strength of the Coulumb repulsion (U) and Hunds coupling (J), the magnitude of the chemical 
-potential ($\mu$) and the form factor, nk and nkf values. The later three are explained in more details in Section \ref{subsec:convergence}.\par
+At the core of the truncated-unity calculation is a model that incorporates all the essential physical parameters. This model must accurately reflect the system's kinematics, based on its real-space hopping parameters.
+It is equally important to define structural details such as the Bravais lattice vectors, the number of atoms per unit cell, 
+and the number of orbitals per atom. Once the model is established, six input parameters must be specified for the calculation to proceed: 
+the strengths of the Coulomb repulsion ($U$) and Hund’s coupling ($J$), the value of the chemical potential ($\mu$), as well as the form factor, nk and nkf
+values. The latter three are discussed in more detail in Section \ref{subsec:convergence}.\par
 \medskip
-\noindent Once the model is created and the required parameters are specified, it is time to perform the calculation. Under the approximations outlined in Section \ref{subsubsec:Truncation scheme}, the flow equations
-are integrated fromhigh scales($\lambda = \inf$) to low scales ($\lambda = 0$) by numerically going from $\lambda$ to $\lambda + d\lambda$.
-This integration is repeated until a phase transition (divergence of one of the calculated channels) occurs or a minimal $\lambda$ is reached. 
-In the later case, the system is assumed to be in a Fermi-Liquid state. 
-All calculations have been carried out in the HPC cluster at the university of St Andrews. 
+\noindent With the model constructed and all necessary parameters defined, 
+the calculation can proceed. Under the approximations described in Section \ref{subsubsec:Truncation scheme},
+the flow equations are integrated numerically from high energy scales ($\lambda = \infty$) down to low scales ($\lambda = 0$), 
+by incrementally stepping from $\lambda$ to $\lambda + d\lambda$. This integration continues until a phase transition is detected—signaled 
+by the divergence of one of the interaction channels—or until a minimum value of $\lambda$ is reached. In the latter case, the system is considered to remain 
+in a Fermi-liquid state. All such computations were performed on the high-performance computing (HPC) cluster at the University of St Andrews.
 
 
  
 
 \subsection{Convergence of Calculation}
 \label{subsec:convergence}
-In the truncated-unity approximation there are several convergence tests that one needs to carry out in order to verify
-that the calculations are accurate. These include the form factor convergence and the number of k points.
+In the truncated-unity approximation, several convergence tests must be performed to ensure the accuracy of the calculations.
+These tests include checking the form factor convergence and the number of k points.
 
 \subsubsection{Form factor convergence}
 
 The set of orthogonal basis functions ($f_m$) used to describe the Truncated space\textit{(See section \ref{subsubsec:Truncation scheme})}
 in momentum representation is called the \textbf{form factors}. In the case of the square lattice, 
 these take the form of delta functions in real space. The form factors are arranged as circles with increasing radii around the origin. This effectively leads to a "bond-like" representation where the form-factor number
-essentially determines how many of the neighbouring bonds are accounted for in a calculation for each point. This is depicted in Fig. . For mathematical rigour on the definition of the form factor, the reader is referred to \cite{lichtenstein2018functional}. \par
+essentially determines how many of the neighbouring bonds are accounted for in a calculation for each point. For mathematical rigour on the definition of the form factor, the reader is referred to \cite{lichtenstein2018functional}. \par
 
 \medskip
 
 
-\noindent The divERGe package allows the user to modify the number of form-factor shells accordingly. It boils down to a trade 
+\noindent The divERGe package allows the user to modify the number of form-factor shells accordingly. Choosing an appropraite values ultimately comes down to a trade 
 between computational accuracy and expensiveness. 
-For the results in this project, the form factor value was set at 4\AA\footnote{This is equivalent to a number of form factor shells of 4 since the lattice spacing of the models here is set to 1\AA.}. The convergence of 
-the calculations was tested accordingly for a range of points in the phase diagram (an example is shown in Fig.\ref{fig:Formfactorconvergence} ). Moreover, this is in agreement with values used in previous literature\cite{lichtenstein2018functional}. 
+For the results in this project, the form factor value was set at 4\AA\footnote{This is equivalent to a number of form factor shells of 4 since the lattice spacing of the models here is set to 1\AA.} after the convergence of the 
+the calculations was tested accordingly for a range of points in the phase diagram \textit{(an example of such tests is shown in Fig.\ref{fig:Formfactorconvergence} )}. Moreover, this is in agreement with values used in previous literature\cite{lichtenstein2018functional}. 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
@@ -481,15 +485,21 @@ Those are $n_k$ and $n_{k_f}$ and  loosely speaking specify the number of k poin
 In particular, $n_k$ refers to the number of k points used for the general momentum integral, and $n_{k_f}$ for 
 the additional sum around each k-point. The calculations performed here were carried out with an integration 
 grid of 20x5 ($n_k$ x $n_{k_f}$) points. The choice of parameters ensured that the calculations had converged appropriatedly 
-and resulted in a computational time of $\approx 180s$ per point. 
+and resulted in a computational time of $\approx 180s$ per point for the simpler models. 
 
 
 \section{Results and discussion}
 
+The results are discussed in three sections, each focusing on one of the models outlined in Fig.\ref{fig:2D Hubbard model}.
+These subsections explore the interaction between magnetism and superconductivity, highlighting trends in the superconducting order parameter 
+and spin density wave nesting vectors. The effect of varying factors such as Coulomb repulsion, 
+chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per site 
+on the critical temperature of the superconducting regions is also examined.
+
 \subsection{1NN Model}
 \label{subsec:1NNModel}
 
-We define the 1NN model as the 2D Hubbard model with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
+The 1NN model is defined as the 2D Hubbard model with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
 As outlined in Section \ref{subsec: HubbardModel}, solving this model near half-filling becomes a hard endeavour. 
 This section explores the solution to the 1NN Model Hamiltonian using  two-particle-interaction-truncated FRG.
 Here, a phase diagram in terms of the on-site Coulumb repulsion $U$ and chemical

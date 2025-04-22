@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  22 APR 2025 10:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  22 APR 2025 11:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -275,58 +275,58 @@ LaTeX Warning: Command \b invalid in math mode on input line 308.
 <convergence.png, id=62, 479.54156pt x 253.69781pt>
 File: convergence.png Graphic file (type png)
 <use convergence.png>
-Package pdftex.def Info: convergence.png  used on input line 465.
+Package pdftex.def Info: convergence.png  used on input line 469.
 (pdftex.def)             Requested size: 294.8657pt x 155.99806pt.
  [12] [13 <./convergence.png>]
 <1NNphased.png, id=71, 629.35126pt x 498.36188pt>
 File: 1NNphased.png Graphic file (type png)
 <use 1NNphased.png>
-Package pdftex.def Info: 1NNphased.png  used on input line 540.
+Package pdftex.def Info: 1NNphased.png  used on input line 550.
 (pdftex.def)             Requested size: 466.86447pt x 369.69453pt.
  [14] [15 <./1NNphased.png>]
 <1NNSC.png, id=79, 559.33969pt x 163.3603pt>
 File: 1NNSC.png Graphic file (type png)
 <use 1NNSC.png>
-Package pdftex.def Info: 1NNSC.png  used on input line 574.
+Package pdftex.def Info: 1NNSC.png  used on input line 584.
 (pdftex.def)             Requested size: 491.43787pt x 143.53316pt.
  [16 <./1NNSC.png>]
 <1NNstripes.png, id=84, 543.53062pt x 342.5297pt>
 File: 1NNstripes.png Graphic file (type png)
 <use 1NNstripes.png>
-Package pdftex.def Info: 1NNstripes.png  used on input line 612.
+Package pdftex.def Info: 1NNstripes.png  used on input line 622.
 (pdftex.def)             Requested size: 442.29108pt x 278.74371pt.
- [17 <./1NNstripes.png>]
-<1NNN.png, id=89, 548.80031pt x 529.98pt>
+<1NNN.png, id=85, 548.80031pt x 529.98pt>
 File: 1NNN.png Graphic file (type png)
 <use 1NNN.png>
-Package pdftex.def Info: 1NNN.png  used on input line 649.
+Package pdftex.def Info: 1NNN.png  used on input line 659.
 (pdftex.def)             Requested size: 491.43787pt x 474.59195pt.
-<1NNNSC_075.png, id=90, 426.84468pt x 260.47313pt>
+ [17] [18 <./1NNstripes.png>] [19 <./1NNN.png>]
+<1NNNSC_075.png, id=98, 426.84468pt x 260.47313pt>
 File: 1NNNSC_075.png Graphic file (type png)
 <use 1NNNSC_075.png>
-Package pdftex.def Info: 1NNNSC_075.png  used on input line 681.
+Package pdftex.def Info: 1NNNSC_075.png  used on input line 691.
 (pdftex.def)             Requested size: 442.29108pt x 269.91588pt.
- [18] [19 <./1NNN.png>] [20 <./1NNNSC_075.png>]
+ [20 <./1NNNSC_075.png>]
 <1NNNstripes.png, id=103, 663.98062pt x 296.60812pt>
 File: 1NNNstripes.png Graphic file (type png)
 <use 1NNNstripes.png>
-Package pdftex.def Info: 1NNNstripes.png  used on input line 757.
+Package pdftex.def Info: 1NNNstripes.png  used on input line 767.
 (pdftex.def)             Requested size: 442.29108pt x 197.57683pt.
 <1NNN050Dome.png, id=104, 497.60907pt x 413.29407pt>
 File: 1NNN050Dome.png Graphic file (type png)
 <use 1NNN050Dome.png>
-Package pdftex.def Info: 1NNN050Dome.png  used on input line 771.
+Package pdftex.def Info: 1NNN050Dome.png  used on input line 781.
 (pdftex.def)             Requested size: 235.88806pt x 195.91942pt.
 <tprimecont.png, id=105, 566.115pt x 507.39563pt>
 File: tprimecont.png Graphic file (type png)
 <use tprimecont.png>
-Package pdftex.def Info: tprimecont.png  used on input line 781.
+Package pdftex.def Info: tprimecont.png  used on input line 791.
 (pdftex.def)             Requested size: 235.88806pt x 211.4169pt.
  [21] [22 <./1NNNstripes.png> <./1NNN050Dome.png> <./tprimecont.png>]
 <1NN2.png, id=115, 514.17094pt x 569.12625pt>
 File: 1NN2.png Graphic file (type png)
 <use 1NN2.png>
-Package pdftex.def Info: 1NN2.png  used on input line 820.
+Package pdftex.def Info: 1NN2.png  used on input line 830.
 (pdftex.def)             Requested size: 442.29108pt x 489.5693pt.
  [23] [24 <./1NN2.png>] [25] (./FinalWriteup.bbl [26] [27] [28]) [29] (./FinalWriteup.aux)
  ***********
@@ -337,13 +337,13 @@ L3 programming layer <2024-01-22>
 Here is how much of TeX's memory you used:
  4361 strings out of 476182
  72825 string characters out of 5795596
- 1937975 words of memory out of 5000000
+ 1940975 words of memory out of 5000000
  26343 multiletter control sequences out of 15000+600000
  567398 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  67i,10n,77p,1000b,367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on FinalWriteup.pdf (29 pages, 1542879 bytes).
+Output written on FinalWriteup.pdf (29 pages, 1544295 bytes).
 PDF statistics:
  215 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
