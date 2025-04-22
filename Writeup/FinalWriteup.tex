@@ -546,7 +546,7 @@ of the cuprate phase diagram—namely, the Mott insulating phase and the emergen
     \centering
     \includegraphics[width=0.95\textwidth]{1NNphased.png}  % Adjust width as needed
     \caption{\textbf{Phase diagram for the 1NN model}:  (t =1eV, nkxnkf = 20x5, ff = 4\AA) as a function of On-site Coulumb Repulsion $U$ and chemical potential $\mu$. 
-    Figure shows the four phases observed in the 1NN model: SC (Superconductivity), SDW (Spin-Density Wave), CDW(Charge Density Wave) and FL (Fermu-Liquid).
+    Figure shows the four phases observed in the 1NN model: SC (Superconductivity), SDW (Spin-Density Wave), CDW(Charge Density Wave) and FL (Fermi-Liquid).
     Calculated points in the phase diagram are showed by the 'x' markers and a lighter-couloured background is used to depict interpolated regions between these points. }
     \label{fig:1NNpd}
 \end{figure}
@@ -557,21 +557,22 @@ of the cuprate phase diagram—namely, the Mott insulating phase and the emergen
 \subsubsection{Superconductivity in the 1NN Model}
 
 Recent findings have claimed that the 2D Hubbard model does not have a superconducting ground state\cite{qin2020absence}. 
-Whilst the model in Ref. \cite{qin2020absence} is the same as the 1NN model explored in this section, their analysis is conducted in a 
+Whilst the model in Ref. \cite{qin2020absence} is the same as the 1NN model explored in this section, the paper's analysis is conducted in a 
 slightly different framework than the one used in this project: using DMRG \cite{white1992density} 
-at moderate-strong coupling and for values of U between 6-8eV\textit{(which they claim to be the 
+at moderate-to-strong coupling and for values of U between 6-8eV\textit{(which the paper claims to be the 
 regime relevant to the cuprates)}.
 The lack of superconductivity in their findings is attributed to a lack of competition 
 between the magnetic and superconducting phases. Here, in the weak-coupling framework, both  competition between magnetism and superconductivity and 
-a stabilised superconducting region is found. The superconducting order parameter for this stable region is plotted on top of the Fermi-Surface for the first BZ (Fig.\ref{fig:1NNSC}a).
+a stabilised superconducting region is found. The superconducting order parameter in this stable region is plotted on top of the Fermi-Surface for the first BZ (Fig.\ref{fig:1NNSC}a).
 The order parameter shows antisymmetry with respect to a 90 degree rotation and therefore one concludes that
-the superconducting region is d-wave symmetric. This is in agreement with what is expected from the Cuprate superconductors \cite{tsuei2000pairing}.\par
+the bulk superconducting region is d-wave symmetric. This is in agreement with what is expected from the Cuprate superconductors \cite{tsuei2000pairing}.\par
 \medskip
 \noindent 
-After plotting the the critical temperature (Tc) as a function of chemical potential ($\mu$) for a constant Coulumb repulsion(U), one observes that
+After plotting the the critical temperature ($T_c$) as a function of chemical potential ($\mu$) for a constant Coulumb repulsion(U), one observes that
 the superconducting critical temperature is maximised closest to the magnetic instability (Fig.\ref{fig:1NNSC}b).
 This is in agreement with the idea that competition between instabilities
-enhace the phase transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulumb repulsion and Tc are positively correlated, as is to be expected from the assumed of the pairing mechanism\textit{(See Eq.\ref{Pairing interaction SF})}.
+enhace the phase transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulumb repulsion and Tc are positively correlated, as is to be expected from the assumed 
+of the pairing mechanism \textit{(See Eq.\ref{Pairing interaction SF})}.
 It is important to note that limiting the interactions 
 accounted for in the FRG calculation to two-particle interactions acts as a bottle-neck for the accuracy 
 of the Tc values calculated. Nevertheless, the trends in Tc remain trustworthy. 
@@ -583,7 +584,7 @@ of the Tc values calculated. Nevertheless, the trends in Tc remain trustworthy.
     Fig a) Superconducting order parameter projected on Fermi Surface at $\mu$ = 1.00 eV, 
     for U =10.00eV. The order parameter is antisymmetric about a 90 degree rotation and hence
     it exhibits d-wave symmetry. 
-    Fig b) Transition temperature (Tc) plotted on a logarithmic scale as a function of chemical potential ($\mu$) for U =10.00eV, showing
+    Fig b) Transition temperature ($T_c$) plotted on a logarithmic scale as a function of chemical potential ($\mu$) for U =10.00eV, showing
     a smooth transition between SC and SDW regions.
     Tc is enhanced closest to the magnetic instability. 
     Although both plots are shown only specific for certain values of U and $\mu$, the results they display hold for the enterity of
@@ -597,7 +598,7 @@ of the Tc values calculated. Nevertheless, the trends in Tc remain trustworthy.
 \subsubsection{Magnetic stripes in the 1NN Model}
 \label{subsec:Stripes1NN}
 
-Another distinctive feature of the Cuprates \textit{(as well as other unconventional superconductors}\cite{levi1998stripes}\textit{)} is 
+Another distinctive feature of the Cuprates \textit{(as well as of other unconventional superconductors}\cite{levi1998stripes}\textit{)} is 
 the emergence of "stripes" in their phase diagram. These are patterns of alternating
 charge-density and spin density waves\cite{zachar1998landau, vojta2009lattice}. 
 In the 1NN model discussed here, these patterns are not observed. However, magnetic regions of 
@@ -607,10 +608,8 @@ occurring at even integer values of the chemical potential ($\mu$). Most of them
 nesting vector as the Coulumb repulsion is increased.\par
 \medskip
 
-
- 
 \noindent The physics becomes particularly interesting at a chemical potential of $\mu =1.00eV$. 
-In  Cuprates, a dopinf of $\frac{1}{8}$th is known as "the magical doping" \cite{komiya2005magic}, where
+In  Cuprates, a doping of $\frac{1}{8}$th is known as "the magical doping" \cite{komiya2005magic}, where
 stripes emerge and superconductivity is supressed. In this model, the magical doping corresponds 
 to a chemical potential of $\pm 1.00eV$(which is $\frac{1}{8}$th of the bandwidth). 
 At low Coulumb repulsion values, a ferromagentically ordered spin density wave (SDW) is observed. This SDW is supressed by a superconducting phase,
@@ -630,7 +629,7 @@ confirming that the result remained unchanged. The appearance of these stripes a
     \caption{\textbf{Magnetic stripe in the 1NN model for doping at $\frac{1}{8}$ of the bandwith}: Fig a) Transition temperature plotted in a Logarithmic scale as a function of Coulumb repulsion (U) along the Magnetic stripe at $\mu$ =1eV. 
        Fig b) Magnetic susceptibility along high symmetry path for U =2.00 eV. 
        Fig c) Plot of the Superconducting order parameter projected on top of the Fermi-surface of the 1NN model for U = 10.00eV and $\mu$ =1.00eV.
-       Fig d) Magnetic susceptibility along high symmetry path for U= 18.00eV. Plots showing the susceptibility as a function of \b{q} for both magnetic regions. The Ferromagnetic SDW is supressed by a superconducting phase at U$\approx$ 6.00eV. At larger values of U,  the SDW phase is recovered but with an Anti-Ferromagnetic ordering instead.  }
+       Fig d) Magnetic susceptibility along high symmetry path for U= 18.00eV. The plots show the susceptibility as a function of \b{q} for both magnetic regions. The Ferromagnetic SDW is supressed by a superconducting phase at U$\approx$ 6.00eV. At larger values of U,  the SDW phase is recovered but with an Anti-Ferromagnetic ordering instead.  }
     \label{fig:1NN_stripes}
 \end{figure}
 
@@ -638,17 +637,17 @@ confirming that the result remained unchanged. The appearance of these stripes a
 
 \subsection{Effect of next-nearest neighbour hopping (1NNN model)}
 \label{subsec:1NNNModel}
-The 1NNN model is an extension of the 1NN model described earlier, incorporating
+The 1NNN model is an extension of the 1NN model described in previous sections, incorporating
 the next-nearest neighbour hopping amplitude as an additional free parameter.
 This section presents three additional phase diagrams
 for the two-dimensional Hubbard model, with next-nearest neighbour hopping amplitudes 
 of 0.25, 0.50 and 0.75 eV \textit{(See Fig.\ref{fig:1NNN})}.
 The nearest neighbour hopping amplitude remains fixed at 1eV for all models. 
 Furthermore, the chemical potential of the models is adjusted to ensure a 
-constant number of electrons at half-filling, for a direct comparison between the models. \par
+constant number of electrons at half-filling, to allow for a direct comparison between the models. \par
 \medskip
 \noindent
-As the next-nearest neighbour hopping is increased, the position of the Van-Hove singularity shifts to lower energies. 
+As the next-nearest neighbour hopping is increased, the position of the Van-Hove singularity shifts to lower energies \textit{(See Fig.\ref{fig:1NNN}a)}. 
 This increase in $t'$ also alters the Fermi-surface, which in turn changes the nesting vectors of the models. 
 As a result of both these effects, the SC-SDW-SC sandwich 
 region shifts toward the negative chemical potential regime as $t'$ increases.
@@ -680,12 +679,12 @@ compare the features of the 1NN and 1NNN phase diagrams.
 \label{subsubsec:SC1NNN}
 
 Including a next-nearest neighbour hopping parameter in the 1NN model does not lead to
-many significant in the superconducting properties of the model. The order parameter is predominantly d-wave symmetric and the  superconducting temperature ($T_c$) increases
+many significant changes in the superconducting properties of the model. The order parameter is predominantly d-wave symmetric and the  superconducting temperature ($T_c$) increases
 with Coulumb repulsion. Proximity to a Magnetic instability further enhances $T_c$.
 Additionally, the same SC-SDW-SC sandwich structure is observed even after breaking particle-hole symmetry, reinfocing the 
 idea that that superconductivity is favoured in the vicinity of a  spin density wave (SDW) instability. \par
 \medskip
-\noindent While most key features remain unchanges, there are some important differences in the superconducting properties. 
+\noindent While most key features remain unchanged, there is an important difference between the superconducting regions in the 1NN and 1NNN model. 
 When $t' \neq 0 $, charge density wave (CDW) patches appear neighbouring some superconducting regions.
 Specifically, when $\frac{t'}{t} = 0.75$, and for Coulumb repulsion between 8 and 11eV, the superconducting order parameter undergoes a change.
 Along these horizontal cuts there is a SCI-SDW-SCII-CDW transition. The Superconducting order parameter 
@@ -774,7 +773,7 @@ However, this trend is only observed in this particular model and phase.
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.90\textwidth]{1NNNstripes.png}  % Adjust width as needed
-    \caption{\textbf{Tc as a function of Coulumb repulsion for a selection of stripes in the 1NNN model}: Tc plotted in
+    \caption{\textbf{$T_c$ as a function of Coulumb repulsion for a selection of stripes in the 1NNN model}: $T_c$ plotted in
     a logarithmic scale for stripes at:  Fig a) t' = 0.00eV, $\mu$=1.00eV, b) t' = 0.25eV, $\mu$=0.60eV, c) t' = 0.25eV, $\mu$=1.40eV,
     d) t' = 0.25eV, $\mu$=-2.00eV,
     e) t' = 0.50eV, $\mu$=1.60eV,
@@ -790,8 +789,8 @@ However, this trend is only observed in this particular model and phase.
 \begin{minipage}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{1NNN050Dome.png}
-    \captionof{figure}{\textbf{Magnetic Dome in 1NNN, t'=0.50eV model}: Tc as a function of $\mu$ for different values of U (offsetted by 1eV).
-    This figure shows how the height of the second magentic dome increases as a function of U whilst the height of the 
+    \captionof{figure}{\textbf{Magnetic Dome in 1NNN, t'=0.50eV model}: $T_c$ as a function of $\mu$ for different values of $U$ (offsetted by 1eV).
+    This figure shows how the height of the second magentic dome increases as a function of $U$ whilst the height of the 
     first remains constant. The turning point of the double dome pattern occurs at $\mu$=-2.00eV }
     \label{fig:1NNNDome}
 \end{minipage}
@@ -800,9 +799,9 @@ However, this trend is only observed in this particular model and phase.
 \begin{minipage}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{tprimecont.png}
-    \captionof{figure}{\textbf{Continuous variation of t':} Normalised Tc plotted as a function of chemical 
-    potential $\mu$ for several values of t'. Tc is normalised separatedly with respect to the 
-    maxima of each plot in order to allow for the clear vizualisation of the trend.  }
+    \captionof{figure}{\textbf{Continuous variation of $t'$:} Normalised $T_c$ plotted as a function of chemical 
+    potential $\mu$ for several values of $t'$. $T_c$ is normalised separatedly with respect to the 
+    maxima of each plot in order to allow for the clear vizualisation of the trend as $\mu$ is varied.  }
     \label{fig:tprimecont}
 \end{minipage}
 
@@ -812,11 +811,11 @@ However, this trend is only observed in this particular model and phase.
 
 In order to further support the ideas discussed in Section \ref{subsec:1NNModel}, the critical temperature
 is plotted as a function of chemical potential $\mu$ for different values of t' at U=10.00eV \textit{(See Fig.\ref{fig:tprimecont})}
-The magnetic region is pushed to more negative values of the chemical potential as the value of the next-nearest 
+The magnetic region is pushed towards more negative values of the chemical potential as the value of the next-nearest 
 neighbour hoping parameter is increased (and the van Hove singularity is pushed down in energy). The bulk magnetic
-region remains AFM ordered and the SC order parameter is predominantly d-wave symmetric. The exception occurs when
+region remains antiferromagnetically ordered and the SC order parameter is predominantly d-wave symmetric. The exception occurs when
 $t'$ is set to 0.70eV. There, the SC order parameter transitions to s-wave symmetric when it is closest to the boundary 
-with the charge density wave (CDW) phase (as discussed in Section \ref{subsubsec:SC1NNN}).
+with the charge density wave (CDW) phase \textit{(as discussed in Section \ref{subsubsec:SC1NNN})}.
 
 \subsection{Effect of bi-orbital system (1NN2 model)}
 \label{subsec:1NN2Model}
@@ -826,12 +825,12 @@ two orbitals per site. The model was calculated using the parameters discussed i
 multiple orbitals per site, the  Hamiltonian is extended to the Hubbard-Kanamori form \textit{(See Section \ref{subsubsec: HKmodel})}. 
 The chemical potential is fixed at both the undoped ($\mu = 0.00eV $) and doped ($\mu =1.00eV$) levels. The Coulumb repulsion and Hunds coupling strengths are varied from 1-10eV and 0.1-1.0eV, respectively.
 The calculations were carried out using a form factor of 4\AA and an $n_k$x$n_{k_f}$ grid of 20x5. 
-his section first discusses the 1NN2MY model, where orbital mixing between different orbitals is set to zero, and compares it later with the 1NN2MN model, which includes this orbital mixing. \par
+This section first discusses the 1NN2MY model, where orbital mixing between different orbitals is set to zero, and compares it later with the 1NN2MN model, which includes this orbital mixing. \par
 \medskip
-\noindent In the undoped case, the model exhibits an Antiferromagnetically ordered spin density wave (SDW) ground state
+\noindent In the undoped case, the model exhibits an antiferromagnetically ordered spin density wave (SDW) ground state
 for $U > 3.00eV$. When the coulomb repulsion is set to zero, the groundstate transitions to a charge density wave (CDW) with a $(\pi, \pi)$ nesting vector. 
 Doping the system to a chemical potential of $\mu = 1.00eV$ supresses the SDW, and instead, a small superconducting patch 
-emerges in the boundary of the CDW phase \textit{(See Fig.{\ref{fig:1NN2pd}})}. The magnitude of the Hund's coupling plays has a minor effect in the dominating phase of the Tc of the model.
+emerges in the boundary of the CDW phase \textit{(See Fig.{\ref{fig:1NN2pd}})}. The magnitude of the Hund's coupling has a minor effect in the dominating phase and its transition temperature  ($T_c$).
 The Superconducting regions shown in Fig.\ref{fig:1NN2pd}.d exhibit different order parameters. The SC region at U=0.0eV is s-wave symmetric whilst the SC region at U =10.00eV
 is d-wave symmetric. By comparing Figures \ref{fig:1NN2pd}c,d with e,f, it can be concluded that the inclusion of different orbital hopping promotes the emergence of a CDW phase at lower Coulomb repulsion values in the doped case with $\mu = 1.00eV$.
 
@@ -862,13 +861,20 @@ A magnetic double dome emerges for a ratio of $\frac{t'}{t} = 0.50$.
 The inclusion of $t'$ also leads to stable charge density wave (CDW) 
 patches surrounding SC regions, where the SC order parameter transitions from d-wave to s-wave symmetry near these patches. 
 Finally, a preliminary analysis is provided on extending these models to a 
-two-orbital-per-site case. The AFM ground state is suppressed as doping increases, and the magnitude of Hund's 
+two-orbital-per-site case. The AFM ground state is suppressed as the model is electronically doped, and the magnitude of Hund's 
 coupling has minimal impact on the observed phases.\par
 
 
 \medskip
 
-\noindent Future work could involve a more in-depth analysis of the two-orbital-per-site model, potentially exploring broader ranges of chemical potential and Hund's coupling values. Additionally, extending the study to a bi-layer, two-orbital-per-site Hubbard model would be an intriguing direction. One could also investigate the impact of spin-orbit coupling (SOC) on the results obtained. Such extensions would quickly evolve into a multi-dimensional analysis, offering numerous avenues for exploration. However, a particularly relevant and compelling direction would be to progressively increase the complexity of these models to better approximate the behavior of unconventional superconductors, such as lanthanum nickelate. This approach would involve a step-by-step examination of how the critical temperature ($T_c$) and superconducting regions change as model parameters evolve. Ultimately, this could provide valuable insights into the key parameters influencing superconducting phases in unconventional materials.
+\noindent Future work could involve a more in-depth analysis of the two-orbital-per-site model, potentially exploring broader ranges of 
+chemical potential and Hund's coupling values. Additionally, extending the study to a bi-layer, two-orbital-per-site Hubbard model would be an intriguing direction. One could also investigate the 
+impact of spin-orbit coupling (SOC) on the results obtained. Such extensions would quickly evolve into a multi-dimensional 
+analysis, offering numerous avenues for exploration. However, a particularly relevant direction would be to progressively increase
+the complexity of these models to better approximate the behavior of unconventional superconductors, 
+such as lanthanum nickelate. This approach would involve a step-by-step examination of how the critical temperature ($T_c$) and superconducting 
+regions change as model parameters evolve. Ultimately, this could provide valuable insights into the key parameters influencing superconducting 
+phases in unconventional materials.
 
 
 
