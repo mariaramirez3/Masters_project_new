@@ -20,24 +20,24 @@ J~Robert Schrieffer.
 \newblock {\em Theory of superconductivity}.
 \newblock CRC press, 2018.
 
-\bibitem{bednorz1986possible}
-J~George Bednorz and K~Alex M{\"u}ller.
-\newblock Possible high t c superconductivity in the ba- la- cu- o system.
-\newblock {\em Zeitschrift f{\"u}r Physik B Condensed Matter}, 64(2):189--193, 1986.
+\bibitem{steglich1979superconductivity}
+Frank Steglich, J~Aarts, CD~Bredl, W~Lieke, D~Meschede, W~Franz, and H~Sch{\"a}fer.
+\newblock Superconductivity in the presence of strong pauli paramagnetism: Ce cu 2 si 2.
+\newblock {\em Physical Review Letters}, 43(25):1892, 1979.
 
 \bibitem{hirsch2015superconducting}
 JE~Hirsch, MB~Maple, and F~Marsiglio.
 \newblock Superconducting materials classes: Introduction and overview, 2015.
 
+\bibitem{bednorz1986possible}
+J~George Bednorz and K~Alex M{\"u}ller.
+\newblock Possible high t c superconductivity in the ba- la- cu- o system.
+\newblock {\em Zeitschrift f{\"u}r Physik B Condensed Matter}, 64(2):189--193, 1986.
+
 \bibitem{eckhardt2020truncated}
 Christian~J Eckhardt, Carsten Honerkamp, Karsten Held, and Anna Kauch.
 \newblock Truncated unity parquet solver.
 \newblock {\em Physical Review B}, 101(15):155104, 2020.
-
-\bibitem{profe2024magic}
-Jonas~B Profe, Luke~C Rhodes, Matteo D{\"u}rrnagel, Rebecca Bisset, Carolina~A Marques, Shun Chi, Tilman Schwemmer, Ronny Thomale, Dante~M Kennes, Chris~A Hooley, et~al.
-\newblock Magic angle of sr 2 ruo 4: Optimizing correlation-driven superconductivity.
-\newblock {\em Physical Review Research}, 6(4):043057, 2024.
 
 \bibitem{moriya2000spin}
 Toru Moriya and Kazuo Ueda.
@@ -133,31 +133,6 @@ Masatoshi Imada, Atsushi Fujimori, and Yoshinori Tokura.
 Jonas~Benedikt Profe.
 \newblock {\em Functional renormalization group developments for correlations in quantum materials}.
 \newblock PhD thesis, Dissertation, RWTH Aachen University, 2023, 2023.
-
-\bibitem{sakakibara2024possible}
-Hirofumi Sakakibara, Naoya Kitamine, Masayuki Ochi, and Kazuhiko Kuroki.
-\newblock Possible high t c superconductivity in la 3 ni 2 o 7 under high pressure through manifestation of a nearly half-filled bilayer hubbard model.
-\newblock {\em Physical Review Letters}, 132(10):106002, 2024.
-
-\bibitem{slater1954simplified}
-John~C Slater and George~F Koster.
-\newblock Simplified lcao method for the periodic potential problem.
-\newblock {\em Physical review}, 94(6):1498, 1954.
-
-\bibitem{blanksby2003bond}
-Stephen~J Blanksby and G~Barney Ellison.
-\newblock Bond dissociation energies of organic molecules.
-\newblock {\em Accounts of chemical research}, 36(4):255--263, 2003.
-
-\bibitem{mcgrady2015introduction}
-John~E McGrady.
-\newblock Introduction and general survey of metal--metal bonds.
-\newblock {\em Molecular Metal-Metal Bonds: Compounds, Synthesis, Properties}, pages 1--22, 2015.
-
-\bibitem{krapp2008strength}
-Andreas Krapp, Matthias Lein, and Gernot Frenking.
-\newblock The strength of the $\sigma$-, $\pi$-and $\delta$-bonds in re 2 cl 8 2-.
-\newblock {\em Theoretical Chemistry Accounts}, 120:313--320, 2008.
 
 \bibitem{profe2024diverge}
 Jonas Profe, Dante~M Kennes, and Lennart Klebl.
@@ -278,5 +253,30 @@ Rodrigo~A Fontenele, Natanael~C Costa, Thereza Paiva, and Raimundo R~dos Santos.
 Louis Taillefer.
 \newblock Scattering and pairing in cuprate superconductors.
 \newblock {\em Annu. Rev. Condens. Matter Phys.}, 1(1):51--70, 2010.
+
+\bibitem{sakakibara2024possible}
+Hirofumi Sakakibara, Naoya Kitamine, Masayuki Ochi, and Kazuhiko Kuroki.
+\newblock Possible high t c superconductivity in la 3 ni 2 o 7 under high pressure through manifestation of a nearly half-filled bilayer hubbard model.
+\newblock {\em Physical Review Letters}, 132(10):106002, 2024.
+
+\bibitem{slater1954simplified}
+John~C Slater and George~F Koster.
+\newblock Simplified lcao method for the periodic potential problem.
+\newblock {\em Physical review}, 94(6):1498, 1954.
+
+\bibitem{blanksby2003bond}
+Stephen~J Blanksby and G~Barney Ellison.
+\newblock Bond dissociation energies of organic molecules.
+\newblock {\em Accounts of chemical research}, 36(4):255--263, 2003.
+
+\bibitem{mcgrady2015introduction}
+John~E McGrady.
+\newblock Introduction and general survey of metal--metal bonds.
+\newblock {\em Molecular Metal-Metal Bonds: Compounds, Synthesis, Properties}, pages 1--22, 2015.
+
+\bibitem{krapp2008strength}
+Andreas Krapp, Matthias Lein, and Gernot Frenking.
+\newblock The strength of the $\sigma$-, $\pi$-and $\delta$-bonds in re 2 cl 8 2-.
+\newblock {\em Theoretical Chemistry Accounts}, 120:313--320, 2008.
 
 \end{thebibliography}

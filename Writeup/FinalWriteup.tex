@@ -20,13 +20,14 @@
 
 
 
-Due to its structural resemblance to the high-temperature cuprate superconductors \cite{dagotto1994correlated}, 
-the two-dimensional Hubbard model has attracted sustained scientific interest for decades.
+The two-dimensional Hubbard model has attracted sustained scientific interest for decades, largely because of its ability to capture most of the underlying physics of the superconducting phase of the high-temperature cuprate superconductors\cite{dagotto1994correlated}. 
+Beyond its relevance to the cuprates, it also serves as a fundamental toy model in theoretical physics. 
 This thesis conducts a detailed analysis of the 2D Hubbard model using the truncated-unity functional Renormalisation Group (TU$^2$FRG) method,
 within the framework of spin-fluctuation-mediated superconductivity.  The interplay between magnetism and superconductivity is explored 
 by systematically varying model parameters such as the on-site Coulomb repulsion, chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per
 site. This approach enables the identification of clear trends in the superconducting critical ($T_c$) temperature and order parameter, while also
-providing insights into the magnetic ordering. 
+providing insights into the magnetic ordering and how well FRG works for a certain range of parameters.
+
 
 
 
@@ -36,31 +37,28 @@ providing insights into the magnetic ordering.
 \section{Introduction}
 
 Since its discovery in 1911\cite{onnes1911superconductivity}, superconductivity has remained a topic of great scientific interest.
-This phenomena, characterised by an abrupt drop in resistance at a so-called "Critical Temperature ($T_c$)"\cite{geballe2015tc} is driven by an attractive interaction
-between electrons. This attractive interaction gives rise to the formation of electron pairs, famously known as "Cooper pairs"\cite{schrieffer2018theory}. For many 
+This phenomenon, characterised by an abrupt drop in resistance at a so-called ``Critical Temperature ($T_c$)"\cite{geballe2015tc} is driven by an attractive interaction
+between electrons. This  interaction leads to the formation of electron pairs, famously known as ``Cooper pairs"\cite{schrieffer2018theory}. For many 
 years after the discovery of superconductivity, physicists
 were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the electron pairing mechanism in all superconducting materials. 
-However, in 1986, the discovery of the first heavy-fermion superconductor\cite{bednorz1986possible} resulted in the emergence of a whole new class of materials: Unconventional Superconductors. 
-These are condensates of cooper pairs formed by a \textbf{different} pairing mechanism than the electron-phonon coupling predicted by BCS theory\cite{hirsch2015superconducting}.
-For many materials, there is no consensus on what the mechanism otherwise is. \par 
-\medskip
-
-\noindent High-Temperature superconductors are defined by having a critical temperature greater than the boiling point 
-of Nitrogen (77K). Ever since the discovery of the first high-$T_c$ superconductor\cite{bednorz1986possible}, the search for "(close to-) room temperature" superconductors has been extended to 
-all kinds of unconventional supercondutors. However, a comprehensive understanding of what drives the superconductivity is required in order 
-to achieve this. There have been multiple attempts to model the pairing mechanism of some families of high-$T_c$ superconductors, but they have
-been greatly limited by the numerical challenges that working with multi-band systems and  spin-orbit coupling (SOC) present. 
-This motivates the use of a promising technique: TU$^2$FRG\cite{eckhardt2020truncated,profe2024magic}.\par
+However, in 1979, the discovery of the first heavy-fermion superconductor\cite{steglich1979superconductivity} gave rise to a whole new class of materials: Unconventional Superconductors. 
+These are condensates of cooper pairs formed by a different pairing mechanism than the electron-phonon coupling predicted by BCS theory\cite{hirsch2015superconducting}.
+For many materials, there is no consensus on what the mechanism otherwise is.\par
 
 \medskip
+\noindent High-temperature superconductors are a special class of unconventional superconductors. They are defined by having a critical temperature greater than the boiling point 
+of Nitrogen (77K). Ever since the discovery of the first high-$T_c$ superconductor\cite{bednorz1986possible}, the search for ``(close to-) room temperature" superconductors has been extended to 
+all kinds of unconventional superconductors. However, a comprehensive understanding of what drives the superconductivity is required in order 
+to achieve this. There have been multiple attempts to model the pairing mechanism of some families of high-$T_c$ superconductors, most of which have
+been greatly limited by the numerical challenges that working with complex lattice structures present.\par 
 
-\noindent Motivated by these challenges and by the need for simplified yet insightful models, this work turns to the two-dimensional Hubbard model—one of the most fundamental 
-and extensively studied frameworks in condensed matter physics. Functional Renormalisation Group (FRG) is employed to 
-investigate the influence of the Coulomb repulsion ($U$) and chemical potential ($\mu$) on the
-interplay between magnetism and superconductivity.
+\medskip
+\noindent Motivated by these challenges and by the need for simplified yet insightful models, this work turns to the two-dimensional Hubbard model-one of the most fundamental frameworks in condensed matter physics. Truncate Unity Functional Renormalisation Group (TU$^2$FRG)\cite{eckhardt2020truncated} is employed to 
+investigate the influence of the Coulomb repulsion ($U$) and chemical potential ($\mu$) on the interplay between magnetism and superconductivity.
 This is done under the key assumption that superconductivity arises from spin-fluctuation mediation.
 In this work, regions of stable magnetic and superconducting order are identified, and trends in their respective ordering and critical temperatures are presented.
 The study is further extended by examining how variations in the next-nearest-neighbor hopping amplitude and the inclusion of a second orbital per site impact all of the above.
+
 
 
 
@@ -185,7 +183,7 @@ In the case of materials with a multi-band and/or multi-orbital nature, the Hubb
 \noindent Here, $U$ and $V$ represent the electronic interactions in the same and different orbitals respectively. For generality, the intraorbital exchange $J$ and the 'pair hopping' term $J'$ following from Hund's rule coupling have been separated.  
 Note that this Hamiltonian is relevant for the later section of this project, where the model is extended to a two-orbital, two-dimensional Hubbard model.
 
-\subsection{Theoretical Background in FRG}
+\subsection{Functional Renormalisation Group (FRG) theory}
 
 Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why one resorts to numerical techniques such as FRG to do so. FRG falls into the same category of many other weak-coupling techniques (such as Mean field-theory\cite{kadanoff2009more}, pertubation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or Random Phase approximation\cite{bohm1951collective}).
 In these theories, interactions between electrons are considered to be weak. This allows one to effectively model the electrons in the system as free particles 
@@ -393,39 +391,6 @@ formalism discussed in Section \ref{subsubsec:Truncation scheme}. All of the cal
 is spin-fluctuation mediated \textit{(See section \ref{subsec:spinfluct})}. This section outlines the methods followed to calculate the required Tight-Binding models for each of the systems, the utilisation of 
 divERGe to solve them and some of the required convergence techniques. 
 
-\subsection{Tight-Binding Models}
-
-\label{subsec:TBM1NN2}
-
-This project investigates three models: the 1NN, 1NNN and 1NN2 model (\textit{See Fig.\ref{fig:2D Hubbard model}}). For the first two, the hopping parameters in the tight-binding model are treated as free parameters. 
-For the later, the hopping parameters are determined using the method described below. \par
-\medskip
-\noindent Constrained to the case of a single layer, the 1NN model is extended to a multi-orbital system by
-including two-orbitals per site and investigating the effect of the interorbital hopping. To allow for future comparison with
-existing literature\cite{sakakibara2024possible}, a choice of $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbitals is made. 
-The respective hopping parameters are determined using the  table of interatomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
-In this calculation, the magnitudes of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05eV$ respectively in order to capture their relative values\cite{blanksby2003bond, mcgrady2015introduction, krapp2008strength}.
-A table summarising the estimated parameters for the models  discussed in Section~\ref{subsec:1NN2Model} is shown below.
-
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|}
-        \hline
-       Model &$t^{[1,0,0]}_{3z^2-r^2}$  &$t^{[0,1,0]}_{3z^2-r^2}$  &  $t_{x^2 - y^2}$ &  $t^{[1,0,0]}_{x^2 - y^2 -3z^2-r^2} $ & $t^{[0,1,0]}_{x^2 - y^2 -3z^2-r^2} $ \\
-        \hline
-        & -0.781 & -0.719  &  -0.375 & -0.402 & -0.310\\
-        \hline
-        1NN2MN & on &  on  & on  & off & off  \\
-        \hline
-        1NN2MY & on &  on  & on  & on & on \\
-          
-        \hline
-    \end{tabular}
-    \caption{\textbf{Nearest neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters.
-    These are labelled by a lower and upper index reresenting the orbital and the direction of hoping respectively.
-    Other rows in the table show which hopping parameters were included in each of the two models from Section \ref{subsec:1NN2Model}.}
-    \label{tab:2D2orbparams }
-\end{table}
 
 \subsection{divERGe}
 \label{subsec:diverge}
@@ -481,7 +446,7 @@ the calculations was tested accordingly for a range of points in the phase diagr
 
 
 
-\subsubsection{Number of k points convergence }
+\subsubsection{Convergence with number of k points }
 
 When integrating the flow equation, there are two parameters that can be further tuned to ensure convergence.
 These are the $n_k$ and $n_{k_f}$ values and, loosely speaking, they specify the number of k points used to carry out the nested integration of the decoupled flow equation. 
@@ -499,7 +464,7 @@ and spin density wave nesting vectors. The effect of varying factors such as Cou
 chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per site 
 on the critical temperature of the superconducting regions is also examined.
 
-\subsection{1NN Model}
+\subsection{Nearest-neighbour hopping 2D Hubbard Model (1NN)}
 \label{subsec:1NNModel}
 
 The 1NN model is defined as the 2D Hubbard model with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
@@ -807,7 +772,7 @@ However, this trend is only observed in this particular model and phase.
 
 
 
-\subsubsection{Continous variation of next-nearest neighbour hopping}
+\subsubsection{Continuous variation of next-nearest neighbour hopping}
 
 In order to further support the ideas discussed in Section \ref{subsec:1NNModel}, the critical temperature
 is plotted as a function of chemical potential $\mu$ for different values of t' at U=10.00eV \textit{(See Fig.\ref{fig:tprimecont})}
@@ -820,8 +785,41 @@ with the charge density wave (CDW) phase \textit{(as discussed in Section \ref{s
 \subsection{Effect of bi-orbital system (1NN2 model)}
 \label{subsec:1NN2Model}
 
+
+This project investigates three models: the 1NN, 1NNN and 1NN2 model (\textit{See Fig.\ref{fig:2D Hubbard model}}). For the first two, the hopping parameters in the tight-binding model are treated as free parameters. 
+For the later, the hopping parameters are determined using the method described below. \par
+\medskip
+\noindent Constrained to the case of a single layer, the 1NN model is extended to a multi-orbital system by
+including two-orbitals per site and investigating the effect of the interorbital hopping. To allow for future comparison with
+existing literature\cite{sakakibara2024possible}, a choice of $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbitals is made. 
+The respective hopping parameters are determined using the  table of interatomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
+In this calculation, the magnitudes of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05eV$ respectively in order to capture their relative values\cite{blanksby2003bond, mcgrady2015introduction, krapp2008strength}.
+A table summarising the estimated parameters for the models  discussed in Section~ is shown below.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+       Model &$t^{[1,0,0]}_{3z^2-r^2}$  &$t^{[0,1,0]}_{3z^2-r^2}$  &  $t_{x^2 - y^2}$ &  $t^{[1,0,0]}_{x^2 - y^2 -3z^2-r^2} $ & $t^{[0,1,0]}_{x^2 - y^2 -3z^2-r^2} $ \\
+        \hline
+        & -0.781 & -0.719  &  -0.375 & -0.402 & -0.310\\
+        \hline
+        1NN2MN & on &  on  & on  & off & off  \\
+        \hline
+        1NN2MY & on &  on  & on  & on & on \\
+          
+        \hline
+    \end{tabular}
+    \caption{\textbf{Nearest neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters.
+    These are labelled by a lower and upper index reresenting the orbital and the direction of hoping respectively.
+    Other rows in the table show which hopping parameters were included in each of the two models from Section \ref{subsec:1NN2Model}.}
+    \label{tab:2D2orbparams }
+\end{table}
+
+
+
 The models presented so far were constructed assuming a single orbital per site. This section discusses the effect of incorportaing
-two orbitals per site. The model was calculated using the parameters discussed in Section \ref{subsec:TBM1NN2} and with the inclusion of 
+two orbitals per site. The model was calculated using the parameters discussed in Section  and with the inclusion of 
 multiple orbitals per site, the  Hamiltonian is extended to the Hubbard-Kanamori form \textit{(See Section \ref{subsubsec: HKmodel})}. 
 The chemical potential is fixed at both the undoped ($\mu = 0.00eV $) and doped ($\mu =1.00eV$) levels. The Coulumb repulsion and Hunds coupling strengths are varied from 1-10eV and 0.1-1.0eV, respectively.
 The calculations were carried out using a form factor of 4\AA and an $n_k$x$n_{k_f}$ grid of 20x5. 
