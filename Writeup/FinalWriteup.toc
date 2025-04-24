@@ -4,23 +4,23 @@
 \contentsline {subsection}{\numberline {3.1}Unconventional superconductivity}{4}{}%
 \contentsline {subsubsection}{\numberline {3.1.1}Spin-fluctuation mediated superconductivity}{4}{}%
 \contentsline {subsection}{\numberline {3.2}Hubbard-Kanamori Model}{5}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}Tight Binding Models}{5}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Tight binding Models}{5}{}%
 \contentsline {subsubsection}{\numberline {3.2.2}Hubbard Model}{6}{}%
 \contentsline {subsubsection}{\numberline {3.2.3}Hubbard-Kanamori Model}{6}{}%
-\contentsline {subsection}{\numberline {3.3}Functional Renormalisation Group (FRG) theory}{7}{}%
+\contentsline {subsection}{\numberline {3.3}Functional Renormalisation Group (FRG) theory}{6}{}%
 \contentsline {subsubsection}{\numberline {3.3.1}Flow equation}{7}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Truncation scheme (TU$^2$FRG)}{10}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Truncation scheme (TU$^2$FRG)}{9}{}%
 \contentsline {subsubsection}{\numberline {3.3.3}Decoupling of flow equation}{10}{}%
-\contentsline {subsubsection}{\numberline {3.3.4}Instability calculation}{11}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Instability calculation}{10}{}%
 \contentsline {section}{\numberline {4}Computational Methods}{11}{}%
 \contentsline {subsection}{\numberline {4.1}divERGe}{11}{}%
-\contentsline {subsection}{\numberline {4.2}Convergence of Calculation}{12}{}%
+\contentsline {subsection}{\numberline {4.2}Convergence of Calculation}{11}{}%
 \contentsline {subsubsection}{\numberline {4.2.1}Form factor convergence}{12}{}%
 \contentsline {subsubsection}{\numberline {4.2.2}Convergence with number of k points }{12}{}%
 \contentsline {section}{\numberline {5}Results and discussion}{13}{}%
 \contentsline {subsection}{\numberline {5.1}Nearest-neighbour hopping 2D Hubbard Model (1NN)}{13}{}%
 \contentsline {subsubsection}{\numberline {5.1.1}Superconductivity in the 1NN Model}{14}{}%
-\contentsline {subsubsection}{\numberline {5.1.2}Magnetic stripes in the 1NN Model}{16}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Magnetic stripes in the 1NN Model}{14}{}%
 \contentsline {subsection}{\numberline {5.2}Effect of next-nearest neighbour hopping (1NNN model)}{18}{}%
 \contentsline {subsubsection}{\numberline {5.2.1}Superconductivity in the 1NNN Model}{18}{}%
 \contentsline {subsubsection}{\numberline {5.2.2}Magnetic stripes in the 1NNN model}{21}{}%

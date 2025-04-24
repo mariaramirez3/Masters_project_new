@@ -119,6 +119,11 @@ Walter Metzner, Manfred Salmhofer, Carsten Honerkamp, Volker Meden, and Kurt Sch
 \newblock Functional renormalization group approach to correlated fermion systems.
 \newblock {\em Reviews of Modern Physics}, 84(1):299--352, 2012.
 
+\bibitem{lichtenstein2017high}
+Julian Lichtenstein, D~S{\'a}nchez de~la Pe{\~n}a, Daniel Rohe, Edoardo Di~Napoli, Carsten Honerkamp, and Stefan~A Maier.
+\newblock High-performance functional renormalization group calculations for interacting fermions.
+\newblock {\em Computer Physics Communications}, 213:100--110, 2017.
+
 \bibitem{lichtenstein2018functional}
 Julian Lichtenstein.
 \newblock {\em Functional renormalization group studies on competing orders in the square lattice}.

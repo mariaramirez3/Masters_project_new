@@ -67,9 +67,6 @@ The study is further extended by examining how variations in the next-nearest-ne
 
 \subsection{Unconventional superconductivity}
 
-As previously outlined, unconventional superconductors are those in which the Cooper pair formation is not driven by the convetional electron-phonon coupling. 
-This section aims to outline the theoretical background behind a particular class of unconventional superconductors: Spin-fluctuation mediated superconductors. \par
-\medskip
 \noindent Most generally, the Hamiltonian for a superconducting state can be described as follows:
 
 \begin{equation}\label{General Hamiltonian}
@@ -82,13 +79,13 @@ This section aims to outline the theoretical background behind a particular clas
     \hat{H}^{cp} = \sum_{k,k'} \Gamma(k, k') c^{\dagger}_{k, \uparrow}  c^{\dagger}_{k', \downarrow} c_{k', \uparrow}c_{-k, \downarrow}
 \end{equation}
 
-\noindent For many unconventional superconductors, the form of the effective pairing interaction $\Gamma(k,k')$ has remained as an unanswered question for decades.
-
+\noindent In s-wave symmetric superconductors, the effective pairing interaction $\Gamma(k,k')$ is momentum-independent and thus remains constant. 
+For many unconventional superconductors-including those with spin-fluctuation mediated pairing-the exact form of $\Gamma(k,k')$ has remained as an unanswered question for decades. 
 \subsubsection{Spin-fluctuation mediated superconductivity}
 \label{subsec:spinfluct}
 
-One emerging theory for some unconventional superconductors such Iron-based or heavy-fermion compounds 
-is that the underlying pairing mechanism is driven by spin fluctuations \cite{moriya2000spin}. This section discusses how to
+The prevailing assumption for the pairing mechanism in Iron-based or heavy-fermion compounds 
+is that it is driven by spin fluctuations \cite{moriya2000spin}. This section discusses how to
 model spin-fluctuation mediated superconductivity for the fluctuation-exchange approximation (FLEX) \cite{esirgen1997fluctuation}. \par
 \medskip
 \noindent In such cases, the effective pairing interaction $\Gamma(k,k')$ is given by \footnote{Note that this form of pairing interaction 
@@ -99,7 +96,7 @@ the fluctuation frequence ($w_f$) and the Fermi energy is small.}:
     \Gamma(k,k') = \frac{3}{2} U^2 \chi^S(k-k') -\frac{1}{2}U^2 \chi^C(k-k') + U
 \end{equation} 
 
-\noindent This equation is taken from Ref.\cite{migdal1958interaction}. Here, U is the on-site Coulumb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge (C) and Spin(S) channel respectively. Their form is given below.
+\noindent This equation is taken from \cite{migdal1958interaction}. Here, U is the on-site Coulumb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge (C) and Spin(S) channel respectively. Their form is given below.
 
 \begin{equation}
     \chi^S(q) = \frac{\chi^0(q)}{1 - U \chi^0 (q)}
@@ -109,25 +106,26 @@ the fluctuation frequence ($w_f$) and the Fermi energy is small.}:
     \chi^C(q) = \frac{\chi^0(q)}{1 + U \chi^0 (q)}
 \end{equation}
 
-\noindent These interacting spin susceptibilities are expressed in terms of the non-interacting dynamic spin susceptibility ($\chi_{ps}^0$) which is stated below without formal proof \cite{moriya2000spin}. 
+\noindent These interacting spin susceptibilities are expressed in terms of the non-interacting dynamic spin susceptibility ($\chi_{ps}^0$)\cite{moriya2000spin}, stated below: 
 
 \begin{equation}\label{chi 0}
     \chi_{ps}^0(q, i \omega) = -\sum_{k} \int_{0}^{\beta} d\tau G^0_{ps}(k+q \tau) G^0_{sp}(k, -\tau)e^{i\omega \tau}
 \end{equation} 
 
 \noindent The calculations presented in this project are carried out in the spin-fluctuation framework. 
-Whilst this theory has managed to succesfully capture key features in phase diagrams of unconvential superconductors, it also has its limitations.
+Whilst this theory has managed to successfully capture key features in the phase diagrams of unconventional superconductors, it also has its limitations.
 The most relevant example is that of the cuprate phase diagram:
 spin-fluctuation theory is able to capture the superconducting dome and the correct order parameter \cite{moriya2006developments, scalapino1995case} 
 but fails
-to describe the characteristic pseudo-gap\cite{timusk1999pseudogap}. 
+to describe the characteristic pseudo-gap and Mott insulating phase\cite{timusk1999pseudogap}.
+
 
 \subsection{Hubbard-Kanamori Model}
 
-\subsubsection{Tight Binding Models}
+\subsubsection{Tight binding Models}
 
-The Tight Binding Model is a central element of condensed matter physics \eqref{TBM}. In this model, electrons are bound in orbitals (called sites) around the lattice ions.
-Due to the overlap between the quantum mechanical wavefunctions that describe these sites, electrons are allowed to 'hop' to neighbouring sites. The probability that this hopping process will occur is given by a tunnelling amplitude, which can be calculated using a hopping integral. \par
+The Tight Binding Model is a central element of condensed matter physics \eqref{TBM}. In this model, electrons are bound in orbitals around the lattice ions.
+Due to the overlap between the quantum mechanical wavefunctions that describe these orbitals, electrons are allowed to 'hop' to neighbouring sites. The probability that this hopping process will occur is given by a tunnelling amplitude, which can be calculated using a hopping integral. \par
 \medskip
 \noindent This work is carried out in the tight-binding model framework, where the magnitude of the tunnelling amplitudes is at first treated as a free parameter. 
 The starting point is a simple nearest-neighbour hoppping tight binding model. 
@@ -144,8 +142,8 @@ is then investigated \textit{(See Fig. \ref{fig:2D Hubbard model})}.
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.9\textwidth]{2Dhubbardmodel.png}  % Adjust width as needed
-    \caption{\textbf{Two-Dimensional Tight-Binding Models:} Three pannels showing the tight binding models for the 1NN, 1NNN and 1NN2 models discussed in Section~\ref{subsec:1NNModel},~\ref{subsec:1NNNModel} and~\ref{subsec:1NN2Model} respectively. Fig a) shows the nearest-neighbour hopping case, where \textit{t} depicts the hopping amplitude between the neighbouring sites. Fig b) shows the inclusion of the next-nearest neighbour hopping, the magnitude given by \textit{t'}.
-    Fig c) Shows the extension to the two-orbital case, depicting  same orbital ($t_{orb1}$, $t_{orb2}$) and different orbital ($t_{orb1,2}$) nearest-neighbour hopping. Note that this is just a pictorial representation of the orbitals, and that it does not correspond to a particular choice of orbitals or their real space projection. }
+    \caption{\textbf{Two-Dimensional Tight-Binding Models:} Three pannels showing the tight binding models for the 1NN, 1NNN and 1NN2 models discussed in Section~\ref{subsec:1NNModel},~\ref{subsec:1NNNModel} and~\ref{subsec:1NN2Model} respectively. Panel a) shows the nearest-neighbour hopping case, where \textit{t} depicts the hopping amplitude between the neighbouring sites. Panel b) shows the inclusion of the next-nearest neighbour hopping, the magnitude given by \textit{t'}.
+    Panel c) Shows the extension to the two-orbital case, depicting  same orbital ($t_{orb1}$, $t_{orb2}$) and different orbital ($t_{orb1,2}$) nearest-neighbour hopping. Note that this is just a pictorial representation of the orbitals, and that it does not correspond to a particular choice of orbitals or their real space projection. }
     \label{fig:2D Hubbard model}
 \end{figure}
 
@@ -154,9 +152,9 @@ is then investigated \textit{(See Fig. \ref{fig:2D Hubbard model})}.
 \subsubsection{Hubbard Model}
 \label{subsec: HubbardModel}
 
-The  tight binding model as defined above fails to account for any interactions between neighbouring electrons. This motivates the extension of this model to the Hubbard model \eqref{t Hubbard model}, which includes the (onsite) Coulomb repulsion between electrons. Despite its simple form, this model can describe very rich physical phenomena.
+The  tight binding model as defined above fails to account for any interactions between electrons. This motivates the extension of this model to the Hubbard model \eqref{t Hubbard model}, which includes the (onsite) Coulomb repulsion between electrons. Despite its simple form, this model can describe very rich physical phenomena.
 In particular, it becomes very interesting to study when the Coulumb repulsion ($U$) and the nearest neighbour hoping ($t$) are of comparable order, since it highlights the competing phenomena that take place in correlated systems. 
-The 2D Hubbard model remains unsolved to date, but is able to predict all sorts of correlated phases: it describes metals, insulators, superconductors and other exotic phases\cite{white1989numerical,hirsch1985two, anderson1990luttinger,sun2011nearly}. 
+The 2D Hubbard model is able to predict all sorts of correlated phases: it describes metals, insulators, superconductors and other exotic phases\cite{white1989numerical,hirsch1985two, anderson1990luttinger,sun2011nearly}. 
 This model has been widely studied since it resembles the structure of the cuprate high-temperature superconductors \cite{dagotto1994correlated}. 
 
 
@@ -185,7 +183,7 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 
 \subsection{Functional Renormalisation Group (FRG) theory}
 
-Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why one resorts to numerical techniques such as FRG to do so. FRG falls into the same category of many other weak-coupling techniques (such as Mean field-theory\cite{kadanoff2009more}, pertubation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or Random Phase approximation\cite{bohm1951collective}).
+Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why one resorts to numerical techniques such as FRG. FRG falls into the same category of many other weak-coupling techniques (such as Mean field-theory\cite{kadanoff2009more}, pertubation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or Random Phase approximation\cite{bohm1951collective}).
 In these theories, interactions between electrons are considered to be weak. This allows one to effectively model the electrons in the system as free particles 
 and treat their interactions as a pertubation. In the non-interacting limit, the method is therefore exact. Beyond this limit, the method's precision is controlled by the ratio between the interaction
 strength and the bandwidth of the system. 
@@ -193,26 +191,28 @@ strength and the bandwidth of the system.
 \medskip
 
 \noindent In this section the theoretical framework for FRG calculations is outlined. The central element of FRG is a flow equation that describes the evolution of the effective action of the system with respect to a scalar/flow parameter Lambda ($\Lambda$) \textit{(See section~\ref{subsubsec:Flow Equation})}.
-The flow equation can be solved exactly for a limited number of systems, so in most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time. 
-(More details of how this approximation is performed and the limitations it presents can be found in Section~\ref{subsubsec:Truncation scheme}). 
+The flow equation can be solved exactly for a limited number of systems, so in most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time.  
 For the systems explored in this project only two-particle
 interactions are considered and any higher order terms are neglected.
 This allows the separtation of the effective action of the system into three terms. Each term represents one of the following three physical channels: Superconductivity, Spin-Density and Charge-Density Waves.
-The calculation is then performed to determine the "winning channel", this will correspond to the respective physical phase that the model exhibits. This rather "hand-wavy" overview of FRG is represented in a flowchart below \textit{(See Fig.\ref{fig:FRGflowdiagram})}.
-For a more rigorous explanation the reader is referred to the sections below. 
+The calculation is then performed to determine the first to diverge and hence "winning channel", this will correspond to the respective physical ground state that the model exhibits. This rather conceptual overview of FRG is represented in a flowchart below \textit{(See Fig.\ref{fig:FRGflowdiagram})}.
+ 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.9\textwidth]{FRGflowdiagram.png}  % Adjust width as needed
-    \caption{\textbf{FRG Flowchart:} Schematic diagram outlining the TU$^2$FRG calculation steps. Starting from the flow equation and applying the truncation scheme in order to decouple the action into three "physical" terms. 
-    The flow equation can then be solved by calculating each channel separatedly and taking the dominating phase to be the channel that diverges.}
+    \caption{\textbf{FRG Flowchart:} Schematic illustration of the TU$^2$FRG calculation process.
+     The procedure begins by truncating the flow equation to two-particle interactions. 
+     This allows for the separation of the effective action into three distinct ``physical" channels. 
+     Each channel is then computed independently, and the dominant phase is identified as the 
+     one in which the corresponding channel diverges.}
     \label{fig:FRGflowdiagram}
 \end{figure}
 
 \subsubsection{Flow equation}
 \label{subsubsec:Flow Equation}
 
-In this section the derivation of the flow equation is outlined. For such, it is assumed that the reader has grasped a strong understanding in Quantum Field theory and many-body physics.
+In this section the derivation of the flow equation is outlined. 
 If interested in the finer details of the derivation, the reader is referred to \cite{metzner2012functional}. \par
 \medskip
 \noindent The central elements of statitiscal physics are the partition function, the canonical potential and its Legendre transformations. 
@@ -229,13 +229,13 @@ For quantum many-body problems, one works instead with partition functional, def
 \end{equation}
 
 \noindent Here, $V[\psi, \bar{\psi}]$ is an arbitrary many-body interaction and $G_0$ represents the propagator of the non-interacting system. 
-This equation contains the shorthand notation $(...)$, which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. In this sum, the Grassman field index $x$ encodes all the quantum numbers of the single-particle basis and imaginary time.\par
+This equation contains the shorthand notation ``$(...)$", which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. In this sum, the Grassman field index $x$ encodes all the quantum numbers of the single-particle basis and imaginary time.\par
 \medskip
 
 \noindent Note that in the limiting case where $V=0$, the path integral in Eq.\ref{partition functional} is exactly solveable. 
 However, the situation becomes considerably more intricate when electronic correlations are taken into account.
 The main idea behind FRG is to introduce a cut-off in the non interacting Green's function ($G_0 \rightarrow G_0^{\lambda} = f(\lambda)G_0$). 
-This cutoff is then interpolated between the solveable intital state and the full path integral solution by susbsequently including electronic interactions. For a spin-independant system this would transform the 
+This cutoff is then interpolated between the solveable initital state and the full path integral solution by subsequently including electronic interactions. For a spin-independent system this would transform the 
 bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{propagator transform 2}). 
 
 \begin{equation} \label{propagator transform 1}
@@ -266,7 +266,7 @@ bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{p
 \noindent In the following steps the derivation will proceed in the framework of the  so-called "effective action" ($\mathcal{T}[\psi, \bar{\psi}]$).
 This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), defined below in Equations (\ref{Effective action})  and  (\ref{Greens function functional}, \ref{G term in effective action}) respectively. 
 \textit{(For reasons that
-are beyond the scope of this project it is more convinient to work with the effective action than it is to do so with the partition functional.) \footnote{If interested in why see Ref. \cite{metzner2012functional}}.}
+are beyond the scope of this project it is more convenient to work with the effective action than it is to do so with the partition functional.) \footnote{If interested in why see Ref. \cite{metzner2012functional}}.}
 
 \begin{equation} \label{Greens function functional}
     \mathcal{G}[\eta, \bar{\eta}] = -ln(\mathcal{Z}[\eta, \bar{\eta}])
@@ -283,7 +283,7 @@ are beyond the scope of this project it is more convinient to work with the effe
 
 
 \noindent The next step is to introduce a scalar flow parameter ($\lambda$) into the generating functionals defined above. This is done in the same manner as outlined in the example shown in Equations \ref{propagator transform 1} $\&$ \ref{propagator transform 2}. 
-But, more generally, has to be performed such that the generators recover their orginal structure at $\lambda = 0 $.
+But, more generally, this has to be performed such that the generators recover their original structure at $\lambda = 0 $.
 After a series of algebraic manipulations, which are ommitted here but can be found in \cite{metzner2012functional}, one arrives at the exact functional flow equation for the effective action:
 
 
@@ -323,21 +323,20 @@ Q_0^{\Lambda} & 0 \\
 
 The flow equation derived above can be solved exactly only for a small class of systems; for most models, Functional Renormalisation Group (FRG) 
 calculations are highly computationally expensive.
-In order to tackle this issue, the truncated unity approximation (TU$^2$FRG) was introduced in 2020\cite{eckhardt2020truncated}. 
+In order to tackle this issue, the truncated unity approximation (TU$^2$FRG) was introduced in 2017\cite{lichtenstein2017high} and later improved in 2020\cite{eckhardt2020truncated}. 
 The main idea behind this scheme is to find a new basis that, with a controlled loss of accuracy, can represent all 
 of the required elements in a compressed way. It can be shown that such a basis can be constructed and is 
 well defined in the case where the calculation is constrained to terms in the order of U$^{2}$ \textit{(two-particle interactions)}\cite{lichtenstein2018functional}.
-Partitions of unity \footnote{These can be essentially regarded as delta functions in momentum and real space. Their exact form can be found in \cite{lichtenstein2018functional}.} are then introduced into a specific part of the flow equation. This reduces an otherwise computationally expensive nested integral to a matrix product. 
-Details of how this truncation is incorporated are ommitted but the reader is referred to Appendix. (REFERENCE appendix).\par
+Partitions of unity \footnote{These can be essentially regarded as delta functions in momentum and real space. Their exact form can be found in \cite{lichtenstein2018functional}.} are then introduced into a specific part of the flow equation. This reduces an otherwise computationally expensive nested integral to a matrix product.\par
 \medskip
 
-\noindent Whilst the truncated scheme presents advantages in computational efficiency, particularly for models with broken translational symmetry, it also has its limitations. 
+\noindent Whilst the truncated scheme presents advantages in computational efficiency, particularly for lattice models with broken translational symmetry, it also has its limitations. 
 TU$^2$FRG relies on short-range interactions, thus struggling to capture strongly correlated phases. 
 This is particularly relevant for the study of the 2D Hubbard model. TU$^2$FRG will not be able to capture
 the characteristic Mott insulating phase of the Cuprate phase diagrams\cite{imada1998metal}, which limits how well the results presented in this project can be directly compared with existing literature. 
-More importantly, the truncation scheme has a direct consquence on the accuracy of the predicted phase transition temperature ($T_c$). Whilst it is able to correctly capture
+More importantly, the truncation scheme has a direct consequence on the accuracy of the predicted phase transition temperature ($T_c$). Whilst it is able to correctly capture
 the trends in $T_c$, the values predicted are much higher than what is reasonable to expect in real materials.
-Nevertheless, TU$^2$FRG successfully captures the competition between Magnetic and Superconducting instabilities, a central focus of the results presented in this project. 
+Nevertheless, TU$^2$FRG successfully captures the competition between magnetic and superconducting instabilities, a central focus of the results presented in this project. 
 \subsubsection{Decoupling of flow equation}
 After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple the two-particle coupling as a function of the flow parameter ($\lambda$) into three channels:
 
