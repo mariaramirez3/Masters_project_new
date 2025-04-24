@@ -386,9 +386,12 @@ the superconducting gap and order parameter.
 
 This section outlines how the concepts presented above link together and are implemented for the purpose of this project. 
 The general aim is to solve the 2D Hubbard-(Kanamori) model. This is achieved computationally, using the divERGe package \textit{(See section ~\ref{subsec:diverge})} which implements the TU$^2$FRG
-formalism discussed in Section \ref{subsubsec:Truncation scheme}. All of the calculations are carried out under the assumption that the superconductivity 
-is spin-fluctuation mediated \textit{(See section \ref{subsec:spinfluct})}. This section outlines the methods followed to calculate the required Tight-Binding models for each of the systems, the utilisation of 
-divERGe to solve them and some of the required convergence techniques. 
+formalism discussed in Section \ref{subsubsec:Truncation scheme}.
+All calculations are performed within the framework of spin-fluctuation mediated 
+superconductivity \textit{(see Section \ref{subsec:spinfluct})}, which considers only 
+electronic interactions while neglecting other instabilities, such as lattice 
+instabilities (e.g. charge density waves or phonon-mediated superconductivity). 
+
 
 
 \subsection{divERGe}
