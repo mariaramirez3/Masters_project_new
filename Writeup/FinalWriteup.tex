@@ -372,12 +372,14 @@ correspond to the Superconducting, Charge and Magnetic phases respectively.
 
 \subsubsection{Instability calculation}
 
-This section provides an outline of the procedure that follows after decoupling the effective action and flow equation (for more details the reader is referred to\cite{profe2023functional}). 
-An FRG calculation on the decoupled action yields the self-energy and the two particle vertex\footnote{For precise definitions of these quantities, see \cite{metzner2012functional}.}.
+This section provides an outline of the procedure following the decoupling the effective action and flow equation, for more details the reader is referred to\cite{profe2023functional}. 
+In the TU$^2$FRG method, the resulting decoupled flow equation is solved through nested integration, involving both a coarse momentum integration and a
+refined integration around each $k$ point.  This calculation yields the self-energy and the two particle vertex\footnote{For precise definitions of these quantities, see \cite{metzner2012functional}.}.
 Although these quantities are not directly measurable, they serve as the foundation for further analysis. The first post-processing step involves
 identifying which of the three interaction channels diverges, revealing the leading susceptibility. Mean-field analysis\cite{reiss2007renormalized} is then performed at the critical scale in order to determine the ordering symmetry 
-and derive a linearized gap equation for the superconducting channel \textit{(See equation \ref{gapeq})}\cite{profe2023functional}. This allows for the computation of 
-the superconducting gap and order parameter\footnote{The equation here is expressed in terms of the Greens functional $G$ and vertex function $F$. Note that this form of linearised gap equation is valid for a small gap magnitude. }.
+and derive a linearized gap equation for the superconducting channel\footnote{The equation here is expressed in terms of the Greens functional $G$ and vertex function $F$. Note that this form of linearised gap equation is valid for a small gap magnitude. }
+\textit{(See equation \ref{gapeq})}\cite{profe2023functional}. From this one can compute 
+the superconducting gap and order parameter.
 
 \begin{equation}\label{gapeq}
     \Delta = aF(GG)|_{\Delta = 0}\Delta
@@ -387,66 +389,67 @@ the superconducting gap and order parameter\footnote{The equation here is expres
 
 \section{Computational Methods}
 
-This section outlines how the concepts presented above link together and are implemented for the purpose of this project. 
-The general aim is to solve the 2D Hubbard-(Kanamori) model. This is achieved computationally, using the divERGe package \textit{(See section ~\ref{subsec:diverge})} which implements the TU$^2$FRG
+After having discussed the required theoretical background, the implementation of the necessary concepts within the framework of
+this project is now addressed. The primary goal is to obtain a computational solution 
+for the 2D Hubbard-(Kanamori) model, utilizing the divERGe package. This package implements the TU$^2$FRG
 formalism discussed in Section \ref{subsubsec:Truncation scheme}.
-All calculations are performed within the framework of spin-fluctuation mediated 
-superconductivity \textit{(see Section \ref{subsec:spinfluct})}, which considers only 
-electronic interactions while neglecting other instabilities, such as lattice 
+All calculations are conducted within the framework of spin-fluctuation mediated 
+superconductivity \textit{(see Section \ref{subsec:spinfluct})}, focusing solely on  
+electronic interactions and neglecting other instabilities, such as lattice 
 instabilities (e.g. charge density waves or phonon-mediated superconductivity). 
-
-
+This section provides an overview of the divERGe package, together with the convergence
+tests required to ensure the accuracy of the results. 
 
 \subsection{divERGe}
 \label{subsec:diverge}
 
-\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
-    \centering
-    \includegraphics[width=0.8\textwidth]{nknkfff.png}  % Adjust width as needed
-    \caption{\textbf{Pictorial depictions of the form factor-cutoff, nk and nkf:} Panel a)
-    Pictorial representation of form factor cut-off. 
-    The form factor cut-off indicates how many bonds are included in each calculation .
-    This shows the number of additional bonds
-    that would be included for a given site (depicted in bold black) in the 2D 
-    square lattice when the form factor is 1,2 and 3\AA. 
-    Panel b) A pictorial representation a 3x4 $n_k$x$n_{k_f}$ integration grid.  }
-    \label{fig:nknkf}
-\end{figure}
+
 
 
 \noindent divERGe is an open-source, high-performance, C/C++/Python library that includes a truncated unity FRG (TU$^2$FRG) computational backend\cite{profe2024diverge}. 
 At the core of the truncated-unity calculation is a model that incorporates all the essential physical parameters. This model must accurately reflect the system's kinematics, based on its real-space hopping parameters.
 It is equally important to define structural details such as the Bravais lattice vectors, the number of atoms per unit cell, 
 and the number of orbitals per atom. Once the model is established, six input parameters must be specified for the calculation to proceed: 
-the strengths of the Coulomb repulsion ($U$) and Hund’s coupling ($J$), the value of the chemical potential ($\mu$), as well as the form factor cut-off, nk and nkf
-values \textit{(The latter three terms are depicted in Fig.\ref{fig:nknkf})}. The latter three are discussed in more detail in Section \ref{subsec:convergence}.\par
+the strengths of the Coulomb repulsion ($U$) and Hund’s coupling ($J$), the value of the chemical potential ($\mu$), as well as the form factor cut-off, $n_k$ and $n_{k_f}$
+values. \textit{(The latter three terms are depicted in Fig.\ref{fig:nknkf} and discussed in more detail in Section \ref{subsec:convergence})}.\par
 \medskip
 \noindent With the model constructed and all necessary parameters defined, 
 the calculation can proceed. Under the approximations described in Section \ref{subsubsec:Truncation scheme},
 the flow equations are integrated numerically from high energy scales ($\lambda = \infty$) down to low scales ($\lambda = 0$), 
-by incrementally stepping from $\lambda$ to $\lambda + d\lambda$. This integration continues until a phase transition is detected—signaled 
-by the divergence of one of the interaction channels—or until a minimum value of $\lambda$ is reached. In the latter case, the system is considered to remain 
+by incrementally stepping from $\lambda$ to $\lambda + d\lambda$. This integration continues until a phase transition is detected-signaled 
+by the divergence of one of the interaction channels-or until a minimum value of $\lambda$ is reached. In the latter case, the system is considered to remain 
 in a Fermi-liquid state. All such computations were performed on the high-performance computing (HPC) cluster at the University of St Andrews.
 
-
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
+    \centering
+    \includegraphics[width=0.8\textwidth]{nknkfff.png}  % Adjust width as needed
+    \caption{\textbf{Pictorial depictions of the form factor-cutoff, $n_k$ and $n_{k_f}$:} \textit{Panel a)}
+    Form factor cut-off for a 2D square lattice. 
+    Increasing the form factor cut-off from 1-3\AA\  increases the number of additional bonds
+    that are included in a calculation for a given site. 
+    \textit{Panel b)} A 3x4 $n_k$x$n_{k_f}$ integration grid. $n_k$ represents the number of k points used for the general momentum integral. In turn, 
+    $n_{k_f}$ represents the number of k points for an additional momentum integral around each point. The outer loop is a 3x3 grid, which refined 
+    by a factor of 4 becomes a 12x12 grid.}
+    \label{fig:nknkf}
+\end{figure}
  
 
 \subsection{Convergence of Calculation}
 \label{subsec:convergence}
 In the truncated-unity approximation, several convergence tests must be performed to ensure that calculations are accurate.
-These tests include checking the form factor convergence and the number of k points.
+These tests include checking the form factor convergence and the number of $k$ points.
 
 \subsubsection{Form factor convergence}
 
-The set of orthogonal basis functions ($f_m$) used to describe the truncated space\textit{(See section \ref{subsubsec:Truncation scheme})}
+The set of orthogonal basis functions ($f_m$) used to describe the truncated space \textit{(See section \ref{subsubsec:Truncation scheme})}
 in momentum representation is called the form factor basis\cite{lichtenstein2018functional}. In the case of the square lattice, 
-the form factor take the form of delta functions in real space; they are arranged as circles with increasing radii around the origin. This effectively leads to a ``bond-like" representation where the form-factor number
-represents how many of the neighbouring bonds are accounted for in the calculation of each point in the phase diagram.\par
+the form factors take the form of delta functions in real space; they are arranged as circles with increasing radii around the origin. This effectively leads to a ``bond-like" representation where the form-factor cut-off
+represents how many of the neighbouring bonds are accounted for in the calculation of each point in the phase diagram\textit{(See Fig.\ref{fig:nknkf}a)}.\par
 
 \medskip
 
 
-\noindent The divERGe package allows the user to modify the number of form-factor shells accordingly. Choosing appropriate values ultimately comes down to a trade-off 
+\noindent The divERGe package allows the user to modify the form-factor cutoff accordingly. Choosing appropriate values ultimately comes down to a trade-off 
 between computational accuracy and expensiveness. 
 For the results in this project, the form factor value was set at 4\AA\footnote{This is equivalent to a number of form factor shells of 4 since the lattice spacing of the models here is set to 1\AA.} after the convergence of  
 the calculations was tested accordingly for a range of points in the phase diagram \textit{(an example of such tests is shown in Fig.\ref{fig:Formfactorconvergence} )}. Moreover, this value is in agreement with values used in previous literature\cite{lichtenstein2018functional}. 
@@ -454,7 +457,7 @@ the calculations was tested accordingly for a range of points in the phase diagr
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.6\textwidth]{convergence.png}  % Adjust width as needed
-    \caption{\textbf{Convergence testing:} Fig a) Transition temperature as a function of form factor for the 1NN model, U = 5.00, $\mu$ = 0.20eV. Fig b) Time taken for calculation
+    \caption{\textbf{Convergence testing:} Fig a) Transition temperature as a function of form factor for the nearest-neighbour 2D Hubbard model, U = 5.00, $\mu$ = 0.20eV. Fig b) Time taken to complete the calculation
     as a function of form factor.   }
     \label{fig:Formfactorconvergence}
 \end{figure}
@@ -470,9 +473,9 @@ the calculations was tested accordingly for a range of points in the phase diagr
 When integrating the flow equation, there are two parameters that can be further tuned to ensure convergence.
 These are the $n_k$ and $n_{k_f}$ values and they specify the number of k points used to carry out the nested integration of the decoupled flow equation. 
 In particular, $n_k$ refers to the number of k points used for the general momentum integral, and $n_{k_f}$ to the number of k points used for 
-the additional sum around each k-point. The calculations performed here were carried out with an integration 
+the additional sum around each k-point \textit{See Fig.\ref{fig:nknkf}b}. The calculations performed here were carried out with an integration 
 grid of 20x5 ($n_k$ x $n_{k_f}$) points. The choice of parameters ensured that the calculations had converged appropriately 
-and resulted in a computational time of $\approx 180s$ per point for the simpler models. 
+and resulted in an average computational time of $\approx 180s$ per point for the simpler models\footnote{Note that the computational time increases as a function of Coulumb repulsion $U$. }. 
 
 
 \section{Results and discussion}

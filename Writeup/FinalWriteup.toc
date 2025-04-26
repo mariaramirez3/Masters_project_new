@@ -14,7 +14,7 @@
 \contentsline {subsubsection}{\numberline {3.3.4}Instability calculation}{10}{subsubsection.3.3.4}%
 \contentsline {section}{\numberline {4}Computational Methods}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}divERGe}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Convergence of Calculation}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Convergence of Calculation}{11}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Form factor convergence}{12}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Convergence with number of k points }{12}{subsubsection.4.2.2}%
 \contentsline {section}{\numberline {5}Results and discussion}{13}{section.5}%
@@ -22,9 +22,9 @@
 \contentsline {subsubsection}{\numberline {5.1.1}Superconductivity in the 1NN Model}{14}{subsubsection.5.1.1}%
 \contentsline {subsubsection}{\numberline {5.1.2}Magnetic stripes in the 1NN Model}{16}{subsubsection.5.1.2}%
 \contentsline {subsection}{\numberline {5.2}Effect of next-nearest neighbour hopping (1NNN model)}{17}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Superconductivity in the 1NNN Model}{17}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Magnetic stripes in the 1NNN model}{21}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Continuous variation of next-nearest neighbour hopping}{22}{subsubsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.3}Effect of bi-orbital system (1NN2 model)}{22}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Conclusion and Outlook}{25}{section.6}%
-\contentsline {section}{\numberline {A}Appendix A}{30}{appendix.A}%
+\contentsline {subsubsection}{\numberline {5.2.1}Superconductivity in the 1NNN Model}{20}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Magnetic stripes in the 1NNN model}{20}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Continuous variation of next-nearest neighbour hopping}{23}{subsubsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.3}Effect of bi-orbital system (1NN2 model)}{23}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Conclusion and Outlook}{26}{section.6}%
+\contentsline {section}{\numberline {A}Appendix A}{31}{appendix.A}%
