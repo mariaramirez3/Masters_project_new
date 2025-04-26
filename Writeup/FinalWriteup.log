@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  26 APR 2025 15:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  26 APR 2025 16:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -418,68 +418,68 @@ File: convergence.png Graphic file (type png)
 Package pdftex.def Info: convergence.png  used on input line 459.
 (pdftex.def)             Requested size: 294.8657pt x 155.99806pt.
  [12 <./nknkfff.png>] [13 <./convergence.png>]
-<1NNphased.png, id=406, 629.35126pt x 498.36188pt>
+<1NNphased.png, id=406, 629.35126pt x 434.37282pt>
 File: 1NNphased.png Graphic file (type png)
 <use 1NNphased.png>
-Package pdftex.def Info: 1NNphased.png  used on input line 534.
-(pdftex.def)             Requested size: 466.86447pt x 369.69453pt.
+Package pdftex.def Info: 1NNphased.png  used on input line 542.
+(pdftex.def)             Requested size: 466.86447pt x 322.2262pt.
  [14] [15 <./1NNphased.png>]
-<1NNSC.png, id=436, 559.33969pt x 163.3603pt>
+<1NNSC.png, id=435, 559.33969pt x 163.3603pt>
 File: 1NNSC.png Graphic file (type png)
 <use 1NNSC.png>
-Package pdftex.def Info: 1NNSC.png  used on input line 569.
+Package pdftex.def Info: 1NNSC.png  used on input line 580.
 (pdftex.def)             Requested size: 491.43787pt x 143.53316pt.
  [16 <./1NNSC.png>]
-<1NNstripes.png, id=460, 543.53062pt x 342.5297pt>
+<1NNstripes.png, id=457, 543.53062pt x 342.5297pt>
 File: 1NNstripes.png Graphic file (type png)
 <use 1NNstripes.png>
-Package pdftex.def Info: 1NNstripes.png  used on input line 615.
+Package pdftex.def Info: 1NNstripes.png  used on input line 626.
 (pdftex.def)             Requested size: 442.29108pt x 278.74371pt.
-<1NNN.png, id=465, 548.80031pt x 529.98pt>
+ [17] [18 <./1NNstripes.png>]
+<1NNN.png, id=477, 548.80031pt x 529.98pt>
 File: 1NNN.png Graphic file (type png)
 <use 1NNN.png>
-Package pdftex.def Info: 1NNN.png  used on input line 654.
+Package pdftex.def Info: 1NNN.png  used on input line 665.
 (pdftex.def)             Requested size: 491.43787pt x 474.59195pt.
- [17] [18 <./1NNstripes.png>] [19 <./1NNN.png>]
-<1NNNSC_075.png, id=487, 426.84468pt x 260.47313pt>
+<1NNNSC_075.png, id=479, 426.84468pt x 260.47313pt>
 File: 1NNNSC_075.png Graphic file (type png)
 <use 1NNNSC_075.png>
-Package pdftex.def Info: 1NNNSC_075.png  used on input line 685.
+Package pdftex.def Info: 1NNNSC_075.png  used on input line 696.
 (pdftex.def)             Requested size: 442.29108pt x 269.91588pt.
-<1NNNstripes.png, id=492, 663.98062pt x 296.60812pt>
+<1NNNstripes.png, id=484, 663.98062pt x 296.60812pt>
 File: 1NNNstripes.png Graphic file (type png)
 <use 1NNNstripes.png>
-Package pdftex.def Info: 1NNNstripes.png  used on input line 719.
+Package pdftex.def Info: 1NNNstripes.png  used on input line 730.
 (pdftex.def)             Requested size: 442.29108pt x 197.57683pt.
-<1NNN050Dome.png, id=493, 497.60907pt x 413.29407pt>
+<1NNN050Dome.png, id=485, 497.60907pt x 413.29407pt>
 File: 1NNN050Dome.png Graphic file (type png)
 <use 1NNN050Dome.png>
-Package pdftex.def Info: 1NNN050Dome.png  used on input line 735.
+Package pdftex.def Info: 1NNN050Dome.png  used on input line 746.
 (pdftex.def)             Requested size: 235.88806pt x 195.91942pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 738.
+(caption)                particular \caption on input line 749.
 See the caption package documentation for explanation.
 
-<tprimecont.png, id=494, 566.115pt x 507.39563pt>
+<tprimecont.png, id=486, 566.115pt x 507.39563pt>
 File: tprimecont.png Graphic file (type png)
 <use tprimecont.png>
-Package pdftex.def Info: tprimecont.png  used on input line 745.
+Package pdftex.def Info: tprimecont.png  used on input line 756.
 (pdftex.def)             Requested size: 235.88806pt x 211.4169pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 748.
+(caption)                particular \caption on input line 759.
 See the caption package documentation for explanation.
 
-[20] [21 <./1NNNSC_075.png>]
+[19] [20 <./1NNN.png>] [21 <./1NNNSC_075.png>]
 Overfull \vbox (6.01529pt too high) has occurred while \output is active []
 
  [22 <./1NNNstripes.png> <./1NNN050Dome.png> <./tprimecont.png>] [23]
 <1NN2.png, id=539, 514.17094pt x 569.12625pt>
 File: 1NN2.png Graphic file (type png)
 <use 1NN2.png>
-Package pdftex.def Info: 1NN2.png  used on input line 817.
+Package pdftex.def Info: 1NN2.png  used on input line 828.
 (pdftex.def)             Requested size: 442.29108pt x 489.5693pt.
  [24] [25 <./1NN2.png>] [26] (./FinalWriteup.bbl [27] [28] [29] [30]) [31] (./FinalWriteup.aux)
  ***********
@@ -498,7 +498,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  75i,10n,79p,1025b,560s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on FinalWriteup.pdf (31 pages, 1576633 bytes).
+Output written on FinalWriteup.pdf (31 pages, 1526227 bytes).
 PDF statistics:
  697 PDF objects out of 1000 (max. 8388607)
  588 compressed objects within 6 object streams

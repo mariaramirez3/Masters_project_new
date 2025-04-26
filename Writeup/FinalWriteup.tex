@@ -457,7 +457,7 @@ the calculations was tested accordingly for a range of points in the phase diagr
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.6\textwidth]{convergence.png}  % Adjust width as needed
-    \caption{\textbf{Convergence testing:} Fig a) Transition temperature as a function of form factor for the nearest-neighbour 2D Hubbard model, U = 5.00, $\mu$ = 0.20eV. Fig b) Time taken to complete the calculation
+    \caption{\textbf{Convergence testing:} Panel a) Transition temperature as a function of form factor for the nearest-neighbour 2D Hubbard model, U = 5.00, $\mu$ = 0.20eV. Panel b) Time taken to complete the calculation
     as a function of form factor.   }
     \label{fig:Formfactorconvergence}
 \end{figure}
@@ -480,18 +480,26 @@ and resulted in an average computational time of $\approx 180s$ per point for th
 
 \section{Results and discussion}
 
-The results of this thesis are discussed in three sections, each focusing on one of the models outlined in Fig. \ref{fig:2D Hubbard model}.
-These subsections explore the interaction between magnetism and superconductivity, highlighting trends in the superconducting order parameter 
-and spin density wave nesting vectors. The effect of varying factors such as Coulomb repulsion, 
-chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per site 
-on the critical temperature of the superconducting regions is also examined.
+The findings of this project are presented across three sections, each dedicated to 
+a different model: the nearest-neighbour, next-nearest-neighbour and nearest-neighbour
+bi-orbital 2D Hubbard model on a square lattice \textit{(See Fig.\ref{fig:2D Hubbard model})}. 
+These section explore the interplay between magnetism and superconductivity, 
+highlighting trends in the superconducting order parameter and spin density wave
+ordering vectors. Additionally, they investigate how variations in factors such as 
+Coulomb repulsion, chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per site 
+influence the critical temperature of the superconducting regions.
 
 \subsection{Nearest-neighbour 2D Hubbard Model on a square lattice (1NN)}
 \label{subsec:1NNModel}
 
 The 1NN model is defined as the 2D Hubbard model with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
+In this project this model is constructed by setting the nearest-neighbour hoppingparameter to 1eV.
+
 As discussed in Section \ref{subsec: HubbardModel}, solving this model near half-filling presents significant challenges. This section investigates the solution to the 1NN Model Hamiltonian using two-particle interaction-truncated FRG. A phase diagram, plotted in terms of the on-site Coulomb repulsion 
-$U$ and chemical potential $\mu$ is presented and analyzed in detail. The calculations were performed using a 20x5 $n_k$x$n_{kf}$
+$U$ and chemical potential $\mu$ is presented and analyzed in detail.
+
+
+The calculations were performed using a 20x5 $n_k$x$n_{kf}$
 grid and a form factor of 4\AA, with a nearest-neighbor hopping parameter of 1eV.
 These convergence parameters were selected based on the methods outlined in Section \ref{subsec:convergence}. 
 The results cover Coulomb repulsion values ranging from 1 to 20 eV and chemical potential values spanning the full energy bandwidth 
@@ -532,9 +540,12 @@ of the cuprate phase diagram—namely, the Mott insulating phase and the emergen
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.95\textwidth]{1NNphased.png}  % Adjust width as needed
-    \caption{\textbf{Phase diagram for the 1NN model}:  (t =1eV, nkxnkf = 20x5, ff = 4\AA) as a function of On-site Coulumb Repulsion $U$ and chemical potential $\mu$. 
-    Figure shows the four phases observed in the 1NN model: SC (Superconductivity), SDW (Spin-Density Wave), CDW(Charge Density Wave) and FL (Fermi-Liquid).
-    Calculated points in the phase diagram are showed by the 'x' markers and a lighter-couloured background is used to depict interpolated regions between these points. }
+    \caption{\textbf{Nearest neighbour 2D Hubbard model on a square lattice}: 
+    Panel a) Band structure for the undoped nearest neighbour 2D Hubbard model on a square lattice.
+    Panel b) Phase diagram as a function of Coulumb repulsion $U$ and chemical 
+    potential $\mu$. The phase diagram shows four phases: SC (Superconductivity), SDW (Spin-Density Wave), CDW(Charge Density Wave) and FL (Fermi-Liquid).
+    Calculated points are shown by an $'x'$ marker; lighter coloured regions show the interpolated regions between these points.}
+
     \label{fig:1NNpd}
 \end{figure}
 
