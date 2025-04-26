@@ -139,6 +139,11 @@ Jonas~Benedikt Profe.
 \newblock {\em Functional renormalization group developments for correlations in quantum materials}.
 \newblock PhD thesis, Dissertation, RWTH Aachen University, 2023, 2023.
 
+\bibitem{reiss2007renormalized}
+J~Reiss, D~Rohe, and W~Metzner.
+\newblock Renormalized mean-field analysis of antiferromagnetism and d-wave superconductivity in the two-dimensional hubbard model.
+\newblock {\em Physical Review B—Condensed Matter and Materials Physics}, 75(7):075110, 2007.
+
 \bibitem{profe2024diverge}
 Jonas Profe, Dante~M Kennes, and Lennart Klebl.
 \newblock diverge implements various exact renormalization group examples.

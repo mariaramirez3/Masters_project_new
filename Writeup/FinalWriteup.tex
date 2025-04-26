@@ -372,12 +372,17 @@ correspond to the Superconducting, Charge and Magnetic phases respectively.
 
 \subsubsection{Instability calculation}
 
-This section provides an outline of the procedure that follows after decoupling the effective action and flow equation (for more details the reader is referred to\cite{profe2023functional}.). 
-A FRG calculation on the decoupled action yields the self-energy and the two particle vertex\footnote{For precise definitions of these quantities, see \cite{metzner2012functional}.}.
+This section provides an outline of the procedure that follows after decoupling the effective action and flow equation (for more details the reader is referred to\cite{profe2023functional}). 
+An FRG calculation on the decoupled action yields the self-energy and the two particle vertex\footnote{For precise definitions of these quantities, see \cite{metzner2012functional}.}.
 Although these quantities are not directly measurable, they serve as the foundation for further analysis. The first post-processing step involves
-identifying which of the three interaction channels diverges, revealing the leading susceptibility. Mean-field analysis is then performed at the critical scale to determine the ordering symmetry 
-and derive a linearized gap equation. This, in turn, enables the computation of 
-the superconducting gap and order parameter.
+identifying which of the three interaction channels diverges, revealing the leading susceptibility. Mean-field analysis\cite{reiss2007renormalized} is then performed at the critical scale in order to determine the ordering symmetry 
+and derive a linearized gap equation for the superconducting channel \textit{(See equation \ref{gapeq})}\cite{profe2023functional}. This allows for the computation of 
+the superconducting gap and order parameter\footnote{The equation here is expressed in terms of the Greens functional $G$ and vertex function $F$. Note that this form of linearised gap equation is valid for a small gap magnitude. }.
+
+\begin{equation}\label{gapeq}
+    \Delta = aF(GG)|_{\Delta = 0}\Delta
+\end{equation}
+
 
 
 \section{Computational Methods}
@@ -395,12 +400,26 @@ instabilities (e.g. charge density waves or phonon-mediated superconductivity).
 \subsection{divERGe}
 \label{subsec:diverge}
 
-divERGe is an open-source, high-performance, C/C++/Python library that includes a truncated unity FRG (TU$^2$FRG) computational backend\cite{profe2024diverge}. 
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
+    \centering
+    \includegraphics[width=0.8\textwidth]{nknkfff.png}  % Adjust width as needed
+    \caption{\textbf{Pictorial depictions of the form factor-cutoff, nk and nkf:} Panel a)
+    Pictorial representation of form factor cut-off. 
+    The form factor cut-off indicates how many bonds are included in each calculation .
+    This shows the number of additional bonds
+    that would be included for a given site (depicted in bold black) in the 2D 
+    square lattice when the form factor is 1,2 and 3\AA. 
+    Panel b) A pictorial representation a 3x4 $n_k$x$n_{k_f}$ integration grid.  }
+    \label{fig:nknkf}
+\end{figure}
+
+
+\noindent divERGe is an open-source, high-performance, C/C++/Python library that includes a truncated unity FRG (TU$^2$FRG) computational backend\cite{profe2024diverge}. 
 At the core of the truncated-unity calculation is a model that incorporates all the essential physical parameters. This model must accurately reflect the system's kinematics, based on its real-space hopping parameters.
 It is equally important to define structural details such as the Bravais lattice vectors, the number of atoms per unit cell, 
 and the number of orbitals per atom. Once the model is established, six input parameters must be specified for the calculation to proceed: 
-the strengths of the Coulomb repulsion ($U$) and Hund’s coupling ($J$), the value of the chemical potential ($\mu$), as well as the form factor, nk and nkf
-values. The latter three are discussed in more detail in Section \ref{subsec:convergence}.\par
+the strengths of the Coulomb repulsion ($U$) and Hund’s coupling ($J$), the value of the chemical potential ($\mu$), as well as the form factor cut-off, nk and nkf
+values \textit{(The latter three terms are depicted in Fig.\ref{fig:nknkf})}. The latter three are discussed in more detail in Section \ref{subsec:convergence}.\par
 \medskip
 \noindent With the model constructed and all necessary parameters defined, 
 the calculation can proceed. Under the approximations described in Section \ref{subsubsec:Truncation scheme},
