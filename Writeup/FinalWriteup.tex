@@ -473,16 +473,13 @@ the calculations was tested accordingly for a range of points in the phase diagr
 
 
 
-
-
-
 \subsubsection{Convergence with number of k points }
 
 When integrating the flow equation, there are two parameters that can be further tuned to ensure convergence.
 These are the $n_k$ and $n_{k_f}$ values and they specify the number of k points used to carry out the nested integration of the decoupled flow equation. 
 In particular, $n_k$ refers to the number of k points used for the general momentum integral, and $n_{k_f}$ to the number of k points used for 
 the additional sum around each k-point \textit{See Fig.\ref{fig:nknkf}b}. The calculations performed here were carried out with an integration 
-grid of 20x5 ($n_k$ x $n_{k_f}$) points. This means that the  outer calculation is therefore a 20x20 grid, the inner loop is refined by a factor
+grid of 20x5 ($n_k$ x $n_{k_f}$) points. This means that the outer calculation is therefore a 20x20 grid, the inner loop is refined by a factor
 of 5 and is a 100x100 grid. The choice of parameters ensured that the calculations had converged appropriately 
 and resulted in an average computational time of $\approx 180s$ per point for the simpler models\footnote{Note that the computational time increases as a function of Coulumb repulsion $U$. }. 
 
@@ -584,7 +581,7 @@ of the cuprate phase diagram—namely, the Mott insulating phase and the emergen
     \label{fig:1NNSC}
 \end{figure}
 
-Recent findings have claimed that the 1NN 2D Hubbard model does not have a superconducting ground state\cite{qin2020absence}. 
+\noindent Recent findings have claimed that the 1NN 2D Hubbard model does not have a superconducting ground state\cite{qin2020absence}. 
 Whilst the model in Ref. \cite{qin2020absence} is the same as the 1NN model explored in this section, the paper's analysis is conducted in a 
 slightly different framework than the one used in this project: using DMRG \cite{white1992density} 
 at moderate-to-strong coupling and for values of U between 6-8 eV\textit{(the 
@@ -599,7 +596,7 @@ the bulk superconducting region is d-wave symmetric. This is in agreement with w
 After plotting the critical temperature ($T_c$) as a function of chemical potential ($\mu$) for a constant Coulumb repulsion($U$), one observes that
 the superconducting critical temperature is maximised closest to the magnetic instability (Fig.\ref{fig:1NNSC}b).
 This is in agreement with the idea that competition between instabilities
-enhance the phase transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulumb repulsion and Tc are positively correlated, as is to be expected from the assumed 
+enhances the transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulumb repulsion and Tc are positively correlated, as is to be expected from the assumed 
 pairing mechanism \textit{(See Eq.\ref{Pairing interaction SF})}.
 
 
@@ -612,7 +609,7 @@ pairing mechanism \textit{(See Eq.\ref{Pairing interaction SF})}.
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.9\textwidth]{1NNstripes.png}  % Adjust width as needed
-    \caption{\textbf{Magnetic stripe in the 1NN model for doping at $\frac{1}{8}$ of the bandwidth}: Panel a) Transition temperature plotted in a Logarithmic scale as a function of Coulumb repulsion (U) along the Magnetic stripe at $\mu$ =1eV. 
+    \caption{\textbf{Magnetic stripe in the 1NN model for doping at $\frac{1}{8}$ of the bandwidth}: Panel a) Transition temperature plotted in a logarithmic scale as a function of Coulumb repulsion (U) along the Magnetic stripe at $\mu$ =1eV. 
        Panel b) Magnetic susceptibility along high symmetry path for U =2.00 eV. 
        Panel c) Plot of the Superconducting order parameter projected on top of the Fermi-surface of the 1NN model for U = 10.00eV and $\mu$ =1.00eV.
        Panel d) Magnetic susceptibility along high symmetry path for U= 18.00eV. The plots show the susceptibility as a function of \b{q} for both magnetic regions. The Ferromagnetic SDW is suppressed by a superconducting phase at U$\approx$ 6.00eV. At larger values of U,  the SDW phase is recovered but with an Anti-Ferromagnetic ordering instead.  }
@@ -620,7 +617,7 @@ pairing mechanism \textit{(See Eq.\ref{Pairing interaction SF})}.
 \end{figure}
 
 
-Another distinctive feature of the Cuprates \textit{(and of other unconventional superconductors}\cite{levi1998stripes}\textit{)} is 
+\noindent Another distinctive feature of the Cuprates \textit{(and of other unconventional superconductors}\cite{levi1998stripes}\textit{)} is 
 the emergence of ``stripes" in their phase diagram. These are patterns of alternating
 charge-density and spin density waves\cite{zachar1998landau, vojta2009lattice}. 
 In the 1NN model discussed here, these patterns are not observed. However, magnetic regions of 
@@ -727,7 +724,23 @@ discontinuity as a result of an additional symmetry breaking when the order para
 \subsubsection{Magnetic stripes in the 1NNN model}
 \label{subsec:Stripes1NNN}
 
-The presence of magnetic stripes is another common feature shared by the 1NN and 1NNN models, 
+
+\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
+    \centering
+    \includegraphics[width=0.90\textwidth]{1NNNstripes.png}  % Adjust width as needed
+    \caption{\textbf{$T_c$ as a function of Coulumb repulsion for a selection of stripes in the 1NNN model}: $T_c$ plotted in
+    a logarithmic scale for stripes at:  Panel a) t' = 0.00eV, $\mu$=1.00eV, b) t' = 0.25eV, $\mu$=0.60eV, c) t' = 0.25eV, $\mu$=1.40eV,
+    d) t' = 0.25eV, $\mu$=-2.00eV,
+    e) t' = 0.50eV, $\mu$=1.60eV,
+    f) t' = 0.50eV, $\mu$=-2.60eV,
+    g) t' = 0.75eV, $\mu$=1.60eV, 
+    h) t' = 0.75eV, $\mu$=-3.00eV.
+    Showing abrupt jumps in the critical temperature in FL-(SC,SDW,CDW) phases and a smoother
+    evolution for any SC-SDW/CDW transitions.  }
+    \label{fig:1NNNStripes}
+\end{figure}
+
+\noindent The presence of magnetic stripes is another common feature shared by the 1NN and 1NNN models, 
 further supporting their physical origin.
 A summary of all the stripes and their respective nesting vectors is provided 
 in Appendix \ref{appendix:A}. The locations of these
@@ -747,20 +760,7 @@ This is consistent with the discussion in Section \ref{subsec:Stripes1NN}. When 
 This is the pattern one might expect in the superconducting region, as observed in cuprates \cite{taillefer2010scattering}. 
 However, this trend is only observed in this particular model and phase.
 
-\begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
-    \centering
-    \includegraphics[width=0.90\textwidth]{1NNNstripes.png}  % Adjust width as needed
-    \caption{\textbf{$T_c$ as a function of Coulumb repulsion for a selection of stripes in the 1NNN model}: $T_c$ plotted in
-    a logarithmic scale for stripes at:  Panel a) t' = 0.00eV, $\mu$=1.00eV, b) t' = 0.25eV, $\mu$=0.60eV, c) t' = 0.25eV, $\mu$=1.40eV,
-    d) t' = 0.25eV, $\mu$=-2.00eV,
-    e) t' = 0.50eV, $\mu$=1.60eV,
-    f) t' = 0.50eV, $\mu$=-2.60eV,
-    g) t' = 0.75eV, $\mu$=1.60eV, 
-    h) t' = 0.75eV, $\mu$=-3.00eV.
-    Showing abrupt jumps in the critical temperature in FL-(SC,SDW,CDW) phases and a smoother
-    evolution for any SC-SDW/CDW transitions.  }
-    \label{fig:1NNNStripes}
-\end{figure}
+
 
 \noindent
 \begin{minipage}[t]{0.48\textwidth}
@@ -787,7 +787,7 @@ However, this trend is only observed in this particular model and phase.
 \subsubsection{Continuous variation of next-nearest neighbour hopping}
 
 Section \ref{subsec:1NNModel} discusses the idea that the location of the 
-Van Hove singularity is strongly related to the area of the phase diagram where the interplay between 
+Van Hove singularity is strongly related to the location of the area in the phase diagram where the interplay between 
 superconductivity and magnetism is most pronounced. In order to further support this, the critical temperature
 is plotted as a function of chemical potential $\mu$ for different values of t' at U=7.00eV \textit{(See Fig.\ref{fig:tprimecont})}.
 The magnetic region is pushed towards more negative values of the chemical potential as the value of the next-nearest 
@@ -800,7 +800,7 @@ with the charge density wave (CDW) phase \textit{(as discussed in Section \ref{s
 \label{subsec:1NN2Model}
 
 \noindent Most materials have more than one orbital per atom. This motivates the extension of the 
-1NN model to a  biorbital nearest neighbour 2D Hubbard model in a square lattice (1NN2). This section explores the effect
+1NN model to a  bi-orbital nearest neighbour 2D Hubbard model in a square lattice (1NN2). This section explores the effect
 of including two orbitals per site, focusing on the effect of mixing between different orbitals. For such, two different models are 
 investigated: with and without different orbital mixing. To allow for future comparison with
 existing literature\cite{sakakibara2024possible}, a choice of $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbitals is made. 
@@ -830,23 +830,24 @@ A table summarising the estimated parameters for the models discussed in this se
 
 
 
-\noindent For this discussion the chemical potential is fixed at both the undoped ($\mu = 0.00eV $) and doped ($\mu =1.00eV$) levels. The Coulumb repulsion and Hunds coupling strengths are varied from 1-10eV and 0.1-1.0eV, respectively.
-The calculations were carried out using a form factor of 4\AA and an $n_k$x$n_{k_f}$ grid of 20x5. 
+\noindent For this discussion the chemical potential is fixed at both the undoped ($\mu = 0.00eV $) and doped ($\mu =1.00eV$) levels. The choice for the latter value is motivated 
+by the strong interplay between magnetism and superconductivity observed at $\mu=1eV$ in the 1NN model.  The Coulomb repulsion and Hund's coupling strengths are varied from 1-10eV and 0.1-1.0eV respectively.
 This section first discusses the 1NN2MY model, where orbital mixing between different orbitals is set to zero, and compares it later with the 1NN2MN model, which includes this orbital mixing. \par
 \medskip
-\noindent In the undoped case, the model exhibits an antiferromagnetically ordered spin density wave (SDW) ground state
-for $U > 3.00eV$. When the coulomb repulsion is set to zero, the groundstate transitions to a charge density wave (CDW) with a $(\pi, \pi)$ nesting vector. 
+\noindent In the undoped case, the model exhibits an anti-ferromagnetically ordered spin density wave (SDW) ground state
+for $U > 3.00eV$. When the Coulomb repulsion is set to zero, the groundstate transitions to a charge density wave (CDW) with a $(\pi, \pi)$ nesting vector. 
 Doping the system to a chemical potential of $\mu = 1.00eV$ suppresses the SDW, and instead, a small superconducting patch 
-emerges in the boundary of the CDW phase \textit{(See Fig.{\ref{fig:1NN2pd}})}. The magnitude of the Hund's coupling has a minor effect in the dominating phase and its transition temperature  ($T_c$).
+emerges in the boundary of the CDW phase \textit{(See Fig.{\ref{fig:1NN2pd}})}. The magnitude of the Hund's coupling has a minor effect in the dominating phase and its transition temperature ($T_c$).
 The Superconducting regions shown in Fig.\ref{fig:1NN2pd}.d exhibit different order parameters. The SC region at U=0.0eV is s-wave symmetric whilst the SC region at U =10.00eV
-is d-wave symmetric. By comparing Figures \ref{fig:1NN2pd}c,d with e,f, it can be concluded that the inclusion of different orbital hopping promotes the emergence of a CDW phase at lower Coulomb repulsion values in the doped case with $\mu = 1.00eV$.
+is d-wave symmetric. By comparing Figures \ref{fig:1NN2pd}c,d with \ref{fig:1NN2pd}e,f, it can be concluded that the inclusion of different orbital hopping promotes the emergence of a CDW phase at lower Coulomb repulsion values in the doped case with $\mu = 1.00eV$.
 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
-    \includegraphics[width=0.90\textwidth]{1NN2.png}  % Adjust width as needed
-    \caption{\textbf{Phase diagram for the bi-orbital nearest neighbout Hubbard model on a square lattice :} Phase diagram for the 1NN2 model without orbital 
-    mixing between different orbitals. Panel a) Band structure for the undoped 1NN2MY/N model. 
+    \includegraphics[width=0.70\textwidth]{1NN2.png}  % Adjust width as needed
+    \caption{\textbf{Phase diagram for the bi-orbital nearest-neighbour Hubbard model on a square lattice :} Phase diagram for the 1NN2 model in terms of 
+    the Coulomb repulsion $U$ and Hund's coupling $J$ with and without orbital 
+    mixing between different orbitals for the undoped and doped cases. Panel a) Band structure for the undoped 1NN2MY/N model. 
     Panel b) Band structure for the 1NN2MY/N model at $\mu =1.0eV$. 
     Panel c) Phase diagram for the undoped 1NN2MY model.
     Panel d) Phase diagram for the 1NN2MY model at $\mu =1.00eV$.
