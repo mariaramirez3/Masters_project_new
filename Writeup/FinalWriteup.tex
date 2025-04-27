@@ -785,8 +785,10 @@ However, this trend is only observed in this particular model and phase.
 
 \subsubsection{Continuous variation of next-nearest neighbour hopping}
 
-In order to further support the ideas discussed in Section \ref{subsec:1NNModel}, the critical temperature
-is plotted as a function of chemical potential $\mu$ for different values of t' at U=10.00eV \textit{(See Fig.\ref{fig:tprimecont})}
+Section \ref{subsec:1NNModel} discusses the idea that the location of the 
+Van Hove singularity is strongly related to the area of the phase diagram where the interplay between 
+superconductivity and magnetism is most pronounced. In order to further support this, the critical temperature
+is plotted as a function of chemical potential $\mu$ for different values of t' at U=7.00eV \textit{(See Fig.\ref{fig:tprimecont})}.
 The magnetic region is pushed towards more negative values of the chemical potential as the value of the next-nearest 
 neighbour hoping parameter is increased (and the van Hove singularity is pushed down in energy). The bulk magnetic
 region remains anti-ferromagnetically ordered and the SC order parameter is predominantly d-wave symmetric. The exception occurs when
@@ -796,16 +798,14 @@ with the charge density wave (CDW) phase \textit{(as discussed in Section \ref{s
 \subsection{Effect of bi-orbital system (1NN2 model)}
 \label{subsec:1NN2Model}
 
-
-This project investigates three models: the 1NN, 1NNN and 1NN2 model (\textit{See Fig.\ref{fig:2D Hubbard model}}). For the first two, the hopping parameters in the tight-binding model are treated as free parameters. 
-For the latter, the hopping parameters are determined using the method described below. \par
-\medskip
-\noindent Constrained to the case of a single layer, the 1NN model is extended to a multi-orbital system by
-including two-orbitals per site and investigating the effect of the interorbital hopping. To allow for future comparison with
+\noindent Most materials have more than one orbital per atom. This motivates the extension of the 
+1NN model to a  biorbital nearest neighbour 2D Hubbard model in a square lattice (1NN2). This section explores the effect
+of including two orbitals per site, focusing on the effect of mixing between different orbitals. For such, two different models are 
+investigated: with and without different orbital mixing. To allow for future comparison with
 existing literature\cite{sakakibara2024possible}, a choice of $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbitals is made. 
-The respective hopping parameters are determined using the  table of interatomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
+The respective hopping parameters are determined using the  table of inter-atomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
 In this calculation, the magnitudes of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05eV$ respectively in order to capture their relative values\cite{blanksby2003bond, mcgrady2015introduction, krapp2008strength}.
-A table summarising the estimated parameters for the models  discussed in Section~ is shown below.
+A table summarising the estimated parameters for the models discussed in this section is shown below.
 
 \begin{table}[h]
     \centering
@@ -821,18 +821,15 @@ A table summarising the estimated parameters for the models  discussed in Sectio
           
         \hline
     \end{tabular}
-    \caption{\textbf{Nearest neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters.
-    These are labelled by a lower and upper index representing the orbital and the direction of hoping respectively.
+    \caption{\textbf{Nearest-neighbour hopping parameters for 2D  two-orbital Hubbard models.} First row shows the calculated hopping parameters.
+    These are labelled by a lower and upper index representing the orbital and the direction of hopping respectively.
     Other rows in the table show which hopping parameters were included in each of the two models from Section \ref{subsec:1NN2Model}.}
     \label{tab:2D2orbparams }
 \end{table}
 
 
 
-The models presented so far were constructed assuming a single orbital per site. This section discusses the effect of incorporating
-two orbitals per site. The model was calculated using the parameters discussed in Section  and with the inclusion of 
-multiple orbitals per site, the  Hamiltonian is extended to the Hubbard-Kanamori form \textit{(See Section \ref{subsubsec: HKmodel})}. 
-The chemical potential is fixed at both the undoped ($\mu = 0.00eV $) and doped ($\mu =1.00eV$) levels. The Coulumb repulsion and Hunds coupling strengths are varied from 1-10eV and 0.1-1.0eV, respectively.
+\noindent For this discussion the chemical potential is fixed at both the undoped ($\mu = 0.00eV $) and doped ($\mu =1.00eV$) levels. The Coulumb repulsion and Hunds coupling strengths are varied from 1-10eV and 0.1-1.0eV, respectively.
 The calculations were carried out using a form factor of 4\AA and an $n_k$x$n_{k_f}$ grid of 20x5. 
 This section first discusses the 1NN2MY model, where orbital mixing between different orbitals is set to zero, and compares it later with the 1NN2MN model, which includes this orbital mixing. \par
 \medskip
@@ -847,7 +844,7 @@ is d-wave symmetric. By comparing Figures \ref{fig:1NN2pd}c,d with e,f, it can b
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.90\textwidth]{1NN2.png}  % Adjust width as needed
-    \caption{\textbf{Phase diagram for the 1NN2 model:} Phase diagram for the 1NN2 model without orbital 
+    \caption{\textbf{Phase diagram for the bi-orbital nearest neighbout Hubbard model on a square lattice :} Phase diagram for the 1NN2 model without orbital 
     mixing between different orbitals. Fig a) Band structure for the undoped 1NN2MY/N model. 
     Fig b) Band structure for the 1NN2MY/N model at $\mu =1.0eV$. 
     Fig c) Phase diagram for the undoped 1NN2MY model.
