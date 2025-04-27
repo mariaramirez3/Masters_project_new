@@ -189,7 +189,7 @@ strength and the bandwidth of the system. \par
 
 \medskip
 
-\noindent The behavior of interacting electrons is strongly influenced by the energy scale. In the Functional Renormalization Group (FRG) approach, the degrees of freedom corresponding to different energy scales are treated successively, 
+\noindent The behavior of interacting electrons is strongly influenced by the energy scale. In the FRG approach, the degrees of freedom corresponding to different energy scales are treated successively, 
 progressing step-by-step from higher to lower energies.
 Metaphorically, FRG functions like a microscope with adjustable resolution: one begins with a detailed, high-resolution view of the fundamental microscopic laws and gradually lowers the resolution to arrive at a coarse-grained description of macroscopic collective phenomena.
 \medskip
@@ -341,7 +341,7 @@ TU$^2$FRG relies on short-range interactions, thus struggling to capture strongl
 This is particularly relevant for the study of the 2D Hubbard model. TU$^2$FRG will not be able to capture
 the characteristic Mott insulating phase of the Cuprate phase diagrams\cite{imada1998metal}, which limits how well the results presented in this project can be directly compared with existing literature. 
 More importantly, the truncation scheme has a direct consequence on the accuracy of the predicted phase transition temperature ($T_c$). Whilst it is able to correctly capture
-the trends in $T_c$, the values predicted are much higher than what is reasonable to expect in real materials.
+the trends in $T_c$, the values predicted are much higher than what is reasonable to expect in real materials \textit{(These unphysically large values are expected to decrease if higher order particle interactions are included)}.
 Nevertheless, TU$^2$FRG successfully captures the competition between magnetic and superconducting instabilities, a central focus of the results presented in this project. 
 \subsubsection{Decoupling of flow equation}
 After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple the two-particle coupling as a function of the flow parameter ($\lambda$) into three channels:
@@ -491,57 +491,59 @@ and resulted in an average computational time of $\approx 180s$ per point for th
 The findings of this project are presented across three sections, each dedicated to 
 a different model: the nearest-neighbour, next-nearest-neighbour and nearest-neighbour
 bi-orbital 2D Hubbard model on a square lattice \textit{(See Fig.\ref{fig:2D Hubbard model})}. 
-These section explore the interplay between magnetism and superconductivity, 
+These sections explore the interplay between magnetism and superconductivity, 
 highlighting trends in the superconducting order parameter and spin density wave
-ordering vectors. Additionally, they investigate how variations in factors such as 
+ordering vectors. Additionally, they investigate how variations in parameters such as 
 Coulomb repulsion, chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per site 
 influence the critical temperature of the superconducting regions.
 
 \subsection{Nearest-neighbour 2D Hubbard Model on a square lattice (1NN)}
 \label{subsec:1NNModel}
 
-The 1NN model is defined as the 2D Hubbard model with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
-In this project this model is constructed by setting the nearest-neighbour hoppingparameter to 1eV.
-
-As discussed in Section \ref{subsec: HubbardModel}, solving this model near half-filling presents significant challenges. This section investigates the solution to the 1NN Model Hamiltonian using two-particle interaction-truncated FRG. A phase diagram, plotted in terms of the on-site Coulomb repulsion 
-$U$ and chemical potential $\mu$ is presented and analyzed in detail.
-
-
-The calculations were performed using a 20x5 $n_k$x$n_{kf}$
-grid and a form factor of 4\AA, with a nearest-neighbor hopping parameter of 1eV.
-These convergence parameters were selected based on the methods outlined in Section \ref{subsec:convergence}. 
-The results cover Coulomb repulsion values ranging from 1 to 20 eV and chemical potential values spanning the full energy bandwidth 
-of the model (from -4 eV to 4 eV). While previous FRG studies on the 2D Hubbard model exist \cite{beyer2023rashba,hille2020quantitative,vilardi2020dynamical},
-they mostly focus on specific regions of the phase diagram. As a result, there has been limited investigation into the effects of varying the on-site Coulomb repulsion.
-The present work explores a much broader range of parameters than what has been previously studied.\par
+The 1NN model is defined as the 2D Hubbard model on a square lattice with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
+In this project the 1NN model is constructed by setting the nearest-neighbour hopping parameter to 1eV.
+Fig.\ref{fig:1NNpd}a shows the band structure of the model along the high-symmetry points $\Gamma-X-M-\Gamma$ \textit{ (which correspond to a momentum path of $(0,0)-(\pi,0)-(\pi,\pi)-(0,0)$ along the square lattice)}.
+The model has a bandwidth of 8 eV and exhibits a Van-Hove singularity \textit{(singularity in the density of states)} at the $M$ symmetry point \textit{$(\pi,\pi)$}. \par
 \medskip
 
 
-\noindent There are several caveats to the results presented here. In real materials,  the chemical potential is an easily tuneable parameter due to its strong connection to the electronic doping of the system.
-In turn, controlling the magnitude of the Coulumb repulsion between electrons is far from straightforward. 
-Additionally, some of the interesting features discussed in this report fall outside the physical regime—specifically, the FRG calculation assumes a weak-coupling limit, meaning that any Coulomb 
+\noindent As discussed in Section \ref{subsec: HubbardModel}, solving this model near half-filling presents significant challenges. 
+This section investigates the solution to the 1NN Model Hamiltonian using two-particle interaction-truncated FRG.
+A phase diagram, plotted in terms of the on-site Coulomb repulsion 
+$U$ and chemical potential $\mu$ is presented and analyzed in detail. While previous FRG studies on the 2D Hubbard model exist \cite{beyer2023rashba,hille2020quantitative,vilardi2020dynamical},
+they mostly focus on specific regions of the phase diagram. As a result, there has been limited investigation into the effects of varying the on-site Coulomb repulsion.
+The present work explores a much broader range of parameters than what has been previously studied: Coulomb repulsion values ranging from 1-20 eV 
+and chemical potential values spanning the entire bandwidth of the model (from -4 eV to 4e V). \par
+
+\medskip
+
+
+\noindent Before diving into the results, it is important to be aware of several caveats. In real materials,  the chemical potential is a tuneable parameter due to its strong connection to the electronic doping of the system.
+In turn, controlling the magnitude of the Coulomb repulsion between electrons is far from straightforward. 
+Additionally, some interesting features discussed in this report fall outside the physical regime—specifically, the FRG calculation assumes a weak-coupling limit, meaning that any Coulomb 
 repulsion values exceeding the bandwidth of the material (8 eV) are unphysical in this context.
-Therefore, the analysis conducted in this project should not be interpreted as a guide to enhance superconductivity in materials that closely resemble the models studied.
-Instead, the primary goal is to understand how variations in certain parameters \textit{(U, $\mu$, t')} influence the correlated phases observed in the model. 
-It is also important to note, as discussed in Section \ref{subsubsec:Truncation scheme}, that any analysis of the 
-superconducting transition temperature should be treated qualitatively. At no point does this work claim to have identified superconducting 
-regions with transition temperatures of the order of thousands of Kelvin.
+Whilst unphysical, calculating these values is nevertheless insightful. It allows for further
+understanding of the behaviour of FRG on electronic structure models, identifying the 
+strengths and limitations of the technique. The primary goal in this project is to understand how variations in certain parameters \textit{($U$, $\mu$, $t'$)} influence the correlated phases observed in the model. 
+Finally, it is also important to note, as discussed in Section \ref{subsubsec:Truncation scheme}, that any analysis of the 
+superconducting transition temperature should be treated qualitatively \textit{(at no point does this work claim to have identified superconducting 
+regions with transition temperatures of the order of thousands of Kelvin)}.
 
 
 \medskip
 \noindent The complete phase diagram for the values discussed above is shown in Fig.\ref{fig:1NNpd}. As is expected
 for both the Hubbard model and the Cuprates\cite{kivelson1998electronic,fradkin2015colloquium,vanhala2018dynamical}, a pronounced competition between Magnetism and 
 Superconductivity (SC) is observed. This interplay gives rise to a prominent magnetic dome, sandwiched between two narrower d-wave superconducting regions. This magnetic dome is 
-anti-ferromagnetically (AFM) ordered and its width increases with increasing Coulumb repulsion is increased. In other words, a stronger Coulumb repulsion favours the magnetic instability as the "winner" of this magnetism/SC competition 
+anti-ferromagnetically (AFM) ordered and its width increases with increasing Coulumb repulsion is increased. In other words, a stronger Coulomb repulsion favours the magnetic instability as the ``leading ground state'' of this magnetism/SC competition 
 for a larger range of doping values. Both AFM and d-wave SC arise from repulsive scattering between
 ($\pi$,0) and (0,$\pi$) vectors. Therefore, their competition peaks closest to the Van-Hove singularity, where both instabilities are amplified and mutually reinforced\cite{furukawa1998truncation,honerkamp2001temperature}.
-Additionally, narrow magnetic stripes emerge at even-integer chemical potential values. At high values of U -those that exceed the material's bandwidth- patches of a charge density wave (CDW) instability appear around regions of the superconducting dome.\par
+Additionally, narrow magnetic stripes emerge at even-integer chemical potential values. At high values of $U$ -those that exceed the material's bandwidth- patches of a charge density wave (CDW) instability appear around regions of the superconducting dome.\par
 
 \medskip
 
 \noindent The results presented here align with previous studies of the two-dimensional Hubbard model. Dynamical Mean Field Theory (DMFT) has 
 previously captured the coexistence of antiferromagnetic (AFM) and superconducting (SC) order parameters within the same solution across a range of doping levels (analogous to variations in 
-$\mu$ in this work) in the weak-coupling regime. A smooth transition between these two phases has also been reported \cite{capone2006competition}. However, the FRG treatment of the 2D 1NN Hubbard model has not been able to capture certain key features
+$\mu$ in this work) in the weak-coupling regime\cite{capone2006competition}. A smooth transition between these two phases has also been reported \cite{capone2006competition}. However, the FRG treatment of the 2D 1NN Hubbard model has not been able to capture certain key features
 of the cuprate phase diagram—namely, the Mott insulating phase and the emergence of the pseudogap that have been found in other studies of the 2D Hubbard model\cite{katanin2009comparing,otsuki2014superconductivity}.
 
 
