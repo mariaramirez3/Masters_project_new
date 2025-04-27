@@ -52,30 +52,30 @@
 \newlabel{fig:FRGflowdiagram}{{2}{7}{\textbf {FRG Flowchart:} Schematic illustration of the TU$^2$FRG calculation process. The procedure begins by truncating the flow equation to two-particle interactions. This allows for the separation of the effective action into three distinct ``physical" channels. Each channel is then computed independently, and the dominant phase is identified as the one in which the corresponding channel diverges}{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Flow equation}{7}{subsubsection.3.3.1}\protected@file@percent }
 \newlabel{subsubsec:Flow Equation}{{3.3.1}{7}{Flow equation}{subsubsection.3.3.1}{}}
-\newlabel{partition functional}{{10}{7}{Flow equation}{equation.3.10}{}}
-\newlabel{action}{{11}{7}{Flow equation}{equation.3.11}{}}
 \citation{metzner2012functional}
 \citation{metzner2012functional}
 \citation{metzner2012functional}
+\citation{metzner2012functional}
+\newlabel{partition functional}{{10}{8}{Flow equation}{equation.3.10}{}}
+\newlabel{action}{{11}{8}{Flow equation}{equation.3.11}{}}
 \newlabel{propagator transform 1}{{12}{8}{Flow equation}{equation.3.12}{}}
 \newlabel{propagator transform 2}{{13}{8}{Flow equation}{equation.3.13}{}}
 \newlabel{theta def}{{14}{8}{Flow equation}{equation.3.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {Cut-off scheme example:} Momentum space region (shaded in grey) around the Fermi-surface (red) that is excluded by a momentum cut-off for a 2D square lattice. Taken from \cite  {metzner2012functional}}}{8}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:Truncation}{{3}{8}{\textbf {Cut-off scheme example:} Momentum space region (shaded in grey) around the Fermi-surface (red) that is excluded by a momentum cut-off for a 2D square lattice. Taken from \cite {metzner2012functional}}{figure.caption.4}{}}
-\citation{metzner2012functional}
+\newlabel{Greens function functional}{{15}{8}{Flow equation}{equation.3.15}{}}
+\newlabel{G term in effective action}{{16}{8}{Flow equation}{equation.3.16}{}}
+\newlabel{Effective action}{{17}{8}{Flow equation}{equation.3.17}{}}
 \citation{lichtenstein2017high}
 \citation{eckhardt2020truncated}
 \citation{lichtenstein2018functional}
 \citation{lichtenstein2018functional}
-\citation{imada1998metal}
-\newlabel{Greens function functional}{{15}{9}{Flow equation}{equation.3.15}{}}
-\newlabel{G term in effective action}{{16}{9}{Flow equation}{equation.3.16}{}}
-\newlabel{Effective action}{{17}{9}{Flow equation}{equation.3.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {Cut-off scheme example:} Momentum space region (shaded in grey) around the Fermi-surface (red) that is excluded by a momentum cut-off for a 2D square lattice. Taken from \cite  {metzner2012functional}}}{9}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:Truncation}{{3}{9}{\textbf {Cut-off scheme example:} Momentum space region (shaded in grey) around the Fermi-surface (red) that is excluded by a momentum cut-off for a 2D square lattice. Taken from \cite {metzner2012functional}}{figure.caption.4}{}}
 \newlabel{eq:ExactFunctionalFlowEquation}{{18}{9}{Flow equation}{equation.3.18}{}}
 \newlabel{Gamma term}{{19}{9}{Flow equation}{equation.3.19}{}}
 \newlabel{Q0 term }{{20}{9}{Flow equation}{equation.3.20}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Truncation scheme (TU$^2$FRG)}{9}{subsubsection.3.3.2}\protected@file@percent }
 \newlabel{subsubsec:Truncation scheme}{{3.3.2}{9}{Truncation scheme (TU$^2$FRG)}{subsubsection.3.3.2}{}}
+\citation{imada1998metal}
 \citation{profe2023functional}
 \citation{metzner2012functional}
 \citation{reiss2007renormalized}
@@ -85,28 +85,28 @@
 \newlabel{con1}{{22}{10}{Decoupling of flow equation}{equation.3.22}{}}
 \newlabel{con2}{{23}{10}{Decoupling of flow equation}{equation.3.23}{}}
 \newlabel{con}{{24}{10}{Decoupling of flow equation}{equation.3.24}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}Instability calculation}{10}{subsubsection.3.3.4}\protected@file@percent }
 \citation{profe2024diverge}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4}Instability calculation}{11}{subsubsection.3.3.4}\protected@file@percent }
 \newlabel{gapeq}{{26}{11}{Instability calculation}{equation.3.26}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Computational Methods}{11}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}divERGe}{11}{subsection.4.1}\protected@file@percent }
 \newlabel{subsec:diverge}{{4.1}{11}{divERGe}{subsection.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Convergence of Calculation}{11}{subsection.4.2}\protected@file@percent }
-\newlabel{subsec:convergence}{{4.2}{11}{Convergence of Calculation}{subsection.4.2}{}}
 \citation{lichtenstein2018functional}
 \citation{lichtenstein2018functional}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textbf  {Pictorial depictions of the form factor-cutoff, $n_k$ and $n_{k_f}$:} \textit  {Panel a)} Form factor cut-off for a 2D square lattice. Increasing the form factor cut-off from 1-3\r A\ increases the number of additional bonds that are included in a calculation for a given site. \textit  {Panel b)} A 3x4 $n_k$x$n_{k_f}$ integration grid. $n_k$ represents the number of k points used for the general momentum integral. In turn, $n_{k_f}$ represents the number of k points for an additional momentum integral around each point. The outer loop is a 3x3 grid, which refined by a factor of 4 becomes a 12x12 grid.}}{12}{figure.caption.5}\protected@file@percent }
 \newlabel{fig:nknkf}{{4}{12}{\textbf {Pictorial depictions of the form factor-cutoff, $n_k$ and $n_{k_f}$:} \textit {Panel a)} Form factor cut-off for a 2D square lattice. Increasing the form factor cut-off from 1-3\AA \ increases the number of additional bonds that are included in a calculation for a given site. \textit {Panel b)} A 3x4 $n_k$x$n_{k_f}$ integration grid. $n_k$ represents the number of k points used for the general momentum integral. In turn, $n_{k_f}$ represents the number of k points for an additional momentum integral around each point. The outer loop is a 3x3 grid, which refined by a factor of 4 becomes a 12x12 grid}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Convergence of Calculation}{12}{subsection.4.2}\protected@file@percent }
+\newlabel{subsec:convergence}{{4.2}{12}{Convergence of Calculation}{subsection.4.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Form factor convergence}{12}{subsubsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Convergence with number of k points }{12}{subsubsection.4.2.2}\protected@file@percent }
-\citation{beyer2023rashba,hille2020quantitative,vilardi2020dynamical}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textbf  {Convergence testing:} Panel a) Transition temperature as a function of form factor for the nearest-neighbour 2D Hubbard model, U = 5.00, $\mu $ = 0.20eV. Panel b) Time taken to complete the calculation as a function of form factor. }}{13}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:Formfactorconvergence}{{5}{13}{\textbf {Convergence testing:} Panel a) Transition temperature as a function of form factor for the nearest-neighbour 2D Hubbard model, U = 5.00, $\mu $ = 0.20eV. Panel b) Time taken to complete the calculation as a function of form factor}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Convergence with number of k points }{13}{subsubsection.4.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5}Results and discussion}{13}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Nearest-neighbour 2D Hubbard Model on a square lattice (1NN)}{13}{subsection.5.1}\protected@file@percent }
-\newlabel{subsec:1NNModel}{{5.1}{13}{Nearest-neighbour 2D Hubbard Model on a square lattice (1NN)}{subsection.5.1}{}}
+\citation{beyer2023rashba,hille2020quantitative,vilardi2020dynamical}
 \citation{kivelson1998electronic,fradkin2015colloquium,vanhala2018dynamical}
 \citation{furukawa1998truncation,honerkamp2001temperature}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Nearest-neighbour 2D Hubbard Model on a square lattice (1NN)}{14}{subsection.5.1}\protected@file@percent }
+\newlabel{subsec:1NNModel}{{5.1}{14}{Nearest-neighbour 2D Hubbard Model on a square lattice (1NN)}{subsection.5.1}{}}
 \citation{capone2006competition}
 \citation{katanin2009comparing,otsuki2014superconductivity}
 \citation{qin2020absence}

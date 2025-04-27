@@ -185,8 +185,13 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why one resorts to numerical techniques such as FRG. FRG falls into the same category of many other weak-coupling techniques (such as Mean field-theory\cite{kadanoff2009more}, pertubation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or Random Phase approximation\cite{bohm1951collective}).
 In these theories, interactions between electrons are considered to be weak. This allows one to effectively model the electrons in the system as free particles 
 and treat their interactions as a pertubation. In the non-interacting limit, the method is therefore exact. Beyond this limit, the method's precision is controlled by the ratio between the interaction
-strength and the bandwidth of the system. 
+strength and the bandwidth of the system. \par
 
+\medskip
+
+\noindent The behavior of interacting electrons is strongly influenced by the energy scale. In the Functional Renormalization Group (FRG) approach, the degrees of freedom corresponding to different energy scales are treated successively, 
+progressing step-by-step from higher to lower energies.
+Metaphorically, FRG functions like a microscope with adjustable resolution: one begins with a detailed, high-resolution view of the fundamental microscopic laws and gradually lowers the resolution to arrive at a coarse-grained description of macroscopic collective phenomena.
 \medskip
 
 \noindent In this section the theoretical framework for FRG calculations is outlined. The central element of FRG is a flow equation that describes the evolution of the effective action of the system with respect to a scalar/flow parameter Lambda ($\Lambda$) \textit{(See section~\ref{subsubsec:Flow Equation})}.
@@ -312,7 +317,10 @@ Q_0^{\Lambda} & 0 \\
 = diag(Q_0^{\Lambda}, - Q_0^{\Lambda t}),
 \end{equation}
 
-\noindent This flow equation is the central element of FRG and the sections below outline how to solve it.
+\noindent $\Gamma^{(2)\lambda}$ and $\b{Q}_0^{\Lambda}$ are given by the reciprocal 
+of the Green's and non-interacting Green's function respectively.
+The key point is that the Flow equation is well-defined. 
+This flow equation is the central element of FRG and the sections below outline how to solve it.
 
 
 \subsubsection{Truncation scheme (TU$^2$FRG)}
