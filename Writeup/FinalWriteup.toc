@@ -7,7 +7,7 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Tight binding Models}{5}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Hubbard Model}{6}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Hubbard-Kanamori Model}{6}{subsubsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.3}Functional Renormalisation Group (FRG) theory}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Functional Renormalization Group (FRG) theory}{6}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Flow equation}{7}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Truncation scheme (TU$^2$FRG)}{9}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Decoupling of flow equation}{10}{subsubsection.3.3.3}%

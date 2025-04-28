@@ -22,8 +22,8 @@
 
 
 The two-dimensional Hubbard model has attracted sustained scientific interest for decades, largely because of its ability to capture most of the underlying physics of the superconducting phase of the high-temperature cuprate superconductors\cite{dagotto1994correlated}. 
-Beyond its relevance to the cuprates, it also serves as a fundamental toy model in theoretical physics. 
-This thesis conducts a detailed analysis of the 2D Hubbard model using the truncated-unity functional Renormalisation Group (TU$^2$FRG) method,
+Beyond its relevance to the Cuprates, it also serves as a fundamental toy model in theoretical physics. 
+This thesis conducts a detailed analysis of the 2D Hubbard model using the truncated-unity functional Renormalization Group (TU$^2$FRG) method,
 within the framework of spin-fluctuation-mediated superconductivity.  The interplay between magnetism and superconductivity is explored 
 by systematically varying model parameters such as the on-site Coulomb repulsion, chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per
 site. This approach enables the identification of clear trends in the superconducting critical ($T_c$) temperature and order parameter, while also
@@ -56,7 +56,7 @@ been greatly limited by the numerical challenges that working with complex latti
 investigate the influence of the Coulomb repulsion ($U$) and chemical potential ($\mu$) on the interplay between magnetism and superconductivity.
 This is done under the key assumption that superconductivity arises from spin-fluctuation mediation.
 In this work, regions of stable magnetic and superconducting order are identified, and trends in their respective ordering and critical temperatures are presented.
-The study is further extended by examining how variations in the next-nearest-neighbor hopping amplitude and the inclusion of a second orbital per site impact all of the above.
+The study is further extended by examining how variations in the next-nearest-neighbor hopping amplitude and the inclusion of a second orbital per site impact all the above.
 
 
 
@@ -89,13 +89,13 @@ model spin-fluctuation mediated superconductivity for the fluctuation-exchange a
 \medskip
 \noindent In such cases, the effective pairing interaction $\Gamma(k,k')$ is given by \footnote{Note that this form of pairing interaction 
 assumes that the ratio between 
-the fluctuation frequence ($w_f$) and the Fermi energy is small.}:
+the fluctuation frequency ($w_f$) and the Fermi energy is small.}:
 
 \begin{equation}\label{Pairing interaction SF}
     \Gamma(k,k') = \frac{3}{2} U^2 \chi^S(k-k') -\frac{1}{2}U^2 \chi^C(k-k') + U
 \end{equation} 
 
-\noindent This equation is taken from \cite{migdal1958interaction}. Here, U is the on-site Coulumb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge (C) and Spin(S) channel respectively. Their form is given below.
+\noindent This equation is taken from \cite{migdal1958interaction}. Here, U is the on-site Coulomb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge (C) and Spin(S) channel respectively. Their form is given below.
 
 \begin{equation}
     \chi^S(q) = \frac{\chi^0(q)}{1 - U \chi^0 (q)}
@@ -113,7 +113,7 @@ the fluctuation frequence ($w_f$) and the Fermi energy is small.}:
 
 \noindent The calculations presented in this project are carried out in the spin-fluctuation framework. 
 Whilst this theory has managed to successfully capture key features in the phase diagrams of unconventional superconductors, it also has its limitations.
-The most relevant example is that of the cuprate phase diagram:
+The most relevant example is that of the Cuprate phase diagram:
 spin-fluctuation theory is able to capture the superconducting dome and the correct order parameter \cite{moriya2006developments, scalapino1995case} 
 but fails
 to describe the characteristic pseudo-gap and Mott insulating phase\cite{timusk1999pseudogap}.
@@ -180,9 +180,9 @@ In the case of materials with a multi-band and/or multi-orbital nature, the Hubb
 \noindent Here, $U$ and $V$ represent the electronic interactions in the same and different orbitals respectively. For generality, the intraorbital exchange $J$ and the 'pair hopping' term $J'$ following from Hund's rule coupling have been separated.  
 Note that this Hamiltonian is relevant for the later section of this project, where the model is extended to a two-orbital, two-dimensional Hubbard model.
 
-\subsection{Functional Renormalisation Group (FRG) theory}
+\subsection{Functional Renormalization Group (FRG) theory}
 
-Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why one resorts to numerical techniques such as FRG. This technique falls into the same category of many other weak-coupling methods (such as mean field-theory\cite{kadanoff2009more}, pertubation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or the Random Phase approximation\cite{bohm1951collective}).
+Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why one resorts to numerical techniques such as FRG. This technique falls into the same category of many other weak-coupling methods (such as mean field-theory\cite{kadanoff2009more}, perturbation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or the Random Phase approximation\cite{bohm1951collective}).
 In these theories, interactions between electrons are considered to be weak. This allows one to effectively model the electrons in the system as free particles 
 and treat their interactions as a perturbation. In the non-interacting limit, the method is therefore exact. Beyond this limit, the method's precision is controlled by the ratio between the interaction
 strength and the bandwidth of the system. \par
@@ -350,7 +350,7 @@ After constraining ourselves to the case of two-particle interactions in the fra
     V(k1,k2,k3,k4)= V_{k_1, k_2, k_3, k_4}^{(0)} - \phi^{P}_{k_1 +k_2, \frac{k_1 - k_2}{2}, \frac{k_4-k_3}{2}} + \phi^{C}_{k_1 - k_3, \frac{k_1 +k_3}{2}, \frac{k_2+k_4}{2}} +\phi^{D}_{k_3- k_2, \frac{k_1 + k_4}{2}, \frac{k_2+k_3}{2}}
 \end{equation}
 
-\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms. These are strongly related to their respective effective actions (\ref{con1}-\ref{con}). They represent all possible ways in which two particle can interact in the correlated system. The particle-particle (P), cross-particle-hole (C) and direct-particle-hole (D) channels
+\noindent Here, the three channels correspond to a particle-particle, crossed particle-hole and (three) direct particle-hole terms. These are strongly related to their respective effective actions (\ref{con1}-\ref{con}). They represent all possible ways in which two particles can interact in the correlated system. The particle-particle (P), cross-particle-hole (C) and direct-particle-hole (D) channels
 correspond to the Superconducting, Charge and Magnetic phases respectively. 
 
 \begin{equation}\label{con1}
@@ -421,7 +421,7 @@ and the number of orbitals per atom. Once the model is established, six input pa
 the strengths of the Coulomb repulsion ($U$) and Hund’s coupling ($J$), the value of the chemical potential ($\mu$), as well as the form factor cut-off, $n_k$ and $n_{k_f}$
 values. \textit{(The latter three terms are depicted in Fig.\ref{fig:nknkf} and discussed in more detail in Section \ref{subsec:convergence})}.\par
 \medskip
-\noindent With the model constructed and all necessary parameters defined, 
+\noindent With the model constructed, and all necessary parameters defined, 
 the calculation can proceed. Under the approximations described in Section \ref{subsubsec:Truncation scheme},
 the flow equations are integrated numerically from high energy scales ($\lambda = \infty$) down to low scales ($\lambda = 0$), 
 by incrementally stepping from $\lambda$ to $\lambda + d\lambda$. This integration continues until a phase transition is detected-signaled 
@@ -476,12 +476,12 @@ the calculations was tested accordingly for a range of points in the phase diagr
 \subsubsection{Convergence with number of k points }
 
 When integrating the flow equation, there are two parameters that can be further tuned to ensure convergence.
-These are the $n_k$ and $n_{k_f}$ values and they specify the number of k points used to carry out the nested integration of the decoupled flow equation. 
+These are the $n_k$ and $n_{k_f}$ values, and they specify the number of k points used to carry out the nested integration of the decoupled flow equation. 
 In particular, $n_k$ refers to the number of k points used for the general momentum integral, and $n_{k_f}$ to the number of k points used for 
 the additional sum around each k-point \textit{See Fig.\ref{fig:nknkf}b}. The calculations performed here were carried out with an integration 
 grid of 20x5 ($n_k$ x $n_{k_f}$) points. This means that the outer calculation is therefore a 20x20 grid, the inner loop is refined by a factor
 of 5 and is a 100x100 grid. The choice of parameters ensured that the calculations had converged appropriately 
-and resulted in an average computational time of $\approx 180s$ per point for the simpler models\footnote{Note that the computational time increases as a function of Coulumb repulsion $U$. }. 
+and resulted in an average computational time of $\approx 180s$ per point for the simpler models\footnote{Note that the computational time increases as a function of Coulomb repulsion $U$. }. 
 
 
 \section{Results and discussion}
@@ -504,7 +504,7 @@ influence the critical temperature of the superconducting regions.
     \caption{\textbf{Nearest neighbour 2D Hubbard model on a square lattice}: 
     Panel a) Band structure for the undoped nearest neighbour 2D Hubbard model on a square lattice.
     Panel b) Phase diagram as a function of Coulomb repulsion $U$ and chemical 
-    potential $\mu$. The phase diagram shows four phases: SC (Superconductivity), SDW (Spin-Density Wave), CDW(Charge Density Wave) and FL (Fermi-Liquid).
+    potential $\mu$. The phase diagram shows four phases: SC (Superconductivity), SDW (Spin-Density Wave), CDW (Charge Density Wave) and FL (Fermi-Liquid).
     Calculated points are shown by an $'x'$ marker; lighter coloured regions show the interpolated regions between these points. A darker mask is applied for $U > $ 8 eV to show the 
     region where results become unphysical.}
 
@@ -512,7 +512,7 @@ influence the critical temperature of the superconducting regions.
 \end{figure} 
 
 
-The 1NN model is defined as the 2D Hubbard model on a square lattice with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagramatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
+The 1NN model is defined as the 2D Hubbard model on a square lattice with a single orbital per site,  allowing hopping between nearest-neighbour sites \textit{(a diagrammatic representation can be found in Fig.\ref{fig:2D Hubbard model}.a)}. 
 In this project the 1NN model is constructed by setting the nearest-neighbour hopping parameter to 1eV.
 Fig.\ref{fig:1NNpd}a shows the band structure of the model along the high-symmetry points $\Gamma-X-M-\Gamma$ \textit{ (which correspond to a momentum path of $(0,0)-(\pi,0)-(\pi,\pi)-(0,0)$ along the square lattice)}.
 The model has a bandwidth of 8 eV and exhibits a Van-Hove singularity \textit{(singularity in the density of states)} at the $M$ symmetry point \textit{$(\pi,\pi)$}. \par
@@ -546,7 +546,7 @@ regions with transition temperatures of the order of thousands of Kelvin)}.
 \noindent The complete phase diagram for the values discussed above is shown in Fig.\ref{fig:1NNpd}. As is expected
 for both the Hubbard model and the Cuprates\cite{kivelson1998electronic,fradkin2015colloquium,vanhala2018dynamical}, a pronounced competition between Magnetism and 
 Superconductivity (SC) is observed. This interplay gives rise to a prominent magnetic dome, sandwiched between two narrower d-wave superconducting regions. This magnetic dome is 
-anti-ferromagnetically (AFM) ordered and its width increases with increasing Coulumb repulsion is increased. In other words, a stronger Coulomb repulsion favours the magnetic instability as the ``leading ground state'' of this magnetism/SC competition 
+anti-ferromagnetically (AFM) ordered and its width increases with increasing Coulomb repulsion is increased. In other words, a stronger Coulomb repulsion favours the magnetic instability as the ``leading ground state'' of this magnetism/SC competition 
 for a larger range of doping values. Both AFM and d-wave SC arise from repulsive scattering between
 ($\pi$,0) and (0,$\pi$) vectors. Therefore, their competition peaks closest to the Van-Hove singularity, where both instabilities are amplified and mutually reinforced\cite{furukawa1998truncation,honerkamp2001temperature}.
 Additionally, narrow magnetic stripes emerge at even-integer chemical potential values. At high values of $U$ -those that exceed the material's bandwidth- patches of a charge density wave (CDW) instability appear around regions of the superconducting dome.\par
@@ -556,7 +556,7 @@ Additionally, narrow magnetic stripes emerge at even-integer chemical potential 
 \noindent The results presented here align with previous studies of the two-dimensional Hubbard model. Dynamical Mean Field Theory (DMFT) has 
 previously captured the coexistence of antiferromagnetic (AFM) and superconducting (SC) order parameters within the same solution across a range of doping levels (analogous to variations in 
 $\mu$ in this work) in the weak-coupling regime\cite{capone2006competition}. A smooth transition between these two phases has also been reported \cite{capone2006competition}. However, the FRG treatment of the 2D 1NN Hubbard model has not been able to capture certain key features
-of the cuprate phase diagram—namely, the Mott insulating phase and the emergence of the pseudogap that have been found in other studies of the 2D Hubbard model\cite{katanin2009comparing,otsuki2014superconductivity}.
+of the Cuprate phase diagram—namely, the Mott insulating phase and the emergence of the pseudogap that have been found in other studies of the 2D Hubbard model\cite{katanin2009comparing,otsuki2014superconductivity}.
 
 
 
@@ -570,7 +570,7 @@ of the cuprate phase diagram—namely, the Mott insulating phase and the emergen
     \includegraphics[width=1.0\textwidth]{1NNSC.png}  % Adjust width as needed
     \caption{\textbf{Superconductivity in the 1NN model}:  
     Panel a) Superconducting order parameter projected on Fermi Surface at $\mu$ = 1.00 eV, 
-    for $U$ = 7.00eV. The order parameter is antisymmetric about a 90 degree rotation and hence
+    for $U$ = 7.00eV. The order parameter is antisymmetric about a 90-degree rotation and hence
     it exhibits d-wave symmetry. In particular, it is $d_{x2-y^2}$ symmetric. 
     Panel b) Transition temperature ($T_c$) plotted on a logarithmic scale as a function of chemical potential ($\mu$) for $U$ = 7.00eV, showing
     a smooth transition between SC and SDW regions.
@@ -585,18 +585,18 @@ of the cuprate phase diagram—namely, the Mott insulating phase and the emergen
 Whilst the model in Ref. \cite{qin2020absence} is the same as the 1NN model explored in this section, the paper's analysis is conducted in a 
 slightly different framework than the one used in this project: using DMRG \cite{white1992density} 
 at moderate-to-strong coupling and for values of U between 6-8 eV\textit{(the 
-regime relevant to the cuprates)}.
+regime relevant to the Cuprates)}.
 The lack of superconductivity in their findings is attributed to a lack of competition 
 between the magnetic and superconducting phases. Here, in the weak-coupling framework, both  competition between magnetism and superconductivity and 
 a stabilised superconducting region is found. The superconducting order parameter in this stable region is plotted on top of the Fermi-Surface for the first BZ (Fig.\ref{fig:1NNSC}a).
-The sign of the order parameter changes with respect to a 90 degree rotation and therefore one concludes that
+The sign of the order parameter changes with respect to a 90-degree rotation and therefore one concludes that
 the bulk superconducting region is d-wave symmetric. This is in agreement with what is expected from the Cuprate superconductors \cite{tsuei2000pairing}.\par
 \medskip
 \noindent 
-After plotting the critical temperature ($T_c$) as a function of chemical potential ($\mu$) for a constant Coulumb repulsion($U$), one observes that
-the superconducting critical temperature is maximised closest to the magnetic instability (Fig.\ref{fig:1NNSC}b).
+After plotting the critical temperature ($T_c$) as a function of chemical potential ($\mu$) for a constant Coulomb repulsion($U$), one observes that
+the superconducting critical temperature is maximized closest to the magnetic instability (Fig.\ref{fig:1NNSC}b).
 This is in agreement with the idea that competition between instabilities
-enhances the transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulumb repulsion and Tc are positively correlated, as is to be expected from the assumed 
+enhances the transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulomb repulsion and Tc are positively correlated, as is to be expected from the assumed 
 pairing mechanism \textit{(See Eq.\ref{Pairing interaction SF})}.
 
 
@@ -624,7 +624,7 @@ In the 1NN model discussed here, these patterns are not observed. However, magne
 interest are found outside the main antiferromagnetic (AFM) dome. 
 The 1NN phase diagram in Fig.\ref{fig:1NNpd} reveals what will henceforth be referred to as ``magnetic stripes" 
 occurring at even integer values of the chemical potential ($\mu$). Most of them are ferromagnetically ordered and evolve to some commensurate 
-nesting vector as the Coulomb repulsion is increased.\par
+nesting vector as the Coulomb repulsion is increased. \par
 \medskip
 
 \noindent The physics becomes particularly interesting at a chemical potential of $\mu =1.00eV$. 
@@ -640,9 +640,6 @@ While this behaviour is not the same as the conventional stripes seen in Cuprate
 \noindent Before conducting this analysis, the possibility of the stripes being a computational artifact was ruled out.
 This was done by increasing the $n_k$x$n_{k_f}$ resolution for a single point in the stripe and
 confirming that the result remained unchanged. Additionally, the appearance of these stripes in other models in this report further confirms this.
-
-
-
 
 
 \subsection{Effect of next-nearest neighbour hopping (1NNN model)}
@@ -677,7 +674,7 @@ As a result of both these effects, the SC-SDW-SC sandwich
 region shifts toward the negative chemical potential regime as $t'$ increases.
 The superconducting regions remain (in the most-part) d-wave symmetric and the emergence of 
 magnetic stripes remains observable. Additionally, general trends in the superconducting transition
-temperature ($T_c$) are also observed: it is maximised closest to the 
+temperature ($T_c$) are also observed: it is maximized closest to the 
 magnetic instability, and it increases as a function of $U$.\par
 \medskip
 \noindent Several studies have explored the effect of $t'$ in the 2D Hubbard model, 
@@ -702,7 +699,7 @@ compare the features of the 1NN and 1NNN phase diagrams.
 
 Including a next-nearest neighbour hopping parameter in the 1NN model does not lead to
 many significant changes in the superconducting properties of the model. The order parameter is predominantly d-wave symmetric and the  superconducting temperature ($T_c$) increases
-with Coulumb repulsion. Proximity to a Magnetic instability further enhances $T_c$.
+with Coulomb repulsion. Proximity to a Magnetic instability further enhances $T_c$.
 Additionally, the same SC-SDW-SC sandwich structure is observed even after breaking particle-hole symmetry, reinforcing the 
 idea that that superconductivity is favoured in the vicinity of a  spin density wave (SDW) instability. \par
 \medskip
@@ -712,7 +709,7 @@ of d-wave symmetry than the one observed in the 1NN model. The 1NN model exhibit
 exhibits a $d_{xy}$ symmetry\cite{butler2012point}. The only difference between these two types of d-wave superconductivity the plane around which the order parameter is sign antisymmetric
 \textit{(For direct comparison see Figs \ref{fig:1NNSC}c and \ref{fig:1NNNSC}b,c)}. 
 Moreover,  $t' \neq 0 $, charge density wave (CDW) patches appear neighbouring some superconducting regions.
-Specifically, when $\frac{t'}{t} = 0.75$, and for Coulumb repulsion between 8 and 11eV, the superconducting order parameter undergoes a more significant change.
+Specifically, when $\frac{t'}{t} = 0.75$, and for Coulomb repulsion between 8 and 11eV, the superconducting order parameter undergoes a more significant change.
 Along these horizontal cuts there is a SCI-SDW-SCII-CDW transition \textit{(See Fig.\ref{fig:1NNNSC})}. The Superconducting order parameter 
 is always d-wave symmetric in the SCI region and for most of the SCII region, but it abruptly transitions to 
 s-wave symmetric in the vicinity of the CDW region \textit{(See Fig.\ref{fig:1NNNSC})}. This behaviour is also observed in the SC regions that neighbour CDW regions for 
@@ -730,7 +727,7 @@ discontinuity as a result of an additional symmetry breaking when the order para
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.90\textwidth]{1NNNstripes.png}  % Adjust width as needed
-    \caption{\textbf{$T_c$ as a function of Coulumb repulsion for a selection of stripes in the 1NNN model}: $T_c$ plotted in
+    \caption{\textbf{$T_c$ as a function of Coulomb repulsion for a selection of stripes in the 1NNN model}: $T_c$ plotted in
     a logarithmic scale for stripes at:  Panel a) t' = 0.00eV, $\mu$=1.00eV, b) t' = 0.25eV, $\mu$=0.60eV, c) t' = 0.25eV, $\mu$=1.40eV,
     d) t' = 0.25eV, $\mu$=-2.00eV,
     e) t' = 0.50eV, $\mu$=1.60eV,
@@ -758,8 +755,8 @@ competition between superconductivity and magnetism results in a change of Spin 
 
 \noindent While the transition from a Fermi liquid phase to any of the superconducting (SC), spin density wave (SDW), or charge density wave (CDW) phases is quite abrupt, the critical temperature
 evolves more smoothly for stripes where there is a strong competition between SC and SDW/CDW instabilities \textit{(see Fig.\ref{fig:1NNNStripes})}. 
-This is consistent with the discussion in Section \ref{subsec:Stripes1NN}. When $\frac{t'}{t} = 0.50$, a magnetic double dome emerges, becoming more pronounced as the Coulomb repulsion increases \textit{(see Fig.\ref{fig:1NNNDome})}. 
-This is the pattern one might expect in the superconducting region, as observed in cuprates \cite{taillefer2010scattering}. 
+This is consistent with the discussion in Section \ref{subsec:Stripes1NN}. When $\frac{t'}{t} = 0.50$, a magnetic double dome emerges, becoming more pronounced as the Coulomb repulsion increases. 
+This is the pattern one might expect in the superconducting region, as observed in Cuprates \cite{taillefer2010scattering}. 
 However, this trend is only observed in this particular model and phase.
 
 
@@ -781,8 +778,8 @@ with the charge density wave (CDW) phase \textit{(as discussed in Section \ref{s
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.50\textwidth]{tprimecont.png}  % Adjust width as needed
-    \caption{ \textbf{Continuous variation of $t'$:} Normalised $T_c$ plotted as a function of chemical 
-    potential $\mu$ for several values of $t'$. $T_c$ is normalised separately with respect to the 
+    \caption{ \textbf{Continuous variation of $t'$:} Normalized $T_c$ plotted as a function of chemical 
+    potential $\mu$ for several values of $t'$. $T_c$ is normalized separately with respect to the 
     maxima of each plot in order to allow for the clear visualization of the trend as $\mu$ is varied.  }
     \label{fig:tprimecont}
 \end{figure}
@@ -860,7 +857,7 @@ in the spin-fluctuation mediated superconductivity framework using the two-parti
 fails to capture correlated phases such as Mott-instulating or pseudo-gap phases, it is widely in agreement with previous literature. The results presented here provide
 a comprehensive study of this model for a uniquely wide range of parameters. A strong competition between an
 Antiferromagnetically-ordered SDW and d-wave symmetric SC phase is observed. 
-Additionally, several strategies to stabilize and enhance the critical temperature of superconductivity are identified, including increasing the on-site Coulomb repulsion and being near a stabilized SDW region.
+Additionally, several strategies to stabilise and enhance the critical temperature of superconductivity are identified, including increasing the on-site Coulomb repulsion and being near a stabilized SDW region.
 Narrow magnetic stripes are present, with their ordering changing at the "magical doping" value. The effect of including a next-nearest neighbor hopping parameter is examined in detail. Increasing $t'$ lowers the Van Hove singularity's energy, shifting the region of prominent SDW-SC interplay towards more negative chemical potentials.
 A magnetic double dome emerges for a ratio of $\frac{t'}{t} = 0.50$.
 The inclusion of $t'$ also leads to stable charge density wave (CDW) 
