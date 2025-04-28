@@ -238,6 +238,7 @@ INPUT ./1NN2.png
 INPUT ./FinalWriteup.bbl
 INPUT ./FinalWriteup.bbl
 INPUT FinalWriteup.bbl
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT FinalWriteup.aux
 INPUT ./FinalWriteup.out
 INPUT ./FinalWriteup.out
@@ -259,3 +260,4 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb

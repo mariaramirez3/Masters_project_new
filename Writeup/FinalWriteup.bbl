@@ -4,6 +4,7 @@
 Elbio Dagotto.
 \newblock Correlated electrons in high-temperature superconductors.
 \newblock {\em Reviews of Modern Physics}, 66(3):763, 1994.
+\newblock \href {https://doi.org/10.1103/RevModPhys.66.763} {\path{doi:10.1103/RevModPhys.66.763}}.
 
 \bibitem{onnes1911superconductivity}
 H~Kamerlingh Onnes.
@@ -14,45 +15,54 @@ H~Kamerlingh Onnes.
 Theodore~H Geballe, Robert~H Hammond, and Phillip~M Wu.
 \newblock What tc tells.
 \newblock {\em Physica C: Superconductivity and Its Applications}, 514:9--16, 2015.
+\newblock \href {https://doi.org/10.1016/j.physc.2015.02.009} {\path{doi:10.1016/j.physc.2015.02.009}}.
 
 \bibitem{schrieffer2018theory}
 J~Robert Schrieffer.
 \newblock {\em Theory of superconductivity}.
 \newblock CRC press, 2018.
+\newblock \href {https://doi.org/10.1201/9780429495700} {\path{doi:10.1201/9780429495700}}.
 
 \bibitem{steglich1979superconductivity}
 Frank Steglich, J~Aarts, CD~Bredl, W~Lieke, D~Meschede, W~Franz, and H~Sch{\"a}fer.
 \newblock Superconductivity in the presence of strong pauli paramagnetism: Ce cu 2 si 2.
 \newblock {\em Physical Review Letters}, 43(25):1892, 1979.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.43.1892} {\path{doi:10.1103/PhysRevLett.43.1892}}.
 
 \bibitem{hirsch2015superconducting}
 JE~Hirsch, MB~Maple, and F~Marsiglio.
 \newblock Superconducting materials classes: Introduction and overview, 2015.
+\newblock \href {https://doi.org/10.1016/j.physc.2015.03.002} {\path{doi:10.1016/j.physc.2015.03.002}}.
 
 \bibitem{norman2011challenge}
 Michael~R Norman.
 \newblock The challenge of unconventional superconductivity.
 \newblock {\em Science}, 332(6026):196--200, 2011.
+\newblock \href {https://doi.org/10.1126/science.1200181} {\path{doi:10.1126/science.1200181}}.
 
 \bibitem{bednorz1986possible}
 J~George Bednorz and K~Alex M{\"u}ller.
 \newblock Possible high t c superconductivity in the ba- la- cu- o system.
 \newblock {\em Zeitschrift f{\"u}r Physik B Condensed Matter}, 64(2):189--193, 1986.
+\newblock \href {https://doi.org/10.1007/bf01303701} {\path{doi:10.1007/bf01303701}}.
 
 \bibitem{eckhardt2020truncated}
 Christian~J Eckhardt, Carsten Honerkamp, Karsten Held, and Anna Kauch.
 \newblock Truncated unity parquet solver.
 \newblock {\em Physical Review B}, 101(15):155104, 2020.
+\newblock \href {https://doi.org/10.1103/PhysRevB.101.155104} {\path{doi:10.1103/PhysRevB.101.155104}}.
 
 \bibitem{moriya2000spin}
 Toru Moriya and Kazuo Ueda.
 \newblock Spin fluctuations and high temperature superconductivity.
 \newblock {\em Advances in Physics}, 49(5):555--606, 2000.
+\newblock \href {https://doi.org/10.1080/000187300412248} {\path{doi:10.1080/000187300412248}}.
 
 \bibitem{esirgen1997fluctuation}
 G{\"o}khan Esirgen and NE~Bickers.
 \newblock Fluctuation-exchange theory for general lattice hamiltonians.
 \newblock {\em Physical Review B}, 55(4):2122, 1997.
+\newblock \href {https://doi.org/10.1103/PhysRevB.55.2122} {\path{doi:10.1103/PhysRevB.55.2122}}.
 
 \bibitem{migdal1958interaction}
 AB~Migdal.
@@ -63,46 +73,55 @@ AB~Migdal.
 Toru Moriya.
 \newblock Developments of the theory of spin fluctuations and spin fluctuation-induced superconductivity.
 \newblock {\em Proceedings of the Japan Academy, Series B}, 82(1):1--16, 2006.
+\newblock \href {https://doi.org/10.2183/pjab.82.1} {\path{doi:10.2183/pjab.82.1}}.
 
 \bibitem{scalapino1995case}
 Douglas~J Scalapino.
 \newblock The case for dx2- y2 pairing in the cuprate superconductors.
 \newblock {\em Physics Reports}, 250(6):329--365, 1995.
+\newblock \href {https://doi.org/10.1016/0370-1573(94)00086-I} {\path{doi:10.1016/0370-1573(94)00086-I}}.
 
 \bibitem{timusk1999pseudogap}
 Tom Timusk and Bryan Statt.
 \newblock The pseudogap in high-temperature superconductors: an experimental survey.
 \newblock {\em Reports on Progress in Physics}, 62(1):61, 1999.
+\newblock \href {https://doi.org/10.1088/0034-4885/62/1/002} {\path{doi:10.1088/0034-4885/62/1/002}}.
 
 \bibitem{white1989numerical}
 Steven~R White, Douglas~J Scalapino, Robert~L Sugar, EY~Loh, James~E Gubernatis, and Richard~T Scalettar.
 \newblock Numerical study of the two-dimensional hubbard model.
 \newblock {\em Physical Review B}, 40(1):506, 1989.
+\newblock \href {https://doi.org/10.1103/PhysRevB.40.506} {\path{doi:10.1103/PhysRevB.40.506}}.
 
 \bibitem{hirsch1985two}
 Jorge~E Hirsch.
 \newblock Two-dimensional hubbard model: Numerical simulation study.
 \newblock {\em Physical Review B}, 31(7):4403, 1985.
+\newblock \href {https://doi.org/10.1103/PhysRevB.31.4403} {\path{doi:10.1103/PhysRevB.31.4403}}.
 
 \bibitem{anderson1990luttinger}
 Philip~W Anderson.
 \newblock ‘‘luttinger-liquid’’behavior of the normal metallic state of the 2d hubbard model.
 \newblock {\em Physical review letters}, 64(15):1839, 1990.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.64.1839} {\path{doi:10.1103/PhysRevLett.64.1839}}.
 
 \bibitem{sun2011nearly}
 Kai Sun, Zhengcheng Gu, Hosho Katsura, and S~Das~Sarma.
 \newblock Nearly flatbands with nontrivial topology.
 \newblock {\em Physical review letters}, 106(23):236803, 2011.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.106.236803} {\path{doi:10.1103/PhysRevLett.106.236803}}.
 
 \bibitem{sherman2020hubbard}
 Alexei Sherman.
 \newblock Hubbard-kanamori model: spectral functions, negative electron compressibility, and susceptibilities.
 \newblock {\em Physica Scripta}, 95(9):095804, 2020.
+\newblock \href {https://doi.org/10.1088/1402-4896/aba923} {\path{doi:10.1088/1402-4896/aba923}}.
 
 \bibitem{kadanoff2009more}
 Leo~P Kadanoff.
 \newblock More is the same; phase transitions and mean field theories.
 \newblock {\em Journal of Statistical Physics}, 137:777--797, 2009.
+\newblock \href {https://doi.org/10.1007/s10955-009-9814-1} {\path{doi:10.1007/s10955-009-9814-1}}.
 
 \bibitem{nagaosa2013quantum}
 Naoto Nagaosa.
@@ -113,21 +132,25 @@ Naoto Nagaosa.
 Walter Kohn and Lu~Jeu Sham.
 \newblock Self-consistent equations including exchange and correlation effects.
 \newblock {\em Physical review}, 140(4A):A1133, 1965.
+\newblock \href {https://doi.org/10.1103/PhysRev.140.A1133} {\path{doi:10.1103/PhysRev.140.A1133}}.
 
 \bibitem{bohm1951collective}
 David Bohm and David Pines.
 \newblock A collective description of electron interactions. i. magnetic interactions.
 \newblock {\em Physical Review}, 82(5):625, 1951.
+\newblock \href {https://doi.org/10.1103/PhysRev.82.625} {\path{doi:10.1103/PhysRev.82.625}}.
 
 \bibitem{metzner2012functional}
 Walter Metzner, Manfred Salmhofer, Carsten Honerkamp, Volker Meden, and Kurt Sch{\"o}nhammer.
 \newblock Functional renormalization group approach to correlated fermion systems.
 \newblock {\em Reviews of Modern Physics}, 84(1):299--352, 2012.
+\newblock \href {https://doi.org/10.1103/RevModPhys.84.299} {\path{doi:10.1103/RevModPhys.84.299}}.
 
 \bibitem{lichtenstein2017high}
 Julian Lichtenstein, D~S{\'a}nchez de~la Pe{\~n}a, Daniel Rohe, Edoardo Di~Napoli, Carsten Honerkamp, and Stefan~A Maier.
 \newblock High-performance functional renormalization group calculations for interacting fermions.
 \newblock {\em Computer Physics Communications}, 213:100--110, 2017.
+\newblock \href {https://doi.org/10.1016/j.cpc.2016.12.013} {\path{doi:10.1016/j.cpc.2016.12.013}}.
 
 \bibitem{lichtenstein2018functional}
 Julian Lichtenstein.
@@ -138,6 +161,7 @@ Julian Lichtenstein.
 Masatoshi Imada, Atsushi Fujimori, and Yoshinori Tokura.
 \newblock Metal-insulator transitions.
 \newblock {\em Reviews of modern physics}, 70(4):1039, 1998.
+\newblock \href {https://doi.org/10.1103/RevModPhys.70.1039} {\path{doi:10.1103/RevModPhys.70.1039}}.
 
 \bibitem{profe2023functional}
 Jonas~Benedikt Profe.
@@ -148,6 +172,7 @@ Jonas~Benedikt Profe.
 J~Reiss, D~Rohe, and W~Metzner.
 \newblock Renormalized mean-field analysis of antiferromagnetism and d-wave superconductivity in the two-dimensional hubbard model.
 \newblock {\em Physical Review B—Condensed Matter and Materials Physics}, 75(7):075110, 2007.
+\newblock \href {https://doi.org/10.1103/PhysRevB.75.075110} {\path{doi:10.1103/PhysRevB.75.075110}}.
 
 \bibitem{profe2024diverge}
 Jonas Profe, Dante~M Kennes, and Lennart Klebl.
