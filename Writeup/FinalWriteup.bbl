@@ -178,111 +178,133 @@ J~Reiss, D~Rohe, and W~Metzner.
 Jonas Profe, Dante~M Kennes, and Lennart Klebl.
 \newblock diverge implements various exact renormalization group examples.
 \newblock {\em SciPost Physics Codebases}, page 026, 2024.
+\newblock \href {https://doi.org/10.21468/SciPostPhysCodeb.26} {\path{doi:10.21468/SciPostPhysCodeb.26}}.
 
 \bibitem{beyer2023rashba}
 Jacob Beyer, Jonas~B Profe, Lennart Klebl, Tilman Schwemmer, Dante~M Kennes, Ronny Thomale, Carsten Honerkamp, and Stephan Rachel.
 \newblock Rashba spin-orbit coupling in the square-lattice hubbard model: A truncated-unity functional renormalization group study.
 \newblock {\em Physical Review B}, 107(12):125115, 2023.
+\newblock \href {https://doi.org/10.1103/PhysRevB.107.125115} {\path{doi:10.1103/PhysRevB.107.125115}}.
 
 \bibitem{hille2020quantitative}
 Cornelia Hille, Fabian~B Kugler, Christian~J Eckhardt, Yuan-Yao He, Anna Kauch, Carsten Honerkamp, Alessandro Toschi, and Sabine Andergassen.
 \newblock Quantitative functional renormalization group description of the two-dimensional hubbard model.
 \newblock {\em Physical Review Research}, 2(3):033372, 2020.
+\newblock \href {https://doi.org/10.1103/PhysRevResearch.2.033372} {\path{doi:10.1103/PhysRevResearch.2.033372}}.
 
 \bibitem{vilardi2020dynamical}
 Demetrio Vilardi, Pietro~M Bonetti, and Walter Metzner.
 \newblock Dynamical functional renormalization group computation of order parameters and critical temperatures in the two-dimensional hubbard model.
 \newblock {\em Physical Review B}, 102(24):245128, 2020.
+\newblock \href {https://doi.org/10.1103/PhysRevB.102.245128} {\path{doi:10.1103/PhysRevB.102.245128}}.
 
 \bibitem{kivelson1998electronic}
 Steven~A Kivelson, Eduardo Fradkin, and Victor~J Emery.
 \newblock Electronic liquid-crystal phases of a doped mott insulator.
 \newblock {\em Nature}, 393(6685):550--553, 1998.
+\newblock \href {https://doi.org/10.1038/31177} {\path{doi:10.1038/31177}}.
 
 \bibitem{fradkin2015colloquium}
 Eduardo Fradkin, Steven~A Kivelson, and John~M Tranquada.
 \newblock Colloquium: Theory of intertwined orders in high temperature superconductors.
 \newblock {\em Reviews of Modern Physics}, 87(2):457--482, 2015.
+\newblock \href {https://doi.org/10.1103/RevModPhys.87.457} {\path{doi:10.1103/RevModPhys.87.457}}.
 
 \bibitem{vanhala2018dynamical}
 Tuomas~I Vanhala and P{\"a}ivi T{\"o}rm{\"a}.
 \newblock Dynamical mean-field theory study of stripe order and d-wave superconductivity in the two-dimensional hubbard model.
 \newblock {\em Physical Review B}, 97(7):075112, 2018.
+\newblock \href {https://doi.org/10.1103/PhysRevB.97.075112} {\path{doi:10.1103/PhysRevB.97.075112}}.
 
 \bibitem{furukawa1998truncation}
 Nobuo Furukawa, TM~Rice, and Manfred Salmhofer.
 \newblock Truncation of a two-dimensional fermi surface due to quasiparticle gap formation at the saddle points.
 \newblock {\em Physical review letters}, 81(15):3195, 1998.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.81.3195} {\path{doi:10.1103/PhysRevLett.81.3195}}.
 
 \bibitem{honerkamp2001temperature}
 Carsten Honerkamp and Manfred Salmhofer.
 \newblock Temperature-flow renormalization group and the competition between superconductivity and ferromagnetism.
 \newblock {\em Physical Review B}, 64(18):184516, 2001.
+\newblock \href {https://doi.org/10.1103/PhysRevB.64.184516} {\path{doi:10.1103/PhysRevB.64.184516}}.
 
 \bibitem{capone2006competition}
 Massimo Capone and G~Kotliar.
 \newblock Competition between d-wave superconductivity and antiferromagnetism in the two-dimensional hubbard model.
 \newblock {\em Physical Review B—Condensed Matter and Materials Physics}, 74(5):054513, 2006.
+\newblock \href {https://doi.org/10.1103/PhysRevB.74.054513} {\path{doi:10.1103/PhysRevB.74.054513}}.
 
 \bibitem{katanin2009comparing}
 AA~Katanin, A~Toschi, and K~Held.
 \newblock Comparing pertinent effects of antiferromagnetic fluctuations in the two-and three-dimensional hubbard model.
 \newblock {\em Physical Review B—Condensed Matter and Materials Physics}, 80(7):075104, 2009.
+\newblock \href {https://doi.org/10.1103/PhysRevB.80.075104} {\path{doi:10.1103/PhysRevB.80.075104}}.
 
 \bibitem{otsuki2014superconductivity}
 Junya Otsuki, Hartmut Hafermann, and Alexander~I Lichtenstein.
 \newblock Superconductivity, antiferromagnetism, and phase separation in the two-dimensional hubbard model: A dual-fermion approach.
 \newblock {\em Physical Review B}, 90(23):235132, 2014.
+\newblock \href {https://doi.org/10.1103/PhysRevB.90.235132} {\path{doi:10.1103/PhysRevB.90.235132}}.
 
 \bibitem{qin2020absence}
 Mingpu Qin, Chia-Min Chung, Hao Shi, Ettore Vitali, Claudius Hubig, Ulrich Schollw{\"o}ck, Steven~R White, Shiwei Zhang, and (Simons~Collaboration on~the Many-Electron~Problem).
 \newblock Absence of superconductivity in the pure two-dimensional hubbard model.
 \newblock {\em Physical Review X}, 10(3):031016, 2020.
+\newblock \href {https://doi.org/10.1103/PhysRevX.10.031016} {\path{doi:10.1103/PhysRevX.10.031016}}.
 
 \bibitem{white1992density}
 Steven~R White.
 \newblock Density matrix formulation for quantum renormalization groups.
 \newblock {\em Physical review letters}, 69(19):2863, 1992.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.69.2863} {\path{doi:10.1103/PhysRevLett.69.2863}}.
 
 \bibitem{tsuei2000pairing}
 CC~Tsuei and JR~Kirtley.
 \newblock Pairing symmetry in cuprate superconductors.
 \newblock {\em Reviews of Modern Physics}, 72(4):969, 2000.
+\newblock \href {https://doi.org/10.1103/RevModPhys.72.969} {\path{doi:10.1103/RevModPhys.72.969}}.
 
 \bibitem{maple1995interplay}
 M~Brian Maple.
 \newblock Interplay between superconductivity and magnetism.
 \newblock {\em Physica B: Condensed Matter}, 215(1):110--126, 1995.
+\newblock \href {https://doi.org/10.1016/0921-4526(95)00031-4} {\path{doi:10.1016/0921-4526(95)00031-4}}.
 
 \bibitem{sun2016dome}
 JP~Sun, K~Matsuura, GZ~Ye, Y~Mizukami, M~Shimozawa, Kazuyuki Matsubayashi, M~Yamashita, T~Watashige, Shigeru Kasahara, Y~Matsuda, et~al.
 \newblock Dome-shaped magnetic order competing with high-temperature superconductivity at high pressures in fese.
 \newblock {\em Nature communications}, 7(1):12146, 2016.
+\newblock \href {https://doi.org/10.1038/ncomms12146} {\path{doi:10.1038/ncomms12146}}.
 
 \bibitem{levi1998stripes}
 Barbara~Goss Levi.
 \newblock Are stripes a universal feature of high-t c superconductors?
 \newblock {\em Physics Today}, 51(6):19--22, 1998.
+\newblock \href {https://doi.org/10.1063/1.882268} {\path{doi:10.1063/1.882268}}.
 
 \bibitem{zachar1998landau}
 Oron Zachar, SA~Kivelson, and VJ~Emery.
 \newblock Landau theory of stripe phases in cuprates and nickelates.
 \newblock {\em Physical Review B}, 57(3):1422, 1998.
+\newblock \href {https://doi.org/10.1103/PhysRevB.57.1422} {\path{doi:10.1103/PhysRevB.57.1422}}.
 
 \bibitem{vojta2009lattice}
 Matthias Vojta.
 \newblock Lattice symmetry breaking in cuprate superconductors: stripes, nematics, and superconductivity.
 \newblock {\em Advances in Physics}, 58(6):699--820, 2009.
+\newblock \href {https://doi.org/10.1080/00018730903122242} {\path{doi:10.1080/00018730903122242}}.
 
 \bibitem{komiya2005magic}
 Seiki Komiya, Han-Dong Chen, Shou-Cheng Zhang, and Yoichi Ando.
 \newblock Magic doping fractions for high-temperature superconductors.
 \newblock {\em Physical review letters}, 94(20):207004, 2005.
+\newblock \href {https://doi.org/doi.org/10.1103/PhysRevLett.94.207004} {\path{doi:doi.org/10.1103/PhysRevLett.94.207004}}.
 
 \bibitem{husemann2012incommensurate}
 Christoph Husemann and Walter Metzner.
 \newblock Incommensurate nematic fluctuations in the two-dimensional hubbard model.
 \newblock {\em Physical Review B—Condensed Matter and Materials Physics}, 86(8):085113, 2012.
+\newblock \href {https://doi.org/10.1103/PhysRevB.86.085113} {\path{doi:10.1103/PhysRevB.86.085113}}.
 
 \bibitem{fontenele2025effects}
 Rodrigo~A Fontenele, Natanael~C Costa, Thereza Paiva, and Raimundo R~dos Santos.
@@ -298,30 +320,36 @@ Philip~H Butler.
 Louis Taillefer.
 \newblock Scattering and pairing in cuprate superconductors.
 \newblock {\em Annu. Rev. Condens. Matter Phys.}, 1(1):51--70, 2010.
+\newblock \href {https://doi.org/10.1146/annurev-conmatphys-070909-104117} {\path{doi:10.1146/annurev-conmatphys-070909-104117}}.
 
 \bibitem{sakakibara2024possible}
 Hirofumi Sakakibara, Naoya Kitamine, Masayuki Ochi, and Kazuhiko Kuroki.
 \newblock Possible high t c superconductivity in la 3 ni 2 o 7 under high pressure through manifestation of a nearly half-filled bilayer hubbard model.
 \newblock {\em Physical Review Letters}, 132(10):106002, 2024.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.132.106002} {\path{doi:10.1103/PhysRevLett.132.106002}}.
 
 \bibitem{slater1954simplified}
 John~C Slater and George~F Koster.
 \newblock Simplified lcao method for the periodic potential problem.
 \newblock {\em Physical review}, 94(6):1498, 1954.
+\newblock \href {https://doi.org/10.1103/PhysRev.94.1498} {\path{doi:10.1103/PhysRev.94.1498}}.
 
 \bibitem{blanksby2003bond}
 Stephen~J Blanksby and G~Barney Ellison.
 \newblock Bond dissociation energies of organic molecules.
 \newblock {\em Accounts of chemical research}, 36(4):255--263, 2003.
+\newblock \href {https://doi.org/10.1021/ar020230d} {\path{doi:10.1021/ar020230d}}.
 
 \bibitem{mcgrady2015introduction}
 John~E McGrady.
 \newblock Introduction and general survey of metal--metal bonds.
 \newblock {\em Molecular Metal-Metal Bonds: Compounds, Synthesis, Properties}, pages 1--22, 2015.
+\newblock \href {https://doi.org/10.1002/9783527673353.ch1} {\path{doi:10.1002/9783527673353.ch1}}.
 
 \bibitem{krapp2008strength}
 Andreas Krapp, Matthias Lein, and Gernot Frenking.
 \newblock The strength of the $\sigma$-, $\pi$-and $\delta$-bonds in re 2 cl 8 2-.
 \newblock {\em Theoretical Chemistry Accounts}, 120:313--320, 2008.
+\newblock \href {https://doi.org/10.1007/s00214-007-0294-6} {\path{doi:10.1007/s00214-007-0294-6}}.
 
 \end{thebibliography}
