@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex FinalWriteup"] 1745773006.7081 "FinalWriteup.aux" "FinalWriteup.bbl" "FinalWriteup" 1745773008.51269 0
+["bibtex FinalWriteup"] 1745835440.93355 "FinalWriteup.aux" "FinalWriteup.bbl" "FinalWriteup" 1745835442.27098 0
   "./references.bib" 1745756395.44286 17899 28c1655c6825dc0fdd189f09240e90e9 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "FinalWriteup.aux" 1745773008.4301 29812 20780e15def038410f5743c64cfd446f "pdflatex"
+  "FinalWriteup.aux" 1745835442.1784 29020 ff00781e2b4417ce627c88b1fe8be22d "pdflatex"
   (generated)
   "FinalWriteup.bbl"
   "FinalWriteup.blg"
   (rewritten before read)
-["pdflatex"] 1745773006.72307 "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" "FinalWriteup.pdf" "FinalWriteup" 1745773008.51293 0
+["pdflatex"] 1745835440.94849 "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" "FinalWriteup.pdf" "FinalWriteup" 1745835442.27121 0
   "/etc/texmf/web2c/texmf.cnf" 1738672379.84493 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" 1745773004.88009 66071 57a51f76502702ee6dec8fe90488ec8f ""
+  "/home/oem/Documents/Final year project (copy)/Writeup/FinalWriteup.tex" 1745835439.28139 65586 4b4acb9da5af5608a05ec278981f1967 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -111,19 +111,18 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1738672396 6800796 a9f5feae0eb4599004415ef964bbf759 ""
   "1NN2.png" 1745760315.81286 121870 7d019a6b9b485222f897b75ac8a08658 ""
   "1NNN.png" 1745755198.59148 398646 2ce3a01e53b5d9a9abc6f28ae4071d75 ""
-  "1NNN050Dome.png" 1745245775.71658 84915 e827e769013e659ddc95e87d58afd41a ""
   "1NNNSC_075.png" 1745755709.63618 51244 0a73612a298d1f86a9ae227aa52c1eb9 ""
   "1NNNstripes.png" 1745244473.87688 117274 2c91591506e9f077b85933c8e236fdfa ""
-  "1NNSC.png" 1745242031.14673 38591 7e952098a155c375104c3453ab4b7be4 ""
+  "1NNSC.png" 1745834950.98151 35192 8cf845340fe1bb88ded421c4f11e273e ""
   "1NNphased.png" 1745752234.68197 331691 d36bcb730d17286861036092274ae501 ""
-  "1NNstripes.png" 1745242649.38821 72639 adb7905228fe82dfcf9a1469a4f81b4d ""
+  "1NNstripes.png" 1745835194.96413 72326 119a34eb9b43b6168f232d043bcb77c0 ""
   "2Dhubbardmodel.png" 1744029096.53911 43641 f11694c37bb0ed3312c8b2421bc63553 ""
   "FRGflowdiagram.png" 1745769765.10365 72421 97a699dca3f6b44465d74dd80bf435ce ""
-  "FinalWriteup.aux" 1745773008.4301 29812 20780e15def038410f5743c64cfd446f "pdflatex"
-  "FinalWriteup.bbl" 1745773006.7191 13343 0a0ce0363f504fd194534cce99603f3b "bibtex FinalWriteup"
-  "FinalWriteup.out" 1745773008.4321 6238 66343c53e29f57e9ef647a75b238942e "pdflatex"
-  "FinalWriteup.tex" 1745773004.88009 66071 57a51f76502702ee6dec8fe90488ec8f ""
-  "FinalWriteup.toc" 1745773008.4331 2920 f0c6d213bcaa62168d27bc4b50a123be "pdflatex"
+  "FinalWriteup.aux" 1745835442.1784 29020 ff00781e2b4417ce627c88b1fe8be22d "pdflatex"
+  "FinalWriteup.bbl" 1745835440.9444 13343 0a0ce0363f504fd194534cce99603f3b "bibtex FinalWriteup"
+  "FinalWriteup.out" 1745835442.1804 6238 66343c53e29f57e9ef647a75b238942e "pdflatex"
+  "FinalWriteup.tex" 1745835439.28139 65586 4b4acb9da5af5608a05ec278981f1967 ""
+  "FinalWriteup.toc" 1745835442.1804 2920 b9ef3ab626d8752569db6bcb37ed596a "pdflatex"
   "Truncation.png" 1744728615.09981 35479 3a7b24bdfffa837fc3f288ad9a4f5eb0 ""
   "convergence.png" 1744729612.7484 46434 da4db4a5946d2b07760e2a372fd88823 ""
   "nknkfff.png" 1745664785.18031 13535 039f47dac65e71ab1134399f64634c2b ""
