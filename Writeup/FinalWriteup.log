@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  28 APR 2025 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.4)  29 APR 2025 10:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count187
 \c@section=\count188
@@ -325,12 +325,12 @@ Package caption Info: End \AtBeginDocument code.
 * \topmargin=-45.67337pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=44.0pt
+* \marginparwidth=59.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -358,158 +358,150 @@ Package hyperref Info: Link coloring ON on input line 14.
 \tf@toc=\write4
 \openout4 = `FinalWriteup.toc'.
 
- [2] [3] [4]
+ [2] [3]
+Overfull \hbox (1.85219pt too wide) in paragraph at lines 89--91
+\OT1/cmr/m/n/10.95 In s-wave sym-met-ric su-per-con-duc-tors, the ef-fec-tive pair-ing in-ter-ac-tion $^^@(\OML/cmm/m/it/10.95 k; k[]\OT1/cmr/m/n/10.95 )$ is momentum-independent
+ []
 
-LaTeX Warning: Command \b invalid in math mode on input line 137.
+[4]
 
-<2Dhubbardmodel.png, id=225, 552.50415pt x 132.0132pt>
+LaTeX Warning: Command \b invalid in math mode on input line 145.
+
+<2Dhubbardmodel.png, id=232, 552.50415pt x 132.0132pt>
 File: 2Dhubbardmodel.png Graphic file (type png)
 <use 2Dhubbardmodel.png>
-Package pdftex.def Info: 2Dhubbardmodel.png  used on input line 143.
+Package pdftex.def Info: 2Dhubbardmodel.png  used on input line 151.
 (pdftex.def)             Requested size: 442.29108pt x 105.67917pt.
 [5 <./2Dhubbardmodel.png>] [6]
-<FRGflowdiagram.png, id=270, 638.50545pt x 313.17pt>
+<FRGflowdiagram.png, id=277, 638.50545pt x 313.17pt>
 File: FRGflowdiagram.png Graphic file (type png)
 <use FRGflowdiagram.png>
-Package pdftex.def Info: FRGflowdiagram.png  used on input line 207.
+Package pdftex.def Info: FRGflowdiagram.png  used on input line 215.
 (pdftex.def)             Requested size: 442.29108pt x 216.93333pt.
- [7 <./FRGflowdiagram.png>]
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 236.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 236.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 244.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 236.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 244.
 
-<Truncation.png, id=287, 243.42944pt x 215.3646pt>
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 244.
+
+[7 <./FRGflowdiagram.png>]
+<Truncation.png, id=296, 243.42944pt x 215.3646pt>
 File: Truncation.png Graphic file (type png)
 <use Truncation.png>
-Package pdftex.def Info: Truncation.png  used on input line 263.
+Package pdftex.def Info: Truncation.png  used on input line 271.
 (pdftex.def)             Requested size: 172.00624pt x 152.1771pt.
-[8]
-
-LaTeX Warning: Command \b invalid in math mode on input line 312.
-
+ [8 <./Truncation.png>]
 
 LaTeX Warning: Command \b invalid in math mode on input line 320.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 326.
+LaTeX Warning: Command \b invalid in math mode on input line 328.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 326.
+(hyperref)                removing `math shift' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 326.
+(hyperref)                removing `superscript' on input line 334.
 
-[9 <./Truncation.png>] [10] [11]
-<nknkfff.png, id=372, 380.50156pt x 148.27396pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 334.
+
+[9] [10]
+<nknkfff.png, id=371, 380.50156pt x 148.27396pt>
 File: nknkfff.png Graphic file (type png)
 <use nknkfff.png>
-Package pdftex.def Info: nknkfff.png  used on input line 433.
+Package pdftex.def Info: nknkfff.png  used on input line 441.
 (pdftex.def)             Requested size: 393.15178pt x 153.2035pt.
- [12 <./nknkfff.png>]
+ [11]
 <convergence.png, id=385, 479.54156pt x 253.69781pt>
 File: convergence.png Graphic file (type png)
 <use convergence.png>
-Package pdftex.def Info: convergence.png  used on input line 467.
+Package pdftex.def Info: convergence.png  used on input line 475.
 (pdftex.def)             Requested size: 294.8657pt x 155.99806pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 476.
+(hyperref)                removing `math shift' on input line 484.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 476.
+(hyperref)                removing `math shift' on input line 484.
 
-[13 <./convergence.png>]
-<1NNphased.png, id=398, 631.3989pt x 434.3427pt>
+[12 <./nknkfff.png> <./convergence.png>]
+<1NNphased.png, id=397, 631.3989pt x 434.3427pt>
 File: 1NNphased.png Graphic file (type png)
 <use 1NNphased.png>
-Package pdftex.def Info: 1NNphased.png  used on input line 503.
+Package pdftex.def Info: 1NNphased.png  used on input line 511.
 (pdftex.def)             Requested size: 466.86447pt x 321.16335pt.
- [14 <./1NNphased.png>]
-Overfull \hbox (6.67372pt too wide) in paragraph at lines 522--528
-\OT1/cmr/m/n/12 This sec-tion in-ves-ti-gates the so-lu-tion to the 1NN Model Hamil-to-nian us-ing two-particle interaction-
- []
-
-[15]
-<1NNSC.png, id=430, 532.6299pt x 163.5711pt>
+ [13] [14 <./1NNphased.png>]
+<1NNSC.png, id=427, 532.6299pt x 163.5711pt>
 File: 1NNSC.png Graphic file (type png)
 <use 1NNSC.png>
-Package pdftex.def Info: 1NNSC.png  used on input line 570.
+Package pdftex.def Info: 1NNSC.png  used on input line 578.
 (pdftex.def)             Requested size: 491.43787pt x 150.92151pt.
- [16 <./1NNSC.png>]
-<1NNstripes.png, id=455, 543.2295pt x 342.3189pt>
+<1NNstripes.png, id=439, 543.2295pt x 342.3189pt>
 File: 1NNstripes.png Graphic file (type png)
 <use 1NNstripes.png>
-Package pdftex.def Info: 1NNstripes.png  used on input line 611.
-(pdftex.def)             Requested size: 442.29108pt x 278.7132pt.
- [17 <./1NNstripes.png>]
-<1NNN.png, id=473, 548.80031pt x 529.98pt>
+Package pdftex.def Info: 1NNstripes.png  used on input line 619.
+(pdftex.def)             Requested size: 245.71893pt x 154.84123pt.
+ [15]
+<1NNN.png, id=464, 548.80031pt x 529.98pt>
 File: 1NNN.png Graphic file (type png)
 <use 1NNN.png>
-Package pdftex.def Info: 1NNN.png  used on input line 650.
+Package pdftex.def Info: 1NNN.png  used on input line 658.
 (pdftex.def)             Requested size: 491.43787pt x 474.59195pt.
-<1NNNSC_075.png, id=479, 426.99525pt x 260.29245pt>
+ [16 <./1NNSC.png>]
+<1NNNSC_075.png, id=480, 426.99525pt x 260.29245pt>
 File: 1NNNSC_075.png Graphic file (type png)
 <use 1NNNSC_075.png>
-Package pdftex.def Info: 1NNNSC_075.png  used on input line 692.
-(pdftex.def)             Requested size: 442.29108pt x 269.62936pt.
- [18] [19 <./1NNN.png>] [20 <./1NNNSC_075.png>]
-<1NNNstripes.png, id=505, 663.98062pt x 296.60812pt>
+Package pdftex.def Info: 1NNNSC_075.png  used on input line 700.
+(pdftex.def)             Requested size: 344.005pt x 209.71172pt.
+ [17 <./1NNstripes.png>] [18 <./1NNN.png>]
+<1NNNstripes.png, id=499, 663.98062pt x 296.60812pt>
 File: 1NNNstripes.png Graphic file (type png)
 <use 1NNNstripes.png>
-Package pdftex.def Info: 1NNNstripes.png  used on input line 729.
+Package pdftex.def Info: 1NNNstripes.png  used on input line 737.
 (pdftex.def)             Requested size: 442.29108pt x 197.57683pt.
- [21]
-<tprimecont.png, id=520, 253.1859pt x 221.1462pt>
+ [19 <./1NNNSC_075.png>]
+<tprimecont.png, id=515, 253.1859pt x 221.1462pt>
 File: tprimecont.png Graphic file (type png)
 <use tprimecont.png>
-Package pdftex.def Info: tprimecont.png  used on input line 780.
+Package pdftex.def Info: tprimecont.png  used on input line 788.
 (pdftex.def)             Requested size: 245.71893pt x 214.63301pt.
- [22 <./1NNNstripes.png>] [23 <./tprimecont.png>]
-<1NN2.png, id=548, 515.67656pt x 592.46344pt>
+ [20 <./1NNNstripes.png>] [21 <./tprimecont.png>]
+<1NN2.png, id=544, 515.67656pt x 592.46344pt>
 File: 1NN2.png Graphic file (type png)
 <use 1NN2.png>
-Package pdftex.def Info: 1NN2.png  used on input line 841.
+Package pdftex.def Info: 1NN2.png  used on input line 849.
 (pdftex.def)             Requested size: 245.71893pt x 282.309pt.
- [24 <./1NN2.png>] [25] (./FinalWriteup.bbl
-Underfull \hbox (badness 1092) in paragraph at lines 38--42
-[]\OT1/cmr/m/n/12 Michael R Nor-man.  The chal-lenge of un-con-ven-tional su-per-con-duc-tiv-ity.  \OT1/cmr/m/it/12 Sci-ence\OT1/cmr/m/n/12 ,
- []
-
-[26] [27] [28] [29])
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[30] [31] (./FinalWriteup.aux)
+ [22 <./1NN2.png>] [23] (./FinalWriteup.bbl [24] [25] [26] [27]) [28] (./FinalWriteup.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `FinalWriteup.out' has not changed.
-(rerunfilecheck)             Checksum: 3D520235EBA76A51290E0FBE96D96F96;6238.
+(rerunfilecheck)             Checksum: CE125BAD0AA13DBDCCC3B5774F36CA67;6357.
  ) 
 Here is how much of TeX's memory you used:
- 11529 strings out of 476182
- 183614 string characters out of 5795596
- 1939975 words of memory out of 5000000
- 33231 multiletter control sequences out of 15000+600000
- 567567 words of font info for 69 fonts, out of 8000000 for 9000
+ 11537 strings out of 476182
+ 183699 string characters out of 5795596
+ 1940975 words of memory out of 5000000
+ 33236 multiletter control sequences out of 15000+600000
+ 568478 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,10n,79p,1025b,560s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on FinalWriteup.pdf (31 pages, 11764210 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on FinalWriteup.pdf (28 pages, 11786865 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 670 compressed objects within 7 object streams
- 174 named destinations out of 1000 (max. 500000)
- 306 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 761 PDF objects out of 1000 (max. 8388607)
+ 654 compressed objects within 7 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 314 words of extra memory for PDF output out of 10000 (max. 10000000)
 
