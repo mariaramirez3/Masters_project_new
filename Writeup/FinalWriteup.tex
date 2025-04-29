@@ -21,13 +21,14 @@
 
 
 
-The two-dimensional Hubbard model has attracted sustained scientific interest for decades, largely due to its ability to capture most of the underlying physics of the superconducting phase in high-temperature Cuprate superconductors\cite{dagotto1994correlated}. 
+Due to its ability to capture most of the underlying physics of the superconducting phase in high-temperature Cuprate superconductors\cite{dagotto1994correlated},
+the two-dimensional Hubbard model has attracted sustained scientific interest for decades. 
 Beyond its relevance to the Cuprates, it also serves as a fundamental toy model in theoretical physics. 
 This thesis conducts a detailed analysis of the 2D Hubbard model using the truncated-unity functional Renormalization Group (TU$^2$FRG) method,
 within the framework of spin-fluctuation-mediated superconductivity.  The interplay between magnetism and superconductivity is explored 
-by systematically varying model parameters such as the on-site Coulomb repulsion, chemical potential, Hund's coupling, next-nearest-neighbor hopping, and the number of orbitals per
+by systematically varying model parameters such as the on-site Coulomb repulsion, chemical potential, Hund's coupling, next-nearest-neighbour hopping, and the number of orbitals per
 site. This approach enables the identification of clear trends in the superconducting critical ($T_c$) temperature and order parameter, while also
-providing insights into the magnetic ordering and how well FRG works for a certain range of parameters.
+providing insights into the magnetic ordering.
 
 
 \section{Acknowledgments}
@@ -36,7 +37,7 @@ Firstly, I would like to thank my supervisors Dr Luke Rhodes and Prof. Peter Wah
 project. I would also like to express my gratitude to everyone in Prof. Wahl's group for their warm welcome 
 and support as I joined the group. \par
 \medskip
-\noindent I would also like to thank my family for their unconditional support before and during 
+\noindent Moreover, I would like to thank my family, in particular my grandad, for their unconditional support before and during 
 my studies at St Andrews. Finally, I am deeply grateful to my friends in St Andrews and to my partner, who have
 made the past four years more memorable and rewarding than I could have ever imagined.  
 
@@ -44,8 +45,8 @@ made the past four years more memorable and rewarding than I could have ever ima
 \section{Introduction}
 
 Since its discovery in 1911\cite{onnes1911superconductivity}, superconductivity has remained a topic of great scientific interest.
-This phenomenon, characterised by an abrupt drop in resistance at a so-called ``Critical Temperature ($T_c$)"\cite{geballe2015tc} is driven by an attractive interaction
-between electrons which in turn leads to the formation of electron pairs, famously known as ``Cooper pairs"\cite{schrieffer2018theory}. For many 
+This phenomenon, characterised by an abrupt drop in resistance at a so-called ``Critical Temperature ($T_c$)"\cite{geballe2015tc}
+is explained by the formation of electron pairs, famously known as ``Cooper pairs"\cite{schrieffer2018theory}, which emerge as a result of an attractive interaction between the electrons. For many 
 years after the discovery of superconductivity, physicists
 were convinced that BCS-Eliashberg-electron-phonon theory \cite{schrieffer2018theory} provided a complete explanation of the electron pairing mechanism in all superconducting materials. 
 However, in 1979, the discovery of the first heavy-fermion superconductor\cite{steglich1979superconductivity} gave rise to a whole new class of materials: Unconventional Superconductors. 
@@ -86,24 +87,24 @@ The study is further extended by examining how variations in the next-nearest-ne
     \hat{H}^{cp} = \sum_{k,k'} \Gamma(k, k') c^{\dagger}_{k, \uparrow}  c^{\dagger}_{k', \downarrow} c_{k', \uparrow}c_{-k, \downarrow}
 \end{equation}
 
-\noindent In s-wave symmetric superconductors, the effective pairing interaction $\Gamma(k,k')$ is momentum-independent and thus remains constant. 
+\noindent In $s$-wave symmetric superconductors\footnote{Those where the sign of the order parameter is completely symmetric about any rotation.}, the effective pairing interaction $\Gamma(k,k')$ is momentum-independent and thus remains constant. 
 For many unconventional superconductors, including those with spin-fluctuation mediated pairing, the exact form of $\Gamma(k,k')$ has remained as an unanswered question for decades. 
 \subsubsection{Spin-fluctuation mediated superconductivity}
 \label{subsec:spinfluct}
 
-The prevailing assumption for the pairing mechanism in Iron-based or heavy-fermion compounds 
-is that it is driven by spin fluctuations \cite{moriya2000spin}. This section discusses how to
+The prevailing assumption in Iron-based or heavy-fermion compounds 
+is that the superconducting pairing mechanism is driven by spin fluctuations \cite{moriya2000spin}. This section discusses how to
 model spin-fluctuation mediated superconductivity for the fluctuation-exchange approximation (FLEX) \cite{esirgen1997fluctuation}. \par
 \medskip
-\noindent In such cases, the effective pairing interaction $\Gamma(k,k')$ is given by \footnote{Note that this form of pairing interaction 
-assumes that the ratio between 
-the fluctuation frequency ($w_f$) and the Fermi energy is small.}:
+\noindent In such cases, the effective pairing interaction $\Gamma(k,k')$ is given by:\footnote{Note that this form of pairing interaction 
+assumes that the ratio between
+the fluctuation frequency ($w_f$) and the Fermi energy is small.}
 
 \begin{equation}\label{Pairing interaction SF}
     \Gamma(k,k') = \frac{3}{2} U^2 \chi^S(k-k') -\frac{1}{2}U^2 \chi^C(k-k') + U
 \end{equation} 
 
-\noindent This equation is taken from \cite{migdal1958interaction}. Here, $U$ is the on-site Coulomb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge(C) and Spin(S) channel respectively. Their form is given below.
+\noindent Here, $U$ is the on-site Coulomb repulsion and $\chi^S$, $\chi^C$ are the interacting spin-susceptibilities in the Charge(C) and Spin(S) channel respectively\cite{migdal1958interaction}. Their form is given below.
 
 \begin{equation}
     \chi^S(q) = \frac{\chi^0(q)}{1 - U \chi^0 (q)}
@@ -132,12 +133,14 @@ to describe the characteristic pseudo-gap and Mott insulating phase\cite{timusk1
 \subsubsection{Tight binding Models}
 
 The Tight Binding Model is a central element of condensed matter physics \eqref{TBM}. In this model, electrons are bound in orbitals around the lattice ions.
-Due to the overlap between the quantum mechanical wave-functions that describe these orbitals, electrons are allowed to 'hop' to neighbouring sites. The probability that this hopping process will occur is given by a tunnelling amplitude, which can be calculated using a hopping integral. \par
+Due to the overlap between the quantum mechanical wave-functions that describe these orbitals, 
+electrons are allowed to ``hop'' to neighbouring orbitals. The probability that this hopping process will 
+occur is given by a tunnelling amplitude, which can be calculated using a hopping integral. \par
 \medskip
 \noindent This work is carried out in the tight-binding framework, where the magnitude of the tunnelling amplitudes is at first treated as a free parameter. 
 The starting point is a simple nearest-neighbour hopping tight binding model. 
 The effect of introducing a next-nearest-neighbour hopping and an extra orbital per site
-is then investigated \textit{(See Fig. \ref{fig:2D Hubbard model})}.
+is then investigated \textit{(See Fig.\ref{fig:2D Hubbard model})}.
 
 
 
@@ -149,8 +152,8 @@ is then investigated \textit{(See Fig. \ref{fig:2D Hubbard model})}.
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.9\textwidth]{2Dhubbardmodel.png}  % Adjust width as needed
-    \caption{\textbf{Two-Dimensional Tight-Binding Models:} Three panels showing the tight binding models for the 1NN, 1NNN and 1NN2 models discussed in Section~\ref{subsec:1NNModel},~\ref{subsec:1NNNModel} and~\ref{subsec:1NN2Model} respectively. Panel a) shows the nearest-neighbour hopping case, where \textit{t} depicts the hopping amplitude between the neighbouring sites. Panel b) shows the inclusion of the next-nearest neighbour hopping, the magnitude given by \textit{t'}.
-    Panel c) Shows the extension to the two-orbital case, depicting  same orbital ($t_{orb1}$, $t_{orb2}$) and different orbital ($t_{orb1,2}$) nearest-neighbour hopping. Note that this is just a pictorial representation of the orbitals, and that it does not correspond to a particular choice of orbitals or their real space projection. }
+    \caption{\textbf{Two-dimensional Tight-binding models:} Three panels showing the tight binding models for the 1NN, 1NNN and 1NN2 models discussed in Section~\ref{subsec:1NNModel},~\ref{subsec:1NNNModel} and~\ref{subsec:1NN2Model} respectively. \textit{Panel a)} shows the nearest-neighbour hopping case, where \textit{t} depicts the hopping amplitude between the neighbouring sites. \textit{Panel b)} shows the inclusion of the next-nearest neighbour hopping, the magnitude given by \textit{t'}.
+    \textit{Panel c)} Shows the extension to the two-orbital case, depicting  same orbital ($t_{orb1}$, $t_{orb2}$) and different orbital ($t_{orb1,2}$) nearest-neighbour hopping. Note that this is just a pictorial representation of the orbitals, and that it does not correspond to a particular choice of orbitals or their real space projection. }
     \label{fig:2D Hubbard model}
 \end{figure}
 
@@ -159,9 +162,11 @@ is then investigated \textit{(See Fig. \ref{fig:2D Hubbard model})}.
 \subsubsection{Hubbard Model}
 \label{subsec: HubbardModel}
 
-The  tight binding model as defined above fails to account for any interactions between electrons. This motivates the extension of this model to the Hubbard model \eqref{t Hubbard model}, which includes the (onsite) Coulomb repulsion between electrons. Despite its simple form, this model can describe very rich physical phenomena.
-In particular, it becomes very interesting to study when the Coulomb repulsion ($U$) and the nearest neighbour hoping ($t$) are of comparable order, since it highlights the competing phenomena that take place in correlated systems. 
-The 2D Hubbard model is able to predict all sorts of correlated phases: it describes metals, insulators, superconductors and other exotic phases\cite{white1989numerical,hirsch1985two, anderson1990luttinger,sun2011nearly}. 
+The  tight binding model as defined above fails to account for any interactions between electrons. 
+This motivates its extension to the Hubbard model \eqref{t Hubbard model}, which includes the (onsite) Coulomb repulsion between electrons. 
+Despite its simple form, the Hubbard model can describe very rich physical phenomena.
+In particular, it becomes very interesting to study when the Coulomb repulsion ($U$) and the nearest-neighbour hoping ($t$) are of comparable order, since it highlights the competing phenomena that take place in correlated systems. 
+In two-dimensions, the Hubbard model is able to predict all sorts of correlated phases: it describes metals, insulators, superconductors and other exotic phases\cite{white1989numerical,hirsch1985two, anderson1990luttinger,sun2011nearly}. 
 This model has been widely studied since it resembles the structure of the Cuprate high-temperature superconductors \cite{dagotto1994correlated}. 
 
 
@@ -178,21 +183,23 @@ This model has been widely studied since it resembles the structure of the Cupra
 
 \subsubsection{Hubbard-Kanamori Model}
 \label{subsubsec: HKmodel}
-In the case of materials with a multi-band and/or multi-orbital nature, the Hubbard model is not sufficient to capture all physical phenomena. This motivates the extension of the Hubbard model to the Hubbard-Kanamori model\cite{sherman2020hubbard} by including a Hund's coupling term.
+In the case of materials with a multi-band and/or multi-orbital nature, 
+the Hubbard model is not sufficient to capture all physical phenomena. 
+This motivates a further extension to the Hubbard-Kanamori model\cite{sherman2020hubbard} by including a Hund's coupling term.
 
 \begin{equation} \label{Hubbard-Kanamori Model}
     H_{int} = U \sum_{is}n_{i,s\uparrow}n_{i,s\downarrow} + \frac{V}{2} \sum_{i,s,t \neq s} n_{is}n_{it} -\frac{J}{2} \sum_{i,s,t \neq s} \vec{S}_{is} \cdot \vec{S}_{it} 
     + \frac{J'}{2} \sum_{i,s,t \neq s} \sum_{\sigma} c_{is\sigma}^{\dagger}c_{is\bar{\sigma}}^{\dagger}c_{it\bar{\sigma}}c_{it\sigma}
 \end{equation}
 
-\noindent Here, $U$ and $V$ represent the electronic interactions in the same and different orbitals respectively. For generality, the intraorbital exchange $J$ and the 'pair hopping' term $J'$ following from Hund's rule coupling have been separated.  
+\noindent Here, $U$ and $V$ represent the electronic interactions in the same and different orbitals respectively. For generality, the intraorbital exchange $J$ and the ``pair hopping'' term $J'$ following from Hund's rule coupling have been separated.  
 Note that this Hamiltonian is relevant for the later section of this project, where the model is extended to a two-orbital, two-dimensional Hubbard model.
 
 \subsection{Functional Renormalization Group (FRG) theory}
 
 Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why one resorts to numerical techniques such as FRG. This technique falls into the same category of many other weak-coupling methods (such as mean field-theory\cite{kadanoff2009more}, perturbation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or the Random Phase approximation\cite{bohm1951collective}).
 In these theories, interactions between electrons are considered to be weak. This allows one to effectively model the electrons in the system as free particles 
-and treat their interactions as a perturbation. In the non-interacting limit, the method is therefore exact. Beyond this limit, the method's precision is controlled by the ratio between the interaction
+and treat their interactions as a perturbation. As a result, the method is exact in the non-interacting limit. Beyond this limit, its precision is controlled by the ratio between the interaction
 strength and the bandwidth of the system. \par
 
 \medskip
@@ -202,12 +209,12 @@ progressing step-by-step from higher to lower energies.
 Intuitively, FRG functions like a microscope with adjustable resolution: one begins with a detailed, high-resolution view of the fundamental microscopic laws and gradually lowers the resolution to arrive at a coarse-grained description of macroscopic collective phenomena.
 \medskip
 
-\noindent In this section the theoretical framework for FRG calculations is outlined. The central element of FRG is a flow equation that describes the evolution of the effective action of the system with respect to a scalar/flow parameter Lambda ($\Lambda$) \textit{(See section~\ref{subsubsec:Flow Equation})}.
+\noindent  The central element of FRG is a flow equation that describes the evolution of the effective action of the system with respect to a scalar/flow parameter Lambda ($\Lambda$) \textit{(See section~\ref{subsubsec:Flow Equation})}.
 The flow equation can be solved exactly for a limited number of systems so in most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time.  
-This is where the TU$^2$FRG scheme comes into play. TU$^2$FRG only considers two-particle
+This is where the Truncated-unity FRG (TU$^2$FRG) scheme comes into play. TU$^2$FRG only considers two-particle
 interactions and neglects any higher order terms.
 This allows the separation of the effective action of the system into three terms. Each term represents one of the following three physical channels: Superconductivity, Spin-Density and Charge-Density Waves\footnote{The concept of charge density wave and spin density wave remains distinct and well-defined as long as spin-orbit coupling is not present}.
-The calculation is then performed to determine the first to diverge, this will correspond to the respective physical ground state that the model exhibits. This rather conceptual overview of FRG (and in particular de TU$^2$FRG scheme) is represented in a flowchart below \textit{(See Fig.\ref{fig:FRGflowdiagram})}.
+The calculation is then performed to determine the first to diverge, this will correspond to the respective physical ground state that the model exhibits. This rather conceptual overview of FRG (and in particular of the TU$^2$FRG scheme) is represented in a flowchart below \textit{(See Fig.\ref{fig:FRGflowdiagram})}.
  
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
