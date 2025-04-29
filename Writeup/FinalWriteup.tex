@@ -198,8 +198,8 @@ Note that this Hamiltonian is relevant for the later section of this project, wh
 \subsection{Functional Renormalization Group (FRG) theory}
 
 Solving the Hubbard-Kanamori Hamiltonian is rather challenging, which is why one resorts to numerical techniques such as FRG. This technique falls into the same category of many other weak-coupling methods (such as mean field-theory\cite{kadanoff2009more}, perturbation theory\cite{nagaosa2013quantum}, Density Functional theory\cite{kohn1965self} or the Random Phase approximation\cite{bohm1951collective}).
-In these theories, interactions between electrons are considered to be weak. This allows one to effectively model the electrons in the system as free particles 
-and treat their interactions as a perturbation. As a result, the method is exact in the non-interacting limit. Beyond this limit, its precision is controlled by the ratio between the interaction
+In these theories, interactions between electrons are considered to be weak. As a result, one can model the electrons in the system as free particles 
+and treat their interactions as a perturbation. The method is therefore exact in the non-interacting limit. Beyond this limit, its precision is controlled by the ratio between the interaction
 strength and the bandwidth of the system. \par
 
 \medskip
@@ -213,8 +213,8 @@ Intuitively, FRG functions like a microscope with adjustable resolution: one beg
 The flow equation can be solved exactly for a limited number of systems so in most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time.  
 This is where the Truncated-unity FRG (TU$^2$FRG) scheme comes into play. TU$^2$FRG only considers two-particle
 interactions and neglects any higher order terms.
-This allows the separation of the effective action of the system into three terms. Each term represents one of the following three physical channels: Superconductivity, Spin-Density and Charge-Density Waves\footnote{The concept of charge density wave and spin density wave remains distinct and well-defined as long as spin-orbit coupling is not present}.
-The calculation is then performed to determine the first to diverge, this will correspond to the respective physical ground state that the model exhibits. This rather conceptual overview of FRG (and in particular of the TU$^2$FRG scheme) is represented in a flowchart below \textit{(See Fig.\ref{fig:FRGflowdiagram})}.
+This allows for the separation of the system's effective action into three terms. Each term represents one of the following three physical channels: Superconductivity, Spin-Density and Charge-Density Waves\footnote{The concept of charge density wave and spin density wave remains distinct and well-defined as long as spin-orbit coupling is not present.}.
+The calculation is then performed to determine which is the first channel to diverge, this will correspond to the respective physical ground state that the model exhibits. This rather conceptual overview of FRG (and in particular of the TU$^2$FRG scheme) is represented in a flowchart below \textit{(See Fig.\ref{fig:FRGflowdiagram})}.
  
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
@@ -236,22 +236,22 @@ If interested in the finer details of the derivation, the reader is referred to 
 \medskip
 \noindent The central elements of statistical physics are the partition function, the canonical potential and its Legendre transformations. 
 These are such powerful physical quantities that one can derive all physical observables from them.
-For quantum many-body problems, one works instead with the partition functional, defined as follows in Eq.\ref{partition functional}:
+For quantum many-body problems, one works instead with the partition functional, defined as follows in \textit{Eq.\ref{partition functional}}:
 
 \begin{equation}\label{partition functional}
     \mathcal{Z}[\bar{\eta}, \eta] = \int \mathcal{D} \bar{\psi} \mathcal{D}\psi e^{\mathcal{S}[\bar{\psi}, \psi]}e^{(\bar{\eta}, \psi)+(\eta, \bar{\psi})}
 \end{equation}
 
-\noindent In the case of fermionic systems, the action in the exponent of Eq.\ref{partition functional} takes the form shown below.
+\noindent In the case of fermionic systems, the action in the exponent of \textit{Eq.\ref{partition functional}} takes the form shown below.
 \begin{equation} \label{action}
     \mathcal{S}[\psi, \bar{\psi}] = -(\bar{\psi}, G_0^{-1} \psi) + V[\psi, \bar{\psi}]
 \end{equation}
 
 \noindent Here, $V[\psi, \bar{\psi}]$ is an arbitrary many-body interaction and $G_0$ represents the propagator of the non-interacting system. 
-This equation contains the shorthand notation ``$(...)$", which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. In this sum, the Grassman field index $x$ encodes all the quantum numbers of the single-particle basis and imaginary time.\par
+This equation contains the shorthand notation ``$(\bar{\psi}, G_0^{-1} \psi)$", which represents the sum $\sum_x \bar{\psi}(x)(G_0^{-1}\psi)(x), (G_0^{-1}\psi)(x) = \sum_{x’}G_0^{-1}(x,x’)\psi(x’)$. In this sum, the Grassman field index $x$ encodes all the quantum numbers of the single-particle basis and imaginary time.\par
 \medskip
 
-\noindent Note that in the limiting case where $V=0$, the path integral in Eq.\ref{partition functional} is exactly solvable. 
+\noindent Note that in the limiting case where $V=0$, the path integral in \textit{Eq.\ref{partition functional}} is exactly solvable. 
 However, the situation becomes considerably more intricate when electronic correlations are taken into account.
 The main idea behind FRG is to introduce a cut-off in the non-interacting Green's function ($G_0 \rightarrow G_0^{\lambda} = f(\lambda)G_0$). 
 This cutoff is then interpolated between the solvable initial state and the full path integral solution by subsequently including electronic interactions. For a spin-independent system this would transform the 
@@ -282,7 +282,7 @@ bare propagator as shown in Equations (\ref{propagator transform 1}) and (\ref{p
 \end{figure}
 
 \medskip
-\noindent In the following steps the derivation will proceed in the framework of the  so-called ``effective action"\footnote{If interested in why see \cite{metzner2012functional}}  ($\mathcal{T}[\psi, \bar{\psi}]$).
+\noindent In the following steps the derivation will proceed in the framework of the  so-called ``effective action"\footnote{If interested in why see \cite{metzner2012functional}.}  ($\mathcal{T}[\psi, \bar{\psi}]$).
 This is the Legendre transformation of the Greens function functional ($\mathcal{G}[\eta, \bar{\eta}]$), defined below in Equations (\ref{Effective action})  and  (\ref{Greens function functional}, \ref{G term in effective action}) respectively. 
 
 
@@ -332,7 +332,7 @@ Q_0^{\Lambda} & 0 \\
 = \mathrm{diag}(Q_0^{\Lambda}, - Q_0^{\Lambda t}),
 \end{equation}
 
-\noindent $\Gamma^{(2)\lambda}$ and $\b{Q}_0^{\Lambda}$ are given by the reciprocal 
+\noindent The terms $\Gamma^{(2)\lambda}$ and $\b{Q}_0^{\Lambda}$ correspond to the reciprocal 
 of the Green's and non-interacting Green's function respectively.
 The key point is that the Flow equation is well-defined. 
 This flow equation is the central element of FRG and the sections below outline how to solve it.
@@ -342,7 +342,7 @@ This flow equation is the central element of FRG and the sections below outline 
 \label{subsubsec:Truncation scheme}
 
 
-The flow equation derived above can be solved exactly only for a small class of systems; for most models, Functional Renormalisation Group (FRG) 
+The flow equation derived above can only be solved exactly for a small class of systems; for most models, Functional Renormalisation Group (FRG) 
 calculations are highly computationally expensive.
 In order to tackle this issue, the truncated unity approximation (TU$^2$FRG) was introduced in 2017\cite{lichtenstein2017high} and later improved in 2020\cite{eckhardt2020truncated}. 
 The main idea behind this scheme is to find a new basis that, with a controlled loss of accuracy, can represent all 
@@ -356,7 +356,7 @@ TU$^2$FRG relies on short-range interactions, thus struggling to capture strongl
 This is particularly relevant for the study of the 2D Hubbard model. TU$^2$FRG will not be able to capture
 the characteristic Mott insulating phase of the Cuprate phase diagrams\cite{imada1998metal}, which limits how well the results presented in this project can be directly compared with existing literature. 
 More importantly, the truncation scheme has a direct consequence on the accuracy of the predicted phase transition temperature ($T_c$). Whilst it is able to correctly capture
-the trends in $T_c$, the values predicted are much higher than what is reasonable to expect in real materials \textit{(These unphysically large values are expected to decrease if higher order particle interactions are included)}.
+the trends in $T_c$, the values predicted are much higher than what is reasonable to expect in real materials \textit{(-these unphysically large values are expected to decrease if higher order particle interactions are included)}.
 Nevertheless, TU$^2$FRG successfully captures the competition between magnetic and superconducting instabilities, a central focus of the results presented in this project. 
 \subsubsection{Decoupling of flow equation}
 After constraining ourselves to the case of two-particle interactions in the framework of translationally invariant systems, one can decouple the two-particle coupling as a function of the flow parameter ($\lambda$) into three channels:
@@ -381,7 +381,8 @@ correspond to the Superconducting, Charge and Magnetic phases respectively.
     \dot{\phi}^{D}_{k_3- k_2, \frac{k_1 + k_4}{2}, \frac{k_2+k_3}{2}} = - \mathcal{T}_{d-ph}(k1,k2,k3)
 \end{equation}
 
-\noindent The decoupling outlined above enables the treatment of the effective action as a separable object:
+\noindent The decoupling outlined above yields a key result of the TU$^2$FRG scheme, it 
+enables the treatment of the effective action as a separable object:
 
 \begin{equation}
     \mathcal{T}[\psi, \bar{\psi}] = \mathcal{T}_{pp}[\psi, \bar{\psi}] + \mathcal{T}_{ph}[\psi, \bar{\psi}] + \mathcal{T}_{cph}[\psi, \bar{\psi}]
