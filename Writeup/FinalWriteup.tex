@@ -25,7 +25,7 @@ Due to its ability to capture most of the underlying physics of the superconduct
 the two-dimensional Hubbard model has attracted sustained scientific interest for decades. 
 Beyond its relevance to the Cuprates, it also serves as a fundamental toy model in theoretical physics. 
 This thesis conducts a detailed analysis of the 2D Hubbard model using the truncated-unity functional Renormalization Group (TU$^2$FRG) method,
-within the framework of spin-fluctuation-mediated superconductivity.  The interplay between magnetism and superconductivity is explored 
+within the framework of spin-fluctuation mediated superconductivity.  The interplay between magnetism and superconductivity is explored 
 by systematically varying model parameters such as the on-site Coulomb repulsion, chemical potential, Hund's coupling, next-nearest-neighbour hopping, and the number of orbitals per
 site. This approach enables the identification of clear trends in the superconducting critical ($T_c$) temperature and order parameter, while also
 providing insights into the magnetic ordering.
@@ -209,7 +209,7 @@ progressing step-by-step from higher to lower energies.
 Intuitively, FRG functions like a microscope with adjustable resolution: one begins with a detailed, high-resolution view of the fundamental microscopic laws and gradually lowers the resolution to arrive at a coarse-grained description of macroscopic collective phenomena.
 \medskip
 
-\noindent  The central element of FRG is a flow equation that describes the evolution of the effective action of the system with respect to a scalar/flow parameter Lambda ($\Lambda$) \textit{(See section~\ref{subsubsec:Flow Equation})}.
+\noindent  The central element of FRG is a flow equation that describes the evolution of the effective action of the system with respect to a scalar/flow parameter Lambda ($\Lambda$).
 The flow equation can be solved exactly for a limited number of systems so in most scenarios an approximation has to be made in order to reach a solution in a reasonable computational time.  
 This is where the Truncated-unity FRG (TU$^2$FRG) scheme comes into play. TU$^2$FRG only considers two-particle
 interactions and neglects any higher order terms.
@@ -396,7 +396,7 @@ enables the treatment of the effective action as a separable object:
 
 \subsubsection{Instability calculation}
 
-This section provides an outline of the procedure following the decoupling the effective action and flow equation, for more details the reader is referred to\cite{profe2023functional}. 
+This section provides an outline of the procedure following the decoupling of the effective action and flow equation, for more details the reader is referred to\cite{profe2023functional}. 
 In the TU$^2$FRG method, the resulting decoupled flow equation is solved through nested integration, involving both a coarse momentum integration and a
 refined integration around each $k$ point.  This calculation yields the self-energy and the two particle vertex\footnote{For precise definitions of these quantities, see \cite{metzner2012functional}.}.
 Although these quantities are not directly measurable, they serve as the foundation for further analysis. The first post-processing step involves
@@ -419,7 +419,7 @@ functional.
 This section addresses the methods required to implement the theoretical concepts discussed in the sections above
 within the framework of this project.
 The primary goal is to obtain a computational solution 
-for the 2D Hubbard-(Kanamori) model, for which the divERGe package is used. This package implements the TU$^2$FRG
+for the 2D Hubbard-(Kanamori) model. For such, the divERGe package is used. This package implements the TU$^2$FRG
 formalism discussed in \textit{Section \ref{subsubsec:Truncation scheme}}.
 An overview of the divERGe package, together with the convergence
 tests required to ensure the accuracy of the results is provided here. 
@@ -441,7 +441,7 @@ values. \textit{(The latter three terms are depicted in Fig.\ref{fig:nknkf} and 
 the calculation can proceed. Under the approximations described in \textit{Section \ref{subsubsec:Truncation scheme}},
 the flow equations are integrated numerically from high energy scales ($\lambda = \infty$) down to low scales ($\lambda = 0$), 
 by incrementally stepping from $\lambda$ to $\lambda + d\lambda$. This integration continues until a phase transition is detected, signaled 
-by the divergence of one of the interaction channels-or until $\lambda$ is smaller than $1e^{-6}$ eV\footnote{This corresponds to about 0.1K.}. In the latter case, the system is considered to remain 
+by the divergence of one of the interaction channels, or until $\lambda$ is smaller than $1 \times 10^{6}$ eV\footnote{This corresponds to about 0.1K.}. In the latter case, the system is considered to remain 
 in a Fermi-liquid state. All such computations were performed on the high-performance computing (HPC) cluster at the University of St Andrews.
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
@@ -467,7 +467,7 @@ These tests include checking the form factor convergence and the number of $k$ p
 
 The set of orthogonal basis functions ($f_m$) used to describe the truncated space 
 in momentum representation \textit{(See section \ref{subsubsec:Truncation scheme})} is called the form factor basis\cite{lichtenstein2018functional}. In the case of the square lattice, 
-the form factors take the form of delta functions in real space; they are arranged as circles with increasing radii around the origin. This effectively leads to a ``bond-like" representation where the form-factor cut-off
+the form factors take the form of delta functions in real space; they are arranged as circles with increasing radii around the origin. This effectively leads to a ``bond-like" representation where the form factor cut-off
 represents how many of the neighbouring bonds are accounted for in the calculation of each point in the phase diagram \textit{(See Fig.\ref{fig:nknkf}a)}.\par
 
 \medskip
@@ -477,13 +477,13 @@ represents how many of the neighbouring bonds are accounted for in the calculati
 between computational expensiveness and accuracy. 
 After testing the convergence of the calculations accordingly \textit{(an example of 
 such tests is shown in Fig.\ref{fig:Formfactorconvergence})},
-the form factor value was set at 4\AA\footnote{This is equivalent to a number of form factor shells of 4 since the lattice spacing of the models here is set to 1\AA.} after the convergence of  
+the form factor value was set at 4\AA\footnote{This is equivalent to a number of form factor shells of 4 since the lattice spacing of the models here is set to 1\AA.}. 
 This value is in agreement with values used in previous literature\cite{lichtenstein2018functional}. 
 
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.6\textwidth]{convergence.png}  % Adjust width as needed
-    \caption{\textbf{Convergence testing:} \textit{Panel a)} Transition temperature as a function of form factor cut-off value for the nearest-neighbour 2D Hubbard model, $U$ = 5.00, $\mu$ = 0.20eV. \textit{Panel b)} Time taken to complete the calculation
+    \caption{\textbf{Convergence testing example:} \textit{Panel a)} Transition temperature as a function of form factor cut-off value for the nearest-neighbour 2D Hubbard model, $U$ = 5.00, $\mu$ = 0.20eV. \textit{Panel b)} Time taken to complete the calculation
     as a function of form factor cut-off value.   }
     \label{fig:Formfactorconvergence}
 \end{figure}
@@ -496,9 +496,9 @@ This value is in agreement with values used in previous literature\cite{lichtens
 When integrating the flow equation, there are two parameters that can be further tuned to ensure convergence.
 These are the $n_k$ and $n_{k_f}$ values, and they specify the number of $k$ points used to carry out the nested integration of the decoupled flow equation. 
 In particular, $n_k$ refers to the number of $k$ points used for the general momentum integral, and $n_{k_f}$ to the number of $k$ points used for 
-the additional sum around each k-point \textit{See Fig.\ref{fig:nknkf}b}. The calculations performed here were carried out with an integration 
+the additional sum around each k-point \textit{(See Fig.\ref{fig:nknkf}b)}. The calculations performed here were carried out with an integration 
 grid of $20 \times 5$ ($n_k$ x $n_{k_f}$) points. This means that the outer calculation is therefore a $20\times20$ grid, the inner loop is refined by a factor
-of 5 and is a $100 \times 100$ grid. The choice of parameters ensured that the calculations had converged appropriately 
+of 5 and becomes a $100 \times 100$ grid. The choice of parameters ensured that the calculations had converged appropriately 
 and resulted in an average computational time of $\approx 180s$ per point for the simpler models\footnote{Note that the computational time increases as a function of Coulomb repulsion $U$. }. 
 
 
@@ -619,7 +619,7 @@ the bulk superconducting region is $d$-wave symmetric and, in particular, $d_{x^
 After plotting the critical temperature ($T_c$) as a function of chemical potential ($\mu$) for a constant Coulomb repulsion ($U$), one observes that
 the superconducting critical temperature is maximized closest to the magnetic instability \textit{(Fig.\ref{fig:1NNSC}b)}.
 This is in agreement with the idea that competition between instabilities
-enhances the transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulomb repulsion and Tc are positively correlated. 
+enhances the transition temperature \cite{maple1995interplay,sun2016dome}. Moreover, the magnitude of the Coulomb repulsion and the transition  temperature ($T_c$) are positively correlated. 
 
 
 
@@ -631,7 +631,7 @@ enhances the transition temperature \cite{maple1995interplay,sun2016dome}. Moreo
 \begin{figure}[htbp]  % Placement: Here, Top, Bottom, Page
     \centering
     \includegraphics[width=0.5\textwidth]{1NNstripes.png}  % Adjust width as needed
-    \caption{\textbf{Magnetic stripe in the 1NN model for doping at $\frac{1}{8}$ of the bandwidth}: \textit{Panel a)} Transition temperature plotted in a logarithmic scale as a function of Coulomb repulsion ($U$) along the Magnetic stripe at $\mu$ =1eV. 
+    \caption{\textbf{Magnetic stripe in the 1NN model for doping at $\frac{1}{8}$th of the bandwidth}: \textit{Panel a)} Transition temperature plotted in a logarithmic scale as a function of Coulomb repulsion ($U$) along the Magnetic stripe at $\mu$ =1eV. 
        \textit{Panel b)} Magnetic susceptibility along high symmetry path for $U$ =2.00 eV. 
        \textit{Panel c)} Plot of the Superconducting order parameter projected on top of the Fermi-surface of the 1NN model for $U$ = 7.00eV and $\mu$ =1.00eV.
        \textit{Panel d)} Magnetic susceptibility along high symmetry path for $U$ = 18.00eV. The plots show the susceptibility as a function of \b{q} for both magnetic regions. The Ferromagnetic SDW is suppressed by a superconducting phase at $U$$\approx$ 6.00eV. At larger values of $U$,  the SDW phase is recovered but with an Anti-Ferromagnetic ordering instead.  }
@@ -656,7 +656,7 @@ to a chemical potential of $\pm 1.00eV$(which is $\frac{1}{8}$th of the bandwidt
 At low Coulomb repulsion values, a ferromagnetically ordered spin density wave (SDW) is observed. This SDW is suppressed by a superconducting phase,
 only to be revived at around $U \approx 15.00eV$, where it becomes antiferromagnetically ordered. The superconducting transition temperature $T_c$ increases along the stripe \textit{(See Fig.\ref{fig:1NN_stripes})}.
 While this behaviour is not the same as the conventional stripes seen in Cuprates, it is fair to conclude that there is still something 
-``magical" about the $\frac{1}{8}$ filling fraction in the 1NN model presented here. \par
+``magical" about the $\frac{1}{8}$th filling fraction in the 1NN model presented here. \par
 \medskip
 
 \noindent Before conducting this analysis, the possibility of the stripes being a computational artifact was ruled out.
@@ -683,6 +683,7 @@ confirming that the result remained unchanged. Additionally, the appearance of t
 In real materials, hopping isn't limited to nearest neighbours; next-nearest neighbour orbitals can also significantly overlap. This motivates the extension of the previously
 discussed 1NN model to the next-nearest neighbour hopping 2D Hubbard model in a square lattice (1NNN model). 
 Here, the next-nearest neighbour hopping amplitude is varied from 0-0.75 eV in steps of 0.25 eV.
+The nearest-neighbour hopping amplitude was kept at 1 eV.
 The chemical potential of the models was adjusted accordingly to ensure that they are all
 at half-filling in the undoped case. Introducing next-nearest neighbour hopping 
 changes the electronic structure of the model (\textit{See Fig.\ref{fig:1NNN}a,b}). This results in notable
@@ -691,13 +692,13 @@ differences in the correlated phases observed in the phase diagrams in \textit{F
 
 \noindent
 As the next-nearest neighbour hopping is increased, the position of the Van-Hove singularity shifts to lower energies \textit{(See Fig.\ref{fig:1NNN}a)}. 
-This increase in $t'$ also alters the Fermi-surface, which in turn changes the nesting vectors of the models. 
-As a result of both these effects, the SC-SDW-SC sandwich 
+As a result, the SC-SDW-SC sandwich 
 region shifts towards the negative chemical potential regime as $t'$ increases.
 The superconducting regions remain (in the most-part) $d$-wave symmetric. However, the symmetry changes from $d_{x^2-y^2}$ to $d_{xy}$ when the 
-next-nearest-neighbour is introduced. Additionally, general trends in the superconducting transition
+next-nearest-neighbour hopping is introduced. Additionally, general trends in the superconducting transition
 temperature ($T_c$) are also observed: it is maximized closest to the 
-magnetic instability, and it increases as a function of $U$. Finally, the emergence of magnetic stripes is still observed. \par
+magnetic instability, and it increases as a function of $U$. Finally, the emergence of magnetic stripes is still observed although
+these now occur at different chemical potential values. This is to be expected since including  $t'$ also alters the Fermi-surface, which in turn changes the nesting vectors of the models.\par
 \medskip
 \noindent Several studies have explored the effect of $t'$ in the 2D Hubbard model, 
 employing both FRG \cite{husemann2012incommensurate} and other alternative methods \cite{fontenele2025effects}, 
@@ -720,16 +721,16 @@ compare the features of the 1NN and 1NNN phase diagrams.
 \end{figure}
 
 \noindent Including a next-nearest neighbour hopping parameter in the 1NN model does not 
-change several of properties of the superconducting region.  Proximity to a Magnetic instability further enhances $T_c$.
+change several properties of the superconducting region.  Proximity to a Magnetic instability further enhances $T_c$.
 Additionally, the same SC-SDW-SC sandwich structure is observed even after breaking particle-hole symmetry, reinforcing the 
 idea that that superconductivity is favoured in the vicinity of a  spin density wave (SDW) instability. \par
 \medskip
 \noindent There are important differences between the superconducting regions in the 1NN and 1NNN model. 
 Whilst the superconducting order parameter remains mostly $d$-wave symmetric, it is a different type
 of $d$-wave symmetry than the one observed in the 1NN model. The 1NN model exhibits a $d_{x^2-y^2}$ symmetry; the 1NNN model
-exhibits a $d_{xy}$ symmetry\cite{butler2012point}. The only difference between these two types of $d$-wave superconductivity the plane around which the order parameter is sign antisymmetric
+exhibits a $d_{xy}$ symmetry\cite{butler2012point}. The only difference between these two types of $d$-wave superconductivity is the plane around which the order parameter is sign antisymmetric
 \textit{(For direct comparison see Figs \ref{fig:1NNSC}c and \ref{fig:1NNNSC}b,c)}. 
-Moreover,  $t' \neq 0 $, charge density wave (CDW) patches appear neighbouring some superconducting regions.
+Moreover, at $t' \neq 0 $, charge density wave (CDW) patches appear neighbouring some superconducting regions.
 Specifically, when $\frac{t'}{t} = 0.75$, and for Coulomb repulsion between 8 and 11 eV, the superconducting order parameter undergoes a more significant change.
 As shown in \textit{(Fig.\ref{fig:1NNNSC})}, there is a SCI-SDW-SCII-CDW transition as the chemical potential is varied and $U$ remains constant. 
 The Superconducting order parameter 
@@ -791,8 +792,8 @@ However, this trend is only observed in this particular model and phase.
 Van Hove singularity is strongly related to the location of the area in the phase diagram where the interplay between 
 superconductivity and magnetism is most pronounced. In order to further support this, the critical temperature
 is plotted as a function of chemical potential $\mu$ for different values of $t'$ at $U$=7.00eV \textit{(See Fig.\ref{fig:tprimecont})}.
-The magnetic region is pushed towards more negative values of the chemical potential as the value of the next-nearest 
-neighbour hoping parameter is increased (and the van Hove singularity is pushed down in energy). The bulk magnetic
+The magnetic region is pushed towards more negative chemical potential values as the value of the next-nearest 
+neighbour hopping parameter is increased (and the van Hove singularity is pushed down in energy). The bulk magnetic
 region remains anti-ferromagnetically ordered and the SC order parameter is predominantly $d_{xy}$-wave symmetric (whenever $t' \neq 0$). The exception occurs when
 $t'$ is set to 0.70 eV. There, the SC order parameter transitions to $s$-wave symmetric when it is closest to the boundary 
 with the charge density wave (CDW) phase \textit{(as discussed in Section \ref{subsubsec:SC1NNN})}.
@@ -839,7 +840,7 @@ investigated: with and without different orbital mixing. To allow for future com
 existing literature\cite{sakakibara2024possible}, a choice of $d_{x^2-y^2}$ and $d_{3z^2 -r^2}$ orbitals is made. 
 The respective hopping parameters are determined using the  table of inter-atomic matrix elements calculated by J.C. Slater and G.F. Koster\cite{slater1954simplified}. 
 In this calculation, the magnitudes of the $\sigma,  \pi, \delta$ bond strength  are approximated to  $\approx  1, 0.5, 0.05 eV$ respectively in order to capture their relative values\cite{blanksby2003bond, mcgrady2015introduction, krapp2008strength}.
-A table summarising the estimated parameters for the models discussed in this section is shown below.\par
+A table summarising the estimated parameters for the models discussed in this section is shown above.\par
 
 \medskip
 
@@ -875,14 +876,15 @@ is $d_{x^2-y^2}$-wave symmetric. By comparing \textit{Figures \ref{fig:1NN2pd}c,
 
 This project aimed to investigate the interplay between Magnetism and Superconductivity in the 2D Hubbard Model on a square lattice. The calculations were carried out
 in the spin-fluctuation mediated superconductivity framework using the two-particle truncated TU$^2$FRG scheme in the weak-coupling limit. Although this method
-fails to capture correlated phases such as Mott-instulating or pseudo-gap phases, it is widely in agreement with previous literature \textit{It captures the strong competition between Magnetism and Superconductivity
+fails to capture correlated phases such as Mott-instulating or pseudo-gap phases, it is widely in agreement with previous literature \textit{(It captures the strong competition between Magnetism and Superconductivity
 as well as how this interplay enhances the transition temperature)}. The results presented here provide
 a comprehensive study of this model for a uniquely wide range of parameters. A strong competition between an
 Antiferromagnetically-ordered SDW and $d$-wave symmetric SC phase is observed. 
-The inclusion of a next-nearest-neighbour hopping changes the symmetry of the order parameter from $d_{x^2-y^2}$ to $d_{xy}$
 Additionally, several strategies to stabilise and enhance the critical temperature of superconductivity are identified, including increasing the on-site Coulomb repulsion and being near a stabilized SDW region.
-Narrow magnetic stripes are present, with their ordering changing at the "magical doping" value. The effect of including a next-nearest neighbour hopping parameter is examined in detail. Increasing $t'$ lowers the Van Hove singularity's energy, shifting the region of prominent SDW-SC interplay towards more negative chemical potentials.
-The inclusion of $t'$ also leads to stable charge density wave (CDW) 
+Narrow magnetic stripes are present, with their ordering changing at the ``magical doping" value. 
+The effect of including a next-nearest neighbour hopping parameter is examined in detail. Increasing $t'$ lowers the Van Hove singularity's energy, shifting the region of prominent SDW-SC interplay towards more negative chemical potentials.
+The inclusion of a next-nearest-neighbour hopping changes the symmetry of the order parameter from $d_{x^2-y^2}$ to $d_{xy}$.
+Moreover, it also results in stable charge density wave (CDW) 
 patches surrounding SC regions, where the SC order parameter transitions from $d$-wave to $s$-wave symmetry near these patches. 
 Finally, a preliminary analysis is provided on extending these models to a 
 two-orbital-per-site case. The AFM ground state is suppressed as the model is electronically doped, and the magnitude of Hund's 
